@@ -1,5 +1,4 @@
-﻿using SiroccoDemo.Application.Models;
-using SiroccoDemo.Application.Repositories;
+﻿using SiroccoDemo.Application.Repositories;
 using SiroccoDemo.Application.Services;
 using SiroccoDemo.Domain.DTOs;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ namespace SiroccoDemo.Infrastructure.Services
             _crmRepository = crmRepository;
         }
 
-        public List<GetAccountContactNoteSummaryDTO> GetAccountContactNoteSummary(GetAccountContactNoteSummaryModel model)
+        public List<GetAccountContactNoteSummaryDTO> GetAccountContactNoteSummary()
         {
             var returnDTO = new List<GetAccountContactNoteSummaryDTO>();
 

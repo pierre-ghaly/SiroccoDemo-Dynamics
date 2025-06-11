@@ -49,7 +49,6 @@
     <Compile Include="Models\AccountInput.cs" />
     <Compile Include="Models\ContactInput.cs" />
     <Compile Include="Models\CreateAccountWithContactsAndNotesModel.cs" />
-    <Compile Include="Models\GetAccountContactNoteSummaryModel.cs" />
     <Compile Include="Models\NoteInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

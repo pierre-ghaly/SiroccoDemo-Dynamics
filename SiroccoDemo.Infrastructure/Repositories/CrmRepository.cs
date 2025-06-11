@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace SiroccoDemo.Infrastructure.Repositories
 {
-    internal class CrmRepository : ICrmRepository
+    public class CrmRepository : ICrmRepository
     {
         private readonly IOrganizationService _service;
         public CrmRepository(IOrganizationService service) => _service = service;
