@@ -1,9 +1,9 @@
-﻿using SiroccoDemo.Domain.Entities;
+﻿using SiroccoDemo.Application.Models;
 
 namespace SiroccoDemo.Application.Validations
 {
     public interface IAccountValidator
     {
-        void Validate(Account account);
+        void Validate(AccountInput account);
     }
 }

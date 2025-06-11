@@ -1,9 +1,9 @@
-﻿using SiroccoDemo.Domain.Entities;
+﻿using SiroccoDemo.Application.Models;
 
 namespace SiroccoDemo.Application.Validations
 {
     public interface INoteValidator
     {
-        void Validate(Note note);
+        void Validate(NoteInput note);
     }
 }

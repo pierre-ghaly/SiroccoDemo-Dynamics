@@ -1,9 +1,9 @@
-﻿using SiroccoDemo.Domain.Entities;
+﻿using SiroccoDemo.Application.Models;
 
 namespace SiroccoDemo.Application.Validations
 {
     public interface IContactValidator
     {
-        void Validate(Contact contact);
+        void Validate(ContactInput contact);
     }
 }
