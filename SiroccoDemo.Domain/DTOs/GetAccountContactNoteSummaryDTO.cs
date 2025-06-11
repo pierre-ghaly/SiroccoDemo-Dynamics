@@ -6,7 +6,7 @@ namespace SiroccoDemo.Domain.DTOs
     {
         public string AccountName { get; set; }
         public PrimaryContactWithNotes PrimaryContact { get; set; }
-        public List<SecondaryContact> SecondaryContacts { get; set; }
+        public List<SecondaryContact> SecondaryContacts { get; set; } = new List<SecondaryContact>();
     }
 
     public class PrimaryContactWithNotes
