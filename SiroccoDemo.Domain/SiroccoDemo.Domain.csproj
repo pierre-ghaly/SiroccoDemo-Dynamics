@@ -41,11 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\CreateAccountWithContactsAndNotesDTO.cs" />
+    <Compile Include="DTOs\GetAccountContactNoteSummaryDTO.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Note.cs" />
+    <Compile Include="Models\AccountInput.cs" />
+    <Compile Include="Models\ContactInput.cs" />
+    <Compile Include="Models\CreateAccountWithContactsAndNotesModel.cs" />
+    <Compile Include="Models\GetAccountContactNoteSummaryModel.cs" />
+    <Compile Include="Models\NoteInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Entities\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
