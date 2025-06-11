@@ -92,6 +92,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CrmRepository.cs" />
     <Compile Include="Services\CreateAccountWithContactsAndNotesService.cs" />
+    <Compile Include="Services\GetAccountContactNoteSummaryService.cs" />
     <Compile Include="Validations\AccountValidator.cs" />
     <Compile Include="Validations\ContactValidator.cs" />
     <Compile Include="Validations\NoteValidator.cs" />

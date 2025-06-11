@@ -1,5 +1,6 @@
 ﻿using SiroccoDemo.Domain.Entities;
 using System;
+using System.Collections.Generic;
 
 namespace SiroccoDemo.Application.Repositories
 {
@@ -9,5 +10,8 @@ namespace SiroccoDemo.Application.Repositories
         Guid CreateContact(Contact contact);
         Guid CreateNote(Note note);
         void SetPrimaryContact(Guid accountId, Guid contactId);
+        List<(Account Account, Guid? PrimaryContactId)> GetAllAccountsAndPrimaryContact();
+        List<Contact> GetContactsByAccountId(Guid accountId);
+        List<Note> GetNotesByRegarding(Guid regardingId);
     }
 }
