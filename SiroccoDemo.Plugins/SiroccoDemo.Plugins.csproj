@@ -38,24 +38,27 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>SiroccoDemo.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-	<PropertyGroup>
-		<PackageId>SiroccoDemo.Plugins</PackageId>
-		<Version>1.0.0</Version>
-		<Authors>Pierre Ghaly</Authors>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-		<BuildOutputTargetFolder>lib</BuildOutputTargetFolder>
-		<IncludeBuildOutput>true</IncludeBuildOutput>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.7.0" PrivateAssets="all" />
-	</ItemGroup>
-	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
-		<ItemGroup>
-			<BuildOutputInPackage Include="@(ReferencePath->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
-		</ItemGroup>
-	</Target>
-	<ItemGroup>
+  <PropertyGroup>
+    <PackageId>SiroccoDemo.Plugins</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Pierre Ghaly</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <BuildOutputTargetFolder>lib</BuildOutputTargetFolder>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool">
+      <Version>9.1.0.200</Version>
+    </PackageReference>
+    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.7.0" PrivateAssets="all" />
+  </ItemGroup>
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferencePath-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -132,16 +135,16 @@
       <Project>{8e845975-7ada-43bf-837a-0d1ecc577d08}</Project>
       <Name>SiroccoDemo.Application</Name>
       <PrivateAssets>all</PrivateAssets>
-	</ProjectReference>
+    </ProjectReference>
     <ProjectReference Include="..\SiroccoDemo.Domain\SiroccoDemo.Domain.csproj">
       <Project>{99806292-105c-4cd7-81b7-7e94b983f5cf}</Project>
       <Name>SiroccoDemo.Domain</Name>
-		<PrivateAssets>all</PrivateAssets>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
     <ProjectReference Include="..\SiroccoDemo.Infrastructure\SiroccoDemo.Infrastructure.csproj">
       <Project>{f57e2dde-bddf-4553-92ec-68140bc2f13f}</Project>
       <Name>SiroccoDemo.Infrastructure</Name>
-		<PrivateAssets>all</PrivateAssets>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

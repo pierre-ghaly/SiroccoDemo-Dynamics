@@ -62,6 +62,7 @@
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="SiroccoDemo.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

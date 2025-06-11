@@ -20,23 +20,72 @@ namespace SiroccoDemo.Plugins
 
             var service = new CreateAccountWithContactsAndNotesService(crmRepository, accountValidator, contactValidator, noteValidator);
 
-            // Get input parameters from the execution context
             if (!Context.InputParameters.Contains("AccountData"))
             {
-                throw new InvalidPluginExecutionException("Required input parameters are missing.");
+                throw new InvalidPluginExecutionException("Required input parameter 'AccountData' is missing.");
             }
 
-            var accountData = Context.InputParameters["AccountName"] as string;
-            var accountNotes = Context.InputParameters["AccountNotes"] as NoteInput[];
-            var primaryContactData = Context.InputParameters["PrimaryContactData"] as ContactInput;
-            var secondaryContactData = Context.InputParameters["SecondaryContactData"] as ContactInput[];
+            var accountData = Context.InputParameters["AccountData"] as string;
+            var accountNotes = Context.InputParameters.Contains("AccountNotes") ? Context.InputParameters["AccountNotes"] as string : null;
+            var primaryContactData = Context.InputParameters.Contains("PrimaryContactData") ? Context.InputParameters["PrimaryContactData"] as string : null;
+            var secondaryContactData = Context.InputParameters.Contains("SecondaryContactData") ? Context.InputParameters["SecondaryContactData"] as string : null;
+
+            if (string.IsNullOrEmpty(accountData))
+            {
+                throw new InvalidPluginExecutionException("AccountData cannot be null or empty.");
+            }
 
             var accountModel = new CreateAccountWithContactsAndNotesModel();
 
-            accountModel.Account.Name = JsonConvert.DeserializeObject<string>(accountData);
-            accountModel.AccountNotes = JsonConvert.DeserializeObject<NoteInput[]>(accountNotes.ToString());
-            accountModel.PrimaryContact = JsonConvert.DeserializeObject<ContactInput>(primaryContactData.ToString());
-            accountModel.SecondaryContacts = JsonConvert.DeserializeObject<ContactInput[]>(secondaryContactData.ToString());
+            accountModel.Account = new AccountInput
+            {
+                Name = accountData
+            };
+
+            if (!string.IsNullOrEmpty(accountNotes))
+            {
+                accountModel.AccountNotes = JsonConvert.DeserializeObject<NoteInput[]>(accountNotes);
+            }
+            else
+            {
+                accountModel.AccountNotes = new NoteInput[0];
+            }
+
+            if (!string.IsNullOrEmpty(primaryContactData))
+            {
+                var primaryContactWithNotes = JsonConvert.DeserializeObject<ContactInput>(primaryContactData);
+                
+                accountModel.PrimaryContact = new ContactInput
+                {
+                    FirstName = primaryContactWithNotes.FirstName,
+                    LastName = primaryContactWithNotes.LastName,
+                    Email = primaryContactWithNotes.Email,
+                    Notes = null
+                };
+                
+                if (primaryContactWithNotes.Notes != null && primaryContactWithNotes.Notes.Length > 0)
+                {
+                    accountModel.PrimaryContactNotes = primaryContactWithNotes.Notes;
+                }
+                else
+                {
+                    accountModel.PrimaryContactNotes = new NoteInput[0];
+                }
+            }
+            else
+            {
+                accountModel.PrimaryContact = null;
+                accountModel.PrimaryContactNotes = new NoteInput[0];
+            }
+
+            if (!string.IsNullOrEmpty(secondaryContactData))
+            {
+                accountModel.SecondaryContacts = JsonConvert.DeserializeObject<ContactInput[]>(secondaryContactData);
+            }
+            else
+            {
+                accountModel.SecondaryContacts = new ContactInput[0];
+            }
 
             try
             {
