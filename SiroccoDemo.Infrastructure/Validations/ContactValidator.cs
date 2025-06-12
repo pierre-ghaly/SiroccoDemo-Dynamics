@@ -1,6 +1,6 @@
 ﻿using SiroccoDemo.Application.Models;
 using SiroccoDemo.Application.Validations;
-using System.IO;
+using SiroccoDemo.Domain.Exceptions;
 using System.Text.RegularExpressions;
 
 namespace SiroccoDemo.Infrastructure.Validations
@@ -13,11 +13,23 @@ namespace SiroccoDemo.Infrastructure.Validations
 
         public void Validate(ContactInput contact)
         {
-            if (string.IsNullOrWhiteSpace(contact.LastName))
-                throw new InvalidDataException("Contact last name is required.");
+            if (contact == null)
+                throw new InvalidInputException("Contact information is required.", nameof(contact), null);
 
-            if (string.IsNullOrWhiteSpace(contact.Email) || !EmailRegex.IsMatch(contact.Email))
-                throw new InvalidDataException("Valid email is required.");
+            if (string.IsNullOrWhiteSpace(contact.LastName))
+                throw new InvalidInputException("Contact last name is required.", nameof(contact.LastName), contact.LastName);
+
+            if (string.IsNullOrWhiteSpace(contact.Email))
+                throw new InvalidInputException("Contact email is required.", nameof(contact.Email), contact.Email);
+
+            if (!EmailRegex.IsMatch(contact.Email))
+                throw new InvalidInputException("Contact email format is invalid.", nameof(contact.Email), contact.Email);
+
+            if (!string.IsNullOrEmpty(contact.FirstName) && contact.FirstName.Length > 50)
+                throw new InvalidInputException("Contact first name cannot exceed 50 characters.", nameof(contact.FirstName), contact.FirstName);
+
+            if (contact.LastName.Length > 50)
+                throw new InvalidInputException("Contact last name cannot exceed 50 characters.", nameof(contact.LastName), contact.LastName);
         }
     }
 }

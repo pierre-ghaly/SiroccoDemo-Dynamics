@@ -1,5 +1,6 @@
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Tooling.Connector;
+using SiroccoDemo.Domain.Exceptions;
 using System;
 using System.Configuration;
 
@@ -15,14 +16,14 @@ namespace SiroccoDemo.APIs.Services
                 
                 if (string.IsNullOrEmpty(connectionString))
                 {
-                    throw new InvalidOperationException("CRM connection string not found in web.config");
+                    throw new CrmException("CRM connection string not found in web.config", "MISSING_CONNECTION_STRING");
                 }
 
                 var crmServiceClient = new CrmServiceClient(connectionString);
                 
                 if (!crmServiceClient.IsReady)
                 {
-                    throw new InvalidOperationException($"Failed to connect to CRM: {crmServiceClient.LastCrmError}");
+                    throw CrmException.ConnectionFailed(new InvalidOperationException(crmServiceClient.LastCrmError));
                 }
 
                 if (crmServiceClient.OrganizationWebProxyClient != null)
@@ -38,9 +39,13 @@ namespace SiroccoDemo.APIs.Services
                     throw new InvalidOperationException("No organization service proxy available from CRM Service Client");
                 }
             }
+            catch (CrmException)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
-                throw new InvalidOperationException("Error creating CRM Organization Service", ex);
+                throw CrmException.ConnectionFailed(ex);
             }
         }
     }

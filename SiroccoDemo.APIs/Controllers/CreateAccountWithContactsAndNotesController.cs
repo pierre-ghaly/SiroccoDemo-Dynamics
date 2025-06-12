@@ -1,6 +1,7 @@
 using SiroccoDemo.Application.Models;
 using SiroccoDemo.Application.Services;
 using SiroccoDemo.Domain.DTOs;
+using SiroccoDemo.Domain.Exceptions;
 using Swashbuckle.Swagger.Annotations;
 using System;
 using System.Web.Http;
@@ -29,7 +30,7 @@ namespace SiroccoDemo.APIs.Controllers
         /// <param name="model">The account creation model. Only Account field is required, all others are optional.</param>
         /// <returns>Created account details with generated IDs</returns>
         /// <response code="200">Account created successfully</response>
-        /// <response code="400">Invalid input data or business rule violation</response>
+        /// <response code="400">Invalid input data or business rule violation. Returns structured error with ErrorCode, Message, and specific details.</response>
         /// <response code="500">Internal server error</response>
         [HttpPost]
         [Route("create-account-with-contacts-and-notes")]
@@ -54,13 +55,69 @@ namespace SiroccoDemo.APIs.Controllers
                 var result = _service.CreateAccountWithContactsAndNotes(model);
                 return Ok(result);
             }
-            catch (ArgumentException ex)
+            catch (InvalidInputException ex)
             {
-                return BadRequest($"Validation error: {ex.Message}");
+                return Content(System.Net.HttpStatusCode.BadRequest, new
+                {
+                    ErrorCode = ex.ErrorCode,
+                    Message = ex.Message,
+                    PropertyName = ex.PropertyName,
+                    ValidationErrors = ex.ValidationErrors,
+                    OccurredAt = ex.OccurredAt
+                });
+            }
+            catch (BusinessRuleException ex)
+            {
+                return Content(System.Net.HttpStatusCode.BadRequest, new
+                {
+                    ErrorCode = ex.ErrorCode,
+                    Message = ex.Message,
+                    RuleName = ex.RuleName,
+                    EntityType = ex.EntityType,
+                    OccurredAt = ex.OccurredAt
+                });
+            }
+            catch (TransactionFailedException ex)
+            {
+                return Content(System.Net.HttpStatusCode.InternalServerError, new
+                {
+                    ErrorCode = ex.ErrorCode,
+                    Message = ex.Message,
+                    OperationName = ex.OperationName,
+                    TransactionId = ex.TransactionId,
+                    OccurredAt = ex.OccurredAt
+                });
+            }
+            catch (CrmException ex)
+            {
+                return Content(System.Net.HttpStatusCode.InternalServerError, new
+                {
+                    ErrorCode = ex.ErrorCode,
+                    Message = ex.Message,
+                    CrmErrorCode = ex.CrmErrorCode,
+                    EntityType = ex.EntityType,
+                    EntityId = ex.EntityId,
+                    OccurredAt = ex.OccurredAt
+                });
+            }
+            catch (ExceptionBase ex)
+            {
+                return Content(System.Net.HttpStatusCode.InternalServerError, new
+                {
+                    ErrorCode = ex.ErrorCode,
+                    Message = ex.Message,
+                    OccurredAt = ex.OccurredAt
+                });
             }
             catch (Exception ex)
             {
-                return InternalServerError(new Exception("An error occurred while creating the account", ex));
+                return Content(System.Net.HttpStatusCode.InternalServerError, new
+                {
+                    ErrorCode = "UNEXPECTED_ERROR",
+                    Message = "An unexpected error occurred while creating the account",
+                    OccurredAt = DateTime.UtcNow,
+                    Details = ex.Message
+                });
             }
         }
     }

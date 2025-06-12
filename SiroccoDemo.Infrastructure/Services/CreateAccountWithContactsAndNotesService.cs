@@ -6,6 +6,7 @@ using SiroccoDemo.Application.Services;
 using SiroccoDemo.Application.Validations;
 using SiroccoDemo.Domain.DTOs;
 using SiroccoDemo.Domain.Entities;
+using SiroccoDemo.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,11 @@ namespace SiroccoDemo.Infrastructure.Services
 
             if (model.PrimaryContact == null && model.PrimaryContactNotes != null && model.PrimaryContactNotes.Length > 0)
             {
-                throw new ArgumentException("Cannot create primary contact notes without providing a primary contact.");
+                throw new BusinessRuleException(
+                "Cannot create primary contact notes without providing a primary contact.",
+                "PrimaryContactNotesRequireContact",
+                "Account"
+                );
             }
 
             if (model.PrimaryContact != null)
@@ -80,7 +85,11 @@ namespace SiroccoDemo.Infrastructure.Services
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException("Transaction failed during account creation process.", ex);
+                throw new TransactionFailedException(
+                "Transaction failed during account creation process. All operations have been rolled back.",
+                ex,
+                "CreateAccountWithContactsAndNotes"
+                );
             }
         }
 

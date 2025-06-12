@@ -18,7 +18,7 @@ namespace SiroccoDemo.Plugins
             var contactValidator = new ContactValidator();
             var noteValidator = new NoteValidator();
 
-            var service = new CreateAccountWithContactsAndNotesService(crmRepository, accountValidator, contactValidator, noteValidator);
+            var service = new CreateAccountWithContactsAndNotesService(crmRepository, OrganizationService, accountValidator, contactValidator, noteValidator);
 
             if (!Context.InputParameters.Contains("AccountData"))
             {

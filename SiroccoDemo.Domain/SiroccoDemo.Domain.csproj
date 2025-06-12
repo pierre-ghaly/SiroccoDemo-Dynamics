@@ -52,14 +52,16 @@
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Note.cs" />
+    <Compile Include="Exceptions\BusinessRuleException.cs" />
+    <Compile Include="Exceptions\CrmException.cs" />
+    <Compile Include="Exceptions\InvalidInputException.cs" />
+    <Compile Include="Exceptions\ExceptionBase.cs" />
+    <Compile Include="Exceptions\TransactionFailedException.cs" />
     <Compile Include="Models\AccountInput.cs" />
     <Compile Include="Models\ContactInput.cs" />
     <Compile Include="Models\CreateAccountWithContactsAndNotesModel.cs" />
     <Compile Include="Models\NoteInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
