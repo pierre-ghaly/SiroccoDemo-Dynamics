@@ -1,4 +1,6 @@
-﻿using SiroccoDemo.Application.Models;
+﻿using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Messages;
+using SiroccoDemo.Application.Models;
 using SiroccoDemo.Application.Repositories;
 using SiroccoDemo.Application.Services;
 using SiroccoDemo.Application.Validations;
@@ -6,12 +8,14 @@ using SiroccoDemo.Domain.DTOs;
 using SiroccoDemo.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SiroccoDemo.Infrastructure.Services
 {
     public class CreateAccountWithContactsAndNotesService : ICreateAccountWithContactsAndNotesService
     {
         private readonly ICrmRepository _crmRepository;
+        private readonly IOrganizationService _organizationService;
         private readonly IAccountValidator _accountValidator;
         private readonly IContactValidator _contactValidator;
         private readonly INoteValidator _noteValidator;
@@ -19,12 +23,14 @@ namespace SiroccoDemo.Infrastructure.Services
         public CreateAccountWithContactsAndNotesService
             (
             ICrmRepository crmRepository,
+            IOrganizationService organizationService,
             IAccountValidator accountValidator,
             IContactValidator contactValidator,
             INoteValidator noteValidator
             )
         {
             _crmRepository = crmRepository;
+            _organizationService = organizationService;
             _accountValidator = accountValidator;
             _contactValidator = contactValidator;
             _noteValidator = noteValidator;
@@ -33,73 +39,150 @@ namespace SiroccoDemo.Infrastructure.Services
         public CreateAccountWithContactsAndNotesDTO CreateAccountWithContactsAndNotes(CreateAccountWithContactsAndNotesModel model)
         {
             _accountValidator.Validate(model.Account);
-            var account = new Account
+
+            if (model.PrimaryContact == null && model.PrimaryContactNotes != null && model.PrimaryContactNotes.Length > 0)
             {
-                Name = model.Account.Name
-            };
-            account.Id = _crmRepository.CreateAccount(account);
+                throw new ArgumentException("Cannot create primary contact notes without providing a primary contact.");
+            }
 
-            _contactValidator.Validate(model.PrimaryContact);
-            var primaryContact = new Contact
+            if (model.PrimaryContact != null)
             {
-                FirstName = model.PrimaryContact.FirstName,
-                LastName = model.PrimaryContact.LastName,
-                Email = model.PrimaryContact.Email,
-                AccountId = account.Id
-            };
-            primaryContact.Id = _crmRepository.CreateContact(primaryContact);
+                _contactValidator.Validate(model.PrimaryContact);
+            }
 
-            _crmRepository.SetPrimaryContact(account.Id, primaryContact.Id);
+            if (model.SecondaryContacts != null)
+            {
+                foreach (var contactInput in model.SecondaryContacts)
+                {
+                    _contactValidator.Validate(contactInput);
+                }
+            }
 
+            if (model.PrimaryContactNotes != null)
+            {
+                foreach (var noteInput in model.PrimaryContactNotes)
+                {
+                    _noteValidator.Validate(noteInput);
+                }
+            }
+
+            if (model.AccountNotes != null)
+            {
+                foreach (var noteInput in model.AccountNotes)
+                {
+                    _noteValidator.Validate(noteInput);
+                }
+            }
+
+            try
+            {
+                return ExecuteInTransaction(model);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Transaction failed during account creation process.", ex);
+            }
+        }
+
+        private CreateAccountWithContactsAndNotesDTO ExecuteInTransaction(CreateAccountWithContactsAndNotesModel model)
+        {
+            var requests = new List<OrganizationRequest>();
+            var accountId = Guid.NewGuid();
+            var primaryContactId = Guid.Empty;
             var secondaryContactIds = new List<Guid>();
-            foreach (var contactInput in model.SecondaryContacts)
-            {
-                _contactValidator.Validate(contactInput);
-                var secondaryContact = new Contact
-                {
-                    FirstName = contactInput.FirstName,
-                    LastName = contactInput.LastName,
-                    Email = contactInput.Email,
-                    AccountId = account.Id
-                };
-                secondaryContact.Id = _crmRepository.CreateContact(secondaryContact);
-                secondaryContactIds.Add(secondaryContact.Id);
-            }
-
             var primaryContactNoteIds = new List<Guid>();
-            foreach (var noteInput in model.PrimaryContactNotes)
+            var accountNoteIds = new List<Guid>();
+
+            var accountEntity = new Entity("account", accountId)
             {
-                _noteValidator.Validate(noteInput);
-                var note = new Note
+                ["name"] = model.Account.Name
+            };
+            requests.Add(new CreateRequest { Target = accountEntity });
+
+            if (model.PrimaryContact != null)
+            {
+                primaryContactId = Guid.NewGuid();
+                var primaryContactEntity = new Entity("contact", primaryContactId)
                 {
-                    Title = noteInput.Title,
-                    Description = noteInput.Description,
-                    RegardingEntityName = "contact",
-                    RegardingId = primaryContact.Id,
+                    ["firstname"] = model.PrimaryContact.FirstName,
+                    ["lastname"] = model.PrimaryContact.LastName,
+                    ["emailaddress1"] = model.PrimaryContact.Email,
+                    ["parentcustomerid"] = new EntityReference("account", accountId)
                 };
-                note.Id = _crmRepository.CreateNote(note);
-                primaryContactNoteIds.Add(note.Id);
+                requests.Add(new CreateRequest { Target = primaryContactEntity });
+
+                var updateAccountEntity = new Entity("account", accountId)
+                {
+                    ["primarycontactid"] = new EntityReference("contact", primaryContactId)
+                };
+                requests.Add(new UpdateRequest { Target = updateAccountEntity });
             }
 
-            var accountNoteIds = new List<Guid>();
-            foreach (var noteInput in model.AccountNotes)
+            if (model.SecondaryContacts != null)
             {
-                _noteValidator.Validate(noteInput);
-                var note = new Note
+                foreach (var contactInput in model.SecondaryContacts)
                 {
-                    Title = noteInput.Title,
-                    Description = noteInput.Description,
-                    RegardingEntityName = "account",
-                    RegardingId = account.Id,
-                };
-                note.Id = _crmRepository.CreateNote(note);
-                accountNoteIds.Add(note.Id);
+                    var secondaryContactId = Guid.NewGuid();
+                    var secondaryContactEntity = new Entity("contact", secondaryContactId)
+                    {
+                        ["firstname"] = contactInput.FirstName,
+                        ["lastname"] = contactInput.LastName,
+                        ["emailaddress1"] = contactInput.Email,
+                        ["parentcustomerid"] = new EntityReference("account", accountId)
+                    };
+                    requests.Add(new CreateRequest { Target = secondaryContactEntity });
+                    secondaryContactIds.Add(secondaryContactId);
+                }
             }
+
+            if (model.PrimaryContact != null && model.PrimaryContactNotes != null)
+            {
+                foreach (var noteInput in model.PrimaryContactNotes)
+                {
+                    var noteId = Guid.NewGuid();
+                    var noteEntity = new Entity("annotation", noteId)
+                    {
+                        ["subject"] = noteInput.Title,
+                        ["notetext"] = noteInput.Description,
+                        ["objectid"] = new EntityReference("contact", primaryContactId)
+                    };
+                    requests.Add(new CreateRequest { Target = noteEntity });
+                    primaryContactNoteIds.Add(noteId);
+                }
+            }
+
+            if (model.AccountNotes != null)
+            {
+                foreach (var noteInput in model.AccountNotes)
+                {
+                    var noteId = Guid.NewGuid();
+                    var noteEntity = new Entity("annotation", noteId)
+                    {
+                        ["subject"] = noteInput.Title,
+                        ["notetext"] = noteInput.Description,
+                        ["objectid"] = new EntityReference("account", accountId)
+                    };
+                    requests.Add(new CreateRequest { Target = noteEntity });
+                    accountNoteIds.Add(noteId);
+                }
+            }
+
+            var transactionRequest = new ExecuteTransactionRequest
+            {
+                Requests = new OrganizationRequestCollection()
+            };
+
+            foreach (var request in requests)
+            {
+                transactionRequest.Requests.Add(request);
+            }
+
+            var transactionResponse = (ExecuteTransactionResponse)_organizationService.Execute(transactionRequest);
 
             return new CreateAccountWithContactsAndNotesDTO
             {
-                Account = account.Id,
-                PrimaryContact = primaryContact.Id,
+                Account = accountId,
+                PrimaryContact = model.PrimaryContact != null ? primaryContactId : (Guid?)null,
                 SecondaryContacts = secondaryContactIds.ToArray(),
                 PrimaryContactNotes = primaryContactNoteIds.ToArray(),
                 AccountNotes = accountNoteIds.ToArray()
@@ -107,3 +190,4 @@ namespace SiroccoDemo.Infrastructure.Services
         }
     }
 }
+
