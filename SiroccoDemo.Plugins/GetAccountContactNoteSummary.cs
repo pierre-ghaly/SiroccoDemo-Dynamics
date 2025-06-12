@@ -14,16 +14,9 @@ namespace SiroccoDemo.Plugins
 
             var service = new GetAccountContactNoteSummaryService(crmRepository);
 
-            try
-            {
-                var result = service.GetAccountContactNoteSummary();
-                
-                Context.OutputParameters["Result"] = JsonConvert.SerializeObject(result, Formatting.None);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidPluginExecutionException("An unexpected error occurred: " + ex.Message);
-            }
+            var result = ExecuteWithExceptionHandling(() => service.GetAccountContactNoteSummary());
+            
+            Context.OutputParameters["Result"] = JsonConvert.SerializeObject(result, Formatting.None);
         }
     }
 }

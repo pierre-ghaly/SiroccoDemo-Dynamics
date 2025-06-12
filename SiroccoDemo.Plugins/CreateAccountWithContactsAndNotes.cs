@@ -87,14 +87,7 @@ namespace SiroccoDemo.Plugins
                 accountModel.SecondaryContacts = new ContactInput[0];
             }
 
-            try
-            {
-                service.CreateAccountWithContactsAndNotes(accountModel);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidPluginExecutionException("An unexpected error occurred: " + ex.Message);
-            }
+            ExecuteWithExceptionHandling(() => service.CreateAccountWithContactsAndNotes(accountModel));
         }
     }
 }

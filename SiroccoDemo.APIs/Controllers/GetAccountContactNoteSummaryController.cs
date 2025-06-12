@@ -1,17 +1,16 @@
 using SiroccoDemo.Application.Services;
 using SiroccoDemo.Domain.DTOs;
 using Swashbuckle.Swagger.Annotations;
-using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
 namespace SiroccoDemo.APIs.Controllers
 {
     /// <summary>
-    /// Account contact note summary
+    /// Account contact and note summary retrieval
     /// </summary>
     [RoutePrefix("api")]
-    public class GetAccountContactNoteSummaryController : ApiController
+    public class GetAccountContactNoteSummaryController : BaseController
     {
         private readonly IGetAccountContactNoteSummaryService _service;
 
@@ -21,27 +20,19 @@ namespace SiroccoDemo.APIs.Controllers
         }
 
         /// <summary>
-        /// Gets a summary of all accounts with their primary contacts, secondary contacts, and primary contact notes
+        /// Retrieves a summary of all accounts including their contact information and associated notes.
         /// </summary>
-        /// <returns>List of account summaries with contact and notes information</returns>
-        /// <response code="200">Summary retrieved successfully</response>
+        /// <returns>List of account summaries with contact and note information</returns>
+        /// <response code="200">Account summaries retrieved successfully</response>
         /// <response code="500">Internal server error</response>
         [HttpGet]
         [Route("account-contact-note-summary")]
         [SwaggerOperation("GetAccountContactNoteSummary")]
-        [SwaggerResponse(200, "Summary retrieved successfully", typeof(List<GetAccountContactNoteSummaryDTO>))]
+        [SwaggerResponse(200, "Account summaries retrieved successfully", typeof(List<GetAccountContactNoteSummaryDTO>))]
         [SwaggerResponse(500, "Internal Server Error")]
         public IHttpActionResult GetAccountContactNoteSummary()
         {
-            try
-            {
-                var result = _service.GetAccountContactNoteSummary();
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(new Exception("An error occurred while retrieving the summary", ex));
-            }
+            return ExecuteWithExceptionHandling(() => _service.GetAccountContactNoteSummary());
         }
     }
 } 
