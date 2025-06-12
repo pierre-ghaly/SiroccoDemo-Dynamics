@@ -28,7 +28,7 @@ namespace SiroccoDemo.APIs.Controllers
         [HttpGet]
         [Route("account-contact-note-summary")]
         [SwaggerOperation("GetAccountContactNoteSummary")]
-        [SwaggerResponse(200, "Account summaries retrieved successfully", typeof(List<GetAccountContactNoteSummaryDTO>))]
+        [SwaggerResponse(200, "Account Summaries Retrieved Successfully", typeof(List<GetAccountContactNoteSummaryDTO>))]
         [SwaggerResponse(500, "Internal Server Error")]
         public IHttpActionResult GetAccountContactNoteSummary()
         {

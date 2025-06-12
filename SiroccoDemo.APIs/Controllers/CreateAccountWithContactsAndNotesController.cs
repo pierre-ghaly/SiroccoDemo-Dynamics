@@ -33,8 +33,8 @@ namespace SiroccoDemo.APIs.Controllers
         [HttpPost]
         [Route("create-account-with-contacts-and-notes")]
         [SwaggerOperation("CreateAccountWithContactsAndNotes")]
-        [SwaggerResponse(200, "Account created successfully", typeof(CreateAccountWithContactsAndNotesDTO))]
-        [SwaggerResponse(400, "Bad Request - Invalid input data")]
+        [SwaggerResponse(200, "Account Created Successfully", typeof(CreateAccountWithContactsAndNotesDTO))]
+        [SwaggerResponse(400, "Bad Request - Invalid Input Data")]
         [SwaggerResponse(500, "Internal Server Error")]
         public IHttpActionResult CreateAccountWithContactsAndNotes([FromBody] CreateAccountWithContactsAndNotesModel model)
         {
