@@ -1,8 +1,6 @@
-﻿using Microsoft.Xrm.Sdk;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using SiroccoDemo.Infrastructure.Repositories;
 using SiroccoDemo.Infrastructure.Services;
-using System;
 
 namespace SiroccoDemo.Plugins
 {
