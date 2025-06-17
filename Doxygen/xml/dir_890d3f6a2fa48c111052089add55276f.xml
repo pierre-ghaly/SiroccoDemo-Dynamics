@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_890d3f6a2fa48c111052089add55276f" kind="dir">
+    <compoundname>SiroccoDemo.Domain/obj</compoundname>
+    <innerdir refid="dir_4aa2309d56c05412f76cf137af5ac677">SiroccoDemo.Domain/obj/Debug</innerdir>
+    <innerdir refid="dir_7b754e1e5ecb68680c3072f099b35ec9">SiroccoDemo.Domain/obj/Release</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Domain/obj/"/>
+  </compounddef>
+</doxygen>

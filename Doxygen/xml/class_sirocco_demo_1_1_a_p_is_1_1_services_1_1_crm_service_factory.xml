@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_services_1_1_crm_service_factory" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Services::CrmServiceFactory</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_services_1_1_crm_service_factory_1aa4434a907e40fedca82b7d1ca0c170ad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IOrganizationService</type>
+        <definition>static IOrganizationService SiroccoDemo.APIs.Services.CrmServiceFactory.CreateOrganizationService</definition>
+        <argsstring>()</argsstring>
+        <name>CreateOrganizationService</name>
+        <qualifiedname>SiroccoDemo.APIs.Services.CrmServiceFactory.CreateOrganizationService</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Services/CrmServiceFactory.cs" line="11" column="44" bodyfile="SiroccoDemo.APIs/Services/CrmServiceFactory.cs" bodystart="11" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Services/CrmServiceFactory.cs" line="9" column="19" bodyfile="SiroccoDemo.APIs/Services/CrmServiceFactory.cs" bodystart="10" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_services_1_1_crm_service_factory_1aa4434a907e40fedca82b7d1ca0c170ad" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Services::CrmServiceFactory</scope><name>CreateOrganizationService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_d6b33f2b79c1e3fa9f33321fa8e57d8a" kind="dir">
+    <compoundname>SiroccoDemo.APIs/App_Start</compoundname>
+    <innerfile refid="_bundle_config_8cs">BundleConfig.cs</innerfile>
+    <innerfile refid="_filter_config_8cs">FilterConfig.cs</innerfile>
+    <innerfile refid="_route_config_8cs">RouteConfig.cs</innerfile>
+    <innerfile refid="_swagger_config_8cs">SwaggerConfig.cs</innerfile>
+    <innerfile refid="_unity_config_8cs">UnityConfig.cs</innerfile>
+    <innerfile refid="_web_api_config_8cs">WebApiConfig.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/App_Start/"/>
+  </compounddef>
+</doxygen>

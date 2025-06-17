@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterAnnotation</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation_1ad469f34c1c9f0705e1ead4c21ab0abc3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Attribute</type>
+        <definition>Attribute SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.AnnotationAttribute</definition>
+        <argsstring></argsstring>
+        <name>AnnotationAttribute</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.AnnotationAttribute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs" line="7" column="26" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation_1a07369f5d34cb5b384decf42e238d2913" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.Documentation</definition>
+        <argsstring></argsstring>
+        <name>Documentation</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.Documentation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs" line="9" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs" line="5" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs" bodystart="6" bodyend="10"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation_1ad469f34c1c9f0705e1ead4c21ab0abc3" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterAnnotation</scope><name>AnnotationAttribute</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation_1a07369f5d34cb5b384decf42e238d2913" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterAnnotation</scope><name>Documentation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

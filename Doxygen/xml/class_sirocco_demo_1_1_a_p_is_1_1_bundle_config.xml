@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::BundleConfig</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config_1a64c170fdeba641e21c7bf58b8ab06821" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SiroccoDemo.APIs.BundleConfig.RegisterBundles</definition>
+        <argsstring>(BundleCollection bundles)</argsstring>
+        <name>RegisterBundles</name>
+        <qualifiedname>SiroccoDemo.APIs.BundleConfig.RegisterBundles</qualifiedname>
+        <param>
+          <type>BundleCollection</type>
+          <declname>bundles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/App_Start/BundleConfig.cs" line="7" column="28" bodyfile="SiroccoDemo.APIs/App_Start/BundleConfig.cs" bodystart="7" bodyend="21"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application_1a996305632c746b7d0dc845873be2c508" compoundref="_global_8asax_8cs" startline="10" endline="19">SiroccoDemo.APIs.WebApiApplication.Application_Start</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/App_Start/BundleConfig.cs" line="5" column="11" bodyfile="SiroccoDemo.APIs/App_Start/BundleConfig.cs" bodystart="6" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config_1a64c170fdeba641e21c7bf58b8ab06821" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::BundleConfig</scope><name>RegisterBundles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

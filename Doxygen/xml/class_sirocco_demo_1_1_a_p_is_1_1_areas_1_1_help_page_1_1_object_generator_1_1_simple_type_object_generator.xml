@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator" kind="class" language="C#" prot="private">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a2317b70b7b9594439a7bd12bf2d7b9ea" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator._index</definition>
+        <argsstring></argsstring>
+        <name>_index</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator._index</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="398" column="26" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="398" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1adefb071e45827885dbfa9bd7d364024e" prot="private" static="yes" mutable="no">
+        <type>readonly Dictionary&lt; Type, Func&lt; long, object &gt; &gt;</type>
+        <definition>readonly Dictionary&lt;Type, Func&lt;long, object&gt; &gt; SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.DefaultGenerators</definition>
+        <argsstring></argsstring>
+        <name>DefaultGenerators</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.DefaultGenerators</qualifiedname>
+        <initializer>= InitializeGenerators()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="399" column="48" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="399" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a30f132995d90de2cbfd3d1f7366e4149" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; Type, Func&lt; long, object &gt; &gt;</type>
+        <definition>static Dictionary&lt; Type, Func&lt; long, object &gt; &gt; SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.InitializeGenerators</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeGenerators</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.InitializeGenerators</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="402" column="39" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="402" bodyend="443"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a463c15278efbfecfa220018c202f4023" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.CanGenerateObject</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>CanGenerateObject</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.CanGenerateObject</qualifiedname>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="445" column="32" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="445" bodyend="448"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a0b2c92338e0af5f3c02959eae3516975" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.GenerateObject</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>GenerateObject</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.GenerateObject</qualifiedname>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="450" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="450" bodyend="453"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="396" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="397" bodyend="454"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a2317b70b7b9594439a7bd12bf2d7b9ea" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</scope><name>_index</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a463c15278efbfecfa220018c202f4023" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</scope><name>CanGenerateObject</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1adefb071e45827885dbfa9bd7d364024e" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</scope><name>DefaultGenerators</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a0b2c92338e0af5f3c02959eae3516975" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</scope><name>GenerateObject</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a30f132995d90de2cbfd3d1f7366e4149" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</scope><name>InitializeGenerators</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

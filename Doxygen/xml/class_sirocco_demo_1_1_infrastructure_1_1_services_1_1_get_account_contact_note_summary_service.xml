@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Infrastructure::Services::GetAccountContactNoteSummaryService</compoundname>
+    <basecompoundref refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service" prot="public" virt="non-virtual">SiroccoDemo.Application.Services.IGetAccountContactNoteSummaryService</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1a6ccf815456d170fd9a69ab794d20c5d2" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" kindref="compound">ICrmRepository</ref></type>
+        <definition>readonly ICrmRepository SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService._crmRepository</definition>
+        <argsstring></argsstring>
+        <name>_crmRepository</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService._crmRepository</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" line="11" column="41" bodyfile="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1afa0e7de32711b46a9378c3e080dff05a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService.GetAccountContactNoteSummaryService</definition>
+        <argsstring>(ICrmRepository crmRepository)</argsstring>
+        <name>GetAccountContactNoteSummaryService</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService.GetAccountContactNoteSummaryService</qualifiedname>
+        <param>
+          <type><ref refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" kindref="compound">ICrmRepository</ref></type>
+          <declname>crmRepository</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" line="13" column="16" bodyfile="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1ace76721933f6c629abfd0454ecaef1fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_get_account_contact_note_summary_d_t_o" kindref="compound">GetAccountContactNoteSummaryDTO</ref> &gt;</type>
+        <definition>List&lt; GetAccountContactNoteSummaryDTO &gt; SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService.GetAccountContactNoteSummary</definition>
+        <argsstring>()</argsstring>
+        <name>GetAccountContactNoteSummary</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService.GetAccountContactNoteSummary</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service_1aae8eaa7e168472a0b64e50b01e1f9142">GetAccountContactNoteSummary</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" line="18" column="21" bodyfile="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" bodystart="18" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Services.IGetAccountContactNoteSummaryService</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Services.IGetAccountContactNoteSummaryService</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service"/>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" line="9" column="11" bodyfile="SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs" bodystart="10" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1a6ccf815456d170fd9a69ab794d20c5d2" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::GetAccountContactNoteSummaryService</scope><name>_crmRepository</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1ace76721933f6c629abfd0454ecaef1fe" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::GetAccountContactNoteSummaryService</scope><name>GetAccountContactNoteSummary</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1afa0e7de32711b46a9378c3e080dff05a" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::GetAccountContactNoteSummaryService</scope><name>GetAccountContactNoteSummaryService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

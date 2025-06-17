@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_i_note_validator_8cs" kind="file" language="C#">
+    <compoundname>INoteValidator.cs</compoundname>
+    <innerclass refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" prot="public">SiroccoDemo::Application::Validations::INoteValidator</innerclass>
+    <innernamespace refid="namespace_sirocco_demo">SiroccoDemo</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_application">SiroccoDemo::Application</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_application_1_1_validations">SiroccoDemo::Application::Validations</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_application_1_1_models" kindref="compound">SiroccoDemo.Application.Models</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_application_1_1_validations" kindref="compound">SiroccoDemo.Application.Validations</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" kindref="compound">INoteValidator</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator_1aede7c00176dba84f8ab0d9b0e69cda81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator_1aede7c00176dba84f8ab0d9b0e69cda81" kindref="member">Validate</ref>(<ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input" kindref="compound">NoteInput</ref><sp/>note);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="SiroccoDemo.Application/Validations/INoteValidator.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_microsoft_8_bcl_8_async_interfaces_88_80_80_2_p_a_c_k_a_g_e_8md" kind="file" language="Markdown">
+    <compoundname>PACKAGE.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>About</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">As<sp/>of<sp/>C#<sp/>8,<sp/>the<sp/>C#<sp/>language<sp/>has<sp/>support<sp/>for<sp/>producing<sp/>and<sp/>consuming<sp/>asynchronous<sp/>iterators.<sp/>The<sp/>library<sp/>types<sp/>in<sp/>support<sp/>of<sp/>those<sp/>features<sp/>are<sp/>available<sp/>in<sp/>.NET<sp/>Core<sp/>3.0<sp/>and<sp/>newer<sp/>as<sp/>well<sp/>as<sp/>in<sp/>.NET<sp/>Standard<sp/>2.1.<sp/>This<sp/>library<sp/>provides<sp/>the<sp/>necessary<sp/>definitions<sp/>of<sp/>those<sp/>types<sp/>to<sp/>support<sp/>these<sp/>language<sp/>features<sp/>on<sp/>.NET<sp/>Framework<sp/>and<sp/>on<sp/>.NET<sp/>Standard<sp/>2.0.<sp/>This<sp/>library<sp/>is<sp/>not<sp/>necessary<sp/>nor<sp/>recommended<sp/>when<sp/>targeting<sp/>versions<sp/>of<sp/>.NET<sp/>that<sp/>include<sp/>the<sp/>relevant<sp/>support.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Key<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>The<sp/>key<sp/>features<sp/>of<sp/>this<sp/>package<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Enables<sp/>the<sp/>use<sp/>of<sp/>C#<sp/>async<sp/>iterators<sp/>on<sp/>older<sp/>.NET<sp/>platforms</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>to<sp/>Use</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>A<sp/>compelling<sp/>example<sp/>on<sp/>how<sp/>to<sp/>use<sp/>this<sp/>package<sp/>with<sp/>code,<sp/>as<sp/>well<sp/>as<sp/>any<sp/>specific<sp/>guidelines<sp/>for<sp/>when<sp/>to<sp/>use<sp/>the<sp/>package<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```C#</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Collections.Generic;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Threading.Tasks;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">internal<sp/>static<sp/>class<sp/>Program</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>private<sp/>static<sp/>async<sp/>Task<sp/>Main()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.WriteLine(&quot;Starting...&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>await<sp/>foreach<sp/>(var<sp/>value<sp/>in<sp/>GetValuesAsync())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.WriteLine(value);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.WriteLine(&quot;Finished!&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>async<sp/>IAsyncEnumerable&lt;int&gt;<sp/>GetValuesAsync()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>await<sp/>Task.Delay(TimeSpan.FromSeconds(1));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yield<sp/>return<sp/>i;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Main<sp/>Types</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>The<sp/>main<sp/>types<sp/>provided<sp/>in<sp/>this<sp/>library<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>types<sp/>provided<sp/>by<sp/>this<sp/>library<sp/>are:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`IAsyncEnumerable&lt;T&gt;`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`IAsyncEnumerator&lt;T&gt;`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`IAsyncDisposable&lt;T&gt;`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Additional<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>Links<sp/>to<sp/>further<sp/>documentation.<sp/>Remove<sp/>conceptual<sp/>documentation<sp/>if<sp/>not<sp/>available<sp/>for<sp/>the<sp/>library.<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[C#<sp/>Feature<sp/>Specification](https://learn.microsoft.com/dotnet/csharp/language-reference/proposals/csharp-8.0/async-streams)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Walkthrough<sp/>article](https://learn.microsoft.com/archive/msdn-magazine/2019/november/csharp-iterating-with-async-enumerables-in-csharp-8)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Feedback<sp/>&amp;<sp/>Contributing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>How<sp/>to<sp/>provide<sp/>feedback<sp/>on<sp/>this<sp/>package<sp/>and<sp/>contribute<sp/>to<sp/>it<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Microsoft.Bcl.AsyncInterfaces<sp/>is<sp/>released<sp/>as<sp/>open<sp/>source<sp/>under<sp/>the<sp/>[MIT<sp/>license](https://licenses.nuget.org/MIT).<sp/>Bug<sp/>reports<sp/>and<sp/>contributions<sp/>are<sp/>welcome<sp/>at<sp/>[the<sp/>GitHub<sp/>repository](https://github.com/dotnet/runtime).</highlight></codeline>
+    </programlisting>
+    <location file="packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/PACKAGE.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,45 @@
+\doxysection{Unity\+Config.\+cs}
+\hypertarget{_unity_config_8cs_source}{}\label{_unity_config_8cs_source}\index{SiroccoDemo.APIs/App\_Start/UnityConfig.cs@{SiroccoDemo.APIs/App\_Start/UnityConfig.cs}}
+\mbox{\hyperlink{_unity_config_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.Xrm.Sdk;}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_services}{SiroccoDemo.APIs.Services}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_repositories}{SiroccoDemo.Application.Repositories}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_services}{SiroccoDemo.Application.Services}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_validations}{SiroccoDemo.Application.Validations}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_repositories}{SiroccoDemo.Infrastructure.Repositories}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_services}{SiroccoDemo.Infrastructure.Services}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_validations}{SiroccoDemo.Infrastructure.Validations}};}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Web.Http;}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }Unity;}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }Unity.WebApi;}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00013}00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is}{SiroccoDemo.APIs}}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }UnityConfig}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ RegisterComponents()}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ container\ =\ \textcolor{keyword}{new}\ UnityContainer();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register\ CRM\ Organization\ Service}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterFactory<IOrganizationService>(c\ =>\ CrmServiceFactory.CreateOrganizationService());}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register\ repositories}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterType<ICrmRepository,\ CrmRepository>();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register\ validators}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterType<IAccountValidator,\ AccountValidator>();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterType<IContactValidator,\ ContactValidator>();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterType<INoteValidator,\ NoteValidator>();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register\ services}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterType<ICreateAccountWithContactsAndNotesService,\ CreateAccountWithContactsAndNotesService>();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ container.RegisterType<IGetAccountContactNoteSummaryService,\ GetAccountContactNoteSummaryService>();}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ GlobalConfiguration.Configuration.DependencyResolver\ =\ \textcolor{keyword}{new}\ UnityDependencyResolver(container);}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unity_config_8cs_source_l00039}00039\ \}\ }
+
+\end{DoxyCode}

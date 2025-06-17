@@ -1,0 +1,5 @@
+var namespace_sirocco_demo_1_1_infrastructure_1_1_services =
+[
+    [ "CreateAccountWithContactsAndNotesService", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service.html", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service" ],
+    [ "GetAccountContactNoteSummaryService", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service.html", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service" ]
+];

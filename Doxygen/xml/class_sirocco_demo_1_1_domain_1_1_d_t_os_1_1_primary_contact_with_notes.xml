@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Domain::DTOs::PrimaryContactWithNotes</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1abc873329405a26129e010657d0e811aa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.FirstName</definition>
+        <argsstring></argsstring>
+        <name>FirstName</name>
+        <qualifiedname>SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.FirstName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" line="14" column="23" bodyfile="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a01ece4053420ca825b1d43d5045a4419" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.LastName</definition>
+        <argsstring></argsstring>
+        <name>LastName</name>
+        <qualifiedname>SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.LastName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" line="15" column="23" bodyfile="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a74590d9446b7ef8840a8fab1fb15f3c4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <qualifiedname>SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.Email</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" line="16" column="23" bodyfile="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a8f57f1eef193268db4c3dc5c881227e1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.Notes</definition>
+        <argsstring></argsstring>
+        <name>Notes</name>
+        <qualifiedname>SiroccoDemo.Domain.DTOs.PrimaryContactWithNotes.Notes</qualifiedname>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" line="17" column="21" bodyfile="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" line="12" column="11" bodyfile="SiroccoDemo.Domain/DTOs/GetAccountContactNoteSummaryDTO.cs" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a74590d9446b7ef8840a8fab1fb15f3c4" prot="public" virt="non-virtual"><scope>SiroccoDemo::Domain::DTOs::PrimaryContactWithNotes</scope><name>Email</name></member>
+      <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1abc873329405a26129e010657d0e811aa" prot="public" virt="non-virtual"><scope>SiroccoDemo::Domain::DTOs::PrimaryContactWithNotes</scope><name>FirstName</name></member>
+      <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a01ece4053420ca825b1d43d5045a4419" prot="public" virt="non-virtual"><scope>SiroccoDemo::Domain::DTOs::PrimaryContactWithNotes</scope><name>LastName</name></member>
+      <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a8f57f1eef193268db4c3dc5c881227e1" prot="public" virt="non-virtual"><scope>SiroccoDemo::Domain::DTOs::PrimaryContactWithNotes</scope><name>Notes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

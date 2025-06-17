@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_sirocco_demo" kind="namespace" language="C#">
+    <compoundname>SiroccoDemo</compoundname>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is">SiroccoDemo::APIs</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_application">SiroccoDemo::Application</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_domain">SiroccoDemo::Domain</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_infrastructure">SiroccoDemo::Infrastructure</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_moq">SiroccoDemo::Moq</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_plugins">SiroccoDemo::Plugins</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/App_Start/BundleConfig.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

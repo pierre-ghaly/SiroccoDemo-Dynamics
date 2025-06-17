@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_bd62f78e7cdafc71655b6a2ac143d342" kind="dir">
+    <compoundname>SiroccoDemo.APIs/Controllers</compoundname>
+    <innerfile refid="_base_controller_8cs">BaseController.cs</innerfile>
+    <innerfile refid="_create_account_with_contacts_and_notes_controller_8cs">CreateAccountWithContactsAndNotesController.cs</innerfile>
+    <innerfile refid="_get_account_contact_note_summary_controller_8cs">GetAccountContactNoteSummaryController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Controllers/"/>
+  </compounddef>
+</doxygen>

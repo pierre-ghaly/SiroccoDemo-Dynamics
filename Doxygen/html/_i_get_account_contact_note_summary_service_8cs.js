@@ -1,0 +1,4 @@
+var _i_get_account_contact_note_summary_service_8cs =
+[
+    [ "SiroccoDemo.Application.Services.IGetAccountContactNoteSummaryService", "interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service.html", "interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service" ]
+];

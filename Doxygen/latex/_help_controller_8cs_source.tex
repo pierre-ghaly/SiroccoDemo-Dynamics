@@ -1,0 +1,66 @@
+\doxysection{Help\+Controller.\+cs}
+\hypertarget{_help_controller_8cs_source}{}\label{_help_controller_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs@{SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs}}
+\mbox{\hyperlink{_help_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Web.Http;}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Web.Mvc;}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions}{SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions}};}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models}{SiroccoDemo.APIs.Areas.HelpPage.Models}};}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00007}\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers}{SiroccoDemo.APIs.Areas.HelpPage.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00012}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a561a899565e2b0d689563df88bf7b087}{HelpController}}\ :\ Controller}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ErrorViewName\ =\ \textcolor{stringliteral}{"{}Error"{}};}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00016}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a561a899565e2b0d689563df88bf7b087}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a561a899565e2b0d689563df88bf7b087}{HelpController}}()}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ :\ this(GlobalConfiguration.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}})}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00021}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a889b4b7ed856daed68d2d0dada7e2343}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a889b4b7ed856daed68d2d0dada7e2343}{HelpController}}(HttpConfiguration\ config)}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}}\ =\ config;}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00026}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ HttpConfiguration\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00028}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_abc8dc179f60d26eb61d6f89429a91902}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ActionResult\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_abc8dc179f60d26eb61d6f89429a91902}{Index}}()}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ ViewBag.DocumentationProvider\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}}.Services.GetDocumentationProvider();}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}}.Services.GetApiExplorer().ApiDescriptions);}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00034}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a694e650b9477a74a189bc2e7b24b5cd6}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ActionResult\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a694e650b9477a74a189bc2e7b24b5cd6}{Api}}(\textcolor{keywordtype}{string}\ apiId)}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!String.IsNullOrEmpty(apiId))}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model}{HelpPageApiModel}}\ apiModel\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}}.GetHelpPageApiModel(apiId);}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (apiModel\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(apiModel);}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(ErrorViewName);}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00048}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_ad16fe1f50a3dbcf5585df34de1981a9e}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ActionResult\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_ad16fe1f50a3dbcf5585df34de1981a9e}{ResourceModel}}(\textcolor{keywordtype}{string}\ modelName)}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!String.IsNullOrEmpty(modelName))}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator}{ModelDescriptionGenerator}}\ modelDescriptionGenerator\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_a223e810cfe5c428ac0a92ec50a96f316}{Configuration}}.GetModelDescriptionGenerator();}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description}{ModelDescription}}\ modelDescription;}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelDescriptionGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}.TryGetValue(modelName,\ out\ modelDescription))}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(modelDescription);}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(ErrorViewName);}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_controller_8cs_source_l00063}00063\ \}}
+
+\end{DoxyCode}

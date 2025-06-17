@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_sirocco_demo_1_1_domain_1_1_entities" kind="namespace" language="C#">
+    <compoundname>SiroccoDemo::Domain::Entities</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" prot="public">SiroccoDemo::Domain::Entities::Account</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact" prot="public">SiroccoDemo::Domain::Entities::Contact</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note" prot="public">SiroccoDemo::Domain::Entities::Note</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Domain/Entities/Account.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

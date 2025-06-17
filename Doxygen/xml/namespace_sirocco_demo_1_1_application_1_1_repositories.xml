@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_sirocco_demo_1_1_application_1_1_repositories" kind="namespace" language="C#">
+    <compoundname>SiroccoDemo::Application::Repositories</compoundname>
+    <innerclass refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" prot="public">SiroccoDemo::Application::Repositories::ICrmRepository</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Application/Repositories/ICrmRepositories.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

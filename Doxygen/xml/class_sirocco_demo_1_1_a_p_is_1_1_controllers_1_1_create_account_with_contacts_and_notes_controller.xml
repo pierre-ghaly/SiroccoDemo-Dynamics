@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Controllers::CreateAccountWithContactsAndNotesController</compoundname>
+    <basecompoundref refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller" prot="public" virt="non-virtual">SiroccoDemo.APIs.Controllers.BaseController</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1ad53e2c0bb89a5bf226c2c2e460cfe039" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service" kindref="compound">ICreateAccountWithContactsAndNotesService</ref></type>
+        <definition>readonly ICreateAccountWithContactsAndNotesService SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <qualifiedname>SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController._service</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" line="15" column="68" bodyfile="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1a917d8345e28c341ef6c5128b174031e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController.CreateAccountWithContactsAndNotesController</definition>
+        <argsstring>(ICreateAccountWithContactsAndNotesService service)</argsstring>
+        <name>CreateAccountWithContactsAndNotesController</name>
+        <qualifiedname>SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController.CreateAccountWithContactsAndNotesController</qualifiedname>
+        <param>
+          <type><ref refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service" kindref="compound">ICreateAccountWithContactsAndNotesService</ref></type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" line="17" column="16" bodyfile="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1a5950483798d2514ad211760e4dc33029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IHttpActionResult</type>
+        <definition>IHttpActionResult SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController.CreateAccountWithContactsAndNotes</definition>
+        <argsstring>([FromBody] CreateAccountWithContactsAndNotesModel model)</argsstring>
+        <name>CreateAccountWithContactsAndNotes</name>
+        <qualifiedname>SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController.CreateAccountWithContactsAndNotes</qualifiedname>
+        <param>
+          <attributes>[FromBody]</attributes>
+          <type><ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model" kindref="compound">CreateAccountWithContactsAndNotesModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Creates an account with optional primary contact, secondary contacts, account notes, and primary contact notes. Only the Account field is required. All other fields are optional. Note: Primary contact notes cannot be provided without a primary contact. All operations are executed in a single transaction - if any step fails, everything is rolled back. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The account creation model. Only Account field is required, all others are optional.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Created account details with generated IDs</para>
+</simplesect>
+&lt;response code=&quot;200&quot;&gt;Account created successfully&lt;/response&gt; &lt;response code=&quot;400&quot;&gt;Invalid input data or business rule violation. Returns structured error with ErrorCode, Message, and specific details.&lt;/response&gt; &lt;response code=&quot;500&quot;&gt;Internal server error&lt;/response&gt; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" line="39" column="34" bodyfile="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" bodystart="39" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Account with contacts and notes creation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ApiController</label>
+      </node>
+      <node id="1">
+        <label>SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.APIs.Controllers.BaseController</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ApiController</label>
+      </node>
+      <node id="1">
+        <label>SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.APIs.Controllers.BaseController</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" line="13" column="11" bodyfile="SiroccoDemo.APIs/Controllers/CreateAccountWithContactsAndNotesController.cs" bodystart="14" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1ad53e2c0bb89a5bf226c2c2e460cfe039" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Controllers::CreateAccountWithContactsAndNotesController</scope><name>_service</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1a5950483798d2514ad211760e4dc33029" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Controllers::CreateAccountWithContactsAndNotesController</scope><name>CreateAccountWithContactsAndNotes</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1a917d8345e28c341ef6c5128b174031e6" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Controllers::CreateAccountWithContactsAndNotesController</scope><name>CreateAccountWithContactsAndNotesController</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller_1a94b341772ec15e640a5bf99b5bd70bab" prot="protected" virt="non-virtual"><scope>SiroccoDemo::APIs::Controllers::CreateAccountWithContactsAndNotesController</scope><name>ExecuteWithExceptionHandling&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

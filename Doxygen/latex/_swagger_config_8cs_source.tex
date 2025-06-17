@@ -1,0 +1,261 @@
+\doxysection{Swagger\+Config.\+cs}
+\hypertarget{_swagger_config_8cs_source}{}\label{_swagger_config_8cs_source}\index{SiroccoDemo.APIs/App\_Start/SwaggerConfig.cs@{SiroccoDemo.APIs/App\_Start/SwaggerConfig.cs}}
+\mbox{\hyperlink{_swagger_config_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Web.Http;}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }WebActivatorEx;}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is}{SiroccoDemo.APIs}};}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Swashbuckle.Application;}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00006}00006\ [assembly:\ PreApplicationStartMethod(typeof(\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_swagger_config}{SwaggerConfig}}),\ \textcolor{stringliteral}{"{}Register"{}})]}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is}{SiroccoDemo.APIs}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00010}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_swagger_config}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_swagger_config}{SwaggerConfig}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00012}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_swagger_config_ae6334ee48436a8257d2484ac5024bd59}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_swagger_config_ae6334ee48436a8257d2484ac5024bd59}{Register}}()}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ thisAssembly\ =\ typeof(\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_swagger_config}{SwaggerConfig}}).Assembly;}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ GlobalConfiguration.Configuration}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .EnableSwagger(c\ =>}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ By\ default,\ the\ service\ root\ url\ is\ inferred\ from\ the\ request\ used\ to\ access\ the\ docs.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ However,\ there\ may\ be\ situations\ (e.g.\ proxy\ and\ load-\/balanced\ environments)\ where\ this\ does\ not}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ resolve\ correctly.\ You\ can\ workaround\ this\ by\ providing\ your\ own\ code\ to\ determine\ the\ root\ URL.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.RootUrl(req\ =>\ GetRootUrlFromAppConfig());}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ schemes\ are\ not\ explicitly\ provided\ in\ a\ Swagger\ 2.0\ document,\ then\ the\ scheme\ used\ to\ access}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ docs\ is\ taken\ as\ the\ default.\ If\ your\ API\ supports\ multiple\ schemes\ and\ you\ want\ to\ be\ explicit}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ about\ them,\ you\ can\ use\ the\ "{}Schemes"{}\ option\ as\ shown\ below.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.Schemes(new[]\ \{\ "{}http"{},\ "{}https"{}\ \});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ "{}SingleApiVersion"{}\ to\ describe\ a\ single\ version\ API.\ Swagger\ 2.0\ includes\ an\ "{}Info"{}\ object\ to}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ hold\ additional\ metadata\ for\ an\ API.\ Version\ and\ title\ are\ required\ but\ you\ can\ also\ provide}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ additional\ fields\ by\ chaining\ methods\ off\ SingleApiVersion.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.SingleApiVersion(\textcolor{stringliteral}{"{}v1"{}},\ \textcolor{stringliteral}{"{}SiroccoDemo.APIs"{}});}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ you\ want\ the\ output\ Swagger\ docs\ to\ be\ indented\ properly,\ enable\ the\ "{}PrettyPrint"{}\ option.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.PrettyPrint();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ your\ API\ has\ multiple\ versions,\ use\ "{}MultipleApiVersions"{}\ instead\ of\ "{}SingleApiVersion"{}.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ this\ case,\ you\ must\ provide\ a\ lambda\ that\ tells\ Swashbuckle\ which\ actions\ should\ be}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ included\ in\ the\ docs\ for\ a\ given\ API\ version.\ Like\ "{}SingleApiVersion"{},\ each\ call\ to\ "{}Version"{}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ an\ "{}Info"{}\ builder\ so\ you\ can\ provide\ additional\ metadata\ per\ API\ version.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.MultipleApiVersions(}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ (apiDesc,\ targetApiVersion)\ =>\ ResolveVersionSupportByRouteConstraint(apiDesc,\ targetApiVersion),}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ (vc)\ =>}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ vc.Version("{}v2"{},\ "{}Swashbuckle\ Dummy\ API\ V2"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ vc.Version("{}v1"{},\ "{}Swashbuckle\ Dummy\ API\ V1"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ You\ can\ use\ "{}BasicAuth"{},\ "{}ApiKey"{}\ or\ "{}OAuth2"{}\ options\ to\ describe\ security\ schemes\ for\ the\ API.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ See\ https://github.com/swagger-\/api/swagger-\/spec/blob/master/versions/2.0.md\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:\ These\ only\ define\ the\ schemes\ and\ need\ to\ be\ coupled\ with\ a\ corresponding\ "{}security"{}\ property}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ at\ the\ document\ or\ operation\ level\ to\ indicate\ which\ schemes\ are\ required\ for\ an\ operation.\ To\ do\ this,}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ you'll\ need\ to\ implement\ a\ custom\ IDocumentFilter\ and/or\ IOperationFilter\ to\ set\ these\ properties}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ according\ to\ your\ specific\ authorization\ implementation}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.BasicAuth("{}basic"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .Description("{}Basic\ HTTP\ Authentication"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:\ You\ must\ also\ configure\ 'EnableApiKeySupport'\ below\ in\ the\ SwaggerUI\ section}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.ApiKey("{}apiKey"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .Description("{}API\ Key\ Authentication"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .Name("{}apiKey"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .In("{}header"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.OAuth2("{}oauth2"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .Description("{}OAuth2\ Implicit\ Grant"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .Flow("{}implicit"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .AuthorizationUrl("{}http://petstore.swagger.wordnik.com/api/oauth/dialog"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ //.TokenUrl("{}https://tempuri.org/token"{})}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ .Scopes(scopes\ =>}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ scopes.Add("{}read"{},\ "{}Read\ access\ to\ protected\ resources"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ scopes.Add("{}write"{},\ "{}Write\ access\ to\ protected\ resources"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ this\ flag\ to\ omit\ descriptions\ for\ any\ actions\ decorated\ with\ the\ Obsolete\ attribute}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.IgnoreObsoleteActions();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Each\ operation\ be\ assigned\ one\ or\ more\ tags\ which\ are\ then\ used\ by\ consumers\ for\ various\ reasons.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ example,\ the\ swagger-\/ui\ groups\ operations\ according\ to\ the\ first\ tag\ of\ each\ operation.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ By\ default,\ this\ will\ be\ controller\ name\ but\ you\ can\ use\ the\ "{}GroupActionsBy"{}\ option\ to}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ override\ with\ any\ value.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.GroupActionsBy(apiDesc\ =>\ apiDesc.HttpMethod.ToString());}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ You\ can\ also\ specify\ a\ custom\ sort\ order\ for\ groups\ (as\ defined\ by\ "{}GroupActionsBy"{})\ to\ dictate}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ order\ in\ which\ operations\ are\ listed.\ For\ example,\ if\ the\ default\ grouping\ is\ in\ place}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (controller\ name)\ and\ you\ specify\ a\ descending\ alphabetic\ sort\ order,\ then\ actions\ from\ a}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ProductsController\ will\ be\ listed\ before\ those\ from\ a\ CustomersController.\ This\ is\ typically}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ used\ to\ customize\ the\ order\ of\ groupings\ in\ the\ swagger-\/ui.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.OrderActionGroupsBy(new\ DescendingAlphabeticComparer());}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ you\ annotate\ Controllers\ and\ API\ Types\ with}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Xml\ comments\ (http://msdn.microsoft.com/en-\/us/library/b2s063f7(v=vs.110).aspx),\ you\ can\ incorporate}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ those\ comments\ into\ the\ generated\ docs\ and\ UI.\ You\ can\ enable\ this\ by\ providing\ the\ path\ to\ one\ or}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ more\ Xml\ comment\ files.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.IncludeXmlComments(GetXmlCommentsPath());}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Swashbuckle\ makes\ a\ best\ attempt\ at\ generating\ Swagger\ compliant\ JSON\ schemas\ for\ the\ various\ types}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ exposed\ in\ your\ API.\ However,\ there\ may\ be\ occasions\ when\ more\ control\ of\ the\ output\ is\ needed.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ supported\ through\ the\ "{}MapType"{}\ and\ "{}SchemaFilter"{}\ options:}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ "{}MapType"{}\ option\ to\ override\ the\ Schema\ generation\ for\ a\ specific\ type.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ It\ should\ be\ noted\ that\ the\ resulting\ Schema\ will\ be\ placed\ "{}inline"{}\ for\ any\ applicable\ Operations.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ While\ Swagger\ 2.0\ supports\ inline\ definitions\ for\ "{}all"{}\ Schema\ types,\ the\ swagger-\/ui\ tool\ does\ not.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ It\ expects\ "{}complex"{}\ Schemas\ to\ be\ defined\ separately\ and\ referenced.\ For\ this\ reason,\ you\ should\ only}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ the\ "{}MapType"{}\ option\ when\ the\ resulting\ Schema\ is\ a\ primitive\ or\ array\ type.\ If\ you\ need\ to\ alter\ a}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ complex\ Schema,\ use\ a\ Schema\ filter.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.MapType<ProductType>(()\ =>\ new\ Schema\ \{\ type\ =\ "{}integer"{},\ format\ =\ "{}int32"{}\ \});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ you\ want\ to\ post-\/modify\ "{}complex"{}\ Schemas\ once\ they've\ been\ generated,\ across\ the\ board\ or\ for\ a}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ specific\ type,\ you\ can\ wire\ up\ one\ or\ more\ Schema\ filters.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.SchemaFilter<ApplySchemaVendorExtensions>();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ a\ Swagger\ 2.0\ document,\ complex\ types\ are\ typically\ declared\ globally\ and\ referenced\ by\ unique}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Schema\ Id.\ By\ default,\ Swashbuckle\ does\ NOT\ use\ the\ full\ type\ name\ in\ Schema\ Ids.\ In\ most\ cases,\ this}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ works\ well\ because\ it\ prevents\ the\ "{}implementation\ detail"{}\ of\ type\ namespaces\ from\ leaking\ into\ your}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Swagger\ docs\ and\ UI.\ However,\ if\ you\ have\ multiple\ types\ in\ your\ API\ with\ the\ same\ class\ name,\ you'll}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ need\ to\ opt\ out\ of\ this\ behavior\ to\ avoid\ Schema\ Id\ conflicts.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.UseFullTypeNameInSchemaIds();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Alternatively,\ you\ can\ provide\ your\ own\ custom\ strategy\ for\ inferring\ SchemaId's\ for}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ describing\ "{}complex"{}\ types\ in\ your\ API.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.SchemaId(t\ =>\ t.FullName.Contains('`')\ ?\ t.FullName.Substring(0,\ t.FullName.IndexOf('`'))\ :\ t.FullName);}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ this\ flag\ to\ omit\ schema\ property\ descriptions\ for\ any\ type\ properties\ decorated\ with\ the}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obsolete\ attribute}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.IgnoreObsoleteProperties();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ accordance\ with\ the\ built\ in\ JsonSerializer,\ Swashbuckle\ will,\ by\ default,\ describe\ enums\ as\ integers.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ You\ can\ change\ the\ serializer\ behavior\ by\ configuring\ the\ StringToEnumConverter\ globally\ or\ for\ a\ given}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ enum\ type.\ Swashbuckle\ will\ honor\ this\ change\ out-\/of-\/the-\/box.\ However,\ if\ you\ use\ a\ different}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ approach\ to\ serialize\ enums\ as\ strings,\ you\ can\ also\ force\ Swashbuckle\ to\ describe\ them\ as\ strings.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.DescribeAllEnumsAsStrings();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Similar\ to\ Schema\ filters,\ Swashbuckle\ also\ supports\ Operation\ and\ Document\ filters:}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Post-\/modify\ Operation\ descriptions\ once\ they've\ been\ generated\ by\ wiring\ up\ one\ or\ more}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation\ filters.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.OperationFilter<AddDefaultResponse>();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ you've\ defined\ an\ OAuth2\ flow\ as\ described\ above,\ you\ could\ use\ a\ custom\ filter}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ inspect\ some\ attribute\ on\ each\ action\ and\ infer\ which\ (if\ any)\ OAuth2\ scopes\ are\ required}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ execute\ the\ operation}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.OperationFilter<AssignOAuth2SecurityRequirements>();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Post-\/modify\ the\ entire\ Swagger\ document\ by\ wiring\ up\ one\ or\ more\ Document\ filters.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ gives\ full\ control\ to\ modify\ the\ final\ SwaggerDocument.\ You\ should\ have\ a\ good\ understanding\ of}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ Swagger\ 2.0\ spec.\ -\/\ https://github.com/swagger-\/api/swagger-\/spec/blob/master/versions/2.0.md}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ before\ using\ this\ option.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.DocumentFilter<ApplyDocumentVendorExtensions>();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ contrast\ to\ WebApi,\ Swagger\ 2.0\ does\ not\ include\ the\ query\ string\ component\ when\ mapping\ a\ URL}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ an\ action.\ As\ a\ result,\ Swashbuckle\ will\ raise\ an\ exception\ if\ it\ encounters\ multiple\ actions}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ with\ the\ same\ path\ (sans\ query\ string)\ and\ HTTP\ method.\ You\ can\ workaround\ this\ by\ providing\ a}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ custom\ strategy\ to\ pick\ a\ winner\ or\ merge\ the\ descriptions\ for\ the\ purposes\ of\ the\ Swagger\ docs}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.ResolveConflictingActions(apiDescriptions\ =>\ apiDescriptions.First());}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wrap\ the\ default\ SwaggerGenerator\ with\ additional\ behavior\ (e.g.\ caching)\ or\ provide\ an}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ alternative\ implementation\ for\ ISwaggerProvider\ with\ the\ CustomProvider\ option.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.CustomProvider((defaultProvider)\ =>\ new\ CachingSwaggerProvider(defaultProvider));}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .EnableSwaggerUi(c\ =>}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ "{}DocumentTitle"{}\ option\ to\ change\ the\ Document\ title.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Very\ helpful\ when\ you\ have\ multiple\ Swagger\ pages\ open,\ to\ tell\ them\ apart.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.DocumentTitle("{}My\ Swagger\ UI"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ "{}InjectStylesheet"{}\ option\ to\ enrich\ the\ UI\ with\ one\ or\ more\ additional\ CSS\ stylesheets.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ file\ must\ be\ included\ in\ your\ project\ as\ an\ "{}Embedded\ Resource"{},\ and\ then\ the\ resource's}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ "{}Logical\ Name"{}\ is\ passed\ to\ the\ method\ as\ shown\ below.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.InjectStylesheet(containingAssembly,\ "{}Swashbuckle.Dummy.SwaggerExtensions.testStyles1.css"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ "{}InjectJavaScript"{}\ option\ to\ invoke\ one\ or\ more\ custom\ JavaScripts\ after\ the\ swagger-\/ui}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ has\ loaded.\ The\ file\ must\ be\ included\ in\ your\ project\ as\ an\ "{}Embedded\ Resource"{},\ and\ then\ the\ resource's}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ "{}Logical\ Name"{}\ is\ passed\ to\ the\ method\ as\ shown\ above.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.InjectJavaScript(thisAssembly,\ "{}Swashbuckle.Dummy.SwaggerExtensions.testScript1.js"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ swagger-\/ui\ renders\ boolean\ data\ types\ as\ a\ dropdown.\ By\ default,\ it\ provides\ "{}true"{}\ and\ "{}false"{}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ strings\ as\ the\ possible\ choices.\ You\ can\ use\ this\ option\ to\ change\ these\ to\ something\ else,}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ example\ 0\ and\ 1.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.BooleanValues(new[]\ \{\ "{}0"{},\ "{}1"{}\ \});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ By\ default,\ swagger-\/ui\ will\ validate\ specs\ against\ swagger.io's\ online\ validator\ and\ display\ the\ result}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ a\ badge\ at\ the\ bottom\ of\ the\ page.\ Use\ these\ options\ to\ set\ a\ different\ validator\ URL\ or\ to\ disable\ the}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ feature\ entirely.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.SetValidatorUrl("{}http://localhost/validator"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.DisableValidator();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ this\ option\ to\ control\ how\ the\ Operation\ listing\ is\ displayed.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ It\ can\ be\ set\ to\ "{}None"{}\ (default),\ "{}List"{}\ (shows\ operations\ for\ each\ resource),}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ or\ "{}Full"{}\ (fully\ expanded:\ shows\ operations\ and\ their\ details).}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.DocExpansion(DocExpansion.List);}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Specify\ which\ HTTP\ operations\ will\ have\ the\ 'Try\ it\ out!'\ option.\ An\ empty\ paramter\ list\ disables}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ it\ for\ all\ operations.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.SupportedSubmitMethods("{}GET"{},\ "{}HEAD"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ CustomAsset\ option\ to\ provide\ your\ own\ version\ of\ assets\ used\ in\ the\ swagger-\/ui.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ It's\ typically\ used\ to\ instruct\ Swashbuckle\ to\ return\ your\ version\ instead\ of\ the\ default}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when\ a\ request\ is\ made\ for\ "{}index.html"{}.\ As\ with\ all\ custom\ content,\ the\ file\ must\ be\ included}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ your\ project\ as\ an\ "{}Embedded\ Resource"{},\ and\ then\ the\ resource's\ "{}Logical\ Name"{}\ is\ passed\ to}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ method\ as\ shown\ below.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.CustomAsset("{}index"{},\ containingAssembly,\ "{}YourWebApiProject.SwaggerExtensions.index.html"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ your\ API\ has\ multiple\ versions\ and\ you've\ applied\ the\ MultipleApiVersions\ setting}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ as\ described\ above,\ you\ can\ also\ enable\ a\ select\ box\ in\ the\ swagger-\/ui,\ that\ displays}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ discovery\ URL\ for\ each\ version.\ This\ provides\ a\ convenient\ way\ for\ users\ to\ browse\ documentation}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ different\ API\ versions.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.EnableDiscoveryUrlSelector();}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ your\ API\ supports\ the\ OAuth2\ Implicit\ flow,\ and\ you've\ described\ it\ correctly,\ according\ to}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ Swagger\ 2.0\ specification,\ you\ can\ enable\ UI\ support\ as\ shown\ below.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.EnableOAuth2Support(}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ clientId:\ "{}test-\/client-\/id"{},}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ clientSecret:\ null,}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ realm:\ "{}test-\/realm"{},}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ appName:\ "{}Swagger\ UI"{}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ //additionalQueryStringParams:\ new\ Dictionary<string,\ string>()\ \{\ \{\ "{}foo"{},\ "{}bar"{}\ \}\ \}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//);}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ your\ API\ supports\ ApiKey,\ you\ can\ override\ the\ default\ values.}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ "{}apiKeyIn"{}\ can\ either\ be\ "{}query"{}\ or\ "{}header"{}}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c.EnableApiKeySupport("{}apiKey"{},\ "{}header"{});}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00254}00254\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_swagger_config_8cs_source_l00255}00255\ \}}
+
+\end{DoxyCode}

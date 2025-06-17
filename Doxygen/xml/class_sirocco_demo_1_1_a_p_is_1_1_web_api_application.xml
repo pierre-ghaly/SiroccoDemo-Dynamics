@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::WebApiApplication</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">System.Web.HttpApplication</basecompoundref>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application_1a996305632c746b7d0dc845873be2c508" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SiroccoDemo.APIs.WebApiApplication.Application_Start</definition>
+        <argsstring>()</argsstring>
+        <name>Application_Start</name>
+        <qualifiedname>SiroccoDemo.APIs.WebApiApplication.Application_Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Global.asax.cs" line="10" column="24" bodyfile="SiroccoDemo.APIs/Global.asax.cs" bodystart="10" bodyend="19"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config_1a64c170fdeba641e21c7bf58b8ab06821" compoundref="_bundle_config_8cs" startline="7" endline="21">SiroccoDemo.APIs.BundleConfig.RegisterBundles</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config_1a425a15e4169e815ebc2fc7956ba816f1" compoundref="_filter_config_8cs" startline="8" endline="11">SiroccoDemo.APIs.FilterConfig.RegisterGlobalFilters</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config_1acc560f5a628e44936a6bf1c125462201" compoundref="_route_config_8cs" startline="12" endline="21">SiroccoDemo.APIs.RouteConfig.RegisterRoutes</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.APIs.WebApiApplication</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>System::Web::HttpApplication</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SiroccoDemo.APIs.WebApiApplication</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>System::Web::HttpApplication</label>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.APIs/Global.asax.cs" line="8" column="11" bodyfile="SiroccoDemo.APIs/Global.asax.cs" bodystart="9" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application_1a996305632c746b7d0dc845873be2c508" prot="protected" virt="non-virtual"><scope>SiroccoDemo::APIs::WebApiApplication</scope><name>Application_Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_fa69e53d1d8aaf455f7b6a29e1e46738" kind="dir">
+    <compoundname>SiroccoDemo.Plugins/obj/Release</compoundname>
+    <innerfile refid="_sirocco_demo_8_plugins_2obj_2_release_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs">.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Plugins/obj/Release/"/>
+  </compounddef>
+</doxygen>

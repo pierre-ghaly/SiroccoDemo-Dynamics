@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_793b073a39faf61df56425f2842e1021" kind="dir">
+    <compoundname>packages/Moq.4.20.72</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The most popular and friendly mocking library for .NET</para>
+<para><programlisting filename=".cs"><codeline><highlight class="normal">var<sp/>mock<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Mock&lt;ILoveThisLibrary&gt;();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>WOW!<sp/>No<sp/>record/replay<sp/>weirdness?!<sp/>:)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">mock.Setup(library<sp/>=&gt;<sp/>library.DownloadExists(</highlight><highlight class="stringliteral">&quot;2.0.0.0&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>.Returns(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>Object<sp/>property<sp/>on<sp/>the<sp/>mock<sp/>to<sp/>get<sp/>a<sp/>reference<sp/>to<sp/>the<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>implementing<sp/>ILoveThisLibrary,<sp/>and<sp/>then<sp/>exercise<sp/>it<sp/>by<sp/>calling</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>methods<sp/>on<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">ILoveThisLibrary<sp/>lovable<sp/>=<sp/>mock.Object;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>download<sp/>=<sp/>lovable.DownloadExists(</highlight><highlight class="stringliteral">&quot;2.0.0.0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Verify<sp/>that<sp/>the<sp/>given<sp/>method<sp/>was<sp/>indeed<sp/>called<sp/>with<sp/>the<sp/>expected<sp/>value<sp/>at<sp/>most<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">mock.Verify(library<sp/>=&gt;<sp/>library.DownloadExists(</highlight><highlight class="stringliteral">&quot;2.0.0.0&quot;</highlight><highlight class="normal">),<sp/>Times.AtMostOnce());</highlight></codeline>
+</programlisting></para>
+<para>Moq also is the first and only library so far to provide Linq to Mocks, so that the same behavior above can be achieved much more succinctly:</para>
+<para><programlisting filename=".cs"><codeline><highlight class="normal">ILoveThisLibrary<sp/>lovable<sp/>=<sp/>Mock.Of&lt;ILoveThisLibrary&gt;(l<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>l.DownloadExists(</highlight><highlight class="stringliteral">&quot;2.0.0.0&quot;</highlight><highlight class="normal">)<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Exercise<sp/>the<sp/>instance<sp/>returned<sp/>by<sp/>Mock.Of<sp/>by<sp/>calling<sp/>methods<sp/>on<sp/>it...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>download<sp/>=<sp/>lovable.DownloadExists(</highlight><highlight class="stringliteral">&quot;2.0.0.0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Simply<sp/>assert<sp/>the<sp/>returned<sp/>state:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Assert.True(download);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>you<sp/>want<sp/>to<sp/>go<sp/>beyond<sp/>state<sp/>testing<sp/>and<sp/>want<sp/>to<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>verify<sp/>the<sp/>mock<sp/>interaction<sp/>instead...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Mock.Get(lovable).Verify(library<sp/>=&gt;<sp/>library.DownloadExists(</highlight><highlight class="stringliteral">&quot;2.0.0.0&quot;</highlight><highlight class="normal">));</highlight></codeline>
+</programlisting></para>
+<para>You can think of Linq to Mocks as &quot;from the universe of mocks, give me one whose behavior 
+matches this expression&quot;.</para>
+<para>Check out the <ulink url="https://github.com/devlooped/moq/wiki/Quickstart">Quickstart</ulink> for more examples!</para>
+<sect1 id="D:/Pierre Ghaly/Personal/Sirocco/SiroccoDemo/packages/Moq.4.20.72/readme.md_1autotoc_md42">
+<title>Sponsors</title><para><ulink url="https://github.com/clarius"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/clarius.png" alt="Clarius Org" inline="yes"></image>
+</ulink> <ulink url="https://github.com/KirillOsenkov"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/KirillOsenkov.png" alt="Kirill Osenkov" inline="yes"></image>
+</ulink> <ulink url="https://github.com/MFB-Technologies-Inc"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/MFB-Technologies-Inc.png" alt="MFB Technologies, Inc." inline="yes"></image>
+</ulink> <ulink url="https://github.com/decriptor"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/decriptor.png" alt="Stephen Shaw" inline="yes"></image>
+</ulink> <ulink url="https://github.com/torutek-gh"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/torutek-gh.png" alt="Torutek" inline="yes"></image>
+</ulink> <ulink url="https://github.com/drivenet"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/drivenet.png" alt="DRIVE.NET, Inc." inline="yes"></image>
+</ulink> <ulink url="https://github.com/AshleyMedway"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/AshleyMedway.png" alt="Ashley Medway" inline="yes"></image>
+</ulink> <ulink url="https://github.com/Keflon"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Keflon.png" alt="Keith Pickford" inline="yes"></image>
+</ulink> <ulink url="https://github.com/tbolon"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/tbolon.png" alt="Thomas Bolon" inline="yes"></image>
+</ulink> <ulink url="https://github.com/kfrancis"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/kfrancis.png" alt="Kori Francis" inline="yes"></image>
+</ulink> <ulink url="https://github.com/twenzel"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/twenzel.png" alt="Toni Wenzel" inline="yes"></image>
+</ulink> <ulink url="https://github.com/Giorgi"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Giorgi.png" alt="Giorgi Dalakishvili" inline="yes"></image>
+</ulink> <ulink url="https://github.com/unoplatform"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/unoplatform.png" alt="Uno Platform" inline="yes"></image>
+</ulink> <ulink url="https://github.com/dansiegel"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/dansiegel.png" alt="Dan Siegel" inline="yes"></image>
+</ulink> <ulink url="https://github.com/rbnswartz"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/rbnswartz.png" alt="Reuben Swartz" inline="yes"></image>
+</ulink> <ulink url="https://github.com/jfoshee"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/jfoshee.png" alt="Jacob Foshee" inline="yes"></image>
+</ulink> <ulink url="https://github.com/Mrxx99"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Mrxx99.png" inline="yes"></image>
+</ulink> <ulink url="https://github.com/eajhnsn1"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/eajhnsn1.png" alt="Eric Johnson" inline="yes"></image>
+</ulink> <ulink url="https://github.com/IxTechnologies"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/IxTechnologies.png" alt="Ix Technologies B.V." inline="yes"></image>
+</ulink> <ulink url="https://github.com/davidjenni"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/davidjenni.png" alt="David JENNI" inline="yes"></image>
+</ulink> <ulink url="https://github.com/Jonathan-Hickey"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Jonathan-Hickey.png" alt="Jonathan " inline="yes"></image>
+</ulink> <ulink url="https://github.com/okyrylchuk"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/okyrylchuk.png" alt="Oleg Kyrylchuk" inline="yes"></image>
+</ulink> <ulink url="https://github.com/akunzai"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/akunzai.png" alt="Charley Wu" inline="yes"></image>
+</ulink> <ulink url="https://github.com/jakobt"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/jakobt.png" alt="Jakob Tikjøb Andersen" inline="yes"></image>
+</ulink> <ulink url="https://github.com/seanalexander"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/seanalexander.png" alt="Seann Alexander" inline="yes"></image>
+</ulink> <ulink url="https://github.com/tinohager"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/tinohager.png" alt="Tino Hager" inline="yes"></image>
+</ulink> <ulink url="https://github.com/ploeh"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/ploeh.png" alt="Mark Seemann" inline="yes"></image>
+</ulink> <ulink url="https://github.com/KenBonny"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/KenBonny.png" alt="Ken Bonny" inline="yes"></image>
+</ulink> <ulink url="https://github.com/SimonCropp"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/SimonCropp.png" alt="Simon Cropp" inline="yes"></image>
+</ulink> <ulink url="https://github.com/agileworks-eu"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/agileworks-eu.png" alt="agileworks-eu" inline="yes"></image>
+</ulink> <ulink url="https://github.com/sorahex"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/sorahex.png" alt="sorahex" inline="yes"></image>
+</ulink> <ulink url="https://github.com/arsdragonfly"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/arsdragonfly.png" alt="Zheyu Shen" inline="yes"></image>
+</ulink> <ulink url="https://github.com/vezel-dev"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/vezel-dev.png" alt="Vezel" inline="yes"></image>
+</ulink> <ulink url="https://github.com/ChilliCream"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/ChilliCream.png" alt="ChilliCream" inline="yes"></image>
+</ulink> <ulink url="https://github.com/4OTC"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/4OTC.png" alt="4OTC" inline="yes"></image>
+</ulink> <ulink url="https://github.com/v-limo"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/v-limo.png" alt="Vincent Limo" inline="yes"></image>
+</ulink> <ulink url="https://github.com/brooke-hamilton"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/brooke-hamilton.png" alt="Brooke Hamilton" inline="yes"></image>
+</ulink></para>
+<para><ulink url="https://github.com/sponsors/devlooped"><image type="html" name="https://raw.githubusercontent.com/devlooped/sponsors/main/sponsor.png" alt="Sponsor this project" inline="yes"></image>
+</ulink> <nonbreakablespace/></para>
+<para><ulink url="https://github.com/sponsors">Learn more about GitHub Sponsors</ulink> </para>
+</sect1>
+    </detaileddescription>
+    <location file="packages/Moq.4.20.72/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a0dff6dafd2cd795b1978cc82969caba2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ApiDescription</type>
+        <definition>ApiDescription SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription</definition>
+        <argsstring></argsstring>
+        <name>ApiDescription</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a0dff6dafd2cd795b1978cc82969caba2" kindref="member">ApiDescription</ref> that describes the API. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="28" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a35017943fce60056fbcf05d935d5bfa0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Collection&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kindref="compound">ParameterDescription</ref> &gt;</type>
+        <definition>Collection&lt;ParameterDescription&gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.UriParameters</definition>
+        <argsstring></argsstring>
+        <name>UriParameters</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.UriParameters</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kindref="compound">ParameterDescription</ref> collection that describes the URI parameters for the API. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="33" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="33" bodyend="33"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ab1f4dcbeb2953ef3c1c4a4a037a4622c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation</definition>
+        <argsstring></argsstring>
+        <name>RequestDocumentation</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the documentation for the request. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="38" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a6a35fee00ab6552063a3a4bfd02f091e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref></type>
+        <definition>ModelDescription SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription</definition>
+        <argsstring></argsstring>
+        <name>RequestModelDescription</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref> that describes the request body. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="43" column="33" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a72d7a49c6ad9c0ba700c5bde51d885d6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kindref="compound">ParameterDescription</ref> &gt;</type>
+        <definition>IList&lt;ParameterDescription&gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters</definition>
+        <argsstring></argsstring>
+        <name>RequestBodyParameters</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters</qualifiedname>
+        <briefdescription>
+<para>Gets the request body parameter descriptions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="48" column="22" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a966b982f54d2b9955c4372df3c62415b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref></type>
+        <definition>ModelDescription SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription</definition>
+        <argsstring></argsstring>
+        <name>ResourceDescription</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref> that describes the resource. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="59" column="33" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae28156b8c9fb3d0793ae8210da0e8bd3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kindref="compound">ParameterDescription</ref> &gt;</type>
+        <definition>IList&lt;ParameterDescription&gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties</definition>
+        <argsstring></argsstring>
+        <name>ResourceProperties</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties</qualifiedname>
+        <briefdescription>
+<para>Gets the resource property descriptions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="64" column="22" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae4b6fc87aaa9ae169d12717ab91695e0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
+        <definition>IDictionary&lt;MediaTypeHeaderValue, object&gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests</definition>
+        <argsstring></argsstring>
+        <name>SampleRequests</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests</qualifiedname>
+        <briefdescription>
+<para>Gets the sample requests associated with the API. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="75" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="75" bodyend="75"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a2591b0021c317235dad8b8a309114a72" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
+        <definition>IDictionary&lt;MediaTypeHeaderValue, object&gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses</definition>
+        <argsstring></argsstring>
+        <name>SampleResponses</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses</qualifiedname>
+        <briefdescription>
+<para>Gets the sample responses associated with the API. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="80" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="80" bodyend="80"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a116a206c78b3bb76bbd6a62ec3cceedf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Collection&lt; string &gt;</type>
+        <definition>Collection&lt;string&gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages</definition>
+        <argsstring></argsstring>
+        <name>ErrorMessages</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages</qualifiedname>
+        <briefdescription>
+<para>Gets the error messages associated with this model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="85" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="85" bodyend="85"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</definition>
+        <argsstring>()</argsstring>
+        <name>HelpPageApiModel</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</qualifiedname>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model" kindref="compound">HelpPageApiModel</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="17" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="17" bodyend="23"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a116a206c78b3bb76bbd6a62ec3cceedf" compoundref="_help_page_api_model_8cs" startline="85" endline="85">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae4b6fc87aaa9ae169d12717ab91695e0" compoundref="_help_page_api_model_8cs" startline="75" endline="75">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a2591b0021c317235dad8b8a309114a72" compoundref="_help_page_api_model_8cs" startline="80" endline="80">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a35017943fce60056fbcf05d935d5bfa0" compoundref="_help_page_api_model_8cs" startline="33" endline="33">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.UriParameters</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a1a28aaf5f0a37e2502af30c2a393a3e2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IList&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kindref="compound">ParameterDescription</ref> &gt;</type>
+        <definition>static IList&lt; ParameterDescription &gt; SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.GetParameterDescriptions</definition>
+        <argsstring>(ModelDescription modelDescription)</argsstring>
+        <name>GetParameterDescriptions</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.GetParameterDescriptions</qualifiedname>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref></type>
+          <declname>modelDescription</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="87" column="30" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="87" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The model that represents an API displayed on the help page. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="12" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="13" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a0dff6dafd2cd795b1978cc82969caba2" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>ApiDescription</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a116a206c78b3bb76bbd6a62ec3cceedf" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>ErrorMessages</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a1a28aaf5f0a37e2502af30c2a393a3e2" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>GetParameterDescriptions</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>HelpPageApiModel</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a72d7a49c6ad9c0ba700c5bde51d885d6" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>RequestBodyParameters</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ab1f4dcbeb2953ef3c1c4a4a037a4622c" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>RequestDocumentation</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a6a35fee00ab6552063a3a4bfd02f091e" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>RequestModelDescription</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a966b982f54d2b9955c4372df3c62415b" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>ResourceDescription</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae28156b8c9fb3d0793ae8210da0e8bd3" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>ResourceProperties</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae4b6fc87aaa9ae169d12717ab91695e0" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>SampleRequests</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a2591b0021c317235dad8b8a309114a72" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>SampleResponses</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a35017943fce60056fbcf05d935d5bfa0" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</scope><name>UriParameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

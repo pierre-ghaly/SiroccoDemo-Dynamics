@@ -1,0 +1,4 @@
+var interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service =
+[
+    [ "GetAccountContactNoteSummary", "interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service.html#aae8eaa7e168472a0b64e50b01e1f9142", null ]
+];

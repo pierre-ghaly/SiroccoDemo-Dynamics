@@ -1,0 +1,359 @@
+\doxysection{Help\+Page\+Configuration\+Extensions.\+cs}
+\hypertarget{_help_page_configuration_extensions_8cs_source}{}\label{_help_page_configuration_extensions_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/HelpPageConfigurationExtensions.cs@{SiroccoDemo.APIs/Areas/HelpPage/HelpPageConfigurationExtensions.cs}}
+\mbox{\hyperlink{_help_page_configuration_extensions_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Diagnostics;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Diagnostics.CodeAnalysis;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Globalization;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Net.Http;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }System.Net.Http.Headers;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }System.Web.Http;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }System.Web.Http.Controllers;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00013}00013\ \textcolor{keyword}{using\ }System.Web.Http.Description;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00014}00014\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions}{SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions}};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00015}00015\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models}{SiroccoDemo.APIs.Areas.HelpPage.Models}};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page}{SiroccoDemo.APIs.Areas.HelpPage}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }HelpPageConfigurationExtensions}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ApiModelPrefix\ =\ \textcolor{stringliteral}{"{}MS\_HelpPageApiModel\_"{}};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetDocumentationProvider(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ IDocumentationProvider\ documentationProvider)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ config.Services.Replace(typeof(IDocumentationProvider),\ documentationProvider);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleObjects(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ IDictionary<Type,\ object>\ sampleObjects)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().SampleObjects\ =\ sampleObjects;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleRequest(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{object}\ sample,\ MediaTypeHeaderValue\ mediaType,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActionSamples.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(mediaType,\ \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Request,\ controllerName,\ actionName,\ \textcolor{keyword}{new}[]\ \{\ \textcolor{stringliteral}{"{}*"{}}\ \}),\ sample);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleRequest(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{object}\ sample,\ MediaTypeHeaderValue\ mediaType,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName,\ params\ \textcolor{keywordtype}{string}[]\ parameterNames)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActionSamples.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(mediaType,\ \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Request,\ controllerName,\ actionName,\ parameterNames),\ sample);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleResponse(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{object}\ sample,\ MediaTypeHeaderValue\ mediaType,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActionSamples.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(mediaType,\ \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Response,\ controllerName,\ actionName,\ \textcolor{keyword}{new}[]\ \{\ \textcolor{stringliteral}{"{}*"{}}\ \}),\ sample);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleResponse(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{object}\ sample,\ MediaTypeHeaderValue\ mediaType,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName,\ params\ \textcolor{keywordtype}{string}[]\ parameterNames)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActionSamples.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(mediaType,\ \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Response,\ controllerName,\ actionName,\ parameterNames),\ sample);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleForMediaType(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{object}\ sample,\ MediaTypeHeaderValue\ mediaType)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActionSamples.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(mediaType),\ sample);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetSampleForType(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{object}\ sample,\ MediaTypeHeaderValue\ mediaType,\ Type\ type)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActionSamples.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(mediaType,\ type),\ sample);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetActualRequestType(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ Type\ type,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActualHttpMessageTypes.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Request,\ controllerName,\ actionName,\ \textcolor{keyword}{new}[]\ \{\ \textcolor{stringliteral}{"{}*"{}}\ \}),\ type);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetActualRequestType(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ Type\ type,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName,\ params\ \textcolor{keywordtype}{string}[]\ parameterNames)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActualHttpMessageTypes.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Request,\ controllerName,\ actionName,\ parameterNames),\ type);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetActualResponseType(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ Type\ type,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActualHttpMessageTypes.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Response,\ controllerName,\ actionName,\ \textcolor{keyword}{new}[]\ \{\ \textcolor{stringliteral}{"{}*"{}}\ \}),\ type);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetActualResponseType(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ Type\ type,\ \textcolor{keywordtype}{string}\ controllerName,\ \textcolor{keywordtype}{string}\ actionName,\ params\ \textcolor{keywordtype}{string}[]\ parameterNames)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().ActualHttpMessageTypes.Add(\textcolor{keyword}{new}\ HelpPageSampleKey(\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{SampleDirection}}.Response,\ controllerName,\ actionName,\ parameterNames),\ type);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ HelpPageSampleGenerator\ GetHelpPageSampleGenerator(\textcolor{keyword}{this}\ HttpConfiguration\ config)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (HelpPageSampleGenerator)config.Properties.GetOrAdd(}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typeof(HelpPageSampleGenerator),}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k\ =>\ \textcolor{keyword}{new}\ HelpPageSampleGenerator());}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetHelpPageSampleGenerator(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ HelpPageSampleGenerator\ sampleGenerator)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ config.Properties.AddOrUpdate(}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typeof(HelpPageSampleGenerator),}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k\ =>\ sampleGenerator,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (k,\ o)\ =>\ sampleGenerator);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ ModelDescriptionGenerator\ GetModelDescriptionGenerator(\textcolor{keyword}{this}\ HttpConfiguration\ config)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (ModelDescriptionGenerator)config.Properties.GetOrAdd(}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typeof(ModelDescriptionGenerator),}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k\ =>\ InitializeModelDescriptionGenerator(config));}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ HelpPageApiModel\ GetHelpPageApiModel(\textcolor{keyword}{this}\ HttpConfiguration\ config,\ \textcolor{keywordtype}{string}\ apiDescriptionId)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ model;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ modelId\ =\ ApiModelPrefix\ +\ apiDescriptionId;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!config.Properties.TryGetValue(modelId,\ out\ model))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Collection<ApiDescription>\ apiDescriptions\ =\ config.Services.GetApiExplorer().ApiDescriptions;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ApiDescription\ apiDescription\ =\ apiDescriptions.FirstOrDefault(api\ =>\ String.Equals(api.GetFriendlyId(),\ apiDescriptionId,\ StringComparison.OrdinalIgnoreCase));}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (apiDescription\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ model\ =\ GenerateApiModel(apiDescription,\ config);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config.Properties.TryAdd(modelId,\ model);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (HelpPageApiModel)model;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ HelpPageApiModel\ GenerateApiModel(ApiDescription\ apiDescription,\ HttpConfiguration\ config)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ HelpPageApiModel\ apiModel\ =\ \textcolor{keyword}{new}\ HelpPageApiModel()}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ApiDescription\ =\ apiDescription,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescriptionGenerator\ modelGenerator\ =\ config.GetModelDescriptionGenerator();}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ HelpPageSampleGenerator\ sampleGenerator\ =\ config.GetHelpPageSampleGenerator();}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ GenerateUriParameters(apiModel,\ modelGenerator);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ GenerateRequestModelDescription(apiModel,\ modelGenerator,\ sampleGenerator);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ GenerateResourceDescription(apiModel,\ modelGenerator);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ GenerateSamples(apiModel,\ sampleGenerator);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ apiModel;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ GenerateUriParameters(HelpPageApiModel\ apiModel,\ ModelDescriptionGenerator\ modelGenerator)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ ApiDescription\ apiDescription\ =\ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ApiParameterDescription\ apiParameter\ \textcolor{keywordflow}{in}\ apiDescription.ParameterDescriptions)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (apiParameter.Source\ ==\ ApiParameterSource.FromUri)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HttpParameterDescriptor\ parameterDescriptor\ =\ apiParameter.ParameterDescriptor;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ parameterType\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ typeDescription\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ComplexTypeModelDescription\ complexTypeDescription\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parameterDescriptor\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parameterType\ =\ parameterDescriptor.ParameterType;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typeDescription\ =\ modelGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(parameterType);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexTypeDescription\ =\ typeDescription\ as\ ComplexTypeModelDescription;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Example:}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [TypeConverter(typeof(PointConverter))]}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ public\ class\ Point}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ public\ Point(int\ x,\ int\ y)}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ X\ =\ x;}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ Y\ =\ y;}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ public\ int\ X\ \{\ get;\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ public\ int\ Y\ \{\ get;\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Class\ Point\ is\ bindable\ with\ a\ TypeConverter,\ so\ Point\ will\ be\ added\ to\ UriParameters\ collection.}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ public\ class\ Point}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ public\ int\ X\ \{\ get;\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ public\ int\ Y\ \{\ get;\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Regular\ complex\ class\ Point\ will\ have\ properties\ X\ and\ Y\ added\ to\ UriParameters\ collection.}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (complexTypeDescription\ !=\ \textcolor{keyword}{null}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !IsBindableWithTypeConverter(parameterType))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ParameterDescription\ uriParameter\ \textcolor{keywordflow}{in}\ complexTypeDescription.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_a7946ce040937ddb216e811ae0e929d9d}{Properties}})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a35017943fce60056fbcf05d935d5bfa0}{UriParameters}}.Add(uriParameter);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (parameterDescriptor\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ParameterDescription\ uriParameter\ =}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddParameterDescription(apiModel,\ apiParameter,\ typeDescription);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00304}00304\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!parameterDescriptor.IsOptional)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uriParameter.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_a6c5b7913f60bbee31b1ef06cb19cc556}{Annotations}}.Add(\textcolor{keyword}{new}\ ParameterAnnotation()\ \{\ Documentation\ =\ \textcolor{stringliteral}{"{}Required"{}}\ \});}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00309}00309\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ defaultValue\ =\ parameterDescriptor.DefaultValue;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (defaultValue\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uriParameter.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_a6c5b7913f60bbee31b1ef06cb19cc556}{Annotations}}.Add(\textcolor{keyword}{new}\ ParameterAnnotation()\ \{\ Documentation\ =\ \textcolor{stringliteral}{"{}Default\ value\ is\ "{}}\ +\ Convert.ToString(defaultValue,\ CultureInfo.InvariantCulture)\ \});}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Assert(parameterDescriptor\ ==\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ parameterDescriptor\ is\ null,\ this\ is\ an\ undeclared\ route\ parameter\ which\ only\ occurs}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when\ source\ is\ FromUri.\ Ignored\ in\ request\ model\ and\ among\ resource\ parameters\ but\ listed}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ as\ a\ simple\ string\ here.}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ modelDescription\ =\ modelGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(typeof(\textcolor{keywordtype}{string}));}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddParameterDescription(apiModel,\ apiParameter,\ modelDescription);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsBindableWithTypeConverter(Type\ parameterType)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parameterType\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TypeDescriptor.GetConverter(parameterType).CanConvertFrom(typeof(\textcolor{keywordtype}{string}));}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ ParameterDescription\ AddParameterDescription(HelpPageApiModel\ apiModel,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ ApiParameterDescription\ apiParameter,\ ModelDescription\ typeDescription)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ ParameterDescription\ parameterDescription\ =\ \textcolor{keyword}{new}\ ParameterDescription}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ apiParameter.Name,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ apiParameter.Documentation,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TypeDescription\ =\ typeDescription,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a35017943fce60056fbcf05d935d5bfa0}{UriParameters}}.Add(parameterDescription);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ parameterDescription;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ GenerateRequestModelDescription(HelpPageApiModel\ apiModel,\ ModelDescriptionGenerator\ modelGenerator,\ HelpPageSampleGenerator\ sampleGenerator)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00355}00355\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ ApiDescription\ apiDescription\ =\ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ApiParameterDescription\ apiParameter\ \textcolor{keywordflow}{in}\ apiDescription.ParameterDescriptions)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (apiParameter.Source\ ==\ ApiParameterSource.FromBody)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ parameterType\ =\ apiParameter.ParameterDescriptor.ParameterType;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.RequestModelDescription\ =\ modelGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(parameterType);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.RequestDocumentation\ =\ apiParameter.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_a18e8a323383951462500968aec555d84}{Documentation}};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (apiParameter.ParameterDescriptor\ !=\ \textcolor{keyword}{null}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiParameter.ParameterDescriptor.ParameterType\ ==\ typeof(HttpRequestMessage))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ parameterType\ =\ sampleGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a760f289f1451506c9c749b247cddda5a}{ResolveHttpRequestMessageType}}(apiDescription);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00369}00369\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parameterType\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.RequestModelDescription\ =\ modelGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(parameterType);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00377}00377\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ GenerateResourceDescription(HelpPageApiModel\ apiModel,\ ModelDescriptionGenerator\ modelGenerator)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ ResponseDescription\ response\ =\ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}}.ResponseDescription;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ Type\ responseType\ =\ response.ResponseType\ ??\ response.DeclaredType;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (responseType\ !=\ \textcolor{keyword}{null}\ \&\&\ responseType\ !=\ typeof(\textcolor{keywordtype}{void}))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.ResourceDescription\ =\ modelGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(responseType);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00388}00388\ \ \ \ \ \ \ \ \ [SuppressMessage(\textcolor{stringliteral}{"{}Microsoft.Design"{}},\ \textcolor{stringliteral}{"{}CA1031:DoNotCatchGeneralExceptionTypes"{}},\ Justification\ =\ \textcolor{stringliteral}{"{}The\ exception\ is\ recorded\ as\ ErrorMessages."{}})]}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00389}00389\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ GenerateSamples(HelpPageApiModel\ apiModel,\ HelpPageSampleGenerator\ sampleGenerator)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00390}00390\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ sampleGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a559df5d82a5d71b7e519d4f1c0f4b8a7}{GetSampleRequests}}(apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}}))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ae4b6fc87aaa9ae169d12717ab91695e0}{SampleRequests}}.Add(item.Key,\ item.Value);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogInvalidSampleAsError(apiModel,\ item.Value);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00398}00398\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ sampleGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ad209708a138fc201e28ce1b2b036a91d}{GetSampleResponses}}(apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}}))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a2591b0021c317235dad8b8a309114a72}{SampleResponses}}.Add(item.Key,\ item.Value);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogInvalidSampleAsError(apiModel,\ item.Value);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a116a206c78b3bb76bbd6a62ec3cceedf}{ErrorMessages}}.Add(String.Format(CultureInfo.CurrentCulture,}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}An\ exception\ has\ occurred\ while\ generating\ the\ sample.\ Exception\ message:\ \{0\}"{}},}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HelpPageSampleGenerator.UnwrapException(e).Message));}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00412}00412\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ TryGetResourceParameter(ApiDescription\ apiDescription,\ HttpConfiguration\ config,\ out\ ApiParameterDescription\ parameterDescription,\ out\ Type\ resourceType)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00414}00414\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ parameterDescription\ =\ apiDescription.ParameterDescriptions.FirstOrDefault(}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p\ =>\ p.Source\ ==\ ApiParameterSource.FromBody\ ||}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (p.ParameterDescriptor\ !=\ \textcolor{keyword}{null}\ \&\&\ p.ParameterDescriptor.ParameterType\ ==\ typeof(HttpRequestMessage)));}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00418}00418\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parameterDescription\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00420}00420\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resourceType\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00424}00424\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ resourceType\ =\ parameterDescription.ParameterDescriptor.ParameterType;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00426}00426\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00427}00427\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (resourceType\ ==\ typeof(HttpRequestMessage))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00428}00428\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HelpPageSampleGenerator\ sampleGenerator\ =\ config.GetHelpPageSampleGenerator();}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resourceType\ =\ sampleGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a760f289f1451506c9c749b247cddda5a}{ResolveHttpRequestMessageType}}(apiDescription);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00431}00431\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (resourceType\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00435}00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parameterDescription\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00438}00438\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00439}00439\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00440}00440\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00441}00441\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ ModelDescriptionGenerator\ InitializeModelDescriptionGenerator(HttpConfiguration\ config)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescriptionGenerator\ modelGenerator\ =\ \textcolor{keyword}{new}\ ModelDescriptionGenerator(config);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ Collection<ApiDescription>\ apis\ =\ config.Services.GetApiExplorer().ApiDescriptions;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ApiDescription\ api\ \textcolor{keywordflow}{in}\ apis)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ApiParameterDescription\ parameterDescription;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ parameterType;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TryGetResourceParameter(api,\ config,\ out\ parameterDescription,\ out\ parameterType))}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelGenerator.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(parameterType);}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00455}00455\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ modelGenerator;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00456}00456\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00458}00458\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LogInvalidSampleAsError(HelpPageApiModel\ apiModel,\ \textcolor{keywordtype}{object}\ sample)}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00459}00459\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00460}00460\ \ \ \ \ \ \ \ \ \ \ \ \ InvalidSample\ invalidSample\ =\ sample\ as\ InvalidSample;}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00461}00461\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (invalidSample\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00462}00462\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apiModel.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a116a206c78b3bb76bbd6a62ec3cceedf}{ErrorMessages}}.Add(invalidSample.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_a5a5c79e642fe4a147e2d56174e80a66f}{ErrorMessage}});}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00465}00465\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00466}00466\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_configuration_extensions_8cs_source_l00467}00467\ \}}
+
+\end{DoxyCode}

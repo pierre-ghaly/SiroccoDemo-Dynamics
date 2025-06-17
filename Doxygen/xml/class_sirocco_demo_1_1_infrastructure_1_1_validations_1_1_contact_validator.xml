@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Infrastructure::Validations::ContactValidator</compoundname>
+    <basecompoundref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator" prot="public" virt="non-virtual">SiroccoDemo.Application.Validations.IContactValidator</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1a56f55cb98c5d5637bbde225cd44502db" prot="private" static="yes" mutable="no">
+        <type>readonly Regex</type>
+        <definition>readonly Regex SiroccoDemo.Infrastructure.Validations.ContactValidator.EmailRegex</definition>
+        <argsstring></argsstring>
+        <name>EmailRegex</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Validations.ContactValidator.EmailRegex</qualifiedname>
+        <initializer>= new Regex(
+            @&quot;^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$&quot;,
+            RegexOptions.Compiled | RegexOptions.IgnoreCase)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" line="10" column="39" bodyfile="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1ac9323a8b60550a8384e2198e7a1f224b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SiroccoDemo.Infrastructure.Validations.ContactValidator.Validate</definition>
+        <argsstring>(ContactInput contact)</argsstring>
+        <name>Validate</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Validations.ContactValidator.Validate</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator_1ab67ef5154368b6f86285918b36cf8f36">Validate</reimplements>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input" kindref="compound">ContactInput</ref></type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" line="14" column="21" bodyfile="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" bodystart="14" bodyend="33"/>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1a598cb7b7e32dcdfa7da9636b815019e4" compoundref="_contact_input_8cs" startline="7" endline="7">SiroccoDemo.Application.Models.ContactInput.Email</references>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae3e2a3fdc9b38ba54fd7b39a2be96be5" compoundref="_contact_input_8cs" startline="5" endline="5">SiroccoDemo.Application.Models.ContactInput.FirstName</references>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ac32772e519ed7848589caaaead414044" compoundref="_contact_input_8cs" startline="6" endline="6">SiroccoDemo.Application.Models.ContactInput.LastName</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Validations.ContactValidator</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Validations.IContactValidator</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Validations.ContactValidator</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Validations.IContactValidator</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator"/>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" line="8" column="11" bodyfile="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" bodystart="9" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1a56f55cb98c5d5637bbde225cd44502db" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Validations::ContactValidator</scope><name>EmailRegex</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1ac9323a8b60550a8384e2198e7a1f224b" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Validations::ContactValidator</scope><name>Validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

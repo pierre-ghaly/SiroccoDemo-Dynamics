@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_566540dddf499852520ad9c2a723ee03" kind="dir">
+    <compoundname>SiroccoDemo.Moq/Activities</compoundname>
+    <innerfile refid="_create_account_with_contacts_and_notes_moq_8cs">CreateAccountWithContactsAndNotesMoq.cs</innerfile>
+    <innerfile refid="_get_account_contact_note_summary_moq_8cs">GetAccountContactNoteSummaryMoq.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Moq/Activities/"/>
+  </compounddef>
+</doxygen>

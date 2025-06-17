@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service" kind="interface" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Application::Services::ICreateAccountWithContactsAndNotesService</compoundname>
+    <derivedcompoundref refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service" prot="public" virt="non-virtual">SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service_1a283bec31fc459c9fe04fe23712cf3a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o" kindref="compound">CreateAccountWithContactsAndNotesDTO</ref></type>
+        <definition>CreateAccountWithContactsAndNotesDTO SiroccoDemo.Application.Services.ICreateAccountWithContactsAndNotesService.CreateAccountWithContactsAndNotes</definition>
+        <argsstring>(CreateAccountWithContactsAndNotesModel model)</argsstring>
+        <name>CreateAccountWithContactsAndNotes</name>
+        <qualifiedname>SiroccoDemo.Application.Services.ICreateAccountWithContactsAndNotesService.CreateAccountWithContactsAndNotes</qualifiedname>
+        <reimplementedby refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a016ab2a2e7023b83dd909cc37b90e896">CreateAccountWithContactsAndNotes</reimplementedby>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model" kindref="compound">CreateAccountWithContactsAndNotesModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Application/Services/ICreateAccountWithContactsAndNotesService.cs" line="8" column="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.Application.Services.ICreateAccountWithContactsAndNotesService</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service"/>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="SiroccoDemo.Application/Services/ICreateAccountWithContactsAndNotesService.cs" line="6" column="22" bodyfile="SiroccoDemo.Application/Services/ICreateAccountWithContactsAndNotesService.cs" bodystart="7" bodyend="9"/>
+    <listofallmembers>
+      <member refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service_1a283bec31fc459c9fe04fe23712cf3a4f" prot="public" virt="non-virtual"><scope>SiroccoDemo::Application::Services::ICreateAccountWithContactsAndNotesService</scope><name>CreateAccountWithContactsAndNotes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_microsoft_1_1_xrm_1_1_tooling_1_1_connector" kind="namespace" language="C#">
+    <compoundname>Microsoft::Xrm::Tooling::Connector</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Services/CrmServiceFactory.cs" line="2" column="38"/>
+  </compounddef>
+</doxygen>

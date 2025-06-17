@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::HelpPageAreaRegistration</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AreaRegistration</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration_1a6966af28b304cbeb855ac394fab4fcc1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override string</type>
+        <definition>override string SiroccoDemo.APIs.Areas.HelpPage.HelpPageAreaRegistration.AreaName</definition>
+        <argsstring></argsstring>
+        <name>AreaName</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageAreaRegistration.AreaName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/HelpPageAreaRegistration.cs" line="8" column="32" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/HelpPageAreaRegistration.cs" bodystart="9" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration_1aeeded42c08252c9709043080c9224d0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SiroccoDemo.APIs.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea</definition>
+        <argsstring>(AreaRegistrationContext context)</argsstring>
+        <name>RegisterArea</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea</qualifiedname>
+        <param>
+          <type>AreaRegistrationContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/HelpPageAreaRegistration.cs" line="16" column="30" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/HelpPageAreaRegistration.cs" bodystart="16" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AreaRegistration</label>
+      </node>
+      <node id="1">
+        <label>SiroccoDemo.APIs.Areas.HelpPage.HelpPageAreaRegistration</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AreaRegistration</label>
+      </node>
+      <node id="1">
+        <label>SiroccoDemo.APIs.Areas.HelpPage.HelpPageAreaRegistration</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/HelpPageAreaRegistration.cs" line="6" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/HelpPageAreaRegistration.cs" bodystart="7" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration_1a6966af28b304cbeb855ac394fab4fcc1" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageAreaRegistration</scope><name>AreaName</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration_1aeeded42c08252c9709043080c9224d0c" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageAreaRegistration</scope><name>RegisterArea</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

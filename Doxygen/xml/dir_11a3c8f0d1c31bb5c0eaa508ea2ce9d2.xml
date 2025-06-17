@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_11a3c8f0d1c31bb5c0eaa508ea2ce9d2" kind="dir">
+    <compoundname>SiroccoDemo.Plugins</compoundname>
+    <innerdir refid="dir_5df8d6e651512c5f2297f7d1c33e2249">SiroccoDemo.Plugins/obj</innerdir>
+    <innerdir refid="dir_0fe2b18fb0af472f3629c646cb71f6f4">SiroccoDemo.Plugins/Properties</innerdir>
+    <innerfile refid="_create_account_with_contacts_and_notes_8cs">CreateAccountWithContactsAndNotes.cs</innerfile>
+    <innerfile refid="_get_account_contact_note_summary_8cs">GetAccountContactNoteSummary.cs</innerfile>
+    <innerfile refid="_plugin_base_8cs">PluginBase.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Plugins/"/>
+  </compounddef>
+</doxygen>
