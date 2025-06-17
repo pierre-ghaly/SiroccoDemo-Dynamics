@@ -4,7 +4,6 @@ using SiroccoDemo.Application.Models;
 using SiroccoDemo.Infrastructure.Repositories;
 using SiroccoDemo.Infrastructure.Services;
 using SiroccoDemo.Infrastructure.Validations;
-using System;
 
 namespace SiroccoDemo.Plugins
 {

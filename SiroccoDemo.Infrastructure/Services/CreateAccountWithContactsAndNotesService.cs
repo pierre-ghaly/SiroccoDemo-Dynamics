@@ -5,11 +5,9 @@ using SiroccoDemo.Application.Repositories;
 using SiroccoDemo.Application.Services;
 using SiroccoDemo.Application.Validations;
 using SiroccoDemo.Domain.DTOs;
-using SiroccoDemo.Domain.Entities;
 using SiroccoDemo.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SiroccoDemo.Infrastructure.Services
 {
