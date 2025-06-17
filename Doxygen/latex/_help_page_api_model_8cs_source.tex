@@ -1,78 +1,78 @@
 \doxysection{Help\+Page\+Api\+Model.\+cs}
-\hypertarget{_help_page_api_model_8cs_source}{}\label{_help_page_api_model_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs@{SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs}}
-\mbox{\hyperlink{_help_page_api_model_8cs}{Go to the documentation of this file.}}
+\label{_help_page_api_model_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs@{SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Net.Http.Headers;}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Web.Http.Description;}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions}{SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions}};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00007}\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models}{SiroccoDemo.APIs.Areas.HelpPage.Models}}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00012}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a01646e8aab5494616c76e0c82c1df1ca}{HelpPageApiModel}}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00013}00013\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00017}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a01646e8aab5494616c76e0c82c1df1ca}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a01646e8aab5494616c76e0c82c1df1ca}{HelpPageApiModel}}()}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a35017943fce60056fbcf05d935d5bfa0}{UriParameters}}\ =\ \textcolor{keyword}{new}\ Collection<ParameterDescription>();}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ae4b6fc87aaa9ae169d12717ab91695e0}{SampleRequests}}\ =\ \textcolor{keyword}{new}\ Dictionary<MediaTypeHeaderValue,\ object>();}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a2591b0021c317235dad8b8a309114a72}{SampleResponses}}\ =\ \textcolor{keyword}{new}\ Dictionary<MediaTypeHeaderValue,\ object>();}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a116a206c78b3bb76bbd6a62ec3cceedf}{ErrorMessages}}\ =\ \textcolor{keyword}{new}\ Collection<string>();}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00028}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a0dff6dafd2cd795b1978cc82969caba2}{ApiDescription}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00033}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a35017943fce60056fbcf05d935d5bfa0}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collection<ParameterDescription>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a35017943fce60056fbcf05d935d5bfa0}{UriParameters}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00038}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ab1f4dcbeb2953ef3c1c4a4a037a4622c}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ab1f4dcbeb2953ef3c1c4a4a037a4622c}{RequestDocumentation}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00043}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a6a35fee00ab6552063a3a4bfd02f091e}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description}{ModelDescription}}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a6a35fee00ab6552063a3a4bfd02f091e}{RequestModelDescription}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00048}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a72d7a49c6ad9c0ba700c5bde51d885d6}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IList<ParameterDescription>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a72d7a49c6ad9c0ba700c5bde51d885d6}{RequestBodyParameters}}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetParameterDescriptions(\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a6a35fee00ab6552063a3a4bfd02f091e}{RequestModelDescription}});}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00059}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a966b982f54d2b9955c4372df3c62415b}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description}{ModelDescription}}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a966b982f54d2b9955c4372df3c62415b}{ResourceDescription}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00064}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ae28156b8c9fb3d0793ae8210da0e8bd3}{00064}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IList<ParameterDescription>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ae28156b8c9fb3d0793ae8210da0e8bd3}{ResourceProperties}}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetParameterDescriptions(\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a966b982f54d2b9955c4372df3c62415b}{ResourceDescription}});}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00071}00071\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00075}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ae4b6fc87aaa9ae169d12717ab91695e0}{00075}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IDictionary<MediaTypeHeaderValue,\ object>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_ae4b6fc87aaa9ae169d12717ab91695e0}{SampleRequests}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00076}00076\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00080}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a2591b0021c317235dad8b8a309114a72}{00080}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IDictionary<MediaTypeHeaderValue,\ object>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a2591b0021c317235dad8b8a309114a72}{SampleResponses}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00085}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a116a206c78b3bb76bbd6a62ec3cceedf}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collection<string>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_a116a206c78b3bb76bbd6a62ec3cceedf}{ErrorMessages}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00086}00086\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ IList<ParameterDescription>\ GetParameterDescriptions(\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description}{ModelDescription}}\ modelDescription)}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description}{ComplexTypeModelDescription}}\ complexTypeModelDescription\ =\ modelDescription\ as\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description}{ComplexTypeModelDescription}};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (complexTypeModelDescription\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ complexTypeModelDescription.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_a7946ce040937ddb216e811ae0e929d9d}{Properties}};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_collection_model_description}{CollectionModelDescription}}\ collectionModelDescription\ =\ modelDescription\ as\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_collection_model_description}{CollectionModelDescription}};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collectionModelDescription\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexTypeModelDescription\ =\ collectionModelDescription.ElementDescription\ as\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description}{ComplexTypeModelDescription}};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (complexTypeModelDescription\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ complexTypeModelDescription.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_a7946ce040937ddb216e811ae0e929d9d}{Properties}};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00104}00104\ }
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00107}00107\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_help_page_api_model_8cs_source_l00108}00108\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.Net.Http.Headers;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Web.Http.Description;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }SiroccoDemo.APIs.Areas.HelpPage.Models}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HelpPageApiModel}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ HelpPageApiModel()}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ UriParameters\ =\ \textcolor{keyword}{new}\ Collection<ParameterDescription>();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ SampleRequests\ =\ \textcolor{keyword}{new}\ Dictionary<MediaTypeHeaderValue,\ object>();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ SampleResponses\ =\ \textcolor{keyword}{new}\ Dictionary<MediaTypeHeaderValue,\ object>();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessages\ =\ \textcolor{keyword}{new}\ Collection<string>();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ApiDescription\ ApiDescription\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collection<ParameterDescription>\ UriParameters\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ RequestDocumentation\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ModelDescription\ RequestModelDescription\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IList<ParameterDescription>\ RequestBodyParameters}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetParameterDescriptions(RequestModelDescription);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ModelDescription\ ResourceDescription\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IList<ParameterDescription>\ ResourceProperties}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetParameterDescriptions(ResourceDescription);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IDictionary<MediaTypeHeaderValue,\ object>\ SampleRequests\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IDictionary<MediaTypeHeaderValue,\ object>\ SampleResponses\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collection<string>\ ErrorMessages\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ IList<ParameterDescription>\ GetParameterDescriptions(ModelDescription\ modelDescription)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ ComplexTypeModelDescription\ complexTypeModelDescription\ =\ modelDescription\ as\ ComplexTypeModelDescription;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (complexTypeModelDescription\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ complexTypeModelDescription.Properties;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ CollectionModelDescription\ collectionModelDescription\ =\ modelDescription\ as\ CollectionModelDescription;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collectionModelDescription\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexTypeModelDescription\ =\ collectionModelDescription.ElementDescription\ as\ ComplexTypeModelDescription;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (complexTypeModelDescription\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ complexTypeModelDescription.Properties;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \}}
 
 \end{DoxyCode}

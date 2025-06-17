@@ -82,9 +82,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs" line="100" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs" bodystart="100" bodyend="100"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a4d99d64ba60145cc93e2b8ca3462d37f" compoundref="_model_description_generator_8cs" startline="110" endline="202">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GetOrCreateModelDescription</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a5004499133a50424431adc57d98f7676" compoundref="_model_description_generator_8cs" startline="89" endline="98">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.ModelDescriptionGenerator</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1ad16fe1f50a3dbcf5585df34de1981a9e" compoundref="_help_controller_8cs" startline="48" endline="61">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.ResourceModel</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a2434fb4ae09be19791cc9e252451a075" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type><ref refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider" kindref="compound">IModelDocumentationProvider</ref></type>
@@ -119,7 +116,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs" line="89" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs" bodystart="89" bodyend="98"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a18a84ab77016b731c4b89e11d40b22d9" compoundref="_model_description_generator_8cs" startline="100" endline="100">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a4d99d64ba60145cc93e2b8ca3462d37f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref></type>
@@ -138,8 +134,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs" line="110" column="33" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs" bodystart="110" bodyend="202"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a18a84ab77016b731c4b89e11d40b22d9" compoundref="_model_description_generator_8cs" startline="100" endline="100">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_1a01a259c52027b00152cd6bfa06c9d4b9" compoundref="_model_description_8cs" startline="12" endline="12">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelDescription.ModelType</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">

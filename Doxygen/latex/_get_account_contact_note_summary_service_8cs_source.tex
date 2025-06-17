@@ -1,68 +1,68 @@
 \doxysection{Get\+Account\+Contact\+Note\+Summary\+Service.\+cs}
-\hypertarget{_get_account_contact_note_summary_service_8cs_source}{}\label{_get_account_contact_note_summary_service_8cs_source}\index{SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs@{SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs}}
-\mbox{\hyperlink{_get_account_contact_note_summary_service_8cs}{Go to the documentation of this file.}}
+\label{_get_account_contact_note_summary_service_8cs_source}\index{SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs@{SiroccoDemo.Infrastructure/Services/GetAccountContactNoteSummaryService.cs}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_repositories}{SiroccoDemo.Application.Repositories}};}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_services}{SiroccoDemo.Application.Services}};}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_domain_1_1_d_t_os}{SiroccoDemo.Domain.DTOs}};}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Collections.Generic;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Linq;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_services}{SiroccoDemo.Infrastructure.Services}}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00009}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_afa0e7de32711b46a9378c3e080dff05a}{GetAccountContactNoteSummaryService}}\ :\ \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service}{IGetAccountContactNoteSummaryService}}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00010}00010\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository}{ICrmRepository}}\ \_crmRepository;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00013}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_afa0e7de32711b46a9378c3e080dff05a}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_afa0e7de32711b46a9378c3e080dff05a}{GetAccountContactNoteSummaryService}}(\mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository}{ICrmRepository}}\ crmRepository)}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \_crmRepository\ =\ crmRepository;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00018}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_ace76721933f6c629abfd0454ecaef1fe}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<GetAccountContactNoteSummaryDTO>\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_ace76721933f6c629abfd0454ecaef1fe}{GetAccountContactNoteSummary}}()}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ var\ returnDTO\ =\ \textcolor{keyword}{new}\ List<GetAccountContactNoteSummaryDTO>();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accountsAndPrimaryContact\ =\ \_crmRepository.GetAllAccountsAndPrimaryContact();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ (account,\ primaryContactId)\ in\ accountsAndPrimaryContact)}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ itemDTO\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_get_account_contact_note_summary_d_t_o}{GetAccountContactNoteSummaryDTO}}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AccountName\ =\ account.Name}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ contacts\ =\ \_crmRepository.GetContactsByAccountId(account.Id);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ contact\ \textcolor{keywordflow}{in}\ contacts)}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (primaryContactId.HasValue\ \&\&\ contact.Id\ ==\ primaryContactId.Value)}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ notes\ =\ \_crmRepository.GetNotesByRegarding(contact.Id);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemDTO.PrimaryContact\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes}{PrimaryContactWithNotes}}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstName\ =\ contact.FirstName,}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LastName\ =\ contact.LastName,}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Email\ =\ contact.Email,}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Notes\ =\ notes.Select(n\ =>\ n.Description).ToList()}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemDTO.SecondaryContacts.Add(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_secondary_contact}{SecondaryContact}}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstName\ =\ contact.FirstName,}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LastName\ =\ contact.LastName,}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Email\ =\ contact.Email}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnDTO.Add(itemDTO);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ returnDTO;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00061}00061\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_service_8cs_source_l00062}00062\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }SiroccoDemo.Application.Repositories;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }SiroccoDemo.Application.Services;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }SiroccoDemo.Domain.DTOs;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }SiroccoDemo.Infrastructure.Services}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GetAccountContactNoteSummaryService\ :\ IGetAccountContactNoteSummaryService}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ ICrmRepository\ \_crmRepository;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GetAccountContactNoteSummaryService(ICrmRepository\ crmRepository)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \_crmRepository\ =\ crmRepository;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<GetAccountContactNoteSummaryDTO>\ GetAccountContactNoteSummary()}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ var\ returnDTO\ =\ \textcolor{keyword}{new}\ List<GetAccountContactNoteSummaryDTO>();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accountsAndPrimaryContact\ =\ \_crmRepository.GetAllAccountsAndPrimaryContact();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ (account,\ primaryContactId)\ in\ accountsAndPrimaryContact)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ itemDTO\ =\ \textcolor{keyword}{new}\ GetAccountContactNoteSummaryDTO}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AccountName\ =\ account.Name}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ contacts\ =\ \_crmRepository.GetContactsByAccountId(account.Id);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ contact\ \textcolor{keywordflow}{in}\ contacts)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (primaryContactId.HasValue\ \&\&\ contact.Id\ ==\ primaryContactId.Value)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ notes\ =\ \_crmRepository.GetNotesByRegarding(contact.Id);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemDTO.PrimaryContact\ =\ \textcolor{keyword}{new}\ PrimaryContactWithNotes}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstName\ =\ contact.FirstName,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LastName\ =\ contact.LastName,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Email\ =\ contact.Email,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Notes\ =\ notes.Select(n\ =>\ n.Description).ToList()}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemDTO.SecondaryContacts.Add(\textcolor{keyword}{new}\ SecondaryContact}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstName\ =\ contact.FirstName,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LastName\ =\ contact.LastName,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Email\ =\ contact.Email}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnDTO.Add(itemDTO);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ returnDTO;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \}}
 
 \end{DoxyCode}

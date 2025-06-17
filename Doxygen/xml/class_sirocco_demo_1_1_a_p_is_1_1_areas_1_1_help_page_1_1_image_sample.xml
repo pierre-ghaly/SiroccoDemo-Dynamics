@@ -16,10 +16,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" line="23" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" bodystart="23" bodyend="23"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abaedac73461371a7ca552b637c789a4b" compoundref="_image_sample_8cs" startline="25" endline="29">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.Equals</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abee48a15ba56cfba444a1d3f21b22fe1" compoundref="_image_sample_8cs" startline="31" endline="34">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.GetHashCode</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a6fa2aa7d10bb9e3701f4a8cd7bee461a" compoundref="_image_sample_8cs" startline="14" endline="21">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.ImageSample</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a7a7db720709bf6031a2f9d8dd93b0aa6" compoundref="_image_sample_8cs" startline="36" endline="39">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.ToString</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -51,8 +47,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" line="14" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" bodystart="14" bodyend="21"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a500588046171fbcec35af14f14d98fc1" compoundref="_image_sample_8cs" startline="23" endline="23">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.Src</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abaedac73461371a7ca552b637c789a4b" compoundref="_image_sample_8cs" startline="25" endline="29">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.Equals</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abaedac73461371a7ca552b637c789a4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override bool</type>
@@ -71,8 +65,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" line="25" column="30" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" bodystart="25" bodyend="29"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a6fa2aa7d10bb9e3701f4a8cd7bee461a" compoundref="_image_sample_8cs" startline="14" endline="21">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.ImageSample</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a500588046171fbcec35af14f14d98fc1" compoundref="_image_sample_8cs" startline="23" endline="23">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.Src</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abee48a15ba56cfba444a1d3f21b22fe1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override int</type>
@@ -87,7 +79,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" line="31" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" bodystart="31" bodyend="34"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a500588046171fbcec35af14f14d98fc1" compoundref="_image_sample_8cs" startline="23" endline="23">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.Src</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a7a7db720709bf6031a2f9d8dd93b0aa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -102,7 +93,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" line="36" column="32" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ImageSample.cs" bodystart="36" bodyend="39"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a500588046171fbcec35af14f14d98fc1" compoundref="_image_sample_8cs" startline="23" endline="23">SiroccoDemo.APIs.Areas.HelpPage.ImageSample.Src</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

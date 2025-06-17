@@ -17,7 +17,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Plugins/GetAccountContactNoteSummary.cs" line="9" column="30" bodyfile="SiroccoDemo.Plugins/GetAccountContactNoteSummary.cs" bodystart="9" bodyend="18"/>
-        <references refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a2727982d5d17e3bd1fa8e2b4156e32ac" compoundref="_plugin_base_8cs" startline="23" endline="54">SiroccoDemo.Plugins.PluginBase.ExecuteWithExceptionHandling</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

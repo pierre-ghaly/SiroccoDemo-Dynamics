@@ -1,27 +1,27 @@
 \doxysection{Account\+Validator.\+cs}
-\hypertarget{_account_validator_8cs_source}{}\label{_account_validator_8cs_source}\index{SiroccoDemo.Infrastructure/Validations/AccountValidator.cs@{SiroccoDemo.Infrastructure/Validations/AccountValidator.cs}}
-\mbox{\hyperlink{_account_validator_8cs}{Go to the documentation of this file.}}
+\label{_account_validator_8cs_source}\index{SiroccoDemo.Infrastructure/Validations/AccountValidator.cs@{SiroccoDemo.Infrastructure/Validations/AccountValidator.cs}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_models}{SiroccoDemo.Application.Models}};}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_validations}{SiroccoDemo.Application.Validations}};}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_domain_1_1_exceptions}{SiroccoDemo.Domain.Exceptions}};}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00005}\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_validations}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_validations}{SiroccoDemo.Infrastructure.Validations}}}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00007}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator}{AccountValidator}}\ :\ \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_account_validator}{IAccountValidator}}}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00009}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator_a1b6964aab25850279ec43e0c6e3181b4}{00009}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator_a1b6964aab25850279ec43e0c6e3181b4}{Validate}}(\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input}{AccountInput}}\ account)}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (account\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Account\ information\ is\ required."{}},\ nameof(account),\ \textcolor{keyword}{null});}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(account.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_af5ae1263f6fe44963e3ab17d1788d079}{Name}}))}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Account\ name\ is\ required."{}},\ nameof(account.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_af5ae1263f6fe44963e3ab17d1788d079}{Name}}),\ account.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_af5ae1263f6fe44963e3ab17d1788d079}{Name}});}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (account.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_af5ae1263f6fe44963e3ab17d1788d079}{Name}}.Length\ >\ 160)}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Account\ name\ cannot\ exceed\ 160\ characters."{}},\ nameof(account.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_af5ae1263f6fe44963e3ab17d1788d079}{Name}}),\ account.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_af5ae1263f6fe44963e3ab17d1788d079}{Name}});}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00020}00020\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_account_validator_8cs_source_l00021}00021\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }SiroccoDemo.Application.Models;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }SiroccoDemo.Application.Validations;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }SiroccoDemo.Domain.Exceptions;}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }SiroccoDemo.Infrastructure.Validations}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }AccountValidator\ :\ IAccountValidator}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Validate(AccountInput\ account)}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (account\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Account\ information\ is\ required."{}},\ nameof(account),\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(account.Name))}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Account\ name\ is\ required."{}},\ nameof(account.Name),\ account.Name);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (account.Name.Length\ >\ 160)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Account\ name\ cannot\ exceed\ 160\ characters."{}},\ nameof(account.Name),\ account.Name);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \}}
 
 \end{DoxyCode}

@@ -21,8 +21,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" line="7" column="23" bodyfile="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" bodystart="7" bodyend="7"/>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a709d874343b8e5210928da0b1b1cc34c" compoundref="_exception_base_8cs" startline="17" endline="22">SiroccoDemo.Domain.Exceptions.ExceptionBase.ExceptionBase</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1ad2c44519e737f3e48219495c0fc10368" compoundref="_exception_base_8cs" startline="10" endline="15">SiroccoDemo.Domain.Exceptions.ExceptionBase.ExceptionBase</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1aca2f6698941c228b90cd87835becb289" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>DateTime</type>
@@ -37,8 +35,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" line="8" column="25" bodyfile="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" bodystart="8" bodyend="8"/>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a709d874343b8e5210928da0b1b1cc34c" compoundref="_exception_base_8cs" startline="17" endline="22">SiroccoDemo.Domain.Exceptions.ExceptionBase.ExceptionBase</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1ad2c44519e737f3e48219495c0fc10368" compoundref="_exception_base_8cs" startline="10" endline="15">SiroccoDemo.Domain.Exceptions.ExceptionBase.ExceptionBase</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -64,8 +60,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" line="10" column="19" bodyfile="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" bodystart="10" bodyend="15"/>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a9f091030bc623b7955015165539741b4" compoundref="_exception_base_8cs" startline="7" endline="7">SiroccoDemo.Domain.Exceptions.ExceptionBase.ErrorCode</references>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1aca2f6698941c228b90cd87835becb289" compoundref="_exception_base_8cs" startline="8" endline="8">SiroccoDemo.Domain.Exceptions.ExceptionBase.OccurredAt</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a709d874343b8e5210928da0b1b1cc34c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -93,8 +87,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" line="17" column="19" bodyfile="SiroccoDemo.Domain/Exceptions/ExceptionBase.cs" bodystart="17" bodyend="22"/>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a9f091030bc623b7955015165539741b4" compoundref="_exception_base_8cs" startline="7" endline="7">SiroccoDemo.Domain.Exceptions.ExceptionBase.ErrorCode</references>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1aca2f6698941c228b90cd87835becb289" compoundref="_exception_base_8cs" startline="8" endline="8">SiroccoDemo.Domain.Exceptions.ExceptionBase.OccurredAt</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

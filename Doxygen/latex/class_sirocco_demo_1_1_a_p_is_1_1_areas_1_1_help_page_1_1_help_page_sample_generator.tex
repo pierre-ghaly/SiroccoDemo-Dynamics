@@ -1,5 +1,5 @@
 \doxysection{Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator Class Reference}
-\hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}{}\label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
+\label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
 
 
 This class will generate the samples for the help page.  
@@ -8,75 +8,73 @@ This class will generate the samples for the help page.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ab1d234b781169989ac91306bd1aa5845}{Help\+Page\+Sample\+Generator}} ()
-\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}{Help\+Page\+Sample\+Generator} class. \end{DoxyCompactList}\item 
-IDictionary$<$ Media\+Type\+Header\+Value, object $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a559df5d82a5d71b7e519d4f1c0f4b8a7}{Get\+Sample\+Requests}} (Api\+Description api)
+\textbf{ Help\+Page\+Sample\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxyref{Help\+Page\+Sample\+Generator}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator} class. \end{DoxyCompactList}\item 
+IDictionary$<$ Media\+Type\+Header\+Value, object $>$ \textbf{ Get\+Sample\+Requests} (Api\+Description api)
 \begin{DoxyCompactList}\small\item\em Gets the request body samples for a given Api\+Description. \end{DoxyCompactList}\item 
-IDictionary$<$ Media\+Type\+Header\+Value, object $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ad209708a138fc201e28ce1b2b036a91d}{Get\+Sample\+Responses}} (Api\+Description api)
+IDictionary$<$ Media\+Type\+Header\+Value, object $>$ \textbf{ Get\+Sample\+Responses} (Api\+Description api)
 \begin{DoxyCompactList}\small\item\em Gets the response body samples for a given Api\+Description. \end{DoxyCompactList}\item 
-virtual IDictionary$<$ Media\+Type\+Header\+Value, object $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a35972db5cc04b3189057867d689a6e1a}{Get\+Sample}} (Api\+Description api, \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{Sample\+Direction}} sample\+Direction)
+virtual IDictionary$<$ Media\+Type\+Header\+Value, object $>$ \textbf{ Get\+Sample} (Api\+Description api, \textbf{ Sample\+Direction} sample\+Direction)
 \begin{DoxyCompactList}\small\item\em Gets the request or response body samples. \end{DoxyCompactList}\item 
-virtual object \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a929f09573364211a4c5ac83d37e18e23}{Get\+Action\+Sample}} (string controller\+Name, string action\+Name, IEnumerable$<$ string $>$ parameter\+Names, Type type, Media\+Type\+Formatter formatter, Media\+Type\+Header\+Value media\+Type, \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{Sample\+Direction}} sample\+Direction)
-\begin{DoxyCompactList}\small\item\em Search for samples that are provided directly through \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e}{Action\+Samples}. \end{DoxyCompactList}\item 
-virtual object \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_af41a4d4188c2f450b5f7375b60996d6b}{Get\+Sample\+Object}} (Type type)
-\begin{DoxyCompactList}\small\item\em Gets the sample object that will be serialized by the formatters. First, it will look at the \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897}{Sample\+Objects}. If no sample object is found, it will try to create one using Default\+Sample\+Object\+Factory (which wraps an \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator}{Object\+Generator}) and other factories in \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}{Sample\+Object\+Factories}. \end{DoxyCompactList}\item 
-virtual Type \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a760f289f1451506c9c749b247cddda5a}{Resolve\+Http\+Request\+Message\+Type}} (Api\+Description api)
+virtual object \textbf{ Get\+Action\+Sample} (string controller\+Name, string action\+Name, IEnumerable$<$ string $>$ parameter\+Names, Type type, Media\+Type\+Formatter formatter, Media\+Type\+Header\+Value media\+Type, \textbf{ Sample\+Direction} sample\+Direction)
+\begin{DoxyCompactList}\small\item\em Search for samples that are provided directly through \doxyref{Action\+Samples}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e}. \end{DoxyCompactList}\item 
+virtual object \textbf{ Get\+Sample\+Object} (Type type)
+\begin{DoxyCompactList}\small\item\em Gets the sample object that will be serialized by the formatters. First, it will look at the \doxyref{Sample\+Objects}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897}. If no sample object is found, it will try to create one using Default\+Sample\+Object\+Factory (which wraps an \doxyref{Object\+Generator}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator}) and other factories in \doxyref{Sample\+Object\+Factories}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}. \end{DoxyCompactList}\item 
+virtual Type \textbf{ Resolve\+Http\+Request\+Message\+Type} (Api\+Description api)
 \begin{DoxyCompactList}\small\item\em Resolves the actual type of System.\+Net.\+Http.\+Object\+Content$<$\+T$>$ passed to the System.\+Net.\+Http.\+Http\+Request\+Message in an action. \end{DoxyCompactList}\item 
-virtual Type \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_aac36a2ef19e232f01c5054d4085c3503}{Resolve\+Type}} (Api\+Description api, string controller\+Name, string action\+Name, IEnumerable$<$ string $>$ parameter\+Names, \mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{Sample\+Direction}} sample\+Direction, out Collection$<$ Media\+Type\+Formatter $>$ formatters)
+virtual Type \textbf{ Resolve\+Type} (Api\+Description api, string controller\+Name, string action\+Name, IEnumerable$<$ string $>$ parameter\+Names, \textbf{ Sample\+Direction} sample\+Direction, out Collection$<$ Media\+Type\+Formatter $>$ formatters)
 \begin{DoxyCompactList}\small\item\em Resolves the type of the action parameter or return value when Http\+Request\+Message or Http\+Response\+Message is used. \end{DoxyCompactList}\item 
-virtual object \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a442ff2b649c4930ad4b41f7f6d1be3ef}{Write\+Sample\+Object\+Using\+Formatter}} (Media\+Type\+Formatter formatter, object value, Type type, Media\+Type\+Header\+Value media\+Type)
+virtual object \textbf{ Write\+Sample\+Object\+Using\+Formatter} (Media\+Type\+Formatter formatter, object value, Type type, Media\+Type\+Header\+Value media\+Type)
 \begin{DoxyCompactList}\small\item\em Writes the sample object using formatter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-IDictionary$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key}{Help\+Page\+Sample\+Key}}, Type $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_aa6d4b4c4239ffd6a04b72d123d155b24}{Actual\+Http\+Message\+Types}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+IDictionary$<$ \textbf{ Help\+Page\+Sample\+Key}, Type $>$ \textbf{ Actual\+Http\+Message\+Types}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Gets CLR types that are used as the content of Http\+Request\+Message or Http\+Response\+Message. \end{DoxyCompactList}\item 
-IDictionary$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key}{Help\+Page\+Sample\+Key}}, object $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e}{Action\+Samples}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+IDictionary$<$ \textbf{ Help\+Page\+Sample\+Key}, object $>$ \textbf{ Action\+Samples}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Gets the objects that are used directly as samples for certain actions. \end{DoxyCompactList}\item 
-IDictionary$<$ Type, object $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897}{Sample\+Objects}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+IDictionary$<$ Type, object $>$ \textbf{ Sample\+Objects}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Gets the objects that are serialized as samples by the supported formatters. \end{DoxyCompactList}\item 
-IList$<$ Func$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}{Help\+Page\+Sample\+Generator}}, Type, object $>$ $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}{Sample\+Object\+Factories}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+IList$<$ Func$<$ \textbf{ Help\+Page\+Sample\+Generator}, Type, object $>$ $>$ \textbf{ Sample\+Object\+Factories}\hspace{0.3cm}{\ttfamily  [get]}
 \begin{DoxyCompactList}\small\item\em Gets factories for the objects that the supported formatters will serialize as samples. Processed in order, stopping when the factory successfully returns a non-\/ object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This class will generate the samples for the help page. 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 21} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
 
 
 \label{doc-constructors}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ab1d234b781169989ac91306bd1aa5845}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!HelpPageSampleGenerator@{HelpPageSampleGenerator}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!HelpPageSampleGenerator@{HelpPageSampleGenerator}}
 \index{HelpPageSampleGenerator@{HelpPageSampleGenerator}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{HelpPageSampleGenerator()}{HelpPageSampleGenerator()}}
+\doxysubsubsection{HelpPageSampleGenerator()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ab1d234b781169989ac91306bd1aa5845} 
 Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Help\+Page\+Sample\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Initializes a new instance of the \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}{Help\+Page\+Sample\+Generator} class. 
+Initializes a new instance of the \doxyref{Help\+Page\+Sample\+Generator}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator} class. 
 
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 26} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
 
 
 \label{doc-func-members}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a929f09573364211a4c5ac83d37e18e23}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetActionSample@{GetActionSample}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetActionSample@{GetActionSample}}
 \index{GetActionSample@{GetActionSample}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{GetActionSample()}{GetActionSample()}}
+\doxysubsubsection{GetActionSample()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a929f09573364211a4c5ac83d37e18e23} 
-virtual object Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Action\+Sample (\begin{DoxyParamCaption}\item[{string}]{controller\+Name}{, }\item[{string}]{action\+Name}{, }\item[{IEnumerable$<$ string $>$}]{parameter\+Names}{, }\item[{Type}]{type}{, }\item[{Media\+Type\+Formatter}]{formatter}{, }\item[{Media\+Type\+Header\+Value}]{media\+Type}{, }\item[{\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{Sample\+Direction}}}]{sample\+Direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+virtual object Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Action\+Sample (\begin{DoxyParamCaption}\item[{string}]{controller\+Name}{, }\item[{string}]{action\+Name}{, }\item[{IEnumerable$<$ string $>$}]{parameter\+Names}{, }\item[{Type}]{type}{, }\item[{Media\+Type\+Formatter}]{formatter}{, }\item[{Media\+Type\+Header\+Value}]{media\+Type}{, }\item[{\textbf{ Sample\+Direction}}]{sample\+Direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Search for samples that are provided directly through \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e}{Action\+Samples}. 
+Search for samples that are provided directly through \doxyref{Action\+Samples}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -100,15 +98,13 @@ The sample that matches the parameters.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00149}{149}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 149} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the caller graph for this function\+:
-% FIG 0
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a35972db5cc04b3189057867d689a6e1a}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSample@{GetSample}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSample@{GetSample}}
 \index{GetSample@{GetSample}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{GetSample()}{GetSample()}}
+\doxysubsubsection{GetSample()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a35972db5cc04b3189057867d689a6e1a} 
-virtual IDictionary$<$ Media\+Type\+Header\+Value, object $>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Sample (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{, }\item[{\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{Sample\+Direction}}}]{sample\+Direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+virtual IDictionary$<$ Media\+Type\+Header\+Value, object $>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Sample (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{, }\item[{\textbf{ Sample\+Direction}}]{sample\+Direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -126,21 +122,17 @@ The samples keyed by media type.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00090}{90}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 90} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the call graph for this function\+:
-% FIG 1
-Here is the caller graph for this function\+:
-% FIG 2
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_af41a4d4188c2f450b5f7375b60996d6b}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSampleObject@{GetSampleObject}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSampleObject@{GetSampleObject}}
 \index{GetSampleObject@{GetSampleObject}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{GetSampleObject()}{GetSampleObject()}}
+\doxysubsubsection{GetSampleObject()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_af41a4d4188c2f450b5f7375b60996d6b} 
 virtual object Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Sample\+Object (\begin{DoxyParamCaption}\item[{Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Gets the sample object that will be serialized by the formatters. First, it will look at the \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897}{Sample\+Objects}. If no sample object is found, it will try to create one using Default\+Sample\+Object\+Factory (which wraps an \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator}{Object\+Generator}) and other factories in \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}{Sample\+Object\+Factories}. 
+Gets the sample object that will be serialized by the formatters. First, it will look at the \doxyref{Sample\+Objects}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897}. If no sample object is found, it will try to create one using Default\+Sample\+Object\+Factory (which wraps an \doxyref{Object\+Generator}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator}) and other factories in \doxyref{Sample\+Object\+Factories}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -152,13 +144,11 @@ The sample object.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00178}{178}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 178} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the caller graph for this function\+:
-% FIG 3
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a559df5d82a5d71b7e519d4f1c0f4b8a7}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSampleRequests@{GetSampleRequests}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSampleRequests@{GetSampleRequests}}
 \index{GetSampleRequests@{GetSampleRequests}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{GetSampleRequests()}{GetSampleRequests()}}
+\doxysubsubsection{GetSampleRequests()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a559df5d82a5d71b7e519d4f1c0f4b8a7} 
 IDictionary$<$ Media\+Type\+Header\+Value, object $>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Sample\+Requests (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{}\end{DoxyParamCaption})}
 
@@ -176,13 +166,11 @@ The samples keyed by media type.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 69} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the call graph for this function\+:
-% FIG 4
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ad209708a138fc201e28ce1b2b036a91d}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSampleResponses@{GetSampleResponses}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!GetSampleResponses@{GetSampleResponses}}
 \index{GetSampleResponses@{GetSampleResponses}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{GetSampleResponses()}{GetSampleResponses()}}
+\doxysubsubsection{GetSampleResponses()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_ad209708a138fc201e28ce1b2b036a91d} 
 IDictionary$<$ Media\+Type\+Header\+Value, object $>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Get\+Sample\+Responses (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{}\end{DoxyParamCaption})}
 
@@ -200,13 +188,11 @@ The samples keyed by media type.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00079}{79}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 79} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the call graph for this function\+:
-% FIG 5
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a760f289f1451506c9c749b247cddda5a}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ResolveHttpRequestMessageType@{ResolveHttpRequestMessageType}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ResolveHttpRequestMessageType@{ResolveHttpRequestMessageType}}
 \index{ResolveHttpRequestMessageType@{ResolveHttpRequestMessageType}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{ResolveHttpRequestMessageType()}{ResolveHttpRequestMessageType()}}
+\doxysubsubsection{ResolveHttpRequestMessageType()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a760f289f1451506c9c749b247cddda5a} 
 virtual Type Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Resolve\+Http\+Request\+Message\+Type (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
@@ -224,15 +210,13 @@ The type.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00215}{215}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 215} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the call graph for this function\+:
-% FIG 6
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_aac36a2ef19e232f01c5054d4085c3503}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ResolveType@{ResolveType}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ResolveType@{ResolveType}}
 \index{ResolveType@{ResolveType}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{ResolveType()}{ResolveType()}}
+\doxysubsubsection{ResolveType()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_aac36a2ef19e232f01c5054d4085c3503} 
-virtual Type Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Resolve\+Type (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{, }\item[{string}]{controller\+Name}{, }\item[{string}]{action\+Name}{, }\item[{IEnumerable$<$ string $>$}]{parameter\+Names}{, }\item[{\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_a230b57efdf0882d808b71f875b6cccf8}{Sample\+Direction}}}]{sample\+Direction}{, }\item[{out Collection$<$ Media\+Type\+Formatter $>$}]{formatters}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+virtual Type Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Resolve\+Type (\begin{DoxyParamCaption}\item[{Api\+Description}]{api}{, }\item[{string}]{controller\+Name}{, }\item[{string}]{action\+Name}{, }\item[{IEnumerable$<$ string $>$}]{parameter\+Names}{, }\item[{\textbf{ Sample\+Direction}}]{sample\+Direction}{, }\item[{out Collection$<$ Media\+Type\+Formatter $>$}]{formatters}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -255,13 +239,11 @@ Resolves the type of the action parameter or return value when Http\+Request\+Me
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00234}{234}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 234} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the caller graph for this function\+:
-% FIG 7
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a442ff2b649c4930ad4b41f7f6d1be3ef}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!WriteSampleObjectUsingFormatter@{WriteSampleObjectUsingFormatter}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!WriteSampleObjectUsingFormatter@{WriteSampleObjectUsingFormatter}}
 \index{WriteSampleObjectUsingFormatter@{WriteSampleObjectUsingFormatter}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{WriteSampleObjectUsingFormatter()}{WriteSampleObjectUsingFormatter()}}
+\doxysubsubsection{WriteSampleObjectUsingFormatter()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a442ff2b649c4930ad4b41f7f6d1be3ef} 
 virtual object Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Write\+Sample\+Object\+Using\+Formatter (\begin{DoxyParamCaption}\item[{Media\+Type\+Formatter}]{formatter}{, }\item[{object}]{value}{, }\item[{Type}]{type}{, }\item[{Media\+Type\+Header\+Value}]{media\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
@@ -285,20 +267,17 @@ Writes the sample object using formatter.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00288}{288}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 288} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-Here is the caller graph for this function\+:
-% FIG 8
 
 
 \label{doc-property-members}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_doc-property-members}
 \doxysubsection{Property Documentation}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ActionSamples@{ActionSamples}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ActionSamples@{ActionSamples}}
 \index{ActionSamples@{ActionSamples}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{ActionSamples}{ActionSamples}}
+\doxysubsubsection{ActionSamples}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a15b9c5dfe37f62f25c4938d154b2371e} 
-IDictionary$<$\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key}{Help\+Page\+Sample\+Key}}, object$>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Action\+Samples\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+IDictionary$<$\textbf{ Help\+Page\+Sample\+Key}, object$>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Action\+Samples\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -306,13 +285,13 @@ Gets the objects that are used directly as samples for certain actions.
 
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 45} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_aa6d4b4c4239ffd6a04b72d123d155b24}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ActualHttpMessageTypes@{ActualHttpMessageTypes}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!ActualHttpMessageTypes@{ActualHttpMessageTypes}}
 \index{ActualHttpMessageTypes@{ActualHttpMessageTypes}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{ActualHttpMessageTypes}{ActualHttpMessageTypes}}
+\doxysubsubsection{ActualHttpMessageTypes}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_aa6d4b4c4239ffd6a04b72d123d155b24} 
-IDictionary$<$\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key}{Help\+Page\+Sample\+Key}}, Type$>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Actual\+Http\+Message\+Types\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+IDictionary$<$\textbf{ Help\+Page\+Sample\+Key}, Type$>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Actual\+Http\+Message\+Types\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -320,35 +299,35 @@ Gets CLR types that are used as the content of Http\+Request\+Message or Http\+R
 
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 40} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!SampleObjectFactories@{SampleObjectFactories}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!SampleObjectFactories@{SampleObjectFactories}}
 \index{SampleObjectFactories@{SampleObjectFactories}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{SampleObjectFactories}{SampleObjectFactories}}
+\doxysubsubsection{SampleObjectFactories}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012} 
-IList$<$Func$<$\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator}{Help\+Page\+Sample\+Generator}}, Type, object$>$ $>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Sample\+Object\+Factories\hspace{0.3cm}{\ttfamily [get]}}
+IList$<$Func$<$\textbf{ Help\+Page\+Sample\+Generator}, Type, object$>$ $>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Sample\+Object\+Factories\hspace{0.3cm}{\ttfamily [get]}}
 
 
 
 Gets factories for the objects that the supported formatters will serialize as samples. Processed in order, stopping when the factory successfully returns a non-\/ object. 
 
-Collection includes just \doxylink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_a978e3e71dc3309cc222ce1bb0d375d20}{Object\+Generator.\+Generate\+Object(\+Type)} initially. Use 
+Collection includes just \doxyref{Object\+Generator.\+Generate\+Object(\+Type)}{p.}{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_a978e3e71dc3309cc222ce1bb0d375d20} initially. Use 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}{SampleObjectFactories}}.Insert(0,\ func)}
+\DoxyCodeLine{SampleObjectFactories.Insert(0,\ func)}
 
 \end{DoxyCode}
  to provide an override and 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a90417b66b0dc6a2c110cf4089b8eb012}{SampleObjectFactories}}.Add(func)}
+\DoxyCodeLine{SampleObjectFactories.Add(func)}
 
 \end{DoxyCode}
  to provide a fallback.
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 62} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897}\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!SampleObjects@{SampleObjects}}
+\index{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}!SampleObjects@{SampleObjects}}
 \index{SampleObjects@{SampleObjects}!SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator@{SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator}}
-\doxysubsubsection{\texorpdfstring{SampleObjects}{SampleObjects}}
+\doxysubsubsection{SampleObjects}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_a55d7bc5ba420a28613d23882d135a897} 
 IDictionary$<$Type, object$>$ Sirocco\+Demo.\+APIs.\+Areas.\+Help\+Page.\+Help\+Page\+Sample\+Generator.\+Sample\+Objects\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
@@ -358,10 +337,10 @@ Gets the objects that are serialized as samples by the supported formatters.
 
 
 
-Definition at line \mbox{\hyperlink{_help_page_sample_generator_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_help_page_sample_generator_8cs_source}{Help\+Page\+Sample\+Generator.\+cs}}.
+Definition at line \textbf{ 50} of file \textbf{ Help\+Page\+Sample\+Generator.\+cs}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Sirocco\+Demo.\+APIs/\+Areas/\+Help\+Page/\+Sample\+Generation/\mbox{\hyperlink{_help_page_sample_generator_8cs}{Help\+Page\+Sample\+Generator.\+cs}}\end{DoxyCompactItemize}
+Sirocco\+Demo.\+APIs/\+Areas/\+Help\+Page/\+Sample\+Generation/\textbf{ Help\+Page\+Sample\+Generator.\+cs}\end{DoxyCompactItemize}

@@ -22,8 +22,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Infrastructure/Validations/NoteValidator.cs" line="9" column="21" bodyfile="SiroccoDemo.Infrastructure/Validations/NoteValidator.cs" bodystart="9" bodyend="25"/>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input_1ad965338e03189e04dc9e0f4a59b96d3e" compoundref="_note_input_8cs" startline="6" endline="6">SiroccoDemo.Application.Models.NoteInput.Description</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input_1a9c18817909e59cb2c61c2dce4666ec66" compoundref="_note_input_8cs" startline="5" endline="5">SiroccoDemo.Application.Models.NoteInput.Title</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

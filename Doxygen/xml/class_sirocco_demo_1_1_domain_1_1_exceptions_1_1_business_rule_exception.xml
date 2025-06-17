@@ -17,8 +17,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" line="7" column="23" bodyfile="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" bodystart="7" bodyend="7"/>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a1b67bb02bff738ecf60e6aa1e70c937d" compoundref="_business_rule_exception_8cs" startline="17" endline="22">SiroccoDemo.Domain.Exceptions.BusinessRuleException.BusinessRuleException</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a97851beadb225d64c610fc1535cc1e29" compoundref="_business_rule_exception_8cs" startline="10" endline="15">SiroccoDemo.Domain.Exceptions.BusinessRuleException.BusinessRuleException</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1ae25a623a507cc854229f80f672ff5b7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -33,8 +31,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" line="8" column="23" bodyfile="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" bodystart="8" bodyend="8"/>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a1b67bb02bff738ecf60e6aa1e70c937d" compoundref="_business_rule_exception_8cs" startline="17" endline="22">SiroccoDemo.Domain.Exceptions.BusinessRuleException.BusinessRuleException</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a97851beadb225d64c610fc1535cc1e29" compoundref="_business_rule_exception_8cs" startline="10" endline="15">SiroccoDemo.Domain.Exceptions.BusinessRuleException.BusinessRuleException</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -65,8 +61,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" line="10" column="16" bodyfile="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" bodystart="10" bodyend="15"/>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1ae25a623a507cc854229f80f672ff5b7f" compoundref="_business_rule_exception_8cs" startline="8" endline="8">SiroccoDemo.Domain.Exceptions.BusinessRuleException.EntityType</references>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a651fc4b6ee709800d7fb27e09153ccff" compoundref="_business_rule_exception_8cs" startline="7" endline="7">SiroccoDemo.Domain.Exceptions.BusinessRuleException.RuleName</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a1b67bb02bff738ecf60e6aa1e70c937d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -99,8 +93,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" line="17" column="16" bodyfile="SiroccoDemo.Domain/Exceptions/BusinessRuleException.cs" bodystart="17" bodyend="22"/>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1ae25a623a507cc854229f80f672ff5b7f" compoundref="_business_rule_exception_8cs" startline="8" endline="8">SiroccoDemo.Domain.Exceptions.BusinessRuleException.EntityType</references>
-        <references refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a651fc4b6ee709800d7fb27e09153ccff" compoundref="_business_rule_exception_8cs" startline="7" endline="7">SiroccoDemo.Domain.Exceptions.BusinessRuleException.RuleName</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
