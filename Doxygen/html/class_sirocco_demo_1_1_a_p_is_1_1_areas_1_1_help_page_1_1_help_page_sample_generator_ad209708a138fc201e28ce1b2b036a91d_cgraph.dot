@@ -1,0 +1,19 @@
+digraph "SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="SiroccoDemo.APIs.Areas.Help\lPage.HelpPageSampleGenerator.Get\lSampleResponses",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Gets the response body samples for a given ApiDescription."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="SiroccoDemo.APIs.Areas.Help\lPage.HelpPageSampleGenerator.Get\lSample",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a35972db5cc04b3189057867d689a6e1a",tooltip="Gets the request or response body samples."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="SiroccoDemo.APIs.Areas.Help\lPage.HelpPageSampleGenerator.Get\lActionSample",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a929f09573364211a4c5ac83d37e18e23",tooltip="Search for samples that are provided directly through ActionSamples."];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="SiroccoDemo.APIs.Areas.Help\lPage.HelpPageSampleGenerator.Get\lSampleObject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#af41a4d4188c2f450b5f7375b60996d6b",tooltip="Gets the sample object that will be serialized by the formatters. First, it will look at the SampleOb..."];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="SiroccoDemo.APIs.Areas.Help\lPage.HelpPageSampleGenerator.ResolveType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#aac36a2ef19e232f01c5054d4085c3503",tooltip="Resolves the type of the action parameter or return value when HttpRequestMessage or HttpResponseMess..."];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="SiroccoDemo.APIs.Areas.Help\lPage.HelpPageSampleGenerator.Write\lSampleObjectUsingFormatter",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a442ff2b649c4930ad4b41f7f6d1be3ef",tooltip="Writes the sample object using formatter."];
+}

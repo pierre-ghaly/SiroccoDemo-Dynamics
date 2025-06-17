@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::EnumValueDescription</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1acf54c6f5ed808e260dac93974d6e821d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Documentation</definition>
+        <argsstring></argsstring>
+        <name>Documentation</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Documentation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" line="5" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1a23883f76b15ce4b4930079b2788e103e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" line="7" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1a111c5aca43f66b8e6ddd46b63462d6c3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" line="9" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" line="3" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs" bodystart="4" bodyend="10"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1acf54c6f5ed808e260dac93974d6e821d" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::EnumValueDescription</scope><name>Documentation</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1a23883f76b15ce4b4930079b2788e103e" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::EnumValueDescription</scope><name>Name</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1a111c5aca43f66b8e6ddd46b63462d6c3" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::EnumValueDescription</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_moq_84_820_872_2readme_8md" kind="file" language="Markdown">
+    <compoundname>readme.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;!--<sp/>include<sp/>../../readme.md#content<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>#content<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>most<sp/>popular<sp/>and<sp/>friendly<sp/>mocking<sp/>library<sp/>for<sp/>.NET</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```csharp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>var<sp/>mock<sp/>=<sp/>new<sp/>Mock&lt;ILoveThisLibrary&gt;();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>WOW!<sp/>No<sp/>record/replay<sp/>weirdness?!<sp/>:)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>mock.Setup(library<sp/>=&gt;<sp/>library.DownloadExists(&quot;2.0.0.0&quot;))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.Returns(true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Use<sp/>the<sp/>Object<sp/>property<sp/>on<sp/>the<sp/>mock<sp/>to<sp/>get<sp/>a<sp/>reference<sp/>to<sp/>the<sp/>object</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>implementing<sp/>ILoveThisLibrary,<sp/>and<sp/>then<sp/>exercise<sp/>it<sp/>by<sp/>calling</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>methods<sp/>on<sp/>it</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>ILoveThisLibrary<sp/>lovable<sp/>=<sp/>mock.Object;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>bool<sp/>download<sp/>=<sp/>lovable.DownloadExists(&quot;2.0.0.0&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Verify<sp/>that<sp/>the<sp/>given<sp/>method<sp/>was<sp/>indeed<sp/>called<sp/>with<sp/>the<sp/>expected<sp/>value<sp/>at<sp/>most<sp/>once</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>mock.Verify(library<sp/>=&gt;<sp/>library.DownloadExists(&quot;2.0.0.0&quot;),<sp/>Times.AtMostOnce());</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Moq<sp/>also<sp/>is<sp/>the<sp/>first<sp/>and<sp/>only<sp/>library<sp/>so<sp/>far<sp/>to<sp/>provide<sp/>Linq<sp/>to<sp/>Mocks,<sp/>so<sp/>that<sp/>the<sp/></highlight></codeline>
+<codeline><highlight class="normal">same<sp/>behavior<sp/>above<sp/>can<sp/>be<sp/>achieved<sp/>much<sp/>more<sp/>succinctly:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```csharp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>ILoveThisLibrary<sp/>lovable<sp/>=<sp/>Mock.Of&lt;ILoveThisLibrary&gt;(l<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>l.DownloadExists(&quot;2.0.0.0&quot;)<sp/>==<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Exercise<sp/>the<sp/>instance<sp/>returned<sp/>by<sp/>Mock.Of<sp/>by<sp/>calling<sp/>methods<sp/>on<sp/>it...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>bool<sp/>download<sp/>=<sp/>lovable.DownloadExists(&quot;2.0.0.0&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Simply<sp/>assert<sp/>the<sp/>returned<sp/>state:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Assert.True(download);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>If<sp/>you<sp/>want<sp/>to<sp/>go<sp/>beyond<sp/>state<sp/>testing<sp/>and<sp/>want<sp/>to<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>verify<sp/>the<sp/>mock<sp/>interaction<sp/>instead...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Mock.Get(lovable).Verify(library<sp/>=&gt;<sp/>library.DownloadExists(&quot;2.0.0.0&quot;));</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>think<sp/>of<sp/>Linq<sp/>to<sp/>Mocks<sp/>as<sp/>&quot;from<sp/>the<sp/>universe<sp/>of<sp/>mocks,<sp/>give<sp/>me<sp/>one<sp/>whose<sp/>behavior<sp/></highlight></codeline>
+<codeline><highlight class="normal">matches<sp/>this<sp/>expression&quot;.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Check<sp/>out<sp/>the<sp/>[Quickstart](https://github.com/devlooped/moq/wiki/Quickstart)<sp/>for<sp/>more<sp/>examples!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>#content<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>../../readme.md#content<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>include<sp/>../../readme.md#sponsors<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>#sponsors<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>include<sp/>https://raw.githubusercontent.com/devlooped/sponsors/main/footer.md<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Sponsors<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>include<sp/>sponsors.md<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">[![Clarius<sp/>Org](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/clarius.png<sp/>&quot;Clarius<sp/>Org&quot;)](https://github.com/clarius)</highlight></codeline>
+<codeline><highlight class="normal">[![Kirill<sp/>Osenkov](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/KirillOsenkov.png<sp/>&quot;Kirill<sp/>Osenkov&quot;)](https://github.com/KirillOsenkov)</highlight></codeline>
+<codeline><highlight class="normal">[![MFB<sp/>Technologies,<sp/>Inc.](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/MFB-Technologies-Inc.png<sp/>&quot;MFB<sp/>Technologies,<sp/>Inc.&quot;)](https://github.com/MFB-Technologies-Inc)</highlight></codeline>
+<codeline><highlight class="normal">[![Stephen<sp/>Shaw](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/decriptor.png<sp/>&quot;Stephen<sp/>Shaw&quot;)](https://github.com/decriptor)</highlight></codeline>
+<codeline><highlight class="normal">[![Torutek](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/torutek-gh.png<sp/>&quot;Torutek&quot;)](https://github.com/torutek-gh)</highlight></codeline>
+<codeline><highlight class="normal">[![DRIVE.NET,<sp/>Inc.](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/drivenet.png<sp/>&quot;DRIVE.NET,<sp/>Inc.&quot;)](https://github.com/drivenet)</highlight></codeline>
+<codeline><highlight class="normal">[![Ashley<sp/>Medway](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/AshleyMedway.png<sp/>&quot;Ashley<sp/>Medway&quot;)](https://github.com/AshleyMedway)</highlight></codeline>
+<codeline><highlight class="normal">[![Keith<sp/>Pickford](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Keflon.png<sp/>&quot;Keith<sp/>Pickford&quot;)](https://github.com/Keflon)</highlight></codeline>
+<codeline><highlight class="normal">[![Thomas<sp/>Bolon](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/tbolon.png<sp/>&quot;Thomas<sp/>Bolon&quot;)](https://github.com/tbolon)</highlight></codeline>
+<codeline><highlight class="normal">[![Kori<sp/>Francis](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/kfrancis.png<sp/>&quot;Kori<sp/>Francis&quot;)](https://github.com/kfrancis)</highlight></codeline>
+<codeline><highlight class="normal">[![Toni<sp/>Wenzel](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/twenzel.png<sp/>&quot;Toni<sp/>Wenzel&quot;)](https://github.com/twenzel)</highlight></codeline>
+<codeline><highlight class="normal">[![Giorgi<sp/>Dalakishvili](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Giorgi.png<sp/>&quot;Giorgi<sp/>Dalakishvili&quot;)](https://github.com/Giorgi)</highlight></codeline>
+<codeline><highlight class="normal">[![Uno<sp/>Platform](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/unoplatform.png<sp/>&quot;Uno<sp/>Platform&quot;)](https://github.com/unoplatform)</highlight></codeline>
+<codeline><highlight class="normal">[![Dan<sp/>Siegel](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/dansiegel.png<sp/>&quot;Dan<sp/>Siegel&quot;)](https://github.com/dansiegel)</highlight></codeline>
+<codeline><highlight class="normal">[![Reuben<sp/>Swartz](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/rbnswartz.png<sp/>&quot;Reuben<sp/>Swartz&quot;)](https://github.com/rbnswartz)</highlight></codeline>
+<codeline><highlight class="normal">[![Jacob<sp/>Foshee](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/jfoshee.png<sp/>&quot;Jacob<sp/>Foshee&quot;)](https://github.com/jfoshee)</highlight></codeline>
+<codeline><highlight class="normal">[![](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Mrxx99.png<sp/>&quot;&quot;)](https://github.com/Mrxx99)</highlight></codeline>
+<codeline><highlight class="normal">[![Eric<sp/>Johnson](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/eajhnsn1.png<sp/>&quot;Eric<sp/>Johnson&quot;)](https://github.com/eajhnsn1)</highlight></codeline>
+<codeline><highlight class="normal">[![Ix<sp/>Technologies<sp/>B.V.](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/IxTechnologies.png<sp/>&quot;Ix<sp/>Technologies<sp/>B.V.&quot;)](https://github.com/IxTechnologies)</highlight></codeline>
+<codeline><highlight class="normal">[![David<sp/>JENNI](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/davidjenni.png<sp/>&quot;David<sp/>JENNI&quot;)](https://github.com/davidjenni)</highlight></codeline>
+<codeline><highlight class="normal">[![Jonathan<sp/>](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/Jonathan-Hickey.png<sp/>&quot;Jonathan<sp/>&quot;)](https://github.com/Jonathan-Hickey)</highlight></codeline>
+<codeline><highlight class="normal">[![Oleg<sp/>Kyrylchuk](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/okyrylchuk.png<sp/>&quot;Oleg<sp/>Kyrylchuk&quot;)](https://github.com/okyrylchuk)</highlight></codeline>
+<codeline><highlight class="normal">[![Charley<sp/>Wu](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/akunzai.png<sp/>&quot;Charley<sp/>Wu&quot;)](https://github.com/akunzai)</highlight></codeline>
+<codeline><highlight class="normal">[![Jakob<sp/>Tikjøb<sp/>Andersen](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/jakobt.png<sp/>&quot;Jakob<sp/>Tikjøb<sp/>Andersen&quot;)](https://github.com/jakobt)</highlight></codeline>
+<codeline><highlight class="normal">[![Seann<sp/>Alexander](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/seanalexander.png<sp/>&quot;Seann<sp/>Alexander&quot;)](https://github.com/seanalexander)</highlight></codeline>
+<codeline><highlight class="normal">[![Tino<sp/>Hager](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/tinohager.png<sp/>&quot;Tino<sp/>Hager&quot;)](https://github.com/tinohager)</highlight></codeline>
+<codeline><highlight class="normal">[![Mark<sp/>Seemann](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/ploeh.png<sp/>&quot;Mark<sp/>Seemann&quot;)](https://github.com/ploeh)</highlight></codeline>
+<codeline><highlight class="normal">[![Ken<sp/>Bonny](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/KenBonny.png<sp/>&quot;Ken<sp/>Bonny&quot;)](https://github.com/KenBonny)</highlight></codeline>
+<codeline><highlight class="normal">[![Simon<sp/>Cropp](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/SimonCropp.png<sp/>&quot;Simon<sp/>Cropp&quot;)](https://github.com/SimonCropp)</highlight></codeline>
+<codeline><highlight class="normal">[![agileworks-eu](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/agileworks-eu.png<sp/>&quot;agileworks-eu&quot;)](https://github.com/agileworks-eu)</highlight></codeline>
+<codeline><highlight class="normal">[![sorahex](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/sorahex.png<sp/>&quot;sorahex&quot;)](https://github.com/sorahex)</highlight></codeline>
+<codeline><highlight class="normal">[![Zheyu<sp/>Shen](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/arsdragonfly.png<sp/>&quot;Zheyu<sp/>Shen&quot;)](https://github.com/arsdragonfly)</highlight></codeline>
+<codeline><highlight class="normal">[![Vezel](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/vezel-dev.png<sp/>&quot;Vezel&quot;)](https://github.com/vezel-dev)</highlight></codeline>
+<codeline><highlight class="normal">[![ChilliCream](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/ChilliCream.png<sp/>&quot;ChilliCream&quot;)](https://github.com/ChilliCream)</highlight></codeline>
+<codeline><highlight class="normal">[![4OTC](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/4OTC.png<sp/>&quot;4OTC&quot;)](https://github.com/4OTC)</highlight></codeline>
+<codeline><highlight class="normal">[![Vincent<sp/>Limo](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/v-limo.png<sp/>&quot;Vincent<sp/>Limo&quot;)](https://github.com/v-limo)</highlight></codeline>
+<codeline><highlight class="normal">[![Brooke<sp/>Hamilton](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/brooke-hamilton.png<sp/>&quot;Brooke<sp/>Hamilton&quot;)](https://github.com/brooke-hamilton)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>sponsors.md<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Sponsor<sp/>this<sp/>project](https://raw.githubusercontent.com/devlooped/sponsors/main/sponsor.png<sp/>&quot;Sponsor<sp/>this<sp/>project&quot;)](https://github.com/sponsors/devlooped)</highlight></codeline>
+<codeline><highlight class="normal">&amp;nbsp;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Learn<sp/>more<sp/>about<sp/>GitHub<sp/>Sponsors](https://github.com/sponsors)</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>https://raw.githubusercontent.com/devlooped/sponsors/main/footer.md<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>../../readme.md#sponsors<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>Exclude<sp/>from<sp/>auto-expansion<sp/>by<sp/>devlooped/actions-include<sp/>GH<sp/>action<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>exclude<sp/>--&gt;</highlight></codeline>
+    </programlisting>
+    <location file="packages/Moq.4.20.72/readme.md"/>
+  </compounddef>
+</doxygen>

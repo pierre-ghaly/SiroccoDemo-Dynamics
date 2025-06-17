@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_create_account_with_contacts_and_notes_moq_8cs" kind="file" language="C#">
+    <compoundname>CreateAccountWithContactsAndNotesMoq.cs</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_moq_1_1_activities_1_1_create_account_with_contacts_and_notes_moq" prot="public">SiroccoDemo::Moq::Activities::CreateAccountWithContactsAndNotesMoq</innerclass>
+    <innernamespace refid="namespace_sirocco_demo">SiroccoDemo</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_moq">SiroccoDemo::Moq</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_moq_1_1_activities">SiroccoDemo::Moq::Activities</innernamespace>
+    <innernamespace refid="namespace_moq">Moq</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Xrm.Sdk;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Xrm.Tooling.Connector;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Moq;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_plugins" kindref="compound">SiroccoDemo.Plugins</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespace_sirocco_demo_1_1_moq" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_moq_1_1_activities" kindref="compound">SiroccoDemo.Moq.Activities</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CreateAccountWithContactsAndNotesMoq</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ExecuteMoq(CrmServiceClient<sp/>crmService)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>factoryMock<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Mock&lt;IOrganizationServiceFactory&gt;();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>pluginContextMock<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Mock&lt;IPluginExecutionContext&gt;();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>serviceProviderMock<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Mock&lt;IServiceProvider&gt;();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>factoryMock.Setup(f<sp/>=&gt;<sp/>f.CreateOrganizationService(It.IsAny&lt;Guid&gt;())).Returns(crmService);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>inputParameters<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParameterCollection();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputParameters.Add(</highlight><highlight class="stringliteral">&quot;AccountData&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Company<sp/>ABC<sp/>Moq&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputParameters.Add(</highlight><highlight class="stringliteral">&quot;AccountNotes&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;[{\&quot;Title\&quot;:<sp/>\&quot;Note<sp/>Text\&quot;,<sp/>\&quot;Description\&quot;:<sp/>\&quot;Account-level<sp/>note.\&quot;}]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputParameters.Add(</highlight><highlight class="stringliteral">&quot;PrimaryContactData&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;{\&quot;FirstName\&quot;:<sp/>\&quot;John\&quot;,<sp/>\&quot;LastName\&quot;:<sp/>\&quot;Primary\&quot;,<sp/>\&quot;Email\&quot;:<sp/>\&quot;john.primary@example.com\&quot;,<sp/>\&quot;Notes\&quot;:<sp/>[{\&quot;Title\&quot;:<sp/>\&quot;Note<sp/>1<sp/>Text\&quot;,<sp/>\&quot;Description\&quot;:<sp/>\&quot;First<sp/>note<sp/>for<sp/>primary<sp/>contact.\&quot;},<sp/>{\&quot;Title\&quot;:<sp/>\&quot;Note<sp/>2<sp/>Text\&quot;,<sp/>\&quot;Description\&quot;:<sp/>\&quot;Second<sp/>note<sp/>for<sp/>primary<sp/>contact.\&quot;}]}&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputParameters.Add(</highlight><highlight class="stringliteral">&quot;SecondaryContactData&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;[{\&quot;FirstName\&quot;:<sp/>\&quot;Jane\&quot;,<sp/>\&quot;LastName\&quot;:<sp/>\&quot;Secondary\&quot;,<sp/>\&quot;Email\&quot;:<sp/>\&quot;jane.secondary@example.com\&quot;}]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pluginContextMock.Setup(c<sp/>=&gt;<sp/>c.InputParameters).Returns(inputParameters);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>serviceProviderMock.Setup(s<sp/>=&gt;<sp/>s.GetService(typeof(IOrganizationServiceFactory))).Returns(factoryMock.Object);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>serviceProviderMock.Setup(s<sp/>=&gt;<sp/>s.GetService(typeof(IPluginExecutionContext))).Returns(pluginContextMock.Object);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>plugin<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes" kindref="compound">CreateAccountWithContactsAndNotes</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plugin.Execute(serviceProviderMock.Object);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.WriteLine(</highlight><highlight class="stringliteral">&quot;CreateAccountWithContactsAndNotes<sp/>Plugin<sp/>Moq<sp/>Executed<sp/>Successfully.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="SiroccoDemo.Moq/Activities/CreateAccountWithContactsAndNotesMoq.cs"/>
+  </compounddef>
+</doxygen>

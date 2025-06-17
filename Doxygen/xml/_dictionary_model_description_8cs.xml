@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_dictionary_model_description_8cs" kind="file" language="C#">
+    <compoundname>DictionaryModelDescription.cs</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_dictionary_model_description" prot="public">SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::DictionaryModelDescription</innerclass>
+    <innernamespace refid="namespace_sirocco_demo">SiroccoDemo</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is">SiroccoDemo::APIs</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas">SiroccoDemo::APIs::Areas</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page">SiroccoDemo::APIs::Areas::HelpPage</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions">SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions" kindref="compound">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_dictionary_model_description" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_dictionary_model_description" kindref="compound">DictionaryModelDescription</ref><sp/>:<sp/><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_key_value_pair_model_description" kindref="compound">KeyValuePairModelDescription</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/DictionaryModelDescription.cs"/>
+  </compounddef>
+</doxygen>

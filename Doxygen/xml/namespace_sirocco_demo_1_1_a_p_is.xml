@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_sirocco_demo_1_1_a_p_is" kind="namespace" language="C#">
+    <compoundname>SiroccoDemo::APIs</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config" prot="public">SiroccoDemo::APIs::BundleConfig</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config" prot="public">SiroccoDemo::APIs::FilterConfig</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config" prot="public">SiroccoDemo::APIs::RouteConfig</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_swagger_config" prot="public">SiroccoDemo::APIs::SwaggerConfig</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_unity_config" prot="public">SiroccoDemo::APIs::UnityConfig</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application" prot="public">SiroccoDemo::APIs::WebApiApplication</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_config" prot="public">SiroccoDemo::APIs::WebApiConfig</innerclass>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas">SiroccoDemo::APIs::Areas</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_controllers">SiroccoDemo::APIs::Controllers</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_services">SiroccoDemo::APIs::Services</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/App_Start/BundleConfig.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

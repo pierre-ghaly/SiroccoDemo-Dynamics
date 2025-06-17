@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a6c5b7913f60bbee31b1ef06cb19cc556" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Collection&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation" kindref="compound">ParameterAnnotation</ref> &gt;</type>
+        <definition>Collection&lt;ParameterAnnotation&gt; SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations</definition>
+        <argsstring></argsstring>
+        <name>Annotations</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" line="13" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" bodystart="13" bodyend="13"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a669f9a8c037a3fe1740a62e2207348ee" compoundref="_parameter_description_8cs" startline="8" endline="11">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.ParameterDescription</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a3ac0903f8f3c2828a14c712d3f8f9f16" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Documentation</definition>
+        <argsstring></argsstring>
+        <name>Documentation</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Documentation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" line="15" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a30c01b01196c46114076cacdc6d513be" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" line="17" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a9a4b4dd26f67b40189b414844b603906" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kindref="compound">ModelDescription</ref></type>
+        <definition>ModelDescription SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.TypeDescription</definition>
+        <argsstring></argsstring>
+        <name>TypeDescription</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.TypeDescription</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" line="19" column="33" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a669f9a8c037a3fe1740a62e2207348ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.ParameterDescription</definition>
+        <argsstring>()</argsstring>
+        <name>ParameterDescription</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.ParameterDescription</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" line="8" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" bodystart="8" bodyend="11"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a6c5b7913f60bbee31b1ef06cb19cc556" compoundref="_parameter_description_8cs" startline="13" endline="13">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" line="6" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs" bodystart="7" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a6c5b7913f60bbee31b1ef06cb19cc556" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</scope><name>Annotations</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a3ac0903f8f3c2828a14c712d3f8f9f16" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</scope><name>Documentation</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a30c01b01196c46114076cacdc6d513be" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</scope><name>Name</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a669f9a8c037a3fe1740a62e2207348ee" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</scope><name>ParameterDescription</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a9a4b4dd26f67b40189b414844b603906" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</scope><name>TypeDescription</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

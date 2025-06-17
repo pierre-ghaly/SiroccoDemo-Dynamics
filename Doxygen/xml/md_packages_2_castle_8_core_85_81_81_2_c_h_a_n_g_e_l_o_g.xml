@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g" kind="page">
+    <compoundname>md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g</compoundname>
+    <title>Castle Core Changelog</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md0"/></para>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md1">
+<title>5.1.1 (2022-12-30)</title><para>Bugfixes:<itemizedlist>
+<listitem><para>Proxies using records derived from a base generic record broken using .NET 6 compiler (@CesarD, #632)</para>
+</listitem><listitem><para>Failure proxying type that has a non-inheritable custom attribute type applied where <computeroutput>null</computeroutput> argument is given for array parameter (@stakx, #637)</para>
+</listitem><listitem><para>Nested custom attribute types do not get replicated (@stakx, #638)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md2">
+<title>5.1.0 (2022-08-02)</title><para>Enhancements:<itemizedlist>
+<listitem><para>Support for covariant method returns (@stakx, #619)</para>
+</listitem><listitem><para>Performance improvement with proxy type generation for class proxies (without target). Abstract class methods now reuse a predefined invocation type (like methods of interface proxies without target; see explanation below at version 5.0.0 enhancements) (@stakx, #626)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>DynamicProxy emits invalid metadata for redeclared event (@stakx, #590)</para>
+</listitem><listitem><para>Proxies using records with a base class broken using .NET 6 compiler (@ajcvickers, #601)</para>
+</listitem><listitem><para><computeroutput>MissingMethodException</computeroutput> when proxying interfaces containing sealed methods (@stakx, #621)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md3">
+<title>5.0.0 (2022-05-11)</title><para>Enhancements:<itemizedlist>
+<listitem><para>.NET 6.0 support (@Jevonius, #616)</para>
+</listitem><listitem><para>.NET Standard 2.0 and 2.1 support (@lg2de, #485)</para>
+</listitem><listitem><para>Non-intercepted methods on a class proxy with target are now forwarded to the target (@stakx, #571)</para>
+</listitem><listitem><para>Significant performance improvements with proxy type generation for interface proxies without target. Up until now, DynamicProxy generated a separate <computeroutput>IInvocation</computeroutput> implementation type for every single proxied method <ndash/> it is now able to reuse a single predefined type in many cases, thereby reducing the total amount of dynamic type generation. (@stakx, #573)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Generic method with differently named generic arguments to parent throws <computeroutput>KeyNotFoundException</computeroutput> (@stakx, #106)</para>
+</listitem><listitem><para>Proxying certain <computeroutput>[Serializable]</computeroutput> classes produces proxy types that fail PEVerify test (@stakx, #367)</para>
+</listitem><listitem><para><computeroutput>private protected</computeroutput> methods are not intercepted (@CrispyDrone, #535)</para>
+</listitem><listitem><para><computeroutput>System.UIntPtr</computeroutput> unsupported (@stakx, #546)</para>
+</listitem><listitem><para>DynamicProxy generates two modules when proceeding from a class proxy&apos;s protected method to the target, causing an <computeroutput>InvalidOperationException</computeroutput> when saving the generated assembly to disk (@stakx, #569)</para>
+</listitem><listitem><para>Upgrade log4net to v2.0.13 (@jonorossi, @stakx, @dschwartzni, #574, #605)</para>
+</listitem></itemizedlist>
+</para>
+<para>Deprecations:<itemizedlist>
+<listitem><para>Removed support for the .NET Framework &lt; 4.6.2 and .NET Standard 1.x. (@stakx, #495, #496; @Jevonius, #614)</para>
+</listitem><listitem><para>Removed support for Code Access Security (CAS). (@stakx, #502)</para>
+</listitem><listitem><para>Removed support for Remoting. This library no longer defines any types deriving from <computeroutput>MarshalByRefObject</computeroutput>, and <computeroutput>ProxyUtil.IsProxy</computeroutput> (which used to recognize remoting/&quot;transparent&quot; proxies) now tests only for DynamicProxy proxies. (@stakx, #507)</para>
+</listitem><listitem><para>The following public members have been removed:<itemizedlist>
+<listitem><para><computeroutput>Castle.Core.Internal.CollectionExtensions</computeroutput> (class)</para>
+</listitem><listitem><para><computeroutput>Castle.Core.Internal.Lock</computeroutput> (class) along with all related types and methods</para>
+</listitem><listitem><para><computeroutput>Castle.Core.Internal.PermissionUtil.IsGranted</computeroutput> (method)</para>
+</listitem><listitem><para><computeroutput>Castle.Core.Pair&lt;,&gt;</computeroutput> (type). Use <computeroutput>System.ValueTuple&lt;,&gt;</computeroutput> or <computeroutput>System.Tuple&lt;,&gt;</computeroutput> instead.</para>
+</listitem><listitem><para>all type members in <computeroutput>Castle.DynamicProxy.ModuleScope</computeroutput> that gave direct access to DynamicProxy&apos;s type cache and <computeroutput>ModuleBuilder</computeroutput>s. Only <computeroutput>SaveAssembly</computeroutput>, <computeroutput>LoadAssemblyIntoCache</computeroutput>, and members supporting these two facilities are left public.</para>
+</listitem><listitem><para>almost all types and type members in the <computeroutput>Castle.DynamicProxy.*</computeroutput> sub-namespaces, as most of them are intended for internal use only.</para>
+</listitem><listitem><para>DynamicProxy&apos;s custom exception types have been replaced by standard BCL exceptions (where appropriate), and by a single <computeroutput>DynamicProxyException</computeroutput> type for internal DynamicProxy errors.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md4">
+<title>4.4.1 (2020-05-06)</title><para>Bugfixes:<itemizedlist>
+<listitem><para>Prevent method name collisions when a proxy type implements more than two identically named interfaces having one or more identically named methods each. Name collisions are avoided by including the declaring types&apos; namespaces in the proxy type&apos;s method names. (@stakx, #469)</para>
+</listitem><listitem><para>Reduce lock contention while generating new proxy types which previously blocked new proxy instances (@tangdf, #484)</para>
+</listitem><listitem><para>Fix mixins where proxy constructor fields were ordered differently to interfaces because of different case comparisons (@zapov, #475)</para>
+</listitem><listitem><para>Fix proxy generation for types having only a <computeroutput>private protected</computeroutput> constructor (@mriehm, #491)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md5">
+<title>4.4.0 (2019-04-05)</title><para>Enhancements:<itemizedlist>
+<listitem><para>Added trace logging level below Debug; maps to Trace in log4net/NLog, and Verbose in Serilog (@pi3k14, #404)</para>
+</listitem><listitem><para>Recognize read-only parameters by the <computeroutput>In</computeroutput> modreq (@zvirja, #406)</para>
+</listitem><listitem><para>DictionaryAdapter: Exposed GetAdapter overloads with NameValueCollection parameter in .NET Standard (@rzontar, #423)</para>
+</listitem><listitem><para>Ability to add delegate mixins to proxies using <computeroutput>ProxyGenerationOptions.AddDelegate[Type]Mixin</computeroutput>. You can bind to the mixed-in <computeroutput>Invoke</computeroutput> methods on the proxy using <computeroutput>ProxyUtil.CreateDelegateToMixin</computeroutput>. (@stakx, #436)</para>
+</listitem><listitem><para>New <computeroutput>IInvocation.CaptureProceedInfo()</computeroutput> method to enable better implementations of asynchronous interceptors (@stakx, #439)</para>
+</listitem></itemizedlist>
+</para>
+<para>Deprecations:<itemizedlist>
+<listitem><para>The API surrounding <computeroutput>Lock</computeroutput> has been deprecated. This consists of the members listed below. Consider using the Base Class Library&apos;s <computeroutput>System.Threading.ReaderWriterLockSlim</computeroutput> instead. (@stakx, #391)<itemizedlist>
+<listitem><para><computeroutput>Castle.Core.Internal.Lock</computeroutput> (class)</para>
+</listitem><listitem><para><computeroutput>Castle.Core.Internal.ILockHolder</computeroutput> (interface)</para>
+</listitem><listitem><para><computeroutput>Castle.Core.Internal.IUpgradeableLockHolder</computeroutput> (interface)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>You should no longer manually emit types into DynamicProxy&apos;s dynamic assembly. For this reason, the following member has been deprecated. (@stakx, #445)<itemizedlist>
+<listitem><para><computeroutput>Castle.DynamicProxy.ModuleScope.DefineType</computeroutput> (method)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>The proxy type cache in <computeroutput>ModuleScope</computeroutput> should no longer be accessed directly. For this reason, the members listed below have been deprecated. (@stakx, #391)<itemizedlist>
+<listitem><para><computeroutput>Castle.DynamicProxy.ModuleScope.Lock</computeroutput> (property)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.ModuleScope.GetFromCache</computeroutput> (method)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.ModuleScope.RegisterInCache</computeroutput> (method)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.Generators.BaseProxyGenerator.AddToCache</computeroutput> (method)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.Generators.BaseProxyGenerator.GetFromCache</computeroutput> (method)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.Generators.CacheKey</computeroutput> (class)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.Serialization.CacheMappingsAttribute.ApplyTo</computeroutput> (method)</para>
+</listitem><listitem><para><computeroutput>Castle.DynamicProxy.Serialization.CacheMappingsAttribute.GetDeserializedMappings</computeroutput> (method)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md6">
+<title>4.3.1 (2018-06-21)</title><para>Enhancements:<itemizedlist>
+<listitem><para>Use shared read locking to reduce lock contention in InvocationHelper and ProxyUtil (@TimLovellSmith, #377)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Prevent interceptors from being able to modify <computeroutput>in</computeroutput> parameters (@stakx, #370)</para>
+</listitem><listitem><para>Make default value replication of optional parameters more tolerant of default values that are represented in metadata with a mismatched type (@stakx, #371)</para>
+</listitem><listitem><para>Fix a concurrency issue (writing without taking a write lock first) in <computeroutput>BaseProxyGenerator.ObtainProxyType</computeroutput> (@stakx, #383)</para>
+</listitem></itemizedlist>
+</para>
+<para>Deprecations:<itemizedlist>
+<listitem><para><computeroutput>Castle.DynamicProxy.Generators.Emitters.ArgumentsUtil.IsAnyByRef</computeroutput> (@stakx, #370)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md7">
+<title>4.3.0 (2018-06-07)</title><para>Enhancements:<itemizedlist>
+<listitem><para>Added .NET Standard/.NET Core support for NLog (@snakefoot, #200)</para>
+</listitem><listitem><para>Added .NET Standard/.NET Core support for log4net (@snakefoot, #201)</para>
+</listitem><listitem><para>DynamicProxy supported C# <computeroutput>in</computeroutput> parameter modifiers only on the .NET Framework up until now. Adding .NET Standard 1.5 as an additional target to the NuGet package makes them work on .NET Core, too (@stakx, #339)</para>
+</listitem><listitem><para>Replicate custom attributes on constructor parameters in the generated proxy type constructors to fulfill introspection of constructors. This does not change the proxying behavior. (@stakx, #341)</para>
+</listitem><listitem><para>Improve performance of InvocationHelper cache lookups (@tangdf, #358)</para>
+</listitem><listitem><para>Improve fidelity of default value replication of optional parameters to fulfill inspection of the generated proxies. This does not change the proxying behavior. (@stakx, #356)</para>
+</listitem><listitem><para>Improve cache performance of MethodFinder.GetAllInstanceMethods (@tangdf, #357)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Fix Castle.Services.Logging.Log4netIntegration assembly file name casing which breaks on Linux (@beginor, #324)</para>
+</listitem><listitem><para>Fix Castle.DynamicProxy.Generators.AttributesToAvoidReplicating not being thread safe (InvalidOperationException &quot;Collection was modified; enumeration operation may not execute.&quot;) (@BrunoJuchli, #334)</para>
+</listitem><listitem><para>Fix TraceLoggerFactory to allow specifying the default logger level (@acjh, #342)</para>
+</listitem><listitem><para>Ensure that DynamicProxy doesn&apos;t create invalid dynamic assemblies when proxying types from non-strong-named assemblies (@stakx, #327)</para>
+</listitem><listitem><para>Fix interceptor selectors being passed <computeroutput>System.RuntimeType</computeroutput> for class proxies instead of the target type (@stakx, #359)</para>
+</listitem><listitem><para>Replace NullReferenceException with descriptive one thrown when interceptors swallow exceptions and cause a null value type to be returned (@jonorossi, #85)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md8">
+<title>4.2.1 (2017-10-11)</title><para>Bugfixes:<itemizedlist>
+<listitem><para>Add missing equality checks in <computeroutput>MethodSignatureComparer.EqualSignatureTypes</computeroutput> to fix <computeroutput>TypeLoadException</computeroutput>s (&quot;Method does not have an implementation&quot;) (@stakx, #310)</para>
+</listitem><listitem><para>Add missing XML documentation files to NuGet packages (@fir3pho3nixx, #312)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md9">
+<title>4.2.0 (2017-09-28)</title><para>Enhancements:<itemizedlist>
+<listitem><para>Add IProxyTargetAccessor.DynProxySetTarget to set the target of a proxy (@yallie, #293)</para>
+</listitem><listitem><para>Internal dynamic proxy fields are now private instead of public (@spencercw, #260)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Make ProxyUtil.IsAccessible(MethodBase) take into account declaring type&apos;s accessibility so it doesn&apos;t report false negatives for e.g. public methods in inaccessible classes. (@stakx, #289)</para>
+</listitem><listitem><para>Fix InvalidCastException calling IChangeProxyTarget.ChangeProxyTarget proxying generic interfaces (@yallie, #293)</para>
+</listitem><listitem><para>Ignore minor/patch level version for AssemblyVersionAttribute as this creates binding errors for downstream libraries (@fir3pho3nixx, #288)</para>
+</listitem><listitem><para>Fix DictionaryAdapter firing NotifyPropertyChang(ed/ing) events after CancelEdit (@Lakritzator, #299)</para>
+</listitem><listitem><para>Fix ArgumentException when overriding method with nested generics (@BitWizJason, #297)</para>
+</listitem><listitem><para>Explicit package versioning applied within solution to avoid maligned NuGet upgrades for lock step versioned packages. (@fir3pho3nixx, #292)</para>
+</listitem></itemizedlist>
+</para>
+<para>Deprecations:<itemizedlist>
+<listitem><para>IChangeProxyTarget.ChangeProxyTarget is deprecated in favor of IProxyTargetAccessor.DynProxySetTarget (@yallie, #293)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md10">
+<title>4.1.1 (2017-07-12)</title><para>Bugfixes:<itemizedlist>
+<listitem><para>Prevent member name collision when proxy implements same generic interface more than twice (@stakx, #88)</para>
+</listitem><listitem><para>Fix incorrect replication (reversed order) of custom modifiers (modopts and modreqs) on the CLR, does not work yet on Mono (@stakx, #277)</para>
+</listitem><listitem><para>Fix COM interface proxy error case throwing exceptions trying to release null pointer from QueryInterface (@stakx, #281)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md11">
+<title>4.1.0 (2017-06-11)</title><para>Breaking Changes:<itemizedlist>
+<listitem><para>Remove AllowPartiallyTrustedCallersAttribute, which wasn&apos;t defined by default (@fir3pho3nixx, #241)</para>
+</listitem><listitem><para>Upgrade log4net to v2.0.8 (@fir3pho3nixx, #241)</para>
+</listitem></itemizedlist>
+</para>
+<para>Enhancements:<itemizedlist>
+<listitem><para>Add ProxyUtil.IsAccessible to check if a method is accessible to DynamicProxyGenAssembly2 (Blair Conrad, #235)</para>
+</listitem><listitem><para>Refactor build engineering to support AppVeyor and TravisCI (@fir3pho3nixx, #241)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Fix order of class proxy constructor arguments when using multiple mixins (@sebastienros, #230)</para>
+</listitem><listitem><para>Fix dependency on &quot;System.ComponentModel.TypeConverter&quot; NuGet package version that does not exist (#239)</para>
+</listitem><listitem><para>Fix ParamArrayAttribute not being replicated in proxy (@stakx, #121)</para>
+</listitem><listitem><para>Fix System.Net.Mail.SmtpClient is obsolete on Mono warning (#254)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md12">
+<title>4.0.0 (2017-01-25)</title><para>Breaking Changes:<itemizedlist>
+<listitem><para>Update to NLog 4.4.1 and remove beta .NET Core support for NLog (#228)</para>
+</listitem><listitem><para>Update to log4net 2.0.7 (#229)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Fix CustomAttributeInfo.FromExpression for VB.NET (@thomaslevesque, #223)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md13">
+<title>4.0.0-beta002 (2016-10-28)</title><para>Breaking Changes:<itemizedlist>
+<listitem><para>Rework Serilog integration to accept an ILogger rather than a LoggerConfiguration to work correctly with Serilog (#142, #211)</para>
+</listitem><listitem><para>Remove obsolete property <computeroutput>AttributesToAddToGeneratedTypes</computeroutput> from <computeroutput>ProxyGenerationOptions</computeroutput> (#219)</para>
+</listitem><listitem><para>Change type of <computeroutput>ProxyGenerationOptions.AdditionalAttributes</computeroutput> to <computeroutput>IList&lt;CustomAttributeInfo&gt;</computeroutput> (#219)</para>
+</listitem><listitem><para>Remove <computeroutput>IAttributeDisassembler</computeroutput> which is no longer necessary (#219)</para>
+</listitem></itemizedlist>
+</para>
+<para>Enhancements:<itemizedlist>
+<listitem><para>Add IProxyGenerator interface for the ProxyGenerator class (#215)</para>
+</listitem><listitem><para>Improve default list of attributes to avoid replicating. Code Access Security attributes and MarshalAsAttribute will no longer be replicated (#221)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Fix building on Mono 4.6.1</para>
+</listitem><listitem><para>Different attributes in <computeroutput>ProxyGenerationOptions.AdditionalAttributes</computeroutput> now generates different proxy types (#219)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md14">
+<title>4.0.0-beta001 (2016-07-17)</title><para>Breaking Changes:<itemizedlist>
+<listitem><para>Update to log4net 1.2.15/2.0.5 (#199)</para>
+</listitem><listitem><para>Update to NLog 4.4.0-beta13 (#199)</para>
+</listitem><listitem><para>Update to Serilog 2.0.0 (#199)</para>
+</listitem></itemizedlist>
+</para>
+<para>Enhancements:<itemizedlist>
+<listitem><para>.NET Core 1.0 and .NET Standard 1.3 support (Jonathon Rossi, Jeremy Meng)</para>
+</listitem><listitem><para>Restore DynamicDictionary class</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Fix target framework moniker in NuGet package for .NET Core (#174)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md15">
+<title>4.0.0-alpha001 (2016-04-07)</title><para>Breaking Changes:<itemizedlist>
+<listitem><para>Remove all Silverlight support (#100, #150)</para>
+</listitem><listitem><para>Remove DynamicProxy&apos;s RemotableInvocation and remoting support for invocations (#110, #65)</para>
+</listitem></itemizedlist>
+</para>
+<para>Enhancements:<itemizedlist>
+<listitem><para>.NET Core DNX and dotnet5.4 support via feature conditional compilation (Jonathon Rossi, Jeremy Meng)</para>
+</listitem><listitem><para>Build script improvements and consolidate version numbers (Blair Conrad, #75, #152, #153)</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>Fix &apos;System.ArgumentException: Constant does not match the defined type&apos; with optional, nullable enum method parameters (Daniel Yankowsky, #141, #149)</para>
+</listitem><listitem><para>Fix proxy generation hook notification for virtual but final methods (Axel Heer, #148)</para>
+</listitem><listitem><para>Fix InvalidCastException with custom attribute having an enum array parameter with non-int enum (@csharper2010, #104, #105)</para>
+</listitem><listitem><para>Update to Mono 4.0.2 and improve Mono support (#79, #95, #102)</para>
+</listitem><listitem><para>Fix &apos;System.ArrayTypeMismatchException: Source array type cannot be assigned to destination array type&apos; on Mono (#81)</para>
+</listitem><listitem><para>Fix &apos;System.ArgumentException: System.Decimal is not a supported constant type&apos; with optional method parameters (@fknx, #87, #91)</para>
+</listitem><listitem><para>Fix ProxyGenerator cache does not take into account AdditionalAttributes (@cmerat, #77, #78)</para>
+</listitem><listitem><para>Fix Castle.Services.Logging.SerilogIntegration.dll missing some assembly info attributes (@imzshh, #20, #82)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md16">
+<title>3.3.3 (2014-11-06)</title><para><itemizedlist>
+<listitem><para>Fix Serilog integration modifies LoggerConfiguration.MinimumLevel (#70)</para>
+</listitem><listitem><para>Add SourceContext to the Serilog logger (@KevivL, #69)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md17">
+<title>3.3.2 (2014-11-03)</title><para><itemizedlist>
+<listitem><para>fixed #66 - SerilogLogger implementation bug where exceptions were passed through incorrectly</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md18">
+<title>3.3.1 (2014-09-10)</title><para><itemizedlist>
+<listitem><para>implemented #61 - Added support for Serilog - contributed by Russell J Baker (@ruba1987)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md19">
+<title>3.3.0 (2014-04-27)</title><para><itemizedlist>
+<listitem><para>implemented #51 - removed abandoned projects: Binder, Pagination, Validator</para>
+</listitem><listitem><para>implemented #49 - build NuGet and Zip packages from TeamCity - contributed by Blair Conrad (@blairconrad)</para>
+</listitem><listitem><para>implemented #42 - move complicated BuildInternalsVisibleMessageForType method out of DynamicProxyBuilder - contributed by Blair Conrad (@blairconrad)</para>
+</listitem><listitem><para>fixed #47 - Calling DynamicProxy proxy methods with multidimensional array parameters - contributed by Ed Parcell (@edparcell)</para>
+</listitem><listitem><para>fixed #44 - DictionaryAdapter FetchAttribute on type has no effect</para>
+</listitem><listitem><para>fixed #34 and #39 - inaccessible type parameters should give better error messages - contributed by Blair Conrad (@blairconrad)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md20">
+<title>3.2.2 (2013-11-30)</title><para><itemizedlist>
+<listitem><para>fixed #35 - ParameterBuilder.SetConstant fails when using a default value of null - contributed by (@jonasro)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md21">
+<title>3.2.1 (2013-10-05)</title><para><itemizedlist>
+<listitem><para>fixed #32 - Improve configuration of SmtpClient in sync sending - contributed by Artur Dorochowicz (@ArturDorochowicz)</para>
+</listitem><listitem><para>fixed #31 - [DynamicProxy] Preserve DefaultValues of proxied method&apos;s parameters (in .NET 4.5)</para>
+</listitem><listitem><para>fixed #30 - tailoring InternalsVisibleTo message based on assembly of inaccessible type - contributed by Blair Conrad (@blairconrad)</para>
+</listitem><listitem><para>fixed #27 - Allow dynamic proxy of generic interfaces which have generic methods, under Mono 2.10.8 and Mono 3.0.6 - contributed by Iain Ballard (@i-e-b)</para>
+</listitem><listitem><para>fixed #26 - Proxy of COM class issue, reference count incremented - contributed by Jean-Claude Viau (@jcviau)</para>
+</listitem><listitem><para>fixed DYNPROXY-188 - CreateInterfaceProxyWithoutTarget fails with interface containing member with &apos;ref UIntPtr&apos; - contributed by Pier Janssen (@Pjanssen)</para>
+</listitem><listitem><para>fixed DYNPROXY-186 - .Net remoting (transparent proxy) cannot be proxied - contributed by Jean-Claude Viau (@jcviau)</para>
+</listitem><listitem><para>fixed DYNPROXY-185 - ProxyUtil.GetUnproxiedInstance returns proxy object for ClassProxyWithTarget instead of its target - contributed by Dmitry Xlestkov (@d-s-x)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md22">
+<title>3.2.0 (2013-02-16)</title><para><itemizedlist>
+<listitem><para>fixed DYNPROXY-179 - Exception when creating a generic proxy (from cache)</para>
+</listitem><listitem><para>fixed DYNPROXY-175 - invalid CompositionInvocation type used when code uses interface proxies with and without InterceptorSelector</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md23">
+<title>3.1.0 (2012-08-05)</title><para><itemizedlist>
+<listitem><para>fixed DYNPROXY-174 - Unable to cast object of type &apos;System.Collections.ObjectModel.ReadOnlyCollection`1[System.Reflection.CustomAttributeTypedArgument]&apos; to type &apos;System.Array&apos;</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md24">
+<title>3.1.0 RC (2012-07-08)</title><para><itemizedlist>
+<listitem><para>support multiple inheritance of DA attributes on interfaces.</para>
+</listitem><listitem><para>BREAKING CHANGE: removed propagated child notifications as it violated INotifyPropertyChanged contract</para>
+</listitem><listitem><para>improved DictionaryAdapter performance</para>
+</listitem><listitem><para>generalized IBindingList support for DictionaryAdapters</para>
+</listitem><listitem><para>added reference support to XmlAdapter</para>
+</listitem><listitem><para>BREAKING CHANGE: refactored XPathAdapter into XmlAdapter with much more flexibility to support other input like XLinq</para>
+</listitem><listitem><para>implemented CORE-43 - Add option to skip configuring log4net/nlog</para>
+</listitem><listitem><para>fixed CORE-44 - NLog logger does not preserver call site info</para>
+</listitem><listitem><para>fixed DYNPROXY-171 - PEVerify error on generic method definition</para>
+</listitem><listitem><para>fixed DYNPROXY-170 - Calls to properties inside non-intercepted methods are not forwarded to target object (regression from v2.5)</para>
+</listitem><listitem><para>fixed DYNPROXY-169 - Support IChangeProxyTarget on additional interfaces and mixins when using CreateInterfaceProxyWithTargetInterface</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md25">
+<title>3.0.0 (2011-12-13)</title><para><itemizedlist>
+<listitem><para>no major changes since RC</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md26">
+<title>3.0.0 RC 1 (2011-11-20)</title><para><itemizedlist>
+<listitem><para>Applied Jeff Sharps patch that refactored Xml DictionaryAdapter to improve maintainability and enable more complete functionality</para>
+</listitem><listitem><para>fixed DYNPROXY-165 - Object.GetType() and Object.MemberwiseClone() should be ignored and not reported as non-interceptable to IProxyGenerationHook</para>
+</listitem><listitem><para>fixed DYNPROXY-164 - Invalid Proxy type generated when there are more than one base class generic constraints</para>
+</listitem><listitem><para>fixed DYNPROXY-162 - ref or out parameters can not be passed back if proxied method throw an exception</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md27">
+<title>3.0.0 beta 1 (2011-08-14)</title><para>Breaking Changes:<itemizedlist>
+<listitem><para>Removed overloads of logging methods that were taking format string from ILogger and ILogger and IExtendedLogger and didn&apos;t have word Format in their name.<itemizedlist>
+<listitem><para>For example:<itemizedlist>
+<listitem><para>void Error(string format, params object[] args); // was removed</para>
+</listitem><listitem><para>void ErrorFormat(string format, params object[] args); //use this one instead</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>impact - low</para>
+</listitem><listitem><para>fixability - medium</para>
+</listitem><listitem><para>description - To minimize confusion and duplication those methods were removed.</para>
+</listitem><listitem><para>fix - Use methods that have explicit &quot;Format&quot; word in their name and same signature.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Removed WebLogger and WebLoggerFactory<itemizedlist>
+<listitem><para>impact - low</para>
+</listitem><listitem><para>fixability - medium</para>
+</listitem><listitem><para>description - To minimize management overhead the classes were removed so that only single Client Profile version of Castle.Core can be distributed.</para>
+</listitem><listitem><para>fix - You can use NLog or Log4Net web logger integration, or reuse implementation of existing web logger and use it as a custom logger.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Removed obsolete overload of ProxyGenerator.CreateClassProxy<itemizedlist>
+<listitem><para>impact - low</para>
+</listitem><listitem><para>fixability - trivial</para>
+</listitem><listitem><para>description - Deprecated overload of ProxyGenerator.CreateClassProxy was removed to keep the method consistent with other methods and to remove confusion</para>
+</listitem><listitem><para>fix - whenever removed overload was used, use one of the other overloads.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>IProxyGenerationHook.NonVirtualMemberNotification method was renamed<itemizedlist>
+<listitem><para>impact - high</para>
+</listitem><listitem><para>fixability - easy</para>
+</listitem><listitem><para>description - to accommodate class proxies with target method NonVirtualMemberNotification on IProxyGenerationHook type was renamed to more accurate NonProxyableMemberNotification since for class proxies with target not just methods but also fields and other member that break the abstraction will be passed to this method.</para>
+</listitem><listitem><para>fix - whenever NonVirtualMemberNotification is used/implemented change the method name to NonProxyableMemberNotification. Implementors should also accommodate possibility that not only MethodInfos will be passed as method&apos;s second parameter.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>DynamicProxy will now allow to intercept members of System.Object<itemizedlist>
+<listitem><para>impact - very low</para>
+</listitem><listitem><para>fixability - easy</para>
+</listitem><listitem><para>description - to allow scenarios like mocking of System.Object members, DynamicProxy will not disallow proxying of these methods anymore. AllMethodsHook (default IProxyGenerationHook) will still filter them out though.</para>
+</listitem><listitem><para>fix - whenever custom IProxyGenerationHook is used, user should account for System.Object&apos;s members being now passed to ShouldInterceptMethod and NonVirtualMemberNotification methods and if necessary update the code to handle them appropriately.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Bugfixes:<itemizedlist>
+<listitem><para>fixed CORE-37 - TAB characters in the XML Configuration of a component parameter is read as String.Empty</para>
+</listitem><listitem><para>fixed DYNPROXY-161 - Strong Named DynamicProxy Assembly Not Available in Silverlight</para>
+</listitem><listitem><para>fixed DYNPROXY-159 - Sorting MemberInfo array for serialization has side effects</para>
+</listitem><listitem><para>fixed DYNPROXY-158 - Can&apos;t create class proxy with target and without target in same ProxyGenerator</para>
+</listitem><listitem><para>fixed DYNPROXY-153 - When proxying a generic interface which has an interface as GenericType . No proxy can be created</para>
+</listitem><listitem><para>fixed DYNPROXY-151 - Cast error when using attributes</para>
+</listitem><listitem><para>implemented CORE-33 - Add lazy logging</para>
+</listitem><listitem><para>implemented DYNPROXY-156 - Provide mechanism for interceptors to implement retry logic</para>
+</listitem><listitem><para>removed obsolete members from ILogger and its implementations</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md28">
+<title>2.5.2 (2010-11-15)</title><para><itemizedlist>
+<listitem><para>fixed DYNPROXY-150 - Finalizer should not be proxied</para>
+</listitem><listitem><para>implemented DYNPROXY-149 - Make AllMethodsHook members virtual so it can be used as a base class</para>
+</listitem><listitem><para>fixed DYNPROXY-147 - Can&apos;t create class proxies with two non-public methods having same argument types but different return type</para>
+</listitem><listitem><para>fixed DYNPROXY-145 Unable to proxy System.Threading.SynchronizationContext (.NET 4.0)</para>
+</listitem><listitem><para>fixed DYNPROXY-144 - params argument not supported in constructor</para>
+</listitem><listitem><para>fixed DYNPROXY-143 - Permit call to reach &quot;non-proxied&quot; methods of inherited interfaces</para>
+</listitem><listitem><para>implemented DYNPROXY-139 - Better error message</para>
+</listitem><listitem><para>fixed DYNPROXY-133 - Debug assertion in ClassProxyInstanceContributor fails when proxying ISerializable with an explicit implementation of GetObjectData</para>
+</listitem><listitem><para>fixed CORE-32 - Determining if permission is granted via PermissionUtil does not work in .NET 4</para>
+</listitem><listitem><para>applied patch by Alwin Meijs - ExtendedLog4netFactory can be configured with a stream from for example an embedded log4net xml config</para>
+</listitem><listitem><para>Upgraded NLog to 2.0 Beta 1</para>
+</listitem><listitem><para>Added DefaultXmlSerializer to bridge XPathAdapter with standard Xml Serialization.</para>
+</listitem><listitem><para>XPathAdapter for DictionaryAdapter added IXPathSerializer to provide hooks for custom serialization.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md29">
+<title>2.5.1 (2010-09-21)</title><para><itemizedlist>
+<listitem><para>Interface proxy with target Interface now accepts null as a valid target value (which can be replaced at a later stage).</para>
+</listitem><listitem><para>DictionaryAdapter behavior overrides are now ordered with all other behaviors</para>
+</listitem><listitem><para>BREAKING CHANGE: removed web logger so that by default Castle.Core works in .NET 4 client profile</para>
+</listitem><listitem><para>added parameter to ModuleScope disabling usage of signed modules. This is to workaround issue DYNPROXY-134. Also a descriptive exception message is being thrown now when the issue is detected.</para>
+</listitem><listitem><para>Added IDictionaryBehaviorBuilder to allow grouping behaviors</para>
+</listitem><listitem><para>Added GenericDictionaryAdapter to simplify generic value sources</para>
+</listitem><listitem><para>fixed issue DYNPROXY-138 - Error message missing space</para>
+</listitem><listitem><para>fixed false positive where DynamicProxy would not let you proxy interface with target interface when target object was a COM object.</para>
+</listitem><listitem><para>fixed ReflectionBasedDictionaryAdapter when using indexed properties</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md30">
+<title>2.5.0 (2010-08-21)</title><para><itemizedlist>
+<listitem><para>DynamicProxy will now not replicate non-public attribute types</para>
+</listitem><listitem><para>Applied patch from Kenneth Siewers Møller which adds parameterless constructor to DefaultSmtpSender implementation, to be able to configure the inner SmtpClient from the application configuration file (system.net.smtp).</para>
+</listitem><listitem><para>added support for .NET 4 and Silverlight 4, updated solution to VisualStudio 2010</para>
+</listitem><listitem><para>Removed obsolete overload of CreateClassProxy</para>
+</listitem><listitem><para>Added class proxy with target</para>
+</listitem><listitem><para>Added ability to intercept explicitly implemented generic interface methods on class proxy.</para>
+</listitem><listitem><para>DynamicProxy does not disallow intercepting members of System.Object anymore. AllMethodsHook will still filter them out though.</para>
+</listitem><listitem><para>Added ability to intercept explicitly implemented interface members on class proxy. Does not support generic members.</para>
+</listitem><listitem><para>Merged DynamicProxy into Core binary</para>
+</listitem><listitem><para>fixed DYNPROXY-ISSUE-132 - &quot;MetaProperty equals implementation incorrect&quot;</para>
+</listitem><listitem><para>Fixed bug in DiagnosticsLoggerTestCase, where when running as non-admin, the teardown will throw SecurityException (contributed by maxild)</para>
+</listitem><listitem><para>Split IoC specific classes into Castle.Windsor project</para>
+</listitem><listitem><para>Merged logging services solution</para>
+</listitem><listitem><para>Merged DynamicProxy project</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md31">
+<title>1.2.0 (2010-01-11)</title><para><itemizedlist>
+<listitem><para>Added IEmailSender interface and its default implementation</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md32">
+<title>1.2.0 beta (2009-12-04)</title><para><itemizedlist>
+<listitem><para>BREAKING CHANGE - added ChangeProxyTarget method to IChangeProxyTarget interface</para>
+</listitem><listitem><para>added docs to IChangeProxyTarget methods</para>
+</listitem><listitem><para>Fixed DYNPROXY-ISSUE-108 - Obtaining replicated custom attributes on proxy may fail when property setter throws exception on default value</para>
+</listitem><listitem><para>Moved custom attribute replication from CustomAttributeUtil to new interface - IAttributeDisassembler</para>
+</listitem><listitem><para>Exposed IAttributeDisassembler via ProxyGenerationOptions, so that users can plug their implementation for some convoluted scenarios. (for Silverlight)</para>
+</listitem><listitem><para>Moved IInterceptorSelector from Dynamic Proxy to Core (IOC-ISSUE-156)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md33">
+<title>1.1.0 (2009-05-04)</title><para><itemizedlist>
+<listitem><para>Applied Eric Hauser&apos;s patch fixing CORE-ISSUE-22 &quot;Support for environment variables in resource URI&quot;</para>
+</listitem><listitem><para>Applied Gauthier Segay&apos;s patch fixing CORE-ISSUE-20 &quot;Castle.Core.Tests won&apos;t build via nant because it use TraceContext without referencing System.Web.dll&quot;</para>
+</listitem><listitem><para>Added simple interface to ComponentModel to make optional properties required.</para>
+</listitem><listitem><para>Applied Mark&apos;s <ndash/> <ulink url="mailto:mwatts42@gmail.com">mwatts42@gmail.com</ulink> <ndash/> patch that changes the Core to support being compiled for Silverlight 2</para>
+</listitem><listitem><para>Applied Louis DeJardin&apos;s patch adding TraceLogger as a new logger implementation</para>
+</listitem><listitem><para>Applied Chris Bilson&apos;s patch fixing CORE-15 &quot;WebLogger Throws When Logging Outside of an HttpContext&quot;</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md34">
+<title>Release Candidate 3</title><para><itemizedlist>
+<listitem><para>Added IServiceProviderEx which extends IServiceProvider</para>
+</listitem><listitem><para>Added Pair&lt;T,S&gt; class.</para>
+</listitem><listitem><para>Applied Bill Pierce&apos;s patch fixing CORE-9 &quot;Allow CastleComponent Attribute to Specify Lifestyle in Constructor&quot;</para>
+</listitem><listitem><para>Added UseSingleInterfaceProxy to CompomentModel to control the proxying behavior while maintaining backward compatibility. Added the corresponding ComponentProxyBehaviorAttribute.</para>
+</listitem><listitem><para>Made NullLogger and IExtnededLogger</para>
+</listitem><listitem><para>Enabled a new format on ILogger interface, with 6 overloads for each method:<itemizedlist>
+<listitem><para>Debug(string)</para>
+</listitem><listitem><para>Debug(string, Exception)</para>
+</listitem><listitem><para>Debug(string, params object[])</para>
+</listitem><listitem><para>DebugFormat(string, params object[])</para>
+</listitem><listitem><para>DebugFormat(Exception, string, params object[])</para>
+</listitem><listitem><para>DebugFormat(IFormatProvider, string, params object[])</para>
+</listitem><listitem><para>DebugFormat(IFormatProvider, Exception, string, params object[])</para>
+</listitem><listitem><para>The &quot;FatalError&quot; overloads where marked as [Obsolete], replaced by &quot;Fatal&quot; and &quot;FatalFormat&quot;.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_1autotoc_md35">
+<title>0.0.1.0</title><para><itemizedlist>
+<listitem><para>Included IProxyTargetAccessor</para>
+</listitem><listitem><para>Removed IMethodInterceptor and IMethodInvocation, that have been replaced by IInterceptor and IInvocation</para>
+</listitem><listitem><para>Added FindByPropertyInfo to PropertySetCollection</para>
+</listitem><listitem><para>Made the DependencyModel.IsOptional property writable</para>
+</listitem><listitem><para>Applied Curtis Schlak&apos;s patch fixing IOC-27 &quot;assembly resource format only works for resources where the assemblies name and default namespace are the same.&quot;</para>
+<para>Quoting:</para>
+<para>&quot;I chose to preserve backwards compatibility by implementing the code in the 
+  reverse order as suggested by the reporter. Given the following URI for a resource:
+
+  assembly://my.cool.assembly/context/moo/file.xml
+
+  It will initially look for an embedded resource with the manifest name of 
+  &quot;my.cool.assembly.context.moo.file.xml&quot; in the loaded assembly my.cool.assembly.dll. 
+  If it does not find it, then it looks for the embedded resource with the manifest name 
+  of &quot;context.moo.file.xml".</para>
+</listitem><listitem><para>IServiceEnabledComponent Introduced to be used across the project as a standard way to have access to common services, for example, logger factories</para>
+</listitem><listitem><para>Added missing log factories</para>
+</listitem><listitem><para>Refactor StreamLogger and DiagnosticLogger to be more consistent behavior-wise</para>
+</listitem><listitem><para>Refactored WebLogger to extend LevelFilteredLogger (removed duplication)</para>
+</listitem><listitem><para>Refactored LoggerLevel order</para>
+</listitem><listitem><para>Project started </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="packages/Castle.Core.5.1.1/CHANGELOG.md"/>
+  </compounddef>
+</doxygen>

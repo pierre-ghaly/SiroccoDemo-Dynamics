@@ -1,0 +1,138 @@
+\doxysection{Crm\+Repository.\+cs}
+\hypertarget{_crm_repository_8cs_source}{}\label{_crm_repository_8cs_source}\index{SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs@{SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs}}
+\mbox{\hyperlink{_crm_repository_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.Xrm.Sdk;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.Xrm.Sdk.Query;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_repositories}{SiroccoDemo.Application.Repositories}};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_domain_1_1_entities}{SiroccoDemo.Domain.Entities}};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00009}\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure}{00009}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_repositories}{SiroccoDemo.Infrastructure.Repositories}}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00011}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a9f2fc9856a714c9e6cb1c246ba41d041}{CrmRepository}}\ :\ \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository}{ICrmRepository}}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IOrganizationService\ \_service;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00014}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a9f2fc9856a714c9e6cb1c246ba41d041}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a9f2fc9856a714c9e6cb1c246ba41d041}{CrmRepository}}(IOrganizationService\ service)\ =>\ \_service\ =\ service;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00016}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a6f2424ab45529534a8f6b24be14f5f4f}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Guid\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a6f2424ab45529534a8f6b24be14f5f4f}{CreateAccount}}(\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}\ account)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ entity\ =\ \textcolor{keyword}{new}\ Entity(\textcolor{stringliteral}{"{}account"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}name"{}}]\ =\ account.Name}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_service.Create(entity);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00025}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae821efa9b19e346db64dc3dd4e1207b3}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Guid\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae821efa9b19e346db64dc3dd4e1207b3}{CreateContact}}(\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact}{Contact}}\ contact)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ var\ entity\ =\ \textcolor{keyword}{new}\ Entity(\textcolor{stringliteral}{"{}contact"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}firstname"{}}]\ =\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_abe174d90f27c16f02406d4ca17418db2}{FirstName}},}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}lastname"{}}]\ =\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_a1d841d61ca5cad263d8fccdf7762fd32}{LastName}},}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}emailaddress1"{}}]\ =\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_a0775231924f180fcf1fa0a6974195ae3}{Email}},}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}parentcustomerid"{}}]\ =\ \textcolor{keyword}{new}\ EntityReference(\textcolor{stringliteral}{"{}account"{}},\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_a8ac38dfb2d997bda607471387c90e4d7}{AccountId}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_service.Create(entity);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00037}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_aa180b49e27bcdf2cfb5e3db932b9dd66}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Guid\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_aa180b49e27bcdf2cfb5e3db932b9dd66}{CreateNote}}(\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note}{Note}}\ note)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ entity\ =\ \textcolor{keyword}{new}\ Entity(\textcolor{stringliteral}{"{}annotation"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}subject"{}}]\ =\ note.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_a3edf4d79e8598b9c37b4aeb3488ef11a}{Title}},}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}notetext"{}}]\ =\ note.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_a8664861f6758bd089d613e8fd60e5fe5}{Description}},}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}objectid"{}}]\ =\ \textcolor{keyword}{new}\ EntityReference(note.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_a3028314e2bdba3cd06e650f1db967d9c}{RegardingEntityName}},\ note.\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_a25e0d8121f75406f8066d570ffbb2948}{RegardingId}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_service.Create(entity);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00048}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a682136a2237d28d5d0a954e8972dba33}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a682136a2237d28d5d0a954e8972dba33}{SetPrimaryContact}}(Guid\ accountId,\ Guid\ contactId)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ var\ account\ =\ \textcolor{keyword}{new}\ Entity(\textcolor{stringliteral}{"{}account"{}},\ accountId)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}primarycontactid"{}}]\ =\ \textcolor{keyword}{new}\ EntityReference(\textcolor{stringliteral}{"{}contact"{}},\ contactId)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \_service.Update(account);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00057}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae27c98c23a80db73bd2a5874c254dc39}{00057}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<(\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}},\ Guid?\ PrimaryContactId)>\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae27c98c23a80db73bd2a5874c254dc39}{GetAllAccountsAndPrimaryContact}}()}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ var\ query\ =\ \textcolor{keyword}{new}\ QueryExpression(\textcolor{stringliteral}{"{}account"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ColumnSet\ =\ \textcolor{keyword}{new}\ ColumnSet(\textcolor{stringliteral}{"{}name"{}},\ \textcolor{stringliteral}{"{}primarycontactid"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ \_service.RetrieveMultiple(query);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result.Entities.Select(e\ =>}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ account\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ e.Id,}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ e.GetAttributeValue<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}name"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Guid?\ primaryContactId\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.Contains(\textcolor{stringliteral}{"{}primarycontactid"{}}))}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ primaryContactRef\ =\ e.GetAttributeValue<EntityReference>(\textcolor{stringliteral}{"{}primarycontactid"{}});}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ primaryContactId\ =\ primaryContactRef?.Id;}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}:\ account,\ PrimaryContactId:\ primaryContactId);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00084}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a85f01cc2c1e600e3785d77f5c801ea25}{00084}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Contact>\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a85f01cc2c1e600e3785d77f5c801ea25}{GetContactsByAccountId}}(Guid\ accountId)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ var\ query\ =\ \textcolor{keyword}{new}\ QueryExpression(\textcolor{stringliteral}{"{}contact"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ColumnSet\ =\ \textcolor{keyword}{new}\ ColumnSet(\textcolor{stringliteral}{"{}firstname"{}},\ \textcolor{stringliteral}{"{}lastname"{}},\ \textcolor{stringliteral}{"{}emailaddress1"{}}),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Criteria\ =\ \textcolor{keyword}{new}\ FilterExpression}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Conditions\ =}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ ConditionExpression(\textcolor{stringliteral}{"{}parentcustomerid"{}},\ ConditionOperator.Equal,\ accountId)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ \_service.RetrieveMultiple(query);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result.Entities.Select(e\ =>\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact}{Contact}}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ e.Id,}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstName\ =\ e.GetAttributeValue<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}firstname"{}}),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LastName\ =\ e.GetAttributeValue<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}lastname"{}}),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Email\ =\ e.GetAttributeValue<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}emailaddress1"{}}),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AccountId\ =\ accountId}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00109}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_afb966b23d8d9cacf865232ad119ee811}{00109}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Note>\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_afb966b23d8d9cacf865232ad119ee811}{GetNotesByRegarding}}(Guid\ regardingId)}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ var\ query\ =\ \textcolor{keyword}{new}\ QueryExpression(\textcolor{stringliteral}{"{}annotation"{}})}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ColumnSet\ =\ \textcolor{keyword}{new}\ ColumnSet(\textcolor{stringliteral}{"{}notetext"{}}),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Criteria\ =\ \textcolor{keyword}{new}\ FilterExpression}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Conditions\ =}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ ConditionExpression(\textcolor{stringliteral}{"{}objectid"{}},\ ConditionOperator.Equal,\ regardingId),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ \_service.RetrieveMultiple(query);}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result.Entities.Select(e\ =>\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note}{Note}}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ e.Id,}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ e.GetAttributeValue<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}notetext"{}}),}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RegardingId\ =\ regardingId,}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crm_repository_8cs_source_l00132}00132\ \}}
+
+\end{DoxyCode}

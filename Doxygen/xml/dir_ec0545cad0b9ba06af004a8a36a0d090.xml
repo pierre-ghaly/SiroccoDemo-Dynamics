@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_ec0545cad0b9ba06af004a8a36a0d090" kind="dir">
+    <compoundname>packages/Newtonsoft.Json.13.0.1</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="packages/Newtonsoft.Json.13.0.1/"/>
+  </compounddef>
+</doxygen>

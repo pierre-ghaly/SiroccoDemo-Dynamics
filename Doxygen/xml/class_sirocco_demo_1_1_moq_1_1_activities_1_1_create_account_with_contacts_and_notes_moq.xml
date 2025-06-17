@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_moq_1_1_activities_1_1_create_account_with_contacts_and_notes_moq" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Moq::Activities::CreateAccountWithContactsAndNotesMoq</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_moq_1_1_activities_1_1_create_account_with_contacts_and_notes_moq_1a7eae5b2af575a071bd974e5b42a4464b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SiroccoDemo.Moq.Activities.CreateAccountWithContactsAndNotesMoq.ExecuteMoq</definition>
+        <argsstring>(CrmServiceClient crmService)</argsstring>
+        <name>ExecuteMoq</name>
+        <qualifiedname>SiroccoDemo.Moq.Activities.CreateAccountWithContactsAndNotesMoq.ExecuteMoq</qualifiedname>
+        <param>
+          <type>CrmServiceClient</type>
+          <declname>crmService</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Moq/Activities/CreateAccountWithContactsAndNotesMoq.cs" line="11" column="28" bodyfile="SiroccoDemo.Moq/Activities/CreateAccountWithContactsAndNotesMoq.cs" bodystart="11" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Moq/Activities/CreateAccountWithContactsAndNotesMoq.cs" line="9" column="19" bodyfile="SiroccoDemo.Moq/Activities/CreateAccountWithContactsAndNotesMoq.cs" bodystart="10" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_moq_1_1_activities_1_1_create_account_with_contacts_and_notes_moq_1a7eae5b2af575a071bd974e5b42a4464b" prot="public" virt="non-virtual"><scope>SiroccoDemo::Moq::Activities::CreateAccountWithContactsAndNotesMoq</scope><name>ExecuteMoq</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

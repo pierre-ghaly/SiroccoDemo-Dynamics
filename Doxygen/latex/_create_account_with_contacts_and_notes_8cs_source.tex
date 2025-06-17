@@ -1,0 +1,98 @@
+\doxysection{Create\+Account\+With\+Contacts\+And\+Notes.\+cs}
+\hypertarget{_create_account_with_contacts_and_notes_8cs_source}{}\label{_create_account_with_contacts_and_notes_8cs_source}\index{SiroccoDemo.Plugins/CreateAccountWithContactsAndNotes.cs@{SiroccoDemo.Plugins/CreateAccountWithContactsAndNotes.cs}}
+\mbox{\hyperlink{_create_account_with_contacts_and_notes_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.Xrm.Sdk;}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_models}{SiroccoDemo.Application.Models}};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_repositories}{SiroccoDemo.Infrastructure.Repositories}};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_services}{SiroccoDemo.Infrastructure.Services}};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_validations}{SiroccoDemo.Infrastructure.Validations}};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00008}\mbox{\hyperlink{namespace_sirocco_demo_1_1_plugins}{00008}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_plugins}{SiroccoDemo.Plugins}}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00010}\mbox{\hyperlink{class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes}{CreateAccountWithContactsAndNotes}}\ :\ \mbox{\hyperlink{class_sirocco_demo_1_1_plugins_1_1_plugin_base}{PluginBase}}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00012}\mbox{\hyperlink{class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes_a4da9b3013de8bd75f452029ff2645fca}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes_a4da9b3013de8bd75f452029ff2645fca}{ExtendedExecute}}()}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ crmRepository\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository}{CrmRepository}}(OrganizationService);}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accountValidator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator}{AccountValidator}}();}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ var\ contactValidator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator}{ContactValidator}}();}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ noteValidator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_note_validator}{NoteValidator}}();}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ var\ service\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service}{CreateAccountWithContactsAndNotesService}}(crmRepository,\ OrganizationService,\ accountValidator,\ contactValidator,\ noteValidator);}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Context.InputParameters.Contains(\textcolor{stringliteral}{"{}AccountData"{}}))}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidPluginExecutionException(\textcolor{stringliteral}{"{}Required\ input\ parameter\ 'AccountData'\ is\ missing."{}});}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accountData\ =\ Context.InputParameters[\textcolor{stringliteral}{"{}AccountData"{}}]\ as\ string;}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accountNotes\ =\ Context.InputParameters.Contains(\textcolor{stringliteral}{"{}AccountNotes"{}})\ ?\ Context.InputParameters[\textcolor{stringliteral}{"{}AccountNotes"{}}]\ as\ string\ :\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ var\ primaryContactData\ =\ Context.InputParameters.Contains(\textcolor{stringliteral}{"{}PrimaryContactData"{}})\ ?\ Context.InputParameters[\textcolor{stringliteral}{"{}PrimaryContactData"{}}]\ as\ string\ :\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ var\ secondaryContactData\ =\ Context.InputParameters.Contains(\textcolor{stringliteral}{"{}SecondaryContactData"{}})\ ?\ Context.InputParameters[\textcolor{stringliteral}{"{}SecondaryContactData"{}}]\ as\ string\ :\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(accountData))}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidPluginExecutionException(\textcolor{stringliteral}{"{}AccountData\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accountModel\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model}{CreateAccountWithContactsAndNotesModel}}();}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.Account\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_account_input}{AccountInput}}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ accountData}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(accountNotes))}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.AccountNotes\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_note_input}{NoteInput}}[]>(accountNotes);}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.AccountNotes\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_note_input}{NoteInput}}[0];}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(primaryContactData))}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ primaryContactWithNotes\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input}{ContactInput}}>(primaryContactData);}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.PrimaryContact\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input}{ContactInput}}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstName\ =\ primaryContactWithNotes.FirstName,}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LastName\ =\ primaryContactWithNotes.LastName,}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Email\ =\ primaryContactWithNotes.Email,}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Notes\ =\ \textcolor{keyword}{null}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (primaryContactWithNotes.Notes\ !=\ \textcolor{keyword}{null}\ \&\&\ primaryContactWithNotes.Notes.Length\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.PrimaryContactNotes\ =\ primaryContactWithNotes.Notes;}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.PrimaryContactNotes\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_note_input}{NoteInput}}[0];}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.PrimaryContact\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.PrimaryContactNotes\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_note_input}{NoteInput}}[0];}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(secondaryContactData))}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.SecondaryContacts\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input}{ContactInput}}[]>(secondaryContactData);}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accountModel.SecondaryContacts\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input}{ContactInput}}[0];}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_plugins_1_1_plugin_base_a2727982d5d17e3bd1fa8e2b4156e32ac}{ExecuteWithExceptionHandling}}(()\ =>\ service.CreateAccountWithContactsAndNotes(accountModel));}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_create_account_with_contacts_and_notes_8cs_source_l00092}00092\ \}}
+
+\end{DoxyCode}

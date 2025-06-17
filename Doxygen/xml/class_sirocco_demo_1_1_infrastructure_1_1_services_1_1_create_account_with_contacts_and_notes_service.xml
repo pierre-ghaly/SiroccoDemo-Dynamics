@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</compoundname>
+    <basecompoundref refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service" prot="public" virt="non-virtual">SiroccoDemo.Application.Services.ICreateAccountWithContactsAndNotesService</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a5df5b8fd00a41e6ffb560f08984c9336" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" kindref="compound">ICrmRepository</ref></type>
+        <definition>readonly ICrmRepository SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._crmRepository</definition>
+        <argsstring></argsstring>
+        <name>_crmRepository</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._crmRepository</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="16" column="41" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a06f9f268ec921fcb4a8212fd84438c98" prot="private" static="no" mutable="no">
+        <type>readonly IOrganizationService</type>
+        <definition>readonly IOrganizationService SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._organizationService</definition>
+        <argsstring></argsstring>
+        <name>_organizationService</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._organizationService</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="17" column="47" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a8b1e4f7a489a5237b7b5586849f350de" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_account_validator" kindref="compound">IAccountValidator</ref></type>
+        <definition>readonly IAccountValidator SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._accountValidator</definition>
+        <argsstring></argsstring>
+        <name>_accountValidator</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._accountValidator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="18" column="44" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a11719157840aaa97726b4343f9ff02be" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator" kindref="compound">IContactValidator</ref></type>
+        <definition>readonly IContactValidator SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._contactValidator</definition>
+        <argsstring></argsstring>
+        <name>_contactValidator</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._contactValidator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="19" column="44" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a43a66647ae75115c5ab5f418516de0ae" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" kindref="compound">INoteValidator</ref></type>
+        <definition>readonly INoteValidator SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._noteValidator</definition>
+        <argsstring></argsstring>
+        <name>_noteValidator</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService._noteValidator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="20" column="41" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a9e0d196869b2b7d6cb495010c3706575" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService.CreateAccountWithContactsAndNotesService</definition>
+        <argsstring>(ICrmRepository crmRepository, IOrganizationService organizationService, IAccountValidator accountValidator, IContactValidator contactValidator, INoteValidator noteValidator)</argsstring>
+        <name>CreateAccountWithContactsAndNotesService</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService.CreateAccountWithContactsAndNotesService</qualifiedname>
+        <param>
+          <type><ref refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" kindref="compound">ICrmRepository</ref></type>
+          <declname>crmRepository</declname>
+        </param>
+        <param>
+          <type>IOrganizationService</type>
+          <declname>organizationService</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_account_validator" kindref="compound">IAccountValidator</ref></type>
+          <declname>accountValidator</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator" kindref="compound">IContactValidator</ref></type>
+          <declname>contactValidator</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" kindref="compound">INoteValidator</ref></type>
+          <declname>noteValidator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="22" column="16" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="23" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a016ab2a2e7023b83dd909cc37b90e896" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o" kindref="compound">CreateAccountWithContactsAndNotesDTO</ref></type>
+        <definition>CreateAccountWithContactsAndNotesDTO SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService.CreateAccountWithContactsAndNotes</definition>
+        <argsstring>(CreateAccountWithContactsAndNotesModel model)</argsstring>
+        <name>CreateAccountWithContactsAndNotes</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService.CreateAccountWithContactsAndNotes</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service_1a283bec31fc459c9fe04fe23712cf3a4f">CreateAccountWithContactsAndNotes</reimplements>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model" kindref="compound">CreateAccountWithContactsAndNotesModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="38" column="53" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="38" bodyend="92"/>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a57ede667ad687421d20bf2e39840b7a9" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="5" endline="5">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.Account</references>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a231c19ddff5d049d5feeb326c2b5b45e" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="9" endline="9">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.AccountNotes</references>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a119a9a6b3257c49a8b51af39bebe7ed3" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="6" endline="6">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.PrimaryContact</references>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a083e37a0782520b6ef2f364192de48a0" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="8" endline="8">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.PrimaryContactNotes</references>
+        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a0ce7822861e6b2d6592104d4a7798d35" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="7" endline="7">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.SecondaryContacts</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a63238ac54dee484844a82c40ade2e3f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o" kindref="compound">CreateAccountWithContactsAndNotesDTO</ref></type>
+        <definition>CreateAccountWithContactsAndNotesDTO SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService.ExecuteInTransaction</definition>
+        <argsstring>(CreateAccountWithContactsAndNotesModel model)</argsstring>
+        <name>ExecuteInTransaction</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService.ExecuteInTransaction</qualifiedname>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model" kindref="compound">CreateAccountWithContactsAndNotesModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="94" column="54" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="94" bodyend="197"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Services.ICreateAccountWithContactsAndNotesService</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Services.CreateAccountWithContactsAndNotesService</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Services.ICreateAccountWithContactsAndNotesService</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service"/>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="14" column="11" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="15" bodyend="198"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a8b1e4f7a489a5237b7b5586849f350de" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>_accountValidator</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a11719157840aaa97726b4343f9ff02be" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>_contactValidator</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a5df5b8fd00a41e6ffb560f08984c9336" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>_crmRepository</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a43a66647ae75115c5ab5f418516de0ae" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>_noteValidator</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a06f9f268ec921fcb4a8212fd84438c98" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>_organizationService</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a016ab2a2e7023b83dd909cc37b90e896" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>CreateAccountWithContactsAndNotes</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a9e0d196869b2b7d6cb495010c3706575" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>CreateAccountWithContactsAndNotesService</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a63238ac54dee484844a82c40ade2e3f3" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</scope><name>ExecuteInTransaction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

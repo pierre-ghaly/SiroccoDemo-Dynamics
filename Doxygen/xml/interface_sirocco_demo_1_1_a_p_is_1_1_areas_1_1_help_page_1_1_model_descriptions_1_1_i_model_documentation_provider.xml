@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider" kind="interface" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::IModelDocumentationProvider</compoundname>
+    <derivedcompoundref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider" prot="public" virt="non-virtual">SiroccoDemo.APIs.Areas.HelpPage.XmlDocumentationProvider</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider_1a967e077923bd9eafd30a839290576a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation</definition>
+        <argsstring>(MemberInfo member)</argsstring>
+        <name>GetDocumentation</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation</qualifiedname>
+        <reimplementedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ab45ce87a2abf6b284efb417b671856c6">GetDocumentation</reimplementedby>
+        <param>
+          <type>MemberInfo</type>
+          <declname>member</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs" line="8" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider_1a7c2b5b73f0eb5be3a5a9a5fa064b2c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>GetDocumentation</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation</qualifiedname>
+        <reimplementedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1af91396d159c7198ac4c98422e9c3d9e4">GetDocumentation</reimplementedby>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs" line="10" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider</label>
+        <link refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider"/>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.APIs.Areas.HelpPage.XmlDocumentationProvider</label>
+        <link refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs" line="6" column="22" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs" bodystart="7" bodyend="11"/>
+    <listofallmembers>
+      <member refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider_1a967e077923bd9eafd30a839290576a0e" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::IModelDocumentationProvider</scope><name>GetDocumentation</name></member>
+      <member refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider_1a7c2b5b73f0eb5be3a5a9a5fa064b2c50" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::IModelDocumentationProvider</scope><name>GetDocumentation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

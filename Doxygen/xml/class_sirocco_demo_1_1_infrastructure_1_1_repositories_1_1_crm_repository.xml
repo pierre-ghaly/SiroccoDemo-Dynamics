@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Infrastructure::Repositories::CrmRepository</compoundname>
+    <basecompoundref refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" prot="public" virt="non-virtual">SiroccoDemo.Application.Repositories.ICrmRepository</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ac166d4bf94be3bd962e7739e5140dd20" prot="private" static="no" mutable="no">
+        <type>readonly IOrganizationService</type>
+        <definition>readonly IOrganizationService SiroccoDemo.Infrastructure.Repositories.CrmRepository._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository._service</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="13" column="47" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a9f2fc9856a714c9e6cb1c246ba41d041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.Infrastructure.Repositories.CrmRepository.CrmRepository</definition>
+        <argsstring>(IOrganizationService service)</argsstring>
+        <name>CrmRepository</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.CrmRepository</qualifiedname>
+        <param>
+          <type>IOrganizationService</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="14" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a6f2424ab45529534a8f6b24be14f5f4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid SiroccoDemo.Infrastructure.Repositories.CrmRepository.CreateAccount</definition>
+        <argsstring>(Account account)</argsstring>
+        <name>CreateAccount</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.CreateAccount</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a4b9e9df14b5bac6c16c18808a9d56635">CreateAccount</reimplements>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" kindref="compound">Account</ref></type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="16" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="16" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ae821efa9b19e346db64dc3dd4e1207b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid SiroccoDemo.Infrastructure.Repositories.CrmRepository.CreateContact</definition>
+        <argsstring>(Contact contact)</argsstring>
+        <name>CreateContact</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.CreateContact</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1ac9ec1e1dd4b65a2ab24529bcc1d72328">CreateContact</reimplements>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact" kindref="compound">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="25" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="25" bodyend="35"/>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1a8ac38dfb2d997bda607471387c90e4d7" compoundref="_contact_8cs" startline="11" endline="11">SiroccoDemo.Domain.Entities.Contact.AccountId</references>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1a0775231924f180fcf1fa0a6974195ae3" compoundref="_contact_8cs" startline="10" endline="10">SiroccoDemo.Domain.Entities.Contact.Email</references>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1abe174d90f27c16f02406d4ca17418db2" compoundref="_contact_8cs" startline="8" endline="8">SiroccoDemo.Domain.Entities.Contact.FirstName</references>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1a1d841d61ca5cad263d8fccdf7762fd32" compoundref="_contact_8cs" startline="9" endline="9">SiroccoDemo.Domain.Entities.Contact.LastName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1aa180b49e27bcdf2cfb5e3db932b9dd66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid SiroccoDemo.Infrastructure.Repositories.CrmRepository.CreateNote</definition>
+        <argsstring>(Note note)</argsstring>
+        <name>CreateNote</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.CreateNote</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a1564ddd669bc9bbf1f2fe168ee05e946">CreateNote</reimplements>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note" kindref="compound">Note</ref></type>
+          <declname>note</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="37" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="37" bodyend="46"/>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a8664861f6758bd089d613e8fd60e5fe5" compoundref="_note_8cs" startline="9" endline="9">SiroccoDemo.Domain.Entities.Note.Description</references>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a3028314e2bdba3cd06e650f1db967d9c" compoundref="_note_8cs" startline="10" endline="10">SiroccoDemo.Domain.Entities.Note.RegardingEntityName</references>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a25e0d8121f75406f8066d570ffbb2948" compoundref="_note_8cs" startline="11" endline="11">SiroccoDemo.Domain.Entities.Note.RegardingId</references>
+        <references refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a3edf4d79e8598b9c37b4aeb3488ef11a" compoundref="_note_8cs" startline="8" endline="8">SiroccoDemo.Domain.Entities.Note.Title</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a682136a2237d28d5d0a954e8972dba33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SiroccoDemo.Infrastructure.Repositories.CrmRepository.SetPrimaryContact</definition>
+        <argsstring>(Guid accountId, Guid contactId)</argsstring>
+        <name>SetPrimaryContact</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.SetPrimaryContact</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a441b76e8b26e14cf466e9a362007e9cb">SetPrimaryContact</reimplements>
+        <param>
+          <type>Guid</type>
+          <declname>accountId</declname>
+        </param>
+        <param>
+          <type>Guid</type>
+          <declname>contactId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="48" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ae27c98c23a80db73bd2a5874c254dc39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt;(<ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" kindref="compound">Account</ref> <ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" kindref="compound">Account</ref>, Guid? PrimaryContactId)&gt;</type>
+        <definition>List&lt;(Account Account, Guid? PrimaryContactId)&gt; SiroccoDemo.Infrastructure.Repositories.CrmRepository.GetAllAccountsAndPrimaryContact</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllAccountsAndPrimaryContact</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.GetAllAccountsAndPrimaryContact</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1acb945cacb0dfc3fd176fa00095134b11">GetAllAccountsAndPrimaryContact</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="57" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="57" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a85f01cc2c1e600e3785d77f5c801ea25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact" kindref="compound">Contact</ref> &gt;</type>
+        <definition>List&lt; Contact &gt; SiroccoDemo.Infrastructure.Repositories.CrmRepository.GetContactsByAccountId</definition>
+        <argsstring>(Guid accountId)</argsstring>
+        <name>GetContactsByAccountId</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.GetContactsByAccountId</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a3b3f04b707cc4309bb2766530fa7c3c2">GetContactsByAccountId</reimplements>
+        <param>
+          <type>Guid</type>
+          <declname>accountId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="84" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="84" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1afb966b23d8d9cacf865232ad119ee811" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note" kindref="compound">Note</ref> &gt;</type>
+        <definition>List&lt; Note &gt; SiroccoDemo.Infrastructure.Repositories.CrmRepository.GetNotesByRegarding</definition>
+        <argsstring>(Guid regardingId)</argsstring>
+        <name>GetNotesByRegarding</name>
+        <qualifiedname>SiroccoDemo.Infrastructure.Repositories.CrmRepository.GetNotesByRegarding</qualifiedname>
+        <reimplements refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a8c982b18dd9bf438386778c7f09a20b3">GetNotesByRegarding</reimplements>
+        <param>
+          <type>Guid</type>
+          <declname>regardingId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="109" column="21" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="109" bodyend="130"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Repositories.CrmRepository</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Repositories.ICrmRepository</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SiroccoDemo.Infrastructure.Repositories.CrmRepository</label>
+        <link refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Application.Repositories.ICrmRepository</label>
+        <link refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository"/>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" line="11" column="11" bodyfile="SiroccoDemo.Infrastructure/Repositories/CrmRepository.cs" bodystart="12" bodyend="131"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ac166d4bf94be3bd962e7739e5140dd20" prot="private" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>_service</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a6f2424ab45529534a8f6b24be14f5f4f" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>CreateAccount</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ae821efa9b19e346db64dc3dd4e1207b3" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>CreateContact</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1aa180b49e27bcdf2cfb5e3db932b9dd66" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>CreateNote</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a9f2fc9856a714c9e6cb1c246ba41d041" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>CrmRepository</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ae27c98c23a80db73bd2a5874c254dc39" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>GetAllAccountsAndPrimaryContact</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a85f01cc2c1e600e3785d77f5c801ea25" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>GetContactsByAccountId</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1afb966b23d8d9cacf865232ad119ee811" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>GetNotesByRegarding</name></member>
+      <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a682136a2237d28d5d0a954e8972dba33" prot="public" virt="non-virtual"><scope>SiroccoDemo::Infrastructure::Repositories::CrmRepository</scope><name>SetPrimaryContact</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

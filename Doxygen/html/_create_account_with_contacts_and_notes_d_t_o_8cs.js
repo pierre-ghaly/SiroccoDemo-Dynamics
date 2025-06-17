@@ -1,0 +1,4 @@
+var _create_account_with_contacts_and_notes_d_t_o_8cs =
+[
+    [ "SiroccoDemo.Domain.DTOs.CreateAccountWithContactsAndNotesDTO", "class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o.html", "class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o" ]
+];

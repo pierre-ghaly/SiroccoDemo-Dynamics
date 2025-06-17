@@ -1,0 +1,5 @@
+var class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description =
+[
+    [ "ComplexTypeModelDescription", "class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description.html#affe265b2f61279497736a8e569ae6341", null ],
+    [ "Properties", "class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description.html#a7946ce040937ddb216e811ae0e929d9d", null ]
+];

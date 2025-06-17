@@ -1,0 +1,40 @@
+\doxysection{Api\+Description\+Extensions.\+cs}
+\hypertarget{_api_description_extensions_8cs_source}{}\label{_api_description_extensions_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/ApiDescriptionExtensions.cs@{SiroccoDemo.APIs/Areas/HelpPage/ApiDescriptionExtensions.cs}}
+\mbox{\hyperlink{_api_description_extensions_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Web;}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Web.Http.Description;}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00006}\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page}{SiroccoDemo.APIs.Areas.HelpPage}}}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }ApiDescriptionExtensions}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetFriendlyId(\textcolor{keyword}{this}\ ApiDescription\ description)}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ path\ =\ description.RelativePath;}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ urlParts\ =\ path.Split(\textcolor{charliteral}{'?'});}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ localPath\ =\ urlParts[0];}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ queryKeyString\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (urlParts.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ query\ =\ urlParts[1];}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ queryKeys\ =\ HttpUtility.ParseQueryString(query).AllKeys;}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ queryKeyString\ =\ String.Join(\textcolor{stringliteral}{"{}\_"{}},\ queryKeys);}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ StringBuilder\ friendlyPath\ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ friendlyPath.AppendFormat(\textcolor{stringliteral}{"{}\{0\}-\/\{1\}"{}},}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ description.HttpMethod.Method,}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localPath.Replace(\textcolor{stringliteral}{"{}/"{}},\ \textcolor{stringliteral}{"{}-\/"{}}).Replace(\textcolor{stringliteral}{"{}\{"{}},\ String.Empty).Replace(\textcolor{stringliteral}{"{}\}"{}},\ String.Empty));}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (queryKeyString\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ friendlyPath.AppendFormat(\textcolor{stringliteral}{"{}\_\{0\}"{}},\ queryKeyString.Replace(\textcolor{charliteral}{'.'},\ \textcolor{charliteral}{'-\/'}));}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ friendlyPath.ToString();}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_api_description_extensions_8cs_source_l00039}00039\ \}}
+
+\end{DoxyCode}

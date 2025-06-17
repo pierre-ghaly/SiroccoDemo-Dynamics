@@ -1,0 +1,151 @@
+\doxysection{Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception Class Reference}
+\hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception}{}\label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+
+
+Inheritance diagram for Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception\+:
+% FIG 0
+
+
+Collaboration diagram for Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a8995d7ffa3d76a1150965f863b8ef11e}{Crm\+Exception}} (string message, string crm\+Error\+Code=null, string entity\+Type=null, Guid? entity\+Id=null)
+\item 
+\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a4279ff76dae1c1b76c94d2046127de5f}{Crm\+Exception}} (string message, Exception inner\+Exception, string crm\+Error\+Code=null, string entity\+Type=null, Guid? entity\+Id=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception}{Crm\+Exception}} \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a0b262a82ffe5ecd3f7a81403a02db9e9}{Connection\+Failed}} (Exception inner\+Exception)
+\item 
+static \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception}{Crm\+Exception}} \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a70ca61e871f697b917ca94e7a0eda757}{Entity\+Creation\+Failed}} (string entity\+Type, Exception inner\+Exception)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_abe133ff91e337fbf03ba35fa9573b494}{Crm\+Error\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a272bdb6d8a124ebde86a1f31def5754e}{Entity\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Guid? \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a564337075f518bf7c0026f62561ee415}{Entity\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base}{Sirocco\+Demo.\+Domain.\+Exceptions.\+Exception\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_a9f091030bc623b7955015165539741b4}{Error\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Date\+Time \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_aca2f6698941c228b90cd87835becb289}{Occurred\+At}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base}{Sirocco\+Demo.\+Domain.\+Exceptions.\+Exception\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_ad2c44519e737f3e48219495c0fc10368}{Exception\+Base}} (string message, string error\+Code=null)
+\item 
+\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_a709d874343b8e5210928da0b1b1cc34c}{Exception\+Base}} (string message, Exception inner\+Exception, string error\+Code=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a8995d7ffa3d76a1150965f863b8ef11e}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!CrmException@{CrmException}}
+\index{CrmException@{CrmException}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{CrmException()}{CrmException()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a8995d7ffa3d76a1150965f863b8ef11e} 
+Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Crm\+Exception (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{string}]{crm\+Error\+Code}{ = {\ttfamily null}, }\item[{string}]{entity\+Type}{ = {\ttfamily null}, }\item[{Guid?}]{entity\+Id}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a4279ff76dae1c1b76c94d2046127de5f}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!CrmException@{CrmException}}
+\index{CrmException@{CrmException}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{CrmException()}{CrmException()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a4279ff76dae1c1b76c94d2046127de5f} 
+Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Crm\+Exception (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{Exception}]{inner\+Exception}{, }\item[{string}]{crm\+Error\+Code}{ = {\ttfamily null}, }\item[{string}]{entity\+Type}{ = {\ttfamily null}, }\item[{Guid?}]{entity\+Id}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a0b262a82ffe5ecd3f7a81403a02db9e9}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!ConnectionFailed@{ConnectionFailed}}
+\index{ConnectionFailed@{ConnectionFailed}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{ConnectionFailed()}{ConnectionFailed()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a0b262a82ffe5ecd3f7a81403a02db9e9} 
+\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception}{Crm\+Exception}} Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Connection\+Failed (\begin{DoxyParamCaption}\item[{Exception}]{inner\+Exception}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a70ca61e871f697b917ca94e7a0eda757}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!EntityCreationFailed@{EntityCreationFailed}}
+\index{EntityCreationFailed@{EntityCreationFailed}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{EntityCreationFailed()}{EntityCreationFailed()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a70ca61e871f697b917ca94e7a0eda757} 
+\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception}{Crm\+Exception}} Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Entity\+Creation\+Failed (\begin{DoxyParamCaption}\item[{string}]{entity\+Type}{, }\item[{Exception}]{inner\+Exception}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\label{doc-property-members}
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_abe133ff91e337fbf03ba35fa9573b494}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!CrmErrorCode@{CrmErrorCode}}
+\index{CrmErrorCode@{CrmErrorCode}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{CrmErrorCode}{CrmErrorCode}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_abe133ff91e337fbf03ba35fa9573b494} 
+string Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Crm\+Error\+Code\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a564337075f518bf7c0026f62561ee415}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!EntityId@{EntityId}}
+\index{EntityId@{EntityId}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{EntityId}{EntityId}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a564337075f518bf7c0026f62561ee415} 
+Guid? Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Entity\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a272bdb6d8a124ebde86a1f31def5754e}\index{SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}!EntityType@{EntityType}}
+\index{EntityType@{EntityType}!SiroccoDemo.Domain.Exceptions.CrmException@{SiroccoDemo.Domain.Exceptions.CrmException}}
+\doxysubsubsection{\texorpdfstring{EntityType}{EntityType}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_a272bdb6d8a124ebde86a1f31def5754e} 
+string Sirocco\+Demo.\+Domain.\+Exceptions.\+Crm\+Exception.\+Entity\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_crm_exception_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_crm_exception_8cs_source}{Crm\+Exception.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sirocco\+Demo.\+Domain/\+Exceptions/\mbox{\hyperlink{_crm_exception_8cs}{Crm\+Exception.\+cs}}\end{DoxyCompactItemize}

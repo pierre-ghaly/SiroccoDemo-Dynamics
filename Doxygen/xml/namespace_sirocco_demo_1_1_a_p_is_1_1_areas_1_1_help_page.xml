@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page" kind="namespace" language="C#">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_api_description_extensions" prot="public">SiroccoDemo::APIs::Areas::HelpPage::ApiDescriptionExtensions</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration" prot="public">SiroccoDemo::APIs::Areas::HelpPage::HelpPageAreaRegistration</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_config" prot="public">SiroccoDemo::APIs::Areas::HelpPage::HelpPageConfig</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions" prot="public">SiroccoDemo::APIs::Areas::HelpPage::HelpPageConfigurationExtensions</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" prot="public">SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" prot="public">SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample" prot="public">SiroccoDemo::APIs::Areas::HelpPage::ImageSample</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample" prot="public">SiroccoDemo::APIs::Areas::HelpPage::InvalidSample</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator" prot="public">SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample" prot="public">SiroccoDemo::APIs::Areas::HelpPage::TextSample</innerclass>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider" prot="public">SiroccoDemo::APIs::Areas::HelpPage::XmlDocumentationProvider</innerclass>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers">SiroccoDemo::APIs::Areas::HelpPage::Controllers</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions">SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models">SiroccoDemo::APIs::Areas::HelpPage::Models</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>SampleDirection</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.SampleDirection</qualifiedname>
+        <enumvalue id="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8a15c2d85f1fae22a3c3a0594510a1f611" prot="public">
+          <name>Request</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8ad64ed3e9c10229648e069f56e32f4c8e" prot="public">
+          <name>Response</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Indicates whether the sample is used for request or response. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/SampleDirection.cs" line="6" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/SampleDirection.cs" bodystart="7" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/ApiDescriptionExtensions.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_moq_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Moq::Program</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_moq_1_1_program_1ae05fe48a0928c25b79b0c6b8722f9275" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>IOrganizationService</type>
+        <definition>IOrganizationService SiroccoDemo.Moq.Program.OrganizationService</definition>
+        <argsstring></argsstring>
+        <name>OrganizationService</name>
+        <qualifiedname>SiroccoDemo.Moq.Program.OrganizationService</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Moq/Program.cs" line="11" column="44" bodyfile="SiroccoDemo.Moq/Program.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_moq_1_1_program_1afcada74a10ac088f85be3e169a35dc7d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SiroccoDemo.Moq.Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <qualifiedname>SiroccoDemo.Moq.Program.Main</qualifiedname>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Moq/Program.cs" line="13" column="21" bodyfile="SiroccoDemo.Moq/Program.cs" bodystart="13" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_moq_1_1_program_1a22b6a07124ef7c88baa166cbbee32472" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CrmServiceClient</type>
+        <definition>static CrmServiceClient SiroccoDemo.Moq.Program.GetAccessToCRM</definition>
+        <argsstring>()</argsstring>
+        <name>GetAccessToCRM</name>
+        <qualifiedname>SiroccoDemo.Moq.Program.GetAccessToCRM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Moq/Program.cs" line="19" column="40" bodyfile="SiroccoDemo.Moq/Program.cs" bodystart="19" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Moq/Program.cs" line="9" column="5" bodyfile="SiroccoDemo.Moq/Program.cs" bodystart="10" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_moq_1_1_program_1a22b6a07124ef7c88baa166cbbee32472" prot="public" virt="non-virtual"><scope>SiroccoDemo::Moq::Program</scope><name>GetAccessToCRM</name></member>
+      <member refid="class_sirocco_demo_1_1_moq_1_1_program_1afcada74a10ac088f85be3e169a35dc7d" prot="private" virt="non-virtual"><scope>SiroccoDemo::Moq::Program</scope><name>Main</name></member>
+      <member refid="class_sirocco_demo_1_1_moq_1_1_program_1ae05fe48a0928c25b79b0c6b8722f9275" prot="public" virt="non-virtual"><scope>SiroccoDemo::Moq::Program</scope><name>OrganizationService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

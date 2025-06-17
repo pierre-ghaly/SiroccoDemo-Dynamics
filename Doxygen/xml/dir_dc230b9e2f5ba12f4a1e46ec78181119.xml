@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_dc230b9e2f5ba12f4a1e46ec78181119" kind="dir">
+    <compoundname>SiroccoDemo.Infrastructure/Properties</compoundname>
+    <innerfile refid="_sirocco_demo_8_infrastructure_2_properties_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Infrastructure/Properties/"/>
+  </compounddef>
+</doxygen>

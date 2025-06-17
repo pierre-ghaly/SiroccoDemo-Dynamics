@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_unity_config" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::UnityConfig</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_unity_config_1aa8fff5da9c5be1a146ed61ed515a54a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SiroccoDemo.APIs.UnityConfig.RegisterComponents</definition>
+        <argsstring>()</argsstring>
+        <name>RegisterComponents</name>
+        <qualifiedname>SiroccoDemo.APIs.UnityConfig.RegisterComponents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/App_Start/UnityConfig.cs" line="17" column="28" bodyfile="SiroccoDemo.APIs/App_Start/UnityConfig.cs" bodystart="17" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/App_Start/UnityConfig.cs" line="15" column="19" bodyfile="SiroccoDemo.APIs/App_Start/UnityConfig.cs" bodystart="16" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_unity_config_1aa8fff5da9c5be1a146ed61ed515a54a5" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::UnityConfig</scope><name>RegisterComponents</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

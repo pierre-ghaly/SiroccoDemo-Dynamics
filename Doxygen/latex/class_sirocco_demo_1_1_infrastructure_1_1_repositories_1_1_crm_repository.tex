@@ -1,0 +1,155 @@
+\doxysection{Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository Class Reference}
+\hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository}{}\label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+
+
+Inheritance diagram for Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository\+:
+% FIG 0
+
+
+Collaboration diagram for Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a9f2fc9856a714c9e6cb1c246ba41d041}{Crm\+Repository}} (IOrganization\+Service service)
+\item 
+Guid \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a6f2424ab45529534a8f6b24be14f5f4f}{Create\+Account}} (\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}} account)
+\item 
+Guid \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae821efa9b19e346db64dc3dd4e1207b3}{Create\+Contact}} (\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact}{Contact}} contact)
+\item 
+Guid \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_aa180b49e27bcdf2cfb5e3db932b9dd66}{Create\+Note}} (\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note}{Note}} note)
+\item 
+void \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a682136a2237d28d5d0a954e8972dba33}{Set\+Primary\+Contact}} (Guid account\+Id, Guid contact\+Id)
+\item 
+List$<$(\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}} \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}, Guid? Primary\+Contact\+Id)$>$ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae27c98c23a80db73bd2a5874c254dc39}{Get\+All\+Accounts\+And\+Primary\+Contact}} ()
+\item 
+List$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a85f01cc2c1e600e3785d77f5c801ea25}{Get\+Contacts\+By\+Account\+Id}} (Guid account\+Id)
+\item 
+List$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note}{Note}} $>$ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_afb966b23d8d9cacf865232ad119ee811}{Get\+Notes\+By\+Regarding}} (Guid regarding\+Id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a9f2fc9856a714c9e6cb1c246ba41d041}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!CrmRepository@{CrmRepository}}
+\index{CrmRepository@{CrmRepository}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{CrmRepository()}{CrmRepository()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a9f2fc9856a714c9e6cb1c246ba41d041} 
+Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Crm\+Repository (\begin{DoxyParamCaption}\item[{IOrganization\+Service}]{service}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a6f2424ab45529534a8f6b24be14f5f4f}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!CreateAccount@{CreateAccount}}
+\index{CreateAccount@{CreateAccount}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{CreateAccount()}{CreateAccount()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a6f2424ab45529534a8f6b24be14f5f4f} 
+Guid Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Create\+Account (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}}]{account}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_a4b9e9df14b5bac6c16c18808a9d56635}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae821efa9b19e346db64dc3dd4e1207b3}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!CreateContact@{CreateContact}}
+\index{CreateContact@{CreateContact}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{CreateContact()}{CreateContact()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae821efa9b19e346db64dc3dd4e1207b3} 
+Guid Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Create\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_ac9ec1e1dd4b65a2ab24529bcc1d72328}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_aa180b49e27bcdf2cfb5e3db932b9dd66}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!CreateNote@{CreateNote}}
+\index{CreateNote@{CreateNote}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{CreateNote()}{CreateNote()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_aa180b49e27bcdf2cfb5e3db932b9dd66} 
+Guid Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Create\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note}{Note}}}]{note}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_a1564ddd669bc9bbf1f2fe168ee05e946}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae27c98c23a80db73bd2a5874c254dc39}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!GetAllAccountsAndPrimaryContact@{GetAllAccountsAndPrimaryContact}}
+\index{GetAllAccountsAndPrimaryContact@{GetAllAccountsAndPrimaryContact}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllAccountsAndPrimaryContact()}{GetAllAccountsAndPrimaryContact()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_ae27c98c23a80db73bd2a5874c254dc39} 
+List$<$(\mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}} \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_account}{Account}}, Guid? Primary\+Contact\+Id)$>$ Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Get\+All\+Accounts\+And\+Primary\+Contact (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_acb945cacb0dfc3fd176fa00095134b11}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a85f01cc2c1e600e3785d77f5c801ea25}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!GetContactsByAccountId@{GetContactsByAccountId}}
+\index{GetContactsByAccountId@{GetContactsByAccountId}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{GetContactsByAccountId()}{GetContactsByAccountId()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a85f01cc2c1e600e3785d77f5c801ea25} 
+List$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact}{Contact}} $>$ Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Get\+Contacts\+By\+Account\+Id (\begin{DoxyParamCaption}\item[{Guid}]{account\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_a3b3f04b707cc4309bb2766530fa7c3c2}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00084}{84}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_afb966b23d8d9cacf865232ad119ee811}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!GetNotesByRegarding@{GetNotesByRegarding}}
+\index{GetNotesByRegarding@{GetNotesByRegarding}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{GetNotesByRegarding()}{GetNotesByRegarding()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_afb966b23d8d9cacf865232ad119ee811} 
+List$<$ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_entities_1_1_note}{Note}} $>$ Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Get\+Notes\+By\+Regarding (\begin{DoxyParamCaption}\item[{Guid}]{regarding\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_a8c982b18dd9bf438386778c7f09a20b3}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+\Hypertarget{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a682136a2237d28d5d0a954e8972dba33}\index{SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}!SetPrimaryContact@{SetPrimaryContact}}
+\index{SetPrimaryContact@{SetPrimaryContact}!SiroccoDemo.Infrastructure.Repositories.CrmRepository@{SiroccoDemo.Infrastructure.Repositories.CrmRepository}}
+\doxysubsubsection{\texorpdfstring{SetPrimaryContact()}{SetPrimaryContact()}}
+{\footnotesize\ttfamily \label{class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_a682136a2237d28d5d0a954e8972dba33} 
+void Sirocco\+Demo.\+Infrastructure.\+Repositories.\+Crm\+Repository.\+Set\+Primary\+Contact (\begin{DoxyParamCaption}\item[{Guid}]{account\+Id}{, }\item[{Guid}]{contact\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_a441b76e8b26e14cf466e9a362007e9cb}{Sirocco\+Demo.\+Application.\+Repositories.\+ICrm\+Repository}}.
+
+
+
+Definition at line \mbox{\hyperlink{_crm_repository_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_crm_repository_8cs_source}{Crm\+Repository.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sirocco\+Demo.\+Infrastructure/\+Repositories/\mbox{\hyperlink{_crm_repository_8cs}{Crm\+Repository.\+cs}}\end{DoxyCompactItemize}

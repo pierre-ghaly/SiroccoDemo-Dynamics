@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_system_8_text_8_json_88_80_85_2_p_a_c_k_a_g_e_8md" kind="file" language="Markdown">
+    <compoundname>PACKAGE.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>About</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>A<sp/>description<sp/>of<sp/>the<sp/>package<sp/>and<sp/>where<sp/>one<sp/>can<sp/>find<sp/>more<sp/>documentation<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Provides<sp/>high-performance<sp/>and<sp/>low-allocating<sp/>types<sp/>that<sp/>serialize<sp/>objects<sp/>to<sp/>JavaScript<sp/>Object<sp/>Notation<sp/>(JSON)<sp/>text<sp/>and<sp/>deserialize<sp/>JSON<sp/>text<sp/>to<sp/>objects,<sp/>with<sp/>UTF-8<sp/>support<sp/>built-in.<sp/>Also<sp/>provides<sp/>types<sp/>to<sp/>read<sp/>and<sp/>write<sp/>JSON<sp/>text<sp/>encoded<sp/>as<sp/>UTF-8,<sp/>and<sp/>to<sp/>create<sp/>an<sp/>in-memory<sp/>document<sp/>object<sp/>model<sp/>(DOM),<sp/>that<sp/>is<sp/>read-only,<sp/>for<sp/>random<sp/>access<sp/>of<sp/>the<sp/>JSON<sp/>elements<sp/>within<sp/>a<sp/>structured<sp/>view<sp/>of<sp/>the<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Key<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>The<sp/>key<sp/>features<sp/>of<sp/>this<sp/>package<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>High-performance<sp/>reader<sp/>and<sp/>writer<sp/>types<sp/>for<sp/>UTF-8<sp/>encoded<sp/>JSON.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>A<sp/>fully-featured<sp/>JSON<sp/>serializer<sp/>for<sp/>.NET<sp/>types<sp/>using<sp/>reflection<sp/>or<sp/>source<sp/>generated<sp/>contracts.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>A<sp/>high-performance<sp/>read-only<sp/>JSON<sp/>DOM<sp/>(JsonDocument)<sp/>and<sp/>a<sp/>mutable<sp/>DOM<sp/>that<sp/>interoperates<sp/>with<sp/>the<sp/>serializer<sp/>(JsonNode).</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Built-in<sp/>support<sp/>for<sp/>async<sp/>serialization,<sp/>including<sp/>IAsyncEnumerable<sp/>support.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Fully<sp/>customizable<sp/>contract<sp/>model<sp/>for<sp/>serializable<sp/>types.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>to<sp/>Use</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>A<sp/>compelling<sp/>example<sp/>on<sp/>how<sp/>to<sp/>use<sp/>this<sp/>package<sp/>with<sp/>code,<sp/>as<sp/>well<sp/>as<sp/>any<sp/>specific<sp/>guidelines<sp/>for<sp/>when<sp/>to<sp/>use<sp/>the<sp/>package<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>System.Text.Json<sp/>library<sp/>is<sp/>built-in<sp/>as<sp/>part<sp/>of<sp/>the<sp/>shared<sp/>framework<sp/>in<sp/>.NET<sp/>Runtime.<sp/>The<sp/>package<sp/>can<sp/>be<sp/>installed<sp/>when<sp/>you<sp/>need<sp/>to<sp/>use<sp/>the<sp/>most<sp/>recent<sp/>version<sp/>in<sp/>older<sp/>target<sp/>frameworks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Serialization:</highlight></codeline>
+<codeline><highlight class="normal">```csharp</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text.Json;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">WeatherForecast<sp/>forecast<sp/>=<sp/>new<sp/>(DateTimeOffset.Now,<sp/>26.6f,<sp/>&quot;Sunny&quot;);</highlight></codeline>
+<codeline><highlight class="normal">var<sp/>serialized<sp/>=<sp/>JsonSerializer.Serialize(forecast);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Console.WriteLine(serialized);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>{&quot;Date&quot;:&quot;2023-08-02T16:01:20.9025406+00:00&quot;,&quot;TemperatureCelsius&quot;:26.6,&quot;Summary&quot;:&quot;Sunny&quot;}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">var<sp/>forecastDeserialized<sp/>=<sp/>JsonSerializer.Deserialize&lt;WeatherForecast&gt;(serialized);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine(forecast<sp/>==<sp/>forecastDeserialized);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>True</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">public<sp/>record<sp/>WeatherForecast(DateTimeOffset<sp/>Date,<sp/>float<sp/>TemperatureCelsius,<sp/>string?<sp/>Summary);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Serialization<sp/>using<sp/>the<sp/>source<sp/>generator:</highlight></codeline>
+<codeline><highlight class="normal">```csharp</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text.Json;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text.Json.Serialization;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">WeatherForecast<sp/>forecast<sp/>=<sp/>new<sp/>(DateTimeOffset.Now,<sp/>26.6f,<sp/>&quot;Sunny&quot;);</highlight></codeline>
+<codeline><highlight class="normal">var<sp/>serialized<sp/>=<sp/>JsonSerializer.Serialize(forecast,<sp/>SourceGenerationContext.Default.WeatherForecast);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Console.WriteLine(serialized);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>{&quot;Date&quot;:&quot;2023-08-02T16:01:20.9025406+00:00&quot;,&quot;TemperatureCelsius&quot;:26.6,&quot;Summary&quot;:&quot;Sunny&quot;}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">var<sp/>forecastDeserialized<sp/>=<sp/>JsonSerializer.Deserialize&lt;WeatherForecast&gt;(serialized,<sp/>SourceGenerationContext.Default.WeatherForecast);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine(forecast<sp/>==<sp/>forecastDeserialized);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>True</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">public<sp/>record<sp/>WeatherForecast(DateTimeOffset<sp/>Date,<sp/>float<sp/>TemperatureCelsius,<sp/>string?<sp/>Summary);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[JsonSourceGenerationOptions(WriteIndented<sp/>=<sp/>true)]</highlight></codeline>
+<codeline><highlight class="normal">[JsonSerializable(typeof(WeatherForecast))]</highlight></codeline>
+<codeline><highlight class="normal">internal<sp/>partial<sp/>class<sp/>SourceGenerationContext<sp/>:<sp/>JsonSerializerContext</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Using<sp/>the<sp/>JSON<sp/>DOM:</highlight></codeline>
+<codeline><highlight class="normal">```csharp</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">using<sp/>System;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text.Json;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text.Json.Nodes;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">string<sp/>jsonString<sp/>=</highlight></codeline>
+<codeline><highlight class="normal">@&quot;{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;&quot;Date&quot;&quot;:<sp/>&quot;&quot;2019-08-01T00:00:00&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;&quot;Temperature&quot;&quot;:<sp/>25,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;&quot;Summary&quot;&quot;:<sp/>&quot;&quot;Hot&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;&quot;DatesAvailable&quot;&quot;:<sp/>[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;&quot;2019-08-01T00:00:00&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;&quot;2019-08-02T00:00:00&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;&quot;TemperatureRanges&quot;&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;Cold&quot;&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;High&quot;&quot;:<sp/>20,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;Low&quot;&quot;:<sp/>-10</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;Hot&quot;&quot;:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;High&quot;&quot;:<sp/>60,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;Low&quot;&quot;:<sp/>20</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>forecastNode<sp/>=<sp/>JsonNode.Parse(jsonString)!;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>value<sp/>from<sp/>a<sp/>JsonNode.</highlight></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>temperatureNode<sp/>=<sp/>forecastNode[&quot;Temperature&quot;]!;</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;Type={temperatureNode.GetType()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;JSON={temperatureNode.ToJsonString()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//Type<sp/>=<sp/>System.Text.Json.Nodes.JsonValue`1[System.Text.Json.JsonElement]</highlight></codeline>
+<codeline><highlight class="normal">//JSON<sp/>=<sp/>25</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>a<sp/>typed<sp/>value<sp/>from<sp/>a<sp/>JsonNode.</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>temperatureInt<sp/>=<sp/>(int)forecastNode[&quot;Temperature&quot;]!;</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;Value={temperatureInt}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//Value=25</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>a<sp/>typed<sp/>value<sp/>from<sp/>a<sp/>JsonNode<sp/>by<sp/>using<sp/>GetValue&lt;T&gt;.</highlight></codeline>
+<codeline><highlight class="normal">temperatureInt<sp/>=<sp/>forecastNode[&quot;Temperature&quot;]!.GetValue&lt;int&gt;();</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;TemperatureInt={temperatureInt}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//Value=25</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>a<sp/>JSON<sp/>object<sp/>from<sp/>a<sp/>JsonNode.</highlight></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>temperatureRanges<sp/>=<sp/>forecastNode[&quot;TemperatureRanges&quot;]!;</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;Type={temperatureRanges.GetType()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;JSON={temperatureRanges.ToJsonString()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//Type<sp/>=<sp/>System.Text.Json.Nodes.JsonObject</highlight></codeline>
+<codeline><highlight class="normal">//JSON<sp/>=<sp/>{<sp/>&quot;Cold&quot;:{<sp/>&quot;High&quot;:20,&quot;Low&quot;:-10},&quot;Hot&quot;:{<sp/>&quot;High&quot;:60,&quot;Low&quot;:20}<sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>a<sp/>JSON<sp/>array<sp/>from<sp/>a<sp/>JsonNode.</highlight></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>datesAvailable<sp/>=<sp/>forecastNode[&quot;DatesAvailable&quot;]!;</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;Type={datesAvailable.GetType()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;JSON={datesAvailable.ToJsonString()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//datesAvailable<sp/>Type<sp/>=<sp/>System.Text.Json.Nodes.JsonArray</highlight></codeline>
+<codeline><highlight class="normal">//datesAvailable<sp/>JSON<sp/>=[&quot;2019-08-01T00:00:00&quot;,<sp/>&quot;2019-08-02T00:00:00&quot;]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>an<sp/>array<sp/>element<sp/>value<sp/>from<sp/>a<sp/>JsonArray.</highlight></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>firstDateAvailable<sp/>=<sp/>datesAvailable[0]!;</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;Type={firstDateAvailable.GetType()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;JSON={firstDateAvailable.ToJsonString()}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//Type<sp/>=<sp/>System.Text.Json.Nodes.JsonValue`1[System.Text.Json.JsonElement]</highlight></codeline>
+<codeline><highlight class="normal">//JSON<sp/>=<sp/>&quot;2019-08-01T00:00:00&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>a<sp/>typed<sp/>value<sp/>by<sp/>chaining<sp/>references.</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>coldHighTemperature<sp/>=<sp/>(int)forecastNode[&quot;TemperatureRanges&quot;]![&quot;Cold&quot;]![&quot;High&quot;]!;</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;TemperatureRanges.Cold.High={coldHighTemperature}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//TemperatureRanges.Cold.High<sp/>=<sp/>20</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Parse<sp/>a<sp/>JSON<sp/>array</highlight></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>datesNode<sp/>=<sp/>JsonNode.Parse(@&quot;[&quot;&quot;2019-08-01T00:00:00&quot;&quot;,&quot;&quot;2019-08-02T00:00:00&quot;&quot;]&quot;)!;</highlight></codeline>
+<codeline><highlight class="normal">JsonNode<sp/>firstDate<sp/>=<sp/>datesNode[0]!.GetValue&lt;DateTime&gt;();</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine($&quot;firstDate={<sp/>firstDate}&quot;);</highlight></codeline>
+<codeline><highlight class="normal">//output:</highlight></codeline>
+<codeline><highlight class="normal">//firstDate<sp/>=<sp/>&quot;2019-08-01T00:00:00&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Using<sp/>the<sp/>low-level<sp/>JSON<sp/>reader/writer<sp/>types</highlight></codeline>
+<codeline><highlight class="normal">```csharp</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.IO;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>System.Text.Json;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">var<sp/>writerOptions<sp/>=<sp/>new<sp/>JsonWriterOptions</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Indented<sp/>=<sp/>true</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">using<sp/>var<sp/>stream<sp/>=<sp/>new<sp/>MemoryStream();</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>var<sp/>writer<sp/>=<sp/>new<sp/>Utf8JsonWriter(stream,<sp/>writerOptions);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">writer.WriteStartObject();</highlight></codeline>
+<codeline><highlight class="normal">writer.WriteString(&quot;date&quot;,<sp/>DateTimeOffset.Parse(&quot;8/2/2023<sp/>9:00<sp/>AM&quot;));</highlight></codeline>
+<codeline><highlight class="normal">writer.WriteNumber(&quot;temp&quot;,<sp/>42);</highlight></codeline>
+<codeline><highlight class="normal">writer.WriteEndObject();</highlight></codeline>
+<codeline><highlight class="normal">writer.Flush();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">var<sp/>jsonBytes<sp/>=<sp/>stream.ToArray();</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>json<sp/>=<sp/>Encoding.UTF8.GetString(jsonBytes);</highlight></codeline>
+<codeline><highlight class="normal">Console.WriteLine(json);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">//<sp/><sp/><sp/>&quot;date&quot;:<sp/>&quot;2023-08-02T09:00:00+00:00&quot;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/><sp/><sp/>&quot;temp&quot;:<sp/>42</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">var<sp/>readerOptions<sp/>=<sp/>new<sp/>JsonReaderOptions</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AllowTrailingCommas<sp/>=<sp/>true,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CommentHandling<sp/>=<sp/>JsonCommentHandling.Skip</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">var<sp/>reader<sp/>=<sp/>new<sp/>Utf8JsonReader(jsonBytes,<sp/>readerOptions);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">while<sp/>(reader.Read())</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Console.Write(reader.TokenType);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>switch<sp/>(reader.TokenType)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>JsonTokenType.PropertyName:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>JsonTokenType.String:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string?<sp/>text<sp/>=<sp/>reader.GetString();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.Write(&quot;<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.Write(text);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>JsonTokenType.Number:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>intValue<sp/>=<sp/>reader.GetInt32();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.Write(&quot;<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.Write(intValue);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Other<sp/>token<sp/>types<sp/>elided<sp/>for<sp/>brevity</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Console.WriteLine();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>StartObject</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>PropertyName<sp/>date</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>String<sp/>2023-08-02T09:00:00+00:00</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>PropertyName<sp/>temp</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Number<sp/>42</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>EndObject</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Main<sp/>Types</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>The<sp/>main<sp/>types<sp/>provided<sp/>in<sp/>this<sp/>library<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>types<sp/>provided<sp/>by<sp/>this<sp/>library<sp/>are:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.Utf8JsonWriter`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.Utf8JsonReader`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.JsonSerializer`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.JsonConverter`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.JsonDocument`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.Nodes.JsonNode`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`System.Text.Json.Serialization.Metadata.JsonTypeInfo`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Additional<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[Conceptual<sp/>documentation](https://learn.microsoft.com/dotnet/standard/serialization/system-text-json/overview)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[API<sp/>documentation](https://learn.microsoft.com/dotnet/api/system.text.json)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Related<sp/>Packages</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>The<sp/>related<sp/>packages<sp/>associated<sp/>with<sp/>this<sp/>package<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Lightweight<sp/>data<sp/>formats<sp/>abstraction:<sp/>[System.Memory.Data](https://www.nuget.org/packages/System.Memory.Data/)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Serialization<sp/>of<sp/>HttpContent:<sp/>[System.Net.Http.Json](https://www.nuget.org/packages/System.Net.Http.Json/)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Feedback<sp/>&amp;<sp/>Contributing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>How<sp/>to<sp/>provide<sp/>feedback<sp/>on<sp/>this<sp/>package<sp/>and<sp/>contribute<sp/>to<sp/>it<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">System.Text.Json<sp/>is<sp/>released<sp/>as<sp/>open<sp/>source<sp/>under<sp/>the<sp/>[MIT<sp/>license](https://licenses.nuget.org/MIT).<sp/>Bug<sp/>reports<sp/>and<sp/>contributions<sp/>are<sp/>welcome<sp/>at<sp/>[the<sp/>GitHub<sp/>repository](https://github.com/dotnet/runtime).</highlight></codeline>
+    </programlisting>
+    <location file="packages/System.Text.Json.8.0.5/PACKAGE.md"/>
+  </compounddef>
+</doxygen>

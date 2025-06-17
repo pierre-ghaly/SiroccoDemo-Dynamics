@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" kind="class"><name>SiroccoDemo::Domain::Entities::Account</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a471d8ae02162ffe4675c6da9fbf365e7" kind="property"><name>Id</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a3c8a9299999ab695ecb67ea42340884a" kind="property"><name>Name</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a1c2548a37b793278f1e7b97733fca94b" kind="property"><name>PrimaryContactId</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_application_1_1_models_1_1_account_input" kind="class"><name>SiroccoDemo::Application::Models::AccountInput</name>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_1af5ae1263f6fe44963e3ab17d1788d079" kind="property"><name>Name</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator" kind="class"><name>SiroccoDemo::Infrastructure::Validations::AccountValidator</name>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_account_validator_1a1b6964aab25850279ec43e0c6e3181b4" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_api_description_extensions" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ApiDescriptionExtensions</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_api_description_extensions_1ac77d017d2b5340425aaa54fbe5f10033" kind="function"><name>GetFriendlyId</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller" kind="class"><name>SiroccoDemo::APIs::Controllers::BaseController</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller_1a94b341772ec15e640a5bf99b5bd70bab" kind="function"><name>ExecuteWithExceptionHandling&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config" kind="class"><name>SiroccoDemo::APIs::BundleConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config_1a64c170fdeba641e21c7bf58b8ab06821" kind="function"><name>RegisterBundles</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception" kind="class"><name>SiroccoDemo::Domain::Exceptions::BusinessRuleException</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a651fc4b6ee709800d7fb27e09153ccff" kind="property"><name>RuleName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1ae25a623a507cc854229f80f672ff5b7f" kind="property"><name>EntityType</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a97851beadb225d64c610fc1535cc1e29" kind="function"><name>BusinessRuleException</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_business_rule_exception_1a1b67bb02bff738ecf60e6aa1e70c937d" kind="function"><name>BusinessRuleException</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_collection_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::CollectionModelDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_collection_model_description_1acae09a6c940bfa9dd5db65d6dfdf6b19" kind="property"><name>ElementDescription</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ComplexTypeModelDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_1a7946ce040937ddb216e811ae0e929d9d" kind="property"><name>Properties</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_1affe265b2f61279497736a8e569ae6341" kind="function"><name>ComplexTypeModelDescription</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact" kind="class"><name>SiroccoDemo::Domain::Entities::Contact</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1ac95c2ec845f9e5c44aa2b0f09a2cf571" kind="property"><name>Id</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1abe174d90f27c16f02406d4ca17418db2" kind="property"><name>FirstName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1a1d841d61ca5cad263d8fccdf7762fd32" kind="property"><name>LastName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1a0775231924f180fcf1fa0a6974195ae3" kind="property"><name>Email</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_contact_1a8ac38dfb2d997bda607471387c90e4d7" kind="property"><name>AccountId</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input" kind="class"><name>SiroccoDemo::Application::Models::ContactInput</name>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae3e2a3fdc9b38ba54fd7b39a2be96be5" kind="property"><name>FirstName</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ac32772e519ed7848589caaaead414044" kind="property"><name>LastName</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1a598cb7b7e32dcdfa7da9636b815019e4" kind="property"><name>Email</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae7b038739b5cde03b38d8552355c3901" kind="property"><name>Notes</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator" kind="class"><name>SiroccoDemo::Infrastructure::Validations::ContactValidator</name>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1a56f55cb98c5d5637bbde225cd44502db" kind="variable"><name>EmailRegex</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1ac9323a8b60550a8384e2198e7a1f224b" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes" kind="class"><name>SiroccoDemo::Plugins::CreateAccountWithContactsAndNotes</name>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_create_account_with_contacts_and_notes_1a4da9b3013de8bd75f452029ff2645fca" kind="function"><name>ExtendedExecute</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller" kind="class"><name>SiroccoDemo::APIs::Controllers::CreateAccountWithContactsAndNotesController</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1ad53e2c0bb89a5bf226c2c2e460cfe039" kind="variable"><name>_service</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1a917d8345e28c341ef6c5128b174031e6" kind="function"><name>CreateAccountWithContactsAndNotesController</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_1a5950483798d2514ad211760e4dc33029" kind="function"><name>CreateAccountWithContactsAndNotes</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o" kind="class"><name>SiroccoDemo::Domain::DTOs::CreateAccountWithContactsAndNotesDTO</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o_1aa34ae74799d4e6d95b5f7f831b39de6a" kind="property"><name>Account</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o_1a5d565ed50b2f615056534d26e8f3e5a4" kind="property"><name>PrimaryContact</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o_1a9b03d298269edffdd2e8ecd7e830fba5" kind="property"><name>SecondaryContacts</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o_1afd28507aeba1ad1cc7b7a8b1dec5ff0c" kind="property"><name>PrimaryContactNotes</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_create_account_with_contacts_and_notes_d_t_o_1aab45aa995c75c9d491f4e9428d8f5b26" kind="property"><name>AccountNotes</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model" kind="class"><name>SiroccoDemo::Application::Models::CreateAccountWithContactsAndNotesModel</name>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a57ede667ad687421d20bf2e39840b7a9" kind="property"><name>Account</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a119a9a6b3257c49a8b51af39bebe7ed3" kind="property"><name>PrimaryContact</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a0ce7822861e6b2d6592104d4a7798d35" kind="property"><name>SecondaryContacts</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a083e37a0782520b6ef2f364192de48a0" kind="property"><name>PrimaryContactNotes</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a231c19ddff5d049d5feeb326c2b5b45e" kind="property"><name>AccountNotes</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_moq_1_1_activities_1_1_create_account_with_contacts_and_notes_moq" kind="class"><name>SiroccoDemo::Moq::Activities::CreateAccountWithContactsAndNotesMoq</name>
+    <member refid="class_sirocco_demo_1_1_moq_1_1_activities_1_1_create_account_with_contacts_and_notes_moq_1a7eae5b2af575a071bd974e5b42a4464b" kind="function"><name>ExecuteMoq</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service" kind="class"><name>SiroccoDemo::Infrastructure::Services::CreateAccountWithContactsAndNotesService</name>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a5df5b8fd00a41e6ffb560f08984c9336" kind="variable"><name>_crmRepository</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a06f9f268ec921fcb4a8212fd84438c98" kind="variable"><name>_organizationService</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a8b1e4f7a489a5237b7b5586849f350de" kind="variable"><name>_accountValidator</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a11719157840aaa97726b4343f9ff02be" kind="variable"><name>_contactValidator</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a43a66647ae75115c5ab5f418516de0ae" kind="variable"><name>_noteValidator</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a9e0d196869b2b7d6cb495010c3706575" kind="function"><name>CreateAccountWithContactsAndNotesService</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a016ab2a2e7023b83dd909cc37b90e896" kind="function"><name>CreateAccountWithContactsAndNotes</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_create_account_with_contacts_and_notes_service_1a63238ac54dee484844a82c40ade2e3f3" kind="function"><name>ExecuteInTransaction</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception" kind="class"><name>SiroccoDemo::Domain::Exceptions::CrmException</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1abe133ff91e337fbf03ba35fa9573b494" kind="property"><name>CrmErrorCode</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1a272bdb6d8a124ebde86a1f31def5754e" kind="property"><name>EntityType</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1a564337075f518bf7c0026f62561ee415" kind="property"><name>EntityId</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1a8995d7ffa3d76a1150965f863b8ef11e" kind="function"><name>CrmException</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1a4279ff76dae1c1b76c94d2046127de5f" kind="function"><name>CrmException</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1a0b262a82ffe5ecd3f7a81403a02db9e9" kind="function"><name>ConnectionFailed</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_crm_exception_1a70ca61e871f697b917ca94e7a0eda757" kind="function"><name>EntityCreationFailed</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository" kind="class"><name>SiroccoDemo::Infrastructure::Repositories::CrmRepository</name>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ac166d4bf94be3bd962e7739e5140dd20" kind="variable"><name>_service</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a9f2fc9856a714c9e6cb1c246ba41d041" kind="function"><name>CrmRepository</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a6f2424ab45529534a8f6b24be14f5f4f" kind="function"><name>CreateAccount</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ae821efa9b19e346db64dc3dd4e1207b3" kind="function"><name>CreateContact</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1aa180b49e27bcdf2cfb5e3db932b9dd66" kind="function"><name>CreateNote</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a682136a2237d28d5d0a954e8972dba33" kind="function"><name>SetPrimaryContact</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1ae27c98c23a80db73bd2a5874c254dc39" kind="function"><name>GetAllAccountsAndPrimaryContact</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1a85f01cc2c1e600e3785d77f5c801ea25" kind="function"><name>GetContactsByAccountId</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_repositories_1_1_crm_repository_1afb966b23d8d9cacf865232ad119ee811" kind="function"><name>GetNotesByRegarding</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_services_1_1_crm_service_factory" kind="class"><name>SiroccoDemo::APIs::Services::CrmServiceFactory</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_services_1_1_crm_service_factory_1aa4434a907e40fedca82b7d1ca0c170ad" kind="function"><name>CreateOrganizationService</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_dictionary_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::DictionaryModelDescription</name>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_type_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::EnumTypeModelDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_type_model_description_1ac21e764f6be57c61be96c1272f0e40bd" kind="property"><name>Values</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_type_model_description_1af66e5ceb9b8c87a459744eca63bb4408" kind="function"><name>EnumTypeModelDescription</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::EnumValueDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1acf54c6f5ed808e260dac93974d6e821d" kind="property"><name>Documentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1a23883f76b15ce4b4930079b2788e103e" kind="property"><name>Name</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_enum_value_description_1a111c5aca43f66b8e6ddd46b63462d6c3" kind="property"><name>Value</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base" kind="class"><name>SiroccoDemo::Domain::Exceptions::ExceptionBase</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a9f091030bc623b7955015165539741b4" kind="property"><name>ErrorCode</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1aca2f6698941c228b90cd87835becb289" kind="property"><name>OccurredAt</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1ad2c44519e737f3e48219495c0fc10368" kind="function"><name>ExceptionBase</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_exception_base_1a709d874343b8e5210928da0b1b1cc34c" kind="function"><name>ExceptionBase</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config" kind="class"><name>SiroccoDemo::APIs::FilterConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config_1a425a15e4169e815ebc2fc7956ba816f1" kind="function"><name>RegisterGlobalFilters</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary" kind="class"><name>SiroccoDemo::Plugins::GetAccountContactNoteSummary</name>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary_1a48c591c30d865b2be7e5f0385175a240" kind="function"><name>ExtendedExecute</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_get_account_contact_note_summary_controller" kind="class"><name>SiroccoDemo::APIs::Controllers::GetAccountContactNoteSummaryController</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_get_account_contact_note_summary_controller_1a826520374f65d44419c4b17a9b3ab2b3" kind="variable"><name>_service</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_get_account_contact_note_summary_controller_1a5183497cc6a8d6996412264cdcd0376f" kind="function"><name>GetAccountContactNoteSummaryController</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_get_account_contact_note_summary_controller_1a64febe95665b82308672f65a914113f8" kind="function"><name>GetAccountContactNoteSummary</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_get_account_contact_note_summary_d_t_o" kind="class"><name>SiroccoDemo::Domain::DTOs::GetAccountContactNoteSummaryDTO</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_get_account_contact_note_summary_d_t_o_1afbb58870e58ee0618ba89021c6f33df4" kind="property"><name>AccountName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_get_account_contact_note_summary_d_t_o_1a6f30ab68c80ac966a1b46114bb3824b8" kind="property"><name>PrimaryContact</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_get_account_contact_note_summary_d_t_o_1aad3fe364f9238abb244ec85333f135b7" kind="property"><name>SecondaryContacts</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_moq_1_1_activities_1_1_get_account_contact_note_summary_moq" kind="class"><name>SiroccoDemo::Moq::Activities::GetAccountContactNoteSummaryMoq</name>
+    <member refid="class_sirocco_demo_1_1_moq_1_1_activities_1_1_get_account_contact_note_summary_moq_1a515fa3c88eb85834a6cdd0e8fe610f2a" kind="function"><name>ExecuteMoq</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service" kind="class"><name>SiroccoDemo::Infrastructure::Services::GetAccountContactNoteSummaryService</name>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1a6ccf815456d170fd9a69ab794d20c5d2" kind="variable"><name>_crmRepository</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1afa0e7de32711b46a9378c3e080dff05a" kind="function"><name>GetAccountContactNoteSummaryService</name></member>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service_1ace76721933f6c629abfd0454ecaef1fe" kind="function"><name>GetAccountContactNoteSummary</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::Controllers::HelpController</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a01386f0fee178dc52aea61f5018d3598" kind="variable"><name>ErrorViewName</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a223e810cfe5c428ac0a92ec50a96f316" kind="property"><name>Configuration</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a561a899565e2b0d689563df88bf7b087" kind="function"><name>HelpController</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a889b4b7ed856daed68d2d0dada7e2343" kind="function"><name>HelpController</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1abc8dc179f60d26eb61d6f89429a91902" kind="function"><name>Index</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a694e650b9477a74a189bc2e7b24b5cd6" kind="function"><name>Api</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1ad16fe1f50a3dbcf5585df34de1981a9e" kind="function"><name>ResourceModel</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::Models::HelpPageApiModel</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a0dff6dafd2cd795b1978cc82969caba2" kind="property"><name>ApiDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a35017943fce60056fbcf05d935d5bfa0" kind="property"><name>UriParameters</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ab1f4dcbeb2953ef3c1c4a4a037a4622c" kind="property"><name>RequestDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a6a35fee00ab6552063a3a4bfd02f091e" kind="property"><name>RequestModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a72d7a49c6ad9c0ba700c5bde51d885d6" kind="property"><name>RequestBodyParameters</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a966b982f54d2b9955c4372df3c62415b" kind="property"><name>ResourceDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae28156b8c9fb3d0793ae8210da0e8bd3" kind="property"><name>ResourceProperties</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae4b6fc87aaa9ae169d12717ab91695e0" kind="property"><name>SampleRequests</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a2591b0021c317235dad8b8a309114a72" kind="property"><name>SampleResponses</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a116a206c78b3bb76bbd6a62ec3cceedf" kind="property"><name>ErrorMessages</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" kind="function"><name>HelpPageApiModel</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a1a28aaf5f0a37e2502af30c2a393a3e2" kind="function"><name>GetParameterDescriptions</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::HelpPageAreaRegistration</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration_1a6966af28b304cbeb855ac394fab4fcc1" kind="property"><name>AreaName</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_area_registration_1aeeded42c08252c9709043080c9224d0c" kind="function"><name>RegisterArea</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_config" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::HelpPageConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_config_1acc15aad162531f99f4e8531581def917" kind="function"><name>Register</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::HelpPageConfigurationExtensions</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1ac4f61a8b9fe7a39646b2fd1f73cbfa19" kind="variable"><name>ApiModelPrefix</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1aa65237044aebf23ad036d43e1b329c41" kind="function"><name>SetDocumentationProvider</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1aca957a17fcdba61b834357283b155432" kind="function"><name>SetSampleObjects</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1aaf6f68d3ab5178c51952228d632c0668" kind="function"><name>SetSampleRequest</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a43cb3aa81e3643c64cc1ba9140047e92" kind="function"><name>SetSampleRequest</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a36e81c02dbafc8a79c22df373fc809ef" kind="function"><name>SetSampleResponse</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a601376908c328e893101d08b1e29a91a" kind="function"><name>SetSampleResponse</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1ae4b57584c2b63fbdac60216e8e55b6a8" kind="function"><name>SetSampleForMediaType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1ad3c767db6bd8149a85f5207dbb5fbcb0" kind="function"><name>SetSampleForType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a1ef710fbdfa039fc290b2bb0db91b5ad" kind="function"><name>SetActualRequestType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a358fd05d0cc5456f3410ca0b9e2e97d5" kind="function"><name>SetActualRequestType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a83b18ff434959af8584c50364fd6f5c4" kind="function"><name>SetActualResponseType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a248fc88d33b099432a1e7ce2bbf86e42" kind="function"><name>SetActualResponseType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a89f83c2ddbe52b906f3ccb3cd3004dd9" kind="function"><name>GetHelpPageSampleGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1aac29aaf57fe564c407fc6acd8be090c4" kind="function"><name>SetHelpPageSampleGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1afb045c409b6feb16a4984f2fdc1b6bf4" kind="function"><name>GetModelDescriptionGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a052424a618340afc0195d0f225bc0e9c" kind="function"><name>GetHelpPageApiModel</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a36bcef6a3e65f95e9b8014fd22c85d1c" kind="function"><name>GenerateApiModel</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a0da8377366794a45bcf4bec5d3dc3ca5" kind="function"><name>GenerateUriParameters</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a4fc4858726a383dc9f9e14adede1f107" kind="function"><name>IsBindableWithTypeConverter</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1ac649622d6850f32adb1cff85126d797e" kind="function"><name>AddParameterDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1ac3002d23b3910ae4ae881692346059da" kind="function"><name>GenerateRequestModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a353ba5d66a94b5f7d74855c87ec4ad83" kind="function"><name>GenerateResourceDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1ac971962b9f3090b05f8ef5c2d6c55555" kind="function"><name>GenerateSamples</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a9a46f857e3eafd01ef0864ee6c6ca257" kind="function"><name>TryGetResourceParameter</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a8c2ad570086ca6d9d490f82a021ba511" kind="function"><name>InitializeModelDescriptionGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_configuration_extensions_1a02e8d33311922c84b7ed143d9efdc7f3" kind="function"><name>LogInvalidSampleAsError</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" kind="property"><name>ActualHttpMessageTypes</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" kind="property"><name>ActionSamples</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" kind="property"><name>SampleObjects</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" kind="property"><name>SampleObjectFactories</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" kind="function"><name>HelpPageSampleGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a559df5d82a5d71b7e519d4f1c0f4b8a7" kind="function"><name>GetSampleRequests</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ad209708a138fc201e28ce1b2b036a91d" kind="function"><name>GetSampleResponses</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" kind="function"><name>GetSample</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" kind="function"><name>GetActionSample</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" kind="function"><name>GetSampleObject</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a760f289f1451506c9c749b247cddda5a" kind="function"><name>ResolveHttpRequestMessageType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" kind="function"><name>ResolveType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a442ff2b649c4930ad4b41f7f6d1be3ef" kind="function"><name>WriteSampleObjectUsingFormatter</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af8839bfaa6efcbd42ea553adf01731f2" kind="function"><name>UnwrapException</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a28ff47ad3b073df0bf20b19fb9894de4" kind="function"><name>DefaultSampleObjectFactory</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a8110e1c7f00766aefed0da9fb5582c17" kind="function"><name>TryFormatJson</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aed94c0ac8c63972b4303ed9f21ec8acf" kind="function"><name>TryFormatXml</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ae3befd2c91c1175422414d410d6b86eb" kind="function"><name>IsFormatSupported</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a1e69078fc48c1606be1ea1066381190d" kind="function"><name>WrapSampleIfString</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a4dd26fbdabc6bf2f98fa7f717d7b3e92" kind="function"><name>GetAllActionSamples</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" kind="property"><name>ControllerName</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" kind="property"><name>ActionName</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" kind="property"><name>MediaType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" kind="property"><name>ParameterNames</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a781214d71bf04b9f647e51ef3dc58c1f" kind="property"><name>ParameterType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" kind="property"><name>SampleDirection</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" kind="function"><name>HelpPageSampleKey</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a75904ce94a3d9d92dec2c478abb4d76a" kind="function"><name>HelpPageSampleKey</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" kind="function"><name>HelpPageSampleKey</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a47112f6dcae1e8aabd14ba97ff71558e" kind="function"><name>HelpPageSampleKey</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" kind="function"><name>Equals</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" kind="function"><name>GetHashCode</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_account_validator" kind="interface"><name>SiroccoDemo::Application::Validations::IAccountValidator</name>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_account_validator_1a6428485bffe43f4991fac5dd0993393f" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator" kind="interface"><name>SiroccoDemo::Application::Validations::IContactValidator</name>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator_1ab67ef5154368b6f86285918b36cf8f36" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service" kind="interface"><name>SiroccoDemo::Application::Services::ICreateAccountWithContactsAndNotesService</name>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service_1a283bec31fc459c9fe04fe23712cf3a4f" kind="function"><name>CreateAccountWithContactsAndNotes</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository" kind="interface"><name>SiroccoDemo::Application::Repositories::ICrmRepository</name>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a4b9e9df14b5bac6c16c18808a9d56635" kind="function"><name>CreateAccount</name></member>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1ac9ec1e1dd4b65a2ab24529bcc1d72328" kind="function"><name>CreateContact</name></member>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a1564ddd669bc9bbf1f2fe168ee05e946" kind="function"><name>CreateNote</name></member>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a441b76e8b26e14cf466e9a362007e9cb" kind="function"><name>SetPrimaryContact</name></member>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1acb945cacb0dfc3fd176fa00095134b11" kind="function"><name>GetAllAccountsAndPrimaryContact</name></member>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a3b3f04b707cc4309bb2766530fa7c3c2" kind="function"><name>GetContactsByAccountId</name></member>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_repositories_1_1_i_crm_repository_1a8c982b18dd9bf438386778c7f09a20b3" kind="function"><name>GetNotesByRegarding</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service" kind="interface"><name>SiroccoDemo::Application::Services::IGetAccountContactNoteSummaryService</name>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_services_1_1_i_get_account_contact_note_summary_service_1aae8eaa7e168472a0b64e50b01e1f9142" kind="function"><name>GetAccountContactNoteSummary</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ImageSample</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a500588046171fbcec35af14f14d98fc1" kind="property"><name>Src</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a6fa2aa7d10bb9e3701f4a8cd7bee461a" kind="function"><name>ImageSample</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abaedac73461371a7ca552b637c789a4b" kind="function"><name>Equals</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1abee48a15ba56cfba444a1d3f21b22fe1" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_image_sample_1a7a7db720709bf6031a2f9d8dd93b0aa6" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider" kind="interface"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::IModelDocumentationProvider</name>
+    <member refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider_1a967e077923bd9eafd30a839290576a0e" kind="function"><name>GetDocumentation</name></member>
+    <member refid="interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider_1a7c2b5b73f0eb5be3a5a9a5fa064b2c50" kind="function"><name>GetDocumentation</name></member>
+  </compound>
+  <compound refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" kind="interface"><name>SiroccoDemo::Application::Validations::INoteValidator</name>
+    <member refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator_1aede7c00176dba84f8ab0d9b0e69cda81" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception" kind="class"><name>SiroccoDemo::Domain::Exceptions::InvalidInputException</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception_1a621baee3e8fd18d19eca8ac8e69b5551" kind="property"><name>PropertyName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception_1ac42edb21dced69481b00392ff1230a57" kind="property"><name>InvalidValue</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception_1a255b265a7a957e9cfdb47f74d84d0ccb" kind="property"><name>ValidationErrors</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception_1a7e05a90acbfe4d71f43da97f82725472" kind="function"><name>InvalidInputException</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception_1a7ae76423b81c7a7abc7f4aeb35681d7d" kind="function"><name>InvalidInputException</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception_1aa92266065f95e52f51032fa17b2c50bf" kind="function"><name>InvalidInputException</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::InvalidSample</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a5a5c79e642fe4a147e2d56174e80a66f" kind="property"><name>ErrorMessage</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a6ffad5cb2e979eec1533e3b39f288441" kind="function"><name>InvalidSample</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1acc22c300c92f178fafdd333f0988843c" kind="function"><name>Equals</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a76798481119b436426c5a83c7d1d9039" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a9e47f9fdf24ccb68426d9889e89a593a" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_key_value_pair_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::KeyValuePairModelDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_key_value_pair_model_description_1a170636615ca573445a550124193c0456" kind="property"><name>KeyModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_key_value_pair_model_description_1ae9365e9476bd4095890eb3f8f61f955f" kind="property"><name>ValueModelDescription</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ModelDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_1a18e8a323383951462500968aec555d84" kind="property"><name>Documentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_1a01a259c52027b00152cd6bfa06c9d4b9" kind="property"><name>ModelType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_1a50e87cf3aad07512cf13735ee05d1aa6" kind="property"><name>Name</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ModelDescriptionGenerator</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a8d9f3e5ca209c19488c099af471e6980" kind="variable"><name>AnnotationTextGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1adce4df5affc0289092fcff1c0604fd2e" kind="variable"><name>DefaultTypeDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a759fe595c7ceadf04f190b653f2282e4" kind="variable"><name>_documentationProvider</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a18a84ab77016b731c4b89e11d40b22d9" kind="property"><name>GeneratedModels</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a2434fb4ae09be19791cc9e252451a075" kind="property"><name>DocumentationProvider</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a5004499133a50424431adc57d98f7676" kind="function"><name>ModelDescriptionGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a4d99d64ba60145cc93e2b8ca3462d37f" kind="function"><name>GetOrCreateModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1aa6bcba76b22993c9ab55053b838923de" kind="function"><name>GetMemberName</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1ad846b6fe76e83d45578ea560a21564a2" kind="function"><name>ShouldDisplayMember</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1aeb5c868d5db8dabdd5f833ef082bedfd" kind="function"><name>CreateDefaultDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a5085de7151a410b240ba88df8f6c901f" kind="function"><name>GenerateAnnotations</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a27d259bccb4c51585f6f180f0b7a099f" kind="function"><name>GenerateCollectionModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1ad08b5134742e2264f00779d3cc1cdb31" kind="function"><name>GenerateComplexTypeModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a329891498dbabf6fe83c9773aece1032" kind="function"><name>GenerateDictionaryModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a0833141e9164d8babaf53bf5c10bb9a4" kind="function"><name>GenerateEnumTypeModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a7acb2210bd232c358eaf20809f8813d3" kind="function"><name>GenerateKeyValuePairModelDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1af722bc3cf3f66481d7828fc39898a6d9" kind="function"><name>GenerateSimpleTypeModelDescription</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_attribute" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ModelNameAttribute</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_attribute_1a09946415fc919f95255cec28e303e299" kind="property"><name>Name</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_attribute_1a84f7a069f7b2828bd2aa2ea1a3a66016" kind="function"><name>ModelNameAttribute</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_helper" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ModelNameHelper</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_helper_1a8ff801609e052fbb55a4b2568daa6ec9" kind="function"><name>GetModelName</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note" kind="class"><name>SiroccoDemo::Domain::Entities::Note</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1af14cf58c7db739171f7561c4f1318873" kind="property"><name>Id</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a3edf4d79e8598b9c37b4aeb3488ef11a" kind="property"><name>Title</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a8664861f6758bd089d613e8fd60e5fe5" kind="property"><name>Description</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a3028314e2bdba3cd06e650f1db967d9c" kind="property"><name>RegardingEntityName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_note_1a25e0d8121f75406f8066d570ffbb2948" kind="property"><name>RegardingId</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input" kind="class"><name>SiroccoDemo::Application::Models::NoteInput</name>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input_1a9c18817909e59cb2c61c2dce4666ec66" kind="property"><name>Title</name></member>
+    <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input_1ad965338e03189e04dc9e0f4a59b96d3e" kind="property"><name>Description</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_note_validator" kind="class"><name>SiroccoDemo::Infrastructure::Validations::NoteValidator</name>
+    <member refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_note_validator_1a489299bd969cd94b3a82531220f16497" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1aefaf7d9795b7ace5a6d6ee2ac09ed5b3" kind="variable"><name>DefaultCollectionSize</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1af37dae00287203af2c7f29e2dc244082" kind="variable"><name>SimpleObjectGenerator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a978e3e71dc3309cc222ce1bb0d375d20" kind="function"><name>GenerateObject</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a4329a5269aba08bfd1b780a96d19aa15" kind="function"><name>GenerateObject</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a747994c500c6763423a2e88127b130d8" kind="function"><name>GenerateGenericType</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1af6f12b46a55100e3e8f9ef6dbffb7dee" kind="function"><name>GenerateTuple</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1aef3ca5354cc33043597b6e0d66c4d593" kind="function"><name>IsTuple</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1af10fedcaf1e7d75f09d90e2538501981" kind="function"><name>GenerateKeyValuePair</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a5c45e985c4ddaaf00f20234baf833014" kind="function"><name>GenerateArray</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a0b69bfcf4e1bd0c551331d5dcd4e293d" kind="function"><name>GenerateDictionary</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a1fec85115eb93f94d35148145f19d309" kind="function"><name>GenerateEnum</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1aa688c56d6e64666c15b13c4147d5630f" kind="function"><name>GenerateQueryable</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1abb47cc0b0303c21621a211e5dfbfe99f" kind="function"><name>GenerateCollection</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a166fd3e1753cb5b01088b03ebc0b64d0" kind="function"><name>GenerateNullable</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a95eef66bd4b3a15c5217ad0ee7c7d338" kind="function"><name>GenerateComplexObject</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a9957ed0cfa3fa58e7bdf27bf90aad7ef" kind="function"><name>SetPublicProperties</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1ab76c49b2f5ccead15d8e02620c6b8dcd" kind="function"><name>SetPublicFields</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterAnnotation</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation_1ad469f34c1c9f0705e1ead4c21ab0abc3" kind="property"><name>AnnotationAttribute</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_annotation_1a07369f5d34cb5b384decf42e238d2913" kind="property"><name>Documentation</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::ParameterDescription</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a6c5b7913f60bbee31b1ef06cb19cc556" kind="property"><name>Annotations</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a3ac0903f8f3c2828a14c712d3f8f9f16" kind="property"><name>Documentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a30c01b01196c46114076cacdc6d513be" kind="property"><name>Name</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a9a4b4dd26f67b40189b414844b603906" kind="property"><name>TypeDescription</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_parameter_description_1a669f9a8c037a3fe1740a62e2207348ee" kind="function"><name>ParameterDescription</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base" kind="class"><name>SiroccoDemo::Plugins::PluginBase</name>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a4a6307a5cbcf601279f82274963a7c99" kind="property"><name>OrganizationService</name></member>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a6648e15706bd2750e0434146aa4d8b9a" kind="property"><name>Context</name></member>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1abaf8cad5369e1ac699cdea8dfc51e0cf" kind="function"><name>Execute</name></member>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a72a19c6fec64a23bbdfa16a43638267b" kind="function"><name>ExtendedExecute</name></member>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a2727982d5d17e3bd1fa8e2b4156e32ac" kind="function"><name>ExecuteWithExceptionHandling</name></member>
+    <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a60e4b0815c56660a1061503a959ad6e1" kind="function"><name>ExecuteWithExceptionHandling&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes" kind="class"><name>SiroccoDemo::Domain::DTOs::PrimaryContactWithNotes</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1abc873329405a26129e010657d0e811aa" kind="property"><name>FirstName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a01ece4053420ca825b1d43d5045a4419" kind="property"><name>LastName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a74590d9446b7ef8840a8fab1fb15f3c4" kind="property"><name>Email</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_primary_contact_with_notes_1a8f57f1eef193268db4c3dc5c881227e1" kind="property"><name>Notes</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_moq_1_1_program" kind="class"><name>SiroccoDemo::Moq::Program</name>
+    <member refid="class_sirocco_demo_1_1_moq_1_1_program_1ae05fe48a0928c25b79b0c6b8722f9275" kind="property"><name>OrganizationService</name></member>
+    <member refid="class_sirocco_demo_1_1_moq_1_1_program_1afcada74a10ac088f85be3e169a35dc7d" kind="function"><name>Main</name></member>
+    <member refid="class_sirocco_demo_1_1_moq_1_1_program_1a22b6a07124ef7c88baa166cbbee32472" kind="function"><name>GetAccessToCRM</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config" kind="class"><name>SiroccoDemo::APIs::RouteConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config_1acc560f5a628e44936a6bf1c125462201" kind="function"><name>RegisterRoutes</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_secondary_contact" kind="class"><name>SiroccoDemo::Domain::DTOs::SecondaryContact</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_secondary_contact_1a6785c5d4d46121f7da6afe9fc82fa8c5" kind="property"><name>FirstName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_secondary_contact_1aac62cbb3c9647841a0ffb95f366cbb94" kind="property"><name>LastName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_d_t_os_1_1_secondary_contact_1a790c7794a0a32fee64c3463d5ac516b8" kind="property"><name>Email</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_simple_type_model_description" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions::SimpleTypeModelDescription</name>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::ObjectGenerator::SimpleTypeObjectGenerator</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a2317b70b7b9594439a7bd12bf2d7b9ea" kind="variable"><name>_index</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1adefb071e45827885dbfa9bd7d364024e" kind="variable"><name>DefaultGenerators</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a30f132995d90de2cbfd3d1f7366e4149" kind="function"><name>InitializeGenerators</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a463c15278efbfecfa220018c202f4023" kind="function"><name>CanGenerateObject</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1_1_simple_type_object_generator_1a0b2c92338e0af5f3c02959eae3516975" kind="function"><name>GenerateObject</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_swagger_config" kind="class"><name>SiroccoDemo::APIs::SwaggerConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_swagger_config_1ae6334ee48436a8257d2484ac5024bd59" kind="function"><name>Register</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::TextSample</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample_1a1af02160771bd64e95c61287f9602779" kind="property"><name>Text</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample_1a79203d7cfdbb4409e2993d5bb39846de" kind="function"><name>TextSample</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample_1af45252c54186807af106b7518e7ca913" kind="function"><name>Equals</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample_1a41b855b7f283ecd64827cc26b1b799f3" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_text_sample_1a2ee8e054048c9ec2a74bfd4df409f975" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_transaction_failed_exception" kind="class"><name>SiroccoDemo::Domain::Exceptions::TransactionFailedException</name>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_transaction_failed_exception_1acc537558ee77c4b3406d70ef8fed6116" kind="property"><name>OperationName</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_transaction_failed_exception_1a2e7671598eed36e4710bb7555f44d9e7" kind="property"><name>OperationCount</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_transaction_failed_exception_1a4aea6bf9ddd72075eb8cb8b3a153f0ce" kind="property"><name>TransactionId</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_transaction_failed_exception_1a7170ff739c67c0306700129156d2bc9a" kind="function"><name>TransactionFailedException</name></member>
+    <member refid="class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_transaction_failed_exception_1ab5d9f7a0fe2e43fad0f5a0b2779c8bb4" kind="function"><name>TransactionFailedException</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_unity_config" kind="class"><name>SiroccoDemo::APIs::UnityConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_unity_config_1aa8fff5da9c5be1a146ed61ed515a54a5" kind="function"><name>RegisterComponents</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application" kind="class"><name>SiroccoDemo::APIs::WebApiApplication</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application_1a996305632c746b7d0dc845873be2c508" kind="function"><name>Application_Start</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_config" kind="class"><name>SiroccoDemo::APIs::WebApiConfig</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_config_1a84289aa563a2df2523e1b9efa6ea528d" kind="function"><name>Register</name></member>
+  </compound>
+  <compound refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider" kind="class"><name>SiroccoDemo::APIs::Areas::HelpPage::XmlDocumentationProvider</name>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1afd9b323b65e866915794052d8efc8f75" kind="variable"><name>_documentNavigator</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ab118ef56af0efe0ccd4a3f1f8d3c0796" kind="variable"><name>TypeExpression</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1acc0d7e7cc5b5a32aa72f72fdc370050f" kind="variable"><name>MethodExpression</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1a9c374c892525f3413c6709f7a7134018" kind="variable"><name>PropertyExpression</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1a20067d98f055f419aeb31b2dcc71f562" kind="variable"><name>FieldExpression</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1a7112c1e6698476c5fe142c0721643cb1" kind="variable"><name>ParameterExpression</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1a8044e71bc8e9b1a89fb3edc7651e5acf" kind="function"><name>XmlDocumentationProvider</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1a2ad8f770fc26861448ad011a44291974" kind="function"><name>GetDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1a47510763852e940cb7df115404c29f43" kind="function"><name>GetDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ac1116e22e5b701ef1427e3f62ae124d8" kind="function"><name>GetDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ad5539d0e3191f2495f15e61e59a43654" kind="function"><name>GetResponseDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ab45ce87a2abf6b284efb417b671856c6" kind="function"><name>GetDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1af91396d159c7198ac4c98422e9c3d9e4" kind="function"><name>GetDocumentation</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1aaf672735ae996f5fcc9538502cb3bdff" kind="function"><name>GetMethodNode</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ad10f1db82693483b6099f9b7a3531243" kind="function"><name>GetTypeNode</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1aa7a0a78beda4337a59fde875b820dff1" kind="function"><name>GetMemberName</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1ab691fce91c84ef4373a686a8b3997d3f" kind="function"><name>GetTagValue</name></member>
+    <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_xml_documentation_provider_1aac1b479426e80e257d9dfda76260e917" kind="function"><name>GetTypeName</name></member>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_xrm_1_1_sdk" kind="namespace"><name>Microsoft::Xrm::Sdk</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_xrm_1_1_sdk_1_1_messages" kind="namespace"><name>Microsoft::Xrm::Sdk::Messages</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_xrm_1_1_sdk_1_1_query" kind="namespace"><name>Microsoft::Xrm::Sdk::Query</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_xrm_1_1_tooling_1_1_connector" kind="namespace"><name>Microsoft::Xrm::Tooling::Connector</name>
+  </compound>
+  <compound refid="namespace_moq" kind="namespace"><name>Moq</name>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo" kind="namespace"><name>SiroccoDemo</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is" kind="namespace"><name>SiroccoDemo::APIs</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas" kind="namespace"><name>SiroccoDemo::APIs::Areas</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page" kind="namespace"><name>SiroccoDemo::APIs::Areas::HelpPage</name>
+    <member refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kind="enum"><name>SampleDirection</name></member>
+    <member refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8a15c2d85f1fae22a3c3a0594510a1f611" kind="enumvalue"><name>Request</name></member>
+    <member refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8ad64ed3e9c10229648e069f56e32f4c8e" kind="enumvalue"><name>Response</name></member>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers" kind="namespace"><name>SiroccoDemo::APIs::Areas::HelpPage::Controllers</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions" kind="namespace"><name>SiroccoDemo::APIs::Areas::HelpPage::ModelDescriptions</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models" kind="namespace"><name>SiroccoDemo::APIs::Areas::HelpPage::Models</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_controllers" kind="namespace"><name>SiroccoDemo::APIs::Controllers</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_a_p_is_1_1_services" kind="namespace"><name>SiroccoDemo::APIs::Services</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_application" kind="namespace"><name>SiroccoDemo::Application</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_application_1_1_models" kind="namespace"><name>SiroccoDemo::Application::Models</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_application_1_1_repositories" kind="namespace"><name>SiroccoDemo::Application::Repositories</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_application_1_1_services" kind="namespace"><name>SiroccoDemo::Application::Services</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_application_1_1_validations" kind="namespace"><name>SiroccoDemo::Application::Validations</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_domain" kind="namespace"><name>SiroccoDemo::Domain</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_domain_1_1_d_t_os" kind="namespace"><name>SiroccoDemo::Domain::DTOs</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_domain_1_1_entities" kind="namespace"><name>SiroccoDemo::Domain::Entities</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_domain_1_1_exceptions" kind="namespace"><name>SiroccoDemo::Domain::Exceptions</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_infrastructure" kind="namespace"><name>SiroccoDemo::Infrastructure</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_infrastructure_1_1_repositories" kind="namespace"><name>SiroccoDemo::Infrastructure::Repositories</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_infrastructure_1_1_services" kind="namespace"><name>SiroccoDemo::Infrastructure::Services</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_infrastructure_1_1_validations" kind="namespace"><name>SiroccoDemo::Infrastructure::Validations</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_moq" kind="namespace"><name>SiroccoDemo::Moq</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_moq_1_1_activities" kind="namespace"><name>SiroccoDemo::Moq::Activities</name>
+  </compound>
+  <compound refid="namespace_sirocco_demo_1_1_plugins" kind="namespace"><name>SiroccoDemo::Plugins</name>
+  </compound>
+  <compound refid="namespace_swashbuckle_1_1_application" kind="namespace"><name>Swashbuckle::Application</name>
+  </compound>
+  <compound refid="namespace_swashbuckle_1_1_swagger_1_1_annotations" kind="namespace"><name>Swashbuckle::Swagger::Annotations</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_object_model" kind="namespace"><name>System::Collections::ObjectModel</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_specialized" kind="namespace"><name>System::Collections::Specialized</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model" kind="namespace"><name>System::ComponentModel</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model_1_1_data_annotations" kind="namespace"><name>System::ComponentModel::DataAnnotations</name>
+  </compound>
+  <compound refid="namespace_system_1_1_configuration" kind="namespace"><name>System::Configuration</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics_1_1_code_analysis" kind="namespace"><name>System::Diagnostics::CodeAnalysis</name>
+  </compound>
+  <compound refid="namespace_system_1_1_globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net" kind="namespace"><name>System::Net</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http" kind="namespace"><name>System::Net::Http</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http_1_1_formatting" kind="namespace"><name>System::Net::Http::Formatting</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http_1_1_headers" kind="namespace"><name>System::Net::Http::Headers</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_serialization" kind="namespace"><name>System::Runtime::Serialization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text_1_1_regular_expressions" kind="namespace"><name>System::Text::RegularExpressions</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web" kind="namespace"><name>System::Web</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_http" kind="namespace"><name>System::Web::Http</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_http_1_1_controllers" kind="namespace"><name>System::Web::Http::Controllers</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_http_1_1_description" kind="namespace"><name>System::Web::Http::Description</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_mvc" kind="namespace"><name>System::Web::Mvc</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_optimization" kind="namespace"><name>System::Web::Optimization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_routing" kind="namespace"><name>System::Web::Routing</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_linq" kind="namespace"><name>System::Xml::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_serialization" kind="namespace"><name>System::Xml::Serialization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_x_path" kind="namespace"><name>System::Xml::XPath</name>
+  </compound>
+  <compound refid="namespace_unity" kind="namespace"><name>Unity</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_web_api" kind="namespace"><name>Unity::WebApi</name>
+  </compound>
+  <compound refid="namespace_web_activator_ex" kind="namespace"><name>WebActivatorEx</name>
+  </compound>
+  <compound refid="_c_h_a_n_g_e_l_o_g_8md" kind="file"><name>CHANGELOG.md</name>
+  </compound>
+  <compound refid="_microsoft_8_bcl_8_async_interfaces_88_80_80_2_p_a_c_k_a_g_e_8md" kind="file"><name>PACKAGE.md</name>
+  </compound>
+  <compound refid="_system_8_text_8_json_88_80_85_2_p_a_c_k_a_g_e_8md" kind="file"><name>PACKAGE.md</name>
+  </compound>
+  <compound refid="_moq_84_820_872_2readme_8md" kind="file"><name>readme.md</name>
+  </compound>
+  <compound refid="_newtonsoft_8_json_813_80_83_2readme_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_nu_get_8_build_8_tasks_8_pack_86_814_80_2readme_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_newtonsoft_8_json_813_80_81_2_l_i_c_e_n_s_e_8md" kind="file"><name>LICENSE.md</name>
+  </compound>
+  <compound refid="_newtonsoft_8_json_813_80_83_2_l_i_c_e_n_s_e_8md" kind="file"><name>LICENSE.md</name>
+  </compound>
+  <compound refid="_bundle_config_8cs" kind="file"><name>BundleConfig.cs</name>
+  </compound>
+  <compound refid="_filter_config_8cs" kind="file"><name>FilterConfig.cs</name>
+  </compound>
+  <compound refid="_route_config_8cs" kind="file"><name>RouteConfig.cs</name>
+  </compound>
+  <compound refid="_swagger_config_8cs" kind="file"><name>SwaggerConfig.cs</name>
+  </compound>
+  <compound refid="_unity_config_8cs" kind="file"><name>UnityConfig.cs</name>
+  </compound>
+  <compound refid="_web_api_config_8cs" kind="file"><name>WebApiConfig.cs</name>
+  </compound>
+  <compound refid="_api_description_extensions_8cs" kind="file"><name>ApiDescriptionExtensions.cs</name>
+  </compound>
+  <compound refid="_help_page_config_8cs" kind="file"><name>HelpPageConfig.cs</name>
+  </compound>
+  <compound refid="_help_controller_8cs" kind="file"><name>HelpController.cs</name>
+  </compound>
+  <compound refid="_help_page_area_registration_8cs" kind="file"><name>HelpPageAreaRegistration.cs</name>
+  </compound>
+  <compound refid="_help_page_configuration_extensions_8cs" kind="file"><name>HelpPageConfigurationExtensions.cs</name>
+  </compound>
+  <compound refid="_collection_model_description_8cs" kind="file"><name>CollectionModelDescription.cs</name>
+  </compound>
+  <compound refid="_complex_type_model_description_8cs" kind="file"><name>ComplexTypeModelDescription.cs</name>
+  </compound>
+  <compound refid="_dictionary_model_description_8cs" kind="file"><name>DictionaryModelDescription.cs</name>
+  </compound>
+  <compound refid="_enum_type_model_description_8cs" kind="file"><name>EnumTypeModelDescription.cs</name>
+  </compound>
+  <compound refid="_enum_value_description_8cs" kind="file"><name>EnumValueDescription.cs</name>
+  </compound>
+  <compound refid="_i_model_documentation_provider_8cs" kind="file"><name>IModelDocumentationProvider.cs</name>
+  </compound>
+  <compound refid="_key_value_pair_model_description_8cs" kind="file"><name>KeyValuePairModelDescription.cs</name>
+  </compound>
+  <compound refid="_model_description_8cs" kind="file"><name>ModelDescription.cs</name>
+  </compound>
+  <compound refid="_model_description_generator_8cs" kind="file"><name>ModelDescriptionGenerator.cs</name>
+  </compound>
+  <compound refid="_model_name_attribute_8cs" kind="file"><name>ModelNameAttribute.cs</name>
+  </compound>
+  <compound refid="_model_name_helper_8cs" kind="file"><name>ModelNameHelper.cs</name>
+  </compound>
+  <compound refid="_parameter_annotation_8cs" kind="file"><name>ParameterAnnotation.cs</name>
+  </compound>
+  <compound refid="_parameter_description_8cs" kind="file"><name>ParameterDescription.cs</name>
+  </compound>
+  <compound refid="_simple_type_model_description_8cs" kind="file"><name>SimpleTypeModelDescription.cs</name>
+  </compound>
+  <compound refid="_help_page_api_model_8cs" kind="file"><name>HelpPageApiModel.cs</name>
+  </compound>
+  <compound refid="_help_page_sample_generator_8cs" kind="file"><name>HelpPageSampleGenerator.cs</name>
+  </compound>
+  <compound refid="_help_page_sample_key_8cs" kind="file"><name>HelpPageSampleKey.cs</name>
+  </compound>
+  <compound refid="_image_sample_8cs" kind="file"><name>ImageSample.cs</name>
+  </compound>
+  <compound refid="_invalid_sample_8cs" kind="file"><name>InvalidSample.cs</name>
+  </compound>
+  <compound refid="_object_generator_8cs" kind="file"><name>ObjectGenerator.cs</name>
+  </compound>
+  <compound refid="_sample_direction_8cs" kind="file"><name>SampleDirection.cs</name>
+  </compound>
+  <compound refid="_text_sample_8cs" kind="file"><name>TextSample.cs</name>
+  </compound>
+  <compound refid="_xml_documentation_provider_8cs" kind="file"><name>XmlDocumentationProvider.cs</name>
+  </compound>
+  <compound refid="_base_controller_8cs" kind="file"><name>BaseController.cs</name>
+  </compound>
+  <compound refid="_create_account_with_contacts_and_notes_controller_8cs" kind="file"><name>CreateAccountWithContactsAndNotesController.cs</name>
+  </compound>
+  <compound refid="_get_account_contact_note_summary_controller_8cs" kind="file"><name>GetAccountContactNoteSummaryController.cs</name>
+  </compound>
+  <compound refid="_global_8asax_8cs" kind="file"><name>Global.asax.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_a_p_is_2obj_2_debug_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_application_2obj_2_debug_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_application_2obj_2_release_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_domain_2obj_2_debug_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_domain_2obj_2_release_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_infrastructure_2obj_2_debug_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_infrastructure_2obj_2_release_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_moq_2obj_2_debug_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_plugins_2obj_2_debug_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_plugins_2obj_2_release_2_8_n_e_t_framework_00_version_0av4_86_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.6.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_a_p_is_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_application_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_domain_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_infrastructure_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_moq_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_sirocco_demo_8_plugins_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_crm_service_factory_8cs" kind="file"><name>CrmServiceFactory.cs</name>
+  </compound>
+  <compound refid="_i_crm_repositories_8cs" kind="file"><name>ICrmRepositories.cs</name>
+  </compound>
+  <compound refid="_i_create_account_with_contacts_and_notes_service_8cs" kind="file"><name>ICreateAccountWithContactsAndNotesService.cs</name>
+  </compound>
+  <compound refid="_i_get_account_contact_note_summary_service_8cs" kind="file"><name>IGetAccountContactNoteSummaryService.cs</name>
+  </compound>
+  <compound refid="_i_account_validator_8cs" kind="file"><name>IAccountValidator.cs</name>
+  </compound>
+  <compound refid="_i_contact_validator_8cs" kind="file"><name>IContactValidator.cs</name>
+  </compound>
+  <compound refid="_i_note_validator_8cs" kind="file"><name>INoteValidator.cs</name>
+  </compound>
+  <compound refid="_create_account_with_contacts_and_notes_d_t_o_8cs" kind="file"><name>CreateAccountWithContactsAndNotesDTO.cs</name>
+  </compound>
+  <compound refid="_get_account_contact_note_summary_d_t_o_8cs" kind="file"><name>GetAccountContactNoteSummaryDTO.cs</name>
+  </compound>
+  <compound refid="_account_8cs" kind="file"><name>Account.cs</name>
+  </compound>
+  <compound refid="_contact_8cs" kind="file"><name>Contact.cs</name>
+  </compound>
+  <compound refid="_note_8cs" kind="file"><name>Note.cs</name>
+  </compound>
+  <compound refid="_business_rule_exception_8cs" kind="file"><name>BusinessRuleException.cs</name>
+  </compound>
+  <compound refid="_crm_exception_8cs" kind="file"><name>CrmException.cs</name>
+  </compound>
+  <compound refid="_exception_base_8cs" kind="file"><name>ExceptionBase.cs</name>
+  </compound>
+  <compound refid="_invalid_input_exception_8cs" kind="file"><name>InvalidInputException.cs</name>
+  </compound>
+  <compound refid="_transaction_failed_exception_8cs" kind="file"><name>TransactionFailedException.cs</name>
+  </compound>
+  <compound refid="_account_input_8cs" kind="file"><name>AccountInput.cs</name>
+  </compound>
+  <compound refid="_contact_input_8cs" kind="file"><name>ContactInput.cs</name>
+  </compound>
+  <compound refid="_create_account_with_contacts_and_notes_model_8cs" kind="file"><name>CreateAccountWithContactsAndNotesModel.cs</name>
+  </compound>
+  <compound refid="_note_input_8cs" kind="file"><name>NoteInput.cs</name>
+  </compound>
+  <compound refid="_crm_repository_8cs" kind="file"><name>CrmRepository.cs</name>
+  </compound>
+  <compound refid="_create_account_with_contacts_and_notes_service_8cs" kind="file"><name>CreateAccountWithContactsAndNotesService.cs</name>
+  </compound>
+  <compound refid="_get_account_contact_note_summary_service_8cs" kind="file"><name>GetAccountContactNoteSummaryService.cs</name>
+  </compound>
+  <compound refid="_account_validator_8cs" kind="file"><name>AccountValidator.cs</name>
+  </compound>
+  <compound refid="_contact_validator_8cs" kind="file"><name>ContactValidator.cs</name>
+  </compound>
+  <compound refid="_note_validator_8cs" kind="file"><name>NoteValidator.cs</name>
+  </compound>
+  <compound refid="_create_account_with_contacts_and_notes_moq_8cs" kind="file"><name>CreateAccountWithContactsAndNotesMoq.cs</name>
+  </compound>
+  <compound refid="_get_account_contact_note_summary_moq_8cs" kind="file"><name>GetAccountContactNoteSummaryMoq.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_create_account_with_contacts_and_notes_8cs" kind="file"><name>CreateAccountWithContactsAndNotes.cs</name>
+  </compound>
+  <compound refid="_get_account_contact_note_summary_8cs" kind="file"><name>GetAccountContactNoteSummary.cs</name>
+  </compound>
+  <compound refid="_plugin_base_8cs" kind="file"><name>PluginBase.cs</name>
+  </compound>
+  <compound refid="md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g" kind="page"><name>md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g</name>
+  </compound>
+  <compound refid="md_packages_2_microsoft_8_bcl_8_async_interfaces_88_80_80_2_p_a_c_k_a_g_e" kind="page"><name>md_packages_2_microsoft_8_bcl_8_async_interfaces_88_80_80_2_p_a_c_k_a_g_e</name>
+  </compound>
+  <compound refid="md_packages_2_newtonsoft_8_json_813_80_81_2_l_i_c_e_n_s_e" kind="page"><name>md_packages_2_newtonsoft_8_json_813_80_81_2_l_i_c_e_n_s_e</name>
+  </compound>
+  <compound refid="md_packages_2_newtonsoft_8_json_813_80_83_2_l_i_c_e_n_s_e" kind="page"><name>md_packages_2_newtonsoft_8_json_813_80_83_2_l_i_c_e_n_s_e</name>
+  </compound>
+  <compound refid="md_packages_2_system_8_text_8_json_88_80_85_2_p_a_c_k_a_g_e" kind="page"><name>md_packages_2_system_8_text_8_json_88_80_85_2_p_a_c_k_a_g_e</name>
+  </compound>
+  <compound refid="dir_566540dddf499852520ad9c2a723ee03" kind="dir"><name>SiroccoDemo.Moq/Activities</name>
+  </compound>
+  <compound refid="dir_d6b33f2b79c1e3fa9f33321fa8e57d8a" kind="dir"><name>SiroccoDemo.APIs/App_Start</name>
+  </compound>
+  <compound refid="dir_edfbbb2b2bd2e0f3fe842b4a59182177" kind="dir"><name>SiroccoDemo.APIs/Areas/HelpPage/App_Start</name>
+  </compound>
+  <compound refid="dir_1dd0464b793a3393aa9feb1d5158ebb7" kind="dir"><name>SiroccoDemo.APIs/Areas</name>
+  </compound>
+  <compound refid="dir_1afdc7268ce4c7290ba68838f112fc04" kind="dir"><name>packages/Castle.Core.5.1.1</name>
+  </compound>
+  <compound refid="dir_bdfcf1bec0d519cf8dc5ee0a05677aaa" kind="dir"><name>SiroccoDemo.APIs/Areas/HelpPage/Controllers</name>
+  </compound>
+  <compound refid="dir_bd62f78e7cdafc71655b6a2ac143d342" kind="dir"><name>SiroccoDemo.APIs/Controllers</name>
+  </compound>
+  <compound refid="dir_929ca6595a47e791b17f2aa0b0ae7659" kind="dir"><name>SiroccoDemo.APIs/obj/Debug</name>
+  </compound>
+  <compound refid="dir_0158db5ed0093bf8366d8cd581805dd2" kind="dir"><name>SiroccoDemo.Application/obj/Debug</name>
+  </compound>
+  <compound refid="dir_4aa2309d56c05412f76cf137af5ac677" kind="dir"><name>SiroccoDemo.Domain/obj/Debug</name>
+  </compound>
+  <compound refid="dir_592102bee3d3af9171e5cdaf1e29f920" kind="dir"><name>SiroccoDemo.Infrastructure/obj/Debug</name>
+  </compound>
+  <compound refid="dir_f9f67a799d51626f56fd1f35dd43c034" kind="dir"><name>SiroccoDemo.Moq/obj/Debug</name>
+  </compound>
+  <compound refid="dir_b1cf68a2fffd39253f175b3247ba78ac" kind="dir"><name>SiroccoDemo.Plugins/obj/Debug</name>
+  </compound>
+  <compound refid="dir_10a4c62c1ff873e2c1aa7f61a7c41f7d" kind="dir"><name>SiroccoDemo.Domain/DTOs</name>
+  </compound>
+  <compound refid="dir_d61906fcdb693aeb247ba3c52a5dafa8" kind="dir"><name>SiroccoDemo.Domain/Entities</name>
+  </compound>
+  <compound refid="dir_4e4fb82a4055eb3013e0f35c951f946b" kind="dir"><name>SiroccoDemo.Domain/Exceptions</name>
+  </compound>
+  <compound refid="dir_eb76d1b9bc1d3d51243a9e76a4cec05c" kind="dir"><name>SiroccoDemo.APIs/Areas/HelpPage</name>
+  </compound>
+  <compound refid="dir_a0741fe369fd75bfcb05d98d6499fcb4" kind="dir"><name>packages/Microsoft.Bcl.AsyncInterfaces.8.0.0</name>
+  </compound>
+  <compound refid="dir_d4075ab617e6ce2f17d378107b54db35" kind="dir"><name>SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions</name>
+  </compound>
+  <compound refid="dir_de04e0be8564f071117b15360bf5913d" kind="dir"><name>SiroccoDemo.APIs/Areas/HelpPage/Models</name>
+  </compound>
+  <compound refid="dir_c28d027a039e0c2c1144c281a4a24f9c" kind="dir"><name>SiroccoDemo.Domain/Models</name>
+  </compound>
+  <compound refid="dir_793b073a39faf61df56425f2842e1021" kind="dir"><name>packages/Moq.4.20.72</name>
+  </compound>
+  <compound refid="dir_ec0545cad0b9ba06af004a8a36a0d090" kind="dir"><name>packages/Newtonsoft.Json.13.0.1</name>
+  </compound>
+  <compound refid="dir_00810d656b575d60a459a59442ee4617" kind="dir"><name>packages/Newtonsoft.Json.13.0.3</name>
+  </compound>
+  <compound refid="dir_50b7b4f7d71bf832a19381214b2c1bfd" kind="dir"><name>packages/NuGet.Build.Tasks.Pack.6.14.0</name>
+  </compound>
+  <compound refid="dir_90062a5d22523524c06661a929a4cb91" kind="dir"><name>SiroccoDemo.APIs/obj</name>
+  </compound>
+  <compound refid="dir_3a3104ec2fe208b9e0fc68f41b94108f" kind="dir"><name>SiroccoDemo.Application/obj</name>
+  </compound>
+  <compound refid="dir_890d3f6a2fa48c111052089add55276f" kind="dir"><name>SiroccoDemo.Domain/obj</name>
+  </compound>
+  <compound refid="dir_74da317eb0a0d64b447d679f30108912" kind="dir"><name>SiroccoDemo.Infrastructure/obj</name>
+  </compound>
+  <compound refid="dir_8ac3cbbd745d92fe78e4563cb4ffb3a2" kind="dir"><name>SiroccoDemo.Moq/obj</name>
+  </compound>
+  <compound refid="dir_5df8d6e651512c5f2297f7d1c33e2249" kind="dir"><name>SiroccoDemo.Plugins/obj</name>
+  </compound>
+  <compound refid="dir_93501a11e921083efbd154e0cdff5f10" kind="dir"><name>packages</name>
+  </compound>
+  <compound refid="dir_1724f4155da7df8900255517b20a75d6" kind="dir"><name>SiroccoDemo.APIs/Properties</name>
+  </compound>
+  <compound refid="dir_d840b46afc3275a48cfff3850e184a0d" kind="dir"><name>SiroccoDemo.Application/Properties</name>
+  </compound>
+  <compound refid="dir_23bc3936a6bce5536413cf7476d9adf2" kind="dir"><name>SiroccoDemo.Domain/Properties</name>
+  </compound>
+  <compound refid="dir_dc230b9e2f5ba12f4a1e46ec78181119" kind="dir"><name>SiroccoDemo.Infrastructure/Properties</name>
+  </compound>
+  <compound refid="dir_6dbad5d5ed6c07e7e61ece9b7ea11559" kind="dir"><name>SiroccoDemo.Moq/Properties</name>
+  </compound>
+  <compound refid="dir_0fe2b18fb0af472f3629c646cb71f6f4" kind="dir"><name>SiroccoDemo.Plugins/Properties</name>
+  </compound>
+  <compound refid="dir_a294131ef64889bb69bd939ca33632b3" kind="dir"><name>SiroccoDemo.Application/obj/Release</name>
+  </compound>
+  <compound refid="dir_7b754e1e5ecb68680c3072f099b35ec9" kind="dir"><name>SiroccoDemo.Domain/obj/Release</name>
+  </compound>
+  <compound refid="dir_f3c5c732bd01a4616886355baddb0e3d" kind="dir"><name>SiroccoDemo.Infrastructure/obj/Release</name>
+  </compound>
+  <compound refid="dir_fa69e53d1d8aaf455f7b6a29e1e46738" kind="dir"><name>SiroccoDemo.Plugins/obj/Release</name>
+  </compound>
+  <compound refid="dir_e20ca584a7994c268947c6f63cfc6ff2" kind="dir"><name>SiroccoDemo.Application/Repositories</name>
+  </compound>
+  <compound refid="dir_a2835246b1d995dd6e096f2dbb91f4c7" kind="dir"><name>SiroccoDemo.Infrastructure/Repositories</name>
+  </compound>
+  <compound refid="dir_b9f6707ebccdb880ac8b0a7db02ec5f6" kind="dir"><name>SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration</name>
+  </compound>
+  <compound refid="dir_cedc416a2a3f44b995a413214944402b" kind="dir"><name>SiroccoDemo.APIs/Services</name>
+  </compound>
+  <compound refid="dir_2929233871c239cc0942d21aba8687c4" kind="dir"><name>SiroccoDemo.Application/Services</name>
+  </compound>
+  <compound refid="dir_882ea92a21167544e2eebb920c4b11d0" kind="dir"><name>SiroccoDemo.Infrastructure/Services</name>
+  </compound>
+  <compound refid="dir_d8b1313e462f24a2a7be9d9d1fc1fe6f" kind="dir"><name>SiroccoDemo.APIs</name>
+  </compound>
+  <compound refid="dir_0b03f7310692ea608e2effca49c19990" kind="dir"><name>SiroccoDemo.Application</name>
+  </compound>
+  <compound refid="dir_318f878e192cdc1dfdb4b79cdb838bbe" kind="dir"><name>SiroccoDemo.Domain</name>
+  </compound>
+  <compound refid="dir_0505c470e76dffc5e353dd24c49e3aa3" kind="dir"><name>SiroccoDemo.Infrastructure</name>
+  </compound>
+  <compound refid="dir_ea741fa6faad7669e9d4958e55293c70" kind="dir"><name>SiroccoDemo.Moq</name>
+  </compound>
+  <compound refid="dir_11a3c8f0d1c31bb5c0eaa508ea2ce9d2" kind="dir"><name>SiroccoDemo.Plugins</name>
+  </compound>
+  <compound refid="dir_018511afd7b36072473a2eb40d020367" kind="dir"><name>packages/System.Text.Json.8.0.5</name>
+  </compound>
+  <compound refid="dir_e2f323450df811feebc38ae86ede13b1" kind="dir"><name>SiroccoDemo.Application/Validations</name>
+  </compound>
+  <compound refid="dir_2887b83f8b59bfeca41b818f05d9a099" kind="dir"><name>SiroccoDemo.Infrastructure/Validations</name>
+  </compound>
+</doxygenindex>

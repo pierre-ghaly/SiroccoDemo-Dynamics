@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ControllerName</definition>
+        <argsstring></argsstring>
+        <name>ControllerName</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ControllerName</qualifiedname>
+        <briefdescription>
+<para>Gets the name of the controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The name of the controller. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="103" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="103" bodyend="103"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" compoundref="_help_page_sample_key_8cs" startline="149" endline="170">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" compoundref="_help_page_sample_key_8cs" startline="17" endline="28">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" compoundref="_help_page_sample_key_8cs" startline="53" endline="76">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ActionName</definition>
+        <argsstring></argsstring>
+        <name>ActionName</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ActionName</qualifiedname>
+        <briefdescription>
+<para>Gets the name of the action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The name of the action. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="111" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="111" bodyend="111"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" compoundref="_help_page_sample_key_8cs" startline="149" endline="170">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" compoundref="_help_page_sample_key_8cs" startline="17" endline="28">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" compoundref="_help_page_sample_key_8cs" startline="53" endline="76">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>MediaTypeHeaderValue</type>
+        <definition>MediaTypeHeaderValue SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.MediaType</definition>
+        <argsstring></argsstring>
+        <name>MediaType</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.MediaType</qualifiedname>
+        <briefdescription>
+<para>Gets the media type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The media type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="119" column="37" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="119" bodyend="119"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" compoundref="_help_page_sample_key_8cs" startline="149" endline="170">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" compoundref="_help_page_sample_key_8cs" startline="17" endline="28">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a47112f6dcae1e8aabd14ba97ff71558e" compoundref="_help_page_sample_key_8cs" startline="86" endline="95">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>HashSet&lt; string &gt;</type>
+        <definition>HashSet&lt;string&gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterNames</definition>
+        <argsstring></argsstring>
+        <name>ParameterNames</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterNames</qualifiedname>
+        <briefdescription>
+<para>Gets the parameter names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="124" column="24" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="124" bodyend="124"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" compoundref="_help_page_sample_key_8cs" startline="149" endline="170">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" compoundref="_help_page_sample_key_8cs" startline="17" endline="28">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" compoundref="_help_page_sample_key_8cs" startline="53" endline="76">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a781214d71bf04b9f647e51ef3dc58c1f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Type</type>
+        <definition>Type SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterType</definition>
+        <argsstring></argsstring>
+        <name>ParameterType</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="126" column="21" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="126" bodyend="126"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" compoundref="_help_page_sample_key_8cs" startline="149" endline="170">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a75904ce94a3d9d92dec2c478abb4d76a" compoundref="_help_page_sample_key_8cs" startline="35" endline="44">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref>?</type>
+        <definition>SampleDirection? SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.SampleDirection</definition>
+        <argsstring></argsstring>
+        <name>SampleDirection</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.SampleDirection</qualifiedname>
+        <briefdescription>
+<para>Gets the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" kindref="member">SampleDirection</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="131" column="32" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="131" bodyend="131"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" compoundref="_help_page_sample_key_8cs" startline="149" endline="170">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a47112f6dcae1e8aabd14ba97ff71558e" compoundref="_help_page_sample_key_8cs" startline="86" endline="95">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" compoundref="_help_page_sample_key_8cs" startline="53" endline="76">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</definition>
+        <argsstring>(MediaTypeHeaderValue mediaType)</argsstring>
+        <name>HelpPageSampleKey</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</qualifiedname>
+        <param>
+          <type>MediaTypeHeaderValue</type>
+          <declname>mediaType</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref> based on media type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mediaType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="17" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="17" bodyend="28"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" compoundref="_help_page_sample_key_8cs" startline="111" endline="111">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ActionName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" compoundref="_help_page_sample_key_8cs" startline="103" endline="103">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ControllerName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" compoundref="_help_page_sample_key_8cs" startline="119" endline="119">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.MediaType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" compoundref="_help_page_sample_key_8cs" startline="124" endline="124">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterNames</references>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" compoundref="_help_page_sample_key_8cs" startline="133" endline="147">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a75904ce94a3d9d92dec2c478abb4d76a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</definition>
+        <argsstring>(MediaTypeHeaderValue mediaType, Type type)</argsstring>
+        <name>HelpPageSampleKey</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</qualifiedname>
+        <param>
+          <type>MediaTypeHeaderValue</type>
+          <declname>mediaType</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref> based on media type and CLR type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mediaType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media type.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CLR type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="35" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="35" bodyend="44"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a781214d71bf04b9f647e51ef3dc58c1f" compoundref="_help_page_sample_key_8cs" startline="126" endline="126">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</definition>
+        <argsstring>(SampleDirection sampleDirection, string controllerName, string actionName, IEnumerable&lt; string &gt; parameterNames)</argsstring>
+        <name>HelpPageSampleKey</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</qualifiedname>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>controllerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>actionName</declname>
+        </param>
+        <param>
+          <type>IEnumerable&lt; string &gt;</type>
+          <declname>parameterNames</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref> based on <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" kindref="member">SampleDirection</ref>, controller name, action name and parameter names. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampleDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" kindref="member">SampleDirection</ref>.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controllerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the controller.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the action.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameterNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter names.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="53" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="53" bodyend="76"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" compoundref="_help_page_sample_key_8cs" startline="111" endline="111">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ActionName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" compoundref="_help_page_sample_key_8cs" startline="103" endline="103">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ControllerName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" compoundref="_help_page_sample_key_8cs" startline="124" endline="124">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterNames</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" compoundref="_help_page_sample_key_8cs" startline="131" endline="131">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.SampleDirection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a47112f6dcae1e8aabd14ba97ff71558e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</definition>
+        <argsstring>(MediaTypeHeaderValue mediaType, SampleDirection sampleDirection, string controllerName, string actionName, IEnumerable&lt; string &gt; parameterNames)</argsstring>
+        <name>HelpPageSampleKey</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</qualifiedname>
+        <param>
+          <type>MediaTypeHeaderValue</type>
+          <declname>mediaType</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>controllerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>actionName</declname>
+        </param>
+        <param>
+          <type>IEnumerable&lt; string &gt;</type>
+          <declname>parameterNames</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref> based on media type, <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" kindref="member">SampleDirection</ref>, controller name, action name and parameter names. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mediaType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media type.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" kindref="member">SampleDirection</ref>.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controllerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the controller.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the action.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameterNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter names.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="86" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="86" bodyend="95"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" compoundref="_help_page_sample_key_8cs" startline="119" endline="119">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.MediaType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" compoundref="_help_page_sample_key_8cs" startline="131" endline="131">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.SampleDirection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.Equals</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="133" column="30" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="133" bodyend="147"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" compoundref="_help_page_sample_key_8cs" startline="111" endline="111">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ActionName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" compoundref="_help_page_sample_key_8cs" startline="103" endline="103">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ControllerName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" compoundref="_help_page_sample_key_8cs" startline="17" endline="28">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.HelpPageSampleKey</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" compoundref="_help_page_sample_key_8cs" startline="119" endline="119">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.MediaType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" compoundref="_help_page_sample_key_8cs" startline="124" endline="124">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterNames</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a781214d71bf04b9f647e51ef3dc58c1f" compoundref="_help_page_sample_key_8cs" startline="126" endline="126">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" compoundref="_help_page_sample_key_8cs" startline="131" endline="131">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.SampleDirection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.GetHashCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="149" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="149" bodyend="170"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" compoundref="_help_page_sample_key_8cs" startline="111" endline="111">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ActionName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" compoundref="_help_page_sample_key_8cs" startline="103" endline="103">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ControllerName</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" compoundref="_help_page_sample_key_8cs" startline="119" endline="119">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.MediaType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" compoundref="_help_page_sample_key_8cs" startline="124" endline="124">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterNames</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a781214d71bf04b9f647e51ef3dc58c1f" compoundref="_help_page_sample_key_8cs" startline="126" endline="126">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.ParameterType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" compoundref="_help_page_sample_key_8cs" startline="131" endline="131">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleKey.SampleDirection</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This is used to identify the place where the sample should be applied. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" line="11" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs" bodystart="12" bodyend="171"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a24e1319e9e2630ca43037bfb2076d829" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>ActionName</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1af31c7a8b28cccbc22f6676a9b1111c9c" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>ControllerName</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1ae4027b397534a4b5629fc3f9ef088888" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>Equals</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4ab430ed889a808a44709c185d027d02" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>GetHashCode</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa8535710d4850f28e43a3d187b72ca6f" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>HelpPageSampleKey</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a75904ce94a3d9d92dec2c478abb4d76a" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>HelpPageSampleKey</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a4fcfb40a6607270dfe9db710c3bc9ba0" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>HelpPageSampleKey</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a47112f6dcae1e8aabd14ba97ff71558e" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>HelpPageSampleKey</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aa3d68451a944566523ef4d768e2f10df" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>MediaType</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a3fa4aa679cdbaefbda1d01869dc4e2ea" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>ParameterNames</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1a781214d71bf04b9f647e51ef3dc58c1f" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>ParameterType</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key_1aec6753c282cc39686a15e4e99dbb0ea6" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleKey</scope><name>SampleDirection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

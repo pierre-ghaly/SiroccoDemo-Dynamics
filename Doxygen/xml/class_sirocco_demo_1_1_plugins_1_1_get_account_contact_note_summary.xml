@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Plugins::GetAccountContactNoteSummary</compoundname>
+    <basecompoundref refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base" prot="public" virt="non-virtual">SiroccoDemo.Plugins.PluginBase</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary_1a48c591c30d865b2be7e5f0385175a240" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SiroccoDemo.Plugins.GetAccountContactNoteSummary.ExtendedExecute</definition>
+        <argsstring>()</argsstring>
+        <name>ExtendedExecute</name>
+        <qualifiedname>SiroccoDemo.Plugins.GetAccountContactNoteSummary.ExtendedExecute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Plugins/GetAccountContactNoteSummary.cs" line="9" column="30" bodyfile="SiroccoDemo.Plugins/GetAccountContactNoteSummary.cs" bodystart="9" bodyend="18"/>
+        <references refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a2727982d5d17e3bd1fa8e2b4156e32ac" compoundref="_plugin_base_8cs" startline="23" endline="54">SiroccoDemo.Plugins.PluginBase.ExecuteWithExceptionHandling</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IPlugin</label>
+      </node>
+      <node id="1">
+        <label>SiroccoDemo.Plugins.GetAccountContactNoteSummary</label>
+        <link refid="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Plugins.PluginBase</label>
+        <link refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IPlugin</label>
+      </node>
+      <node id="1">
+        <label>SiroccoDemo.Plugins.GetAccountContactNoteSummary</label>
+        <link refid="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SiroccoDemo.Plugins.PluginBase</label>
+        <link refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SiroccoDemo.Plugins/GetAccountContactNoteSummary.cs" line="7" column="11" bodyfile="SiroccoDemo.Plugins/GetAccountContactNoteSummary.cs" bodystart="8" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a6648e15706bd2750e0434146aa4d8b9a" prot="package" virt="non-virtual"><scope>SiroccoDemo::Plugins::GetAccountContactNoteSummary</scope><name>Context</name></member>
+      <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1abaf8cad5369e1ac699cdea8dfc51e0cf" prot="public" virt="non-virtual"><scope>SiroccoDemo::Plugins::GetAccountContactNoteSummary</scope><name>Execute</name></member>
+      <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a2727982d5d17e3bd1fa8e2b4156e32ac" prot="protected" virt="non-virtual"><scope>SiroccoDemo::Plugins::GetAccountContactNoteSummary</scope><name>ExecuteWithExceptionHandling</name></member>
+      <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a60e4b0815c56660a1061503a959ad6e1" prot="protected" virt="non-virtual"><scope>SiroccoDemo::Plugins::GetAccountContactNoteSummary</scope><name>ExecuteWithExceptionHandling&lt; T &gt;</name></member>
+      <member refid="class_sirocco_demo_1_1_plugins_1_1_get_account_contact_note_summary_1a48c591c30d865b2be7e5f0385175a240" prot="public" virt="non-virtual"><scope>SiroccoDemo::Plugins::GetAccountContactNoteSummary</scope><name>ExtendedExecute</name></member>
+      <member refid="class_sirocco_demo_1_1_plugins_1_1_plugin_base_1a4a6307a5cbcf601279f82274963a7c99" prot="package" virt="non-virtual"><scope>SiroccoDemo::Plugins::GetAccountContactNoteSummary</scope><name>OrganizationService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::Application::Models::ContactInput</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae3e2a3fdc9b38ba54fd7b39a2be96be5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.Application.Models.ContactInput.FirstName</definition>
+        <argsstring></argsstring>
+        <name>FirstName</name>
+        <qualifiedname>SiroccoDemo.Application.Models.ContactInput.FirstName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/Models/ContactInput.cs" line="5" column="23" bodyfile="SiroccoDemo.Domain/Models/ContactInput.cs" bodystart="5" bodyend="5"/>
+        <referencedby refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1ac9323a8b60550a8384e2198e7a1f224b" compoundref="_contact_validator_8cs" startline="14" endline="33">SiroccoDemo.Infrastructure.Validations.ContactValidator.Validate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ac32772e519ed7848589caaaead414044" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.Application.Models.ContactInput.LastName</definition>
+        <argsstring></argsstring>
+        <name>LastName</name>
+        <qualifiedname>SiroccoDemo.Application.Models.ContactInput.LastName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/Models/ContactInput.cs" line="6" column="23" bodyfile="SiroccoDemo.Domain/Models/ContactInput.cs" bodystart="6" bodyend="6"/>
+        <referencedby refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1ac9323a8b60550a8384e2198e7a1f224b" compoundref="_contact_validator_8cs" startline="14" endline="33">SiroccoDemo.Infrastructure.Validations.ContactValidator.Validate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1a598cb7b7e32dcdfa7da9636b815019e4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SiroccoDemo.Application.Models.ContactInput.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <qualifiedname>SiroccoDemo.Application.Models.ContactInput.Email</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/Models/ContactInput.cs" line="7" column="23" bodyfile="SiroccoDemo.Domain/Models/ContactInput.cs" bodystart="7" bodyend="7"/>
+        <referencedby refid="class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_1ac9323a8b60550a8384e2198e7a1f224b" compoundref="_contact_validator_8cs" startline="14" endline="33">SiroccoDemo.Infrastructure.Validations.ContactValidator.Validate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae7b038739b5cde03b38d8552355c3901" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_sirocco_demo_1_1_application_1_1_models_1_1_note_input" kindref="compound">NoteInput</ref>[]</type>
+        <definition>NoteInput [] SiroccoDemo.Application.Models.ContactInput.Notes</definition>
+        <argsstring></argsstring>
+        <name>Notes</name>
+        <qualifiedname>SiroccoDemo.Application.Models.ContactInput.Notes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.Domain/Models/ContactInput.cs" line="8" column="26" bodyfile="SiroccoDemo.Domain/Models/ContactInput.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Domain/Models/ContactInput.cs" line="3" column="11" bodyfile="SiroccoDemo.Domain/Models/ContactInput.cs" bodystart="4" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1a598cb7b7e32dcdfa7da9636b815019e4" prot="public" virt="non-virtual"><scope>SiroccoDemo::Application::Models::ContactInput</scope><name>Email</name></member>
+      <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae3e2a3fdc9b38ba54fd7b39a2be96be5" prot="public" virt="non-virtual"><scope>SiroccoDemo::Application::Models::ContactInput</scope><name>FirstName</name></member>
+      <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ac32772e519ed7848589caaaead414044" prot="public" virt="non-virtual"><scope>SiroccoDemo::Application::Models::ContactInput</scope><name>LastName</name></member>
+      <member refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae7b038739b5cde03b38d8552355c3901" prot="public" virt="non-virtual"><scope>SiroccoDemo::Application::Models::ContactInput</scope><name>Notes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

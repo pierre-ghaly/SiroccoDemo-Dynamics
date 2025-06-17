@@ -1,0 +1,92 @@
+\doxysection{Help\+Page\+Config.\+cs}
+\hypertarget{_help_page_config_8cs_source}{}\label{_help_page_config_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/App\_Start/HelpPageConfig.cs@{SiroccoDemo.APIs/Areas/HelpPage/App\_Start/HelpPageConfig.cs}}
+\mbox{\hyperlink{_help_page_config_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00001}00001\ \textcolor{comment}{//\ Uncomment\ the\ following\ to\ provide\ samples\ for\ PageResult<T>.\ Must\ also\ add\ the\ Microsoft.AspNet.WebApi.OData}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00002}00002\ \textcolor{comment}{//\ package\ to\ your\ project.}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Diagnostics.CodeAnalysis;}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Net.Http.Headers;}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Web.Http;}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00008}00008\ \textcolor{preprocessor}{\#if\ Handle\_PageResultOfT}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Web.Http.OData;}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00010}00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00012}00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page}{SiroccoDemo.APIs.Areas.HelpPage}}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }HelpPageConfig}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [SuppressMessage(\textcolor{stringliteral}{"{}Microsoft.Globalization"{}},\ \textcolor{stringliteral}{"{}CA1303:Do\ not\ pass\ literals\ as\ localized\ parameters"{}},}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ MessageId\ =\ \textcolor{stringliteral}{"{}SiroccoDemo.APIs.Areas.HelpPage.TextSample.\#ctor(System.String)"{}},}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ Justification\ =\ \textcolor{stringliteral}{"{}End\ users\ may\ choose\ to\ merge\ this\ string\ with\ existing\ localized\ resources."{}})]}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ [SuppressMessage(\textcolor{stringliteral}{"{}Microsoft.Naming"{}},\ \textcolor{stringliteral}{"{}CA2204:Literals\ should\ be\ spelled\ correctly"{}},}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ MessageId\ =\ \textcolor{stringliteral}{"{}bsonspec"{}},}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Justification\ =\ \textcolor{stringliteral}{"{}Part\ of\ a\ URI."{}})]}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Register(HttpConfiguration\ config)}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetDocumentationProvider(new\ XmlDocumentationProvider(HttpContext.Current.Server.MapPath("{}\string~/App\_Data/XmlDocument.xml"{})));}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetSampleObjects(new\ Dictionary<Type,\ object>}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\{}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{typeof(string),\ "{}sample\ string"{}\},}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{typeof(IEnumerable<string>),\ new\ string[]\{"{}sample\ 1"{},\ "{}sample\ 2"{}\}\}}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\});}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extend\ the\ following\ to\ provide\ factories\ for\ types\ not\ handled\ automatically\ (those\ lacking\ parameterless}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ constructors)\ or\ for\ which\ you\ prefer\ to\ use\ non-\/default\ property\ values.\ Line\ below\ provides\ a\ fallback}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ since\ automatic\ handling\ will\ fail\ and\ GeneratePageResult\ handles\ only\ a\ single\ type.}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00044}00044\ \textcolor{preprocessor}{\#if\ Handle\_PageResultOfT}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ config.GetHelpPageSampleGenerator().SampleObjectFactories.Add(GeneratePageResult);}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00046}00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extend\ the\ following\ to\ use\ a\ preset\ object\ directly\ as\ the\ sample\ for\ all\ actions\ that\ support\ a\ media}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ type,\ regardless\ of\ the\ body\ parameter\ or\ return\ type.\ The\ lines\ below\ avoid\ display\ of\ binary\ content.}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ BsonMediaTypeFormatter\ (if\ available)\ is\ not\ used\ to\ serialize\ the\ TextSample\ object.}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ config.SetSampleForMediaType(}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ TextSample(\textcolor{stringliteral}{"{}Binary\ JSON\ content.\ See\ http://bsonspec.org\ for\ details."{}}),}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ MediaTypeHeaderValue(\textcolor{stringliteral}{"{}application/bson"{}}));}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetSampleForType("{}[0]=foo\&[1]=bar"{},\ new\ MediaTypeHeaderValue("{}application/x-\/www-\/form-\/urlencoded"{}),\ typeof(IEnumerable<string>));}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetSampleRequest("{}1234"{},\ new\ MediaTypeHeaderValue("{}text/plain"{}),\ "{}Values"{},\ "{}Put"{});}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetSampleResponse(new\ ImageSample("{}../images/aspNetHome.png"{}),\ new\ MediaTypeHeaderValue("{}image/png"{}),\ "{}Values"{},\ "{}Get"{},\ "{}id"{});}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetActualRequestType(typeof(string),\ "{}Values"{},\ "{}Get"{});}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//config.SetActualResponseType(typeof(string),\ "{}Values"{},\ "{}Post"{});}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00076}00076\ \textcolor{preprocessor}{\#if\ Handle\_PageResultOfT}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{object}\ GeneratePageResult(HelpPageSampleGenerator\ sampleGenerator,\ Type\ type)}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (type.IsGenericType)}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ openGenericType\ =\ type.GetGenericTypeDefinition();}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (openGenericType\ ==\ typeof(PageResult<>))}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ T\ in\ PageResult<T>}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type[]\ typeParameters\ =\ type.GetGenericArguments();}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Assert(typeParameters.Length\ ==\ 1);}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ an\ enumeration\ to\ pass\ as\ the\ first\ parameter\ to\ the\ PageResult<T>\ constuctor}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ itemsType\ =\ typeof(List<>).MakeGenericType(typeParameters);}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ items\ =\ sampleGenerator.GetSampleObject(itemsType);}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fill\ in\ the\ other\ information\ needed\ to\ invoke\ the\ PageResult<T>\ constuctor}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type[]\ parameterTypes\ =\ \textcolor{keyword}{new}\ Type[]\ \{\ itemsType,\ typeof(Uri),\ typeof(\textcolor{keywordtype}{long}?),\ \};}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}[]\ parameters\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{object}[]\ \{\ items,\ \textcolor{keyword}{null},\ (long)ObjectGenerator.DefaultCollectionSize,\ \};}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Call\ PageResult(IEnumerable<T>\ items,\ Uri\ nextPageLink,\ long?\ count)\ constructor}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ConstructorInfo\ constructor\ =\ type.GetConstructor(parameterTypes);}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ constructor.Invoke(parameters);}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00104}00104\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_help_page_config_8cs_source_l00106}00106\ \}}
+
+\end{DoxyCode}

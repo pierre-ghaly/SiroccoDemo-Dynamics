@@ -1,0 +1,12 @@
+digraph "SiroccoDemo.APIs/App_Start"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_d8b1313e462f24a2a7be9d9d1fc1fe6f {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="SiroccoDemo.APIs", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_d8b1313e462f24a2a7be9d9d1fc1fe6f.html",tooltip=""]
+  dir_d6b33f2b79c1e3fa9f33321fa8e57d8a [label="App_Start", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_d6b33f2b79c1e3fa9f33321fa8e57d8a.html",tooltip=""];
+  }
+}

@@ -1,0 +1,57 @@
+\doxysection{packages/\+Moq.4.20.72 Directory Reference}
+\hypertarget{dir_793b073a39faf61df56425f2842e1021}{}\label{dir_793b073a39faf61df56425f2842e1021}\index{packages/Moq.4.20.72 Directory Reference@{packages/Moq.4.20.72 Directory Reference}}
+Directory dependency graph for Moq.4.20.72\+:
+% FIG 0
+
+
+\doxysubsection{Detailed Description}
+The most popular and friendly mocking library for .NET
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ mock\ =\ \textcolor{keyword}{new}\ Mock<ILoveThisLibrary>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ WOW!\ No\ record/replay\ weirdness?!\ :)}}
+\DoxyCodeLine{mock.Setup(library\ =>\ library.DownloadExists(\textcolor{stringliteral}{"{}2.0.0.0"{}}))}
+\DoxyCodeLine{\ \ \ \ .Returns(\textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Use\ the\ Object\ property\ on\ the\ mock\ to\ get\ a\ reference\ to\ the\ object}}
+\DoxyCodeLine{\textcolor{comment}{//\ implementing\ ILoveThisLibrary,\ and\ then\ exercise\ it\ by\ calling}}
+\DoxyCodeLine{\textcolor{comment}{//\ methods\ on\ it}}
+\DoxyCodeLine{ILoveThisLibrary\ lovable\ =\ mock.Object;}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ download\ =\ lovable.DownloadExists(\textcolor{stringliteral}{"{}2.0.0.0"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Verify\ that\ the\ given\ method\ was\ indeed\ called\ with\ the\ expected\ value\ at\ most\ once}}
+\DoxyCodeLine{mock.Verify(library\ =>\ library.DownloadExists(\textcolor{stringliteral}{"{}2.0.0.0"{}}),\ Times.AtMostOnce());}
+
+\end{DoxyCode}
+
+
+Moq also is the first and only library so far to provide Linq to Mocks, so that the same behavior above can be achieved much more succinctly\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ILoveThisLibrary\ lovable\ =\ Mock.Of<ILoveThisLibrary>(l\ =>}
+\DoxyCodeLine{\ \ l.DownloadExists(\textcolor{stringliteral}{"{}2.0.0.0"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Exercise\ the\ instance\ returned\ by\ Mock.Of\ by\ calling\ methods\ on\ it...}}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ download\ =\ lovable.DownloadExists(\textcolor{stringliteral}{"{}2.0.0.0"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Simply\ assert\ the\ returned\ state:}}
+\DoxyCodeLine{Assert.True(download);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ If\ you\ want\ to\ go\ beyond\ state\ testing\ and\ want\ to\ }}
+\DoxyCodeLine{\textcolor{comment}{//\ verify\ the\ mock\ interaction\ instead...}}
+\DoxyCodeLine{Mock.Get(lovable).Verify(library\ =>\ library.DownloadExists(\textcolor{stringliteral}{"{}2.0.0.0"{}}));}
+
+\end{DoxyCode}
+
+
+You can think of Linq to Mocks as "{}from the universe of mocks, give me one whose behavior  matches this expression"{}.
+
+Check out the \href{https://github.com/devlooped/moq/wiki/Quickstart}{\texttt{Quickstart}} for more examples!\hypertarget{readme.md_autotoc_md42}{}\doxysubsection{\texorpdfstring{Sponsors}{Sponsors}}\label{readme.md_autotoc_md42}
+\href{https://github.com/clarius}{\texttt{}} \href{https://github.com/KirillOsenkov}{\texttt{}} \href{https://github.com/MFB-Technologies-Inc}{\texttt{}} \href{https://github.com/decriptor}{\texttt{}} \href{https://github.com/torutek-gh}{\texttt{}} \href{https://github.com/drivenet}{\texttt{}} \href{https://github.com/AshleyMedway}{\texttt{}} \href{https://github.com/Keflon}{\texttt{}} \href{https://github.com/tbolon}{\texttt{}} \href{https://github.com/kfrancis}{\texttt{}} \href{https://github.com/twenzel}{\texttt{}} \href{https://github.com/Giorgi}{\texttt{}} \href{https://github.com/unoplatform}{\texttt{}} \href{https://github.com/dansiegel}{\texttt{}} \href{https://github.com/rbnswartz}{\texttt{}} \href{https://github.com/jfoshee}{\texttt{}} \href{https://github.com/Mrxx99}{\texttt{}} \href{https://github.com/eajhnsn1}{\texttt{}} \href{https://github.com/IxTechnologies}{\texttt{}} \href{https://github.com/davidjenni}{\texttt{}} \href{https://github.com/Jonathan-Hickey}{\texttt{}} \href{https://github.com/okyrylchuk}{\texttt{}} \href{https://github.com/akunzai}{\texttt{}} \href{https://github.com/jakobt}{\texttt{}} \href{https://github.com/seanalexander}{\texttt{}} \href{https://github.com/tinohager}{\texttt{}} \href{https://github.com/ploeh}{\texttt{}} \href{https://github.com/KenBonny}{\texttt{}} \href{https://github.com/SimonCropp}{\texttt{}} \href{https://github.com/agileworks-eu}{\texttt{}} \href{https://github.com/sorahex}{\texttt{}} \href{https://github.com/arsdragonfly}{\texttt{}} \href{https://github.com/vezel-dev}{\texttt{}} \href{https://github.com/ChilliCream}{\texttt{}} \href{https://github.com/4OTC}{\texttt{}} \href{https://github.com/v-limo}{\texttt{}} \href{https://github.com/brooke-hamilton}{\texttt{}}
+
+\href{https://github.com/sponsors/devlooped}{\texttt{}} ~
+
+\href{https://github.com/sponsors}{\texttt{Learn more about Git\+Hub Sponsors}} 

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_2887b83f8b59bfeca41b818f05d9a099" kind="dir">
+    <compoundname>SiroccoDemo.Infrastructure/Validations</compoundname>
+    <innerfile refid="_account_validator_8cs">AccountValidator.cs</innerfile>
+    <innerfile refid="_contact_validator_8cs">ContactValidator.cs</innerfile>
+    <innerfile refid="_note_validator_8cs">NoteValidator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Infrastructure/Validations/"/>
+  </compounddef>
+</doxygen>

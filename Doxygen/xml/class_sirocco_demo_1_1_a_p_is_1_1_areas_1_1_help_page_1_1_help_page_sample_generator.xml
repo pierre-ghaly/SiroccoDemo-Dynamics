@@ -1,0 +1,728 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" kind="class" language="C#" prot="public">
+    <compoundname>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IDictionary&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref>, Type &gt;</type>
+        <definition>IDictionary&lt;HelpPageSampleKey, Type&gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes</definition>
+        <argsstring></argsstring>
+        <name>ActualHttpMessageTypes</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes</qualifiedname>
+        <briefdescription>
+<para>Gets CLR types that are used as the content of HttpRequestMessage or HttpResponseMessage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="40" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="40" bodyend="40"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" compoundref="_help_page_sample_generator_8cs" startline="234" endline="277">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IDictionary&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref>, object &gt;</type>
+        <definition>IDictionary&lt;HelpPageSampleKey, object&gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples</definition>
+        <argsstring></argsstring>
+        <name>ActionSamples</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples</qualifiedname>
+        <briefdescription>
+<para>Gets the objects that are used directly as samples for certain actions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="45" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="45" bodyend="45"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" compoundref="_help_page_sample_generator_8cs" startline="149" endline="166">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IDictionary&lt; Type, object &gt;</type>
+        <definition>IDictionary&lt;Type, object&gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects</definition>
+        <argsstring></argsstring>
+        <name>SampleObjects</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects</qualifiedname>
+        <briefdescription>
+<para>Gets the objects that are serialized as samples by the supported formatters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="50" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="50" bodyend="50"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" compoundref="_help_page_sample_generator_8cs" startline="178" endline="208">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>IList&lt; Func&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" kindref="compound">HelpPageSampleGenerator</ref>, Type, object &gt; &gt;</type>
+        <definition>IList&lt;Func&lt;HelpPageSampleGenerator, Type, object&gt; &gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories</definition>
+        <argsstring></argsstring>
+        <name>SampleObjectFactories</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories</qualifiedname>
+        <briefdescription>
+<para>Gets factories for the objects that the supported formatters will serialize as samples. Processed in order, stopping when the factory successfully returns a non- object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Collection includes just <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a978e3e71dc3309cc222ce1bb0d375d20" kindref="member">ObjectGenerator.GenerateObject(Type)</ref> initially. Use <programlisting filename=".cs"><codeline><highlight class="normal"><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" kindref="member">SampleObjectFactories</ref>.Insert(0,<sp/>func)</highlight></codeline>
+</programlisting> to provide an override and <programlisting filename=".cs"><codeline><highlight class="normal"><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" kindref="member">SampleObjectFactories</ref>.Add(func)</highlight></codeline>
+</programlisting> to provide a fallback.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="62" column="22" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="62" bodyend="62"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" compoundref="_help_page_sample_generator_8cs" startline="178" endline="208">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>HelpPageSampleGenerator</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</qualifiedname>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" kindref="compound">HelpPageSampleGenerator</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="26" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="26" bodyend="35"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" compoundref="_help_page_sample_generator_8cs" startline="45" endline="45">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" compoundref="_help_page_sample_generator_8cs" startline="40" endline="40">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" compoundref="_help_page_sample_generator_8cs" startline="62" endline="62">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" compoundref="_help_page_sample_generator_8cs" startline="50" endline="50">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a559df5d82a5d71b7e519d4f1c0f4b8a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
+        <definition>IDictionary&lt; MediaTypeHeaderValue, object &gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests</definition>
+        <argsstring>(ApiDescription api)</argsstring>
+        <name>GetSampleRequests</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests</qualifiedname>
+        <param>
+          <type>ApiDescription</type>
+          <declname>api</declname>
+        </param>
+        <briefdescription>
+<para>Gets the request body samples for a given ApiDescription. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>api</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ApiDescription.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The samples keyed by media type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="69" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="69" bodyend="72"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ad209708a138fc201e28ce1b2b036a91d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
+        <definition>IDictionary&lt; MediaTypeHeaderValue, object &gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses</definition>
+        <argsstring>(ApiDescription api)</argsstring>
+        <name>GetSampleResponses</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses</qualifiedname>
+        <param>
+          <type>ApiDescription</type>
+          <declname>api</declname>
+        </param>
+        <briefdescription>
+<para>Gets the response body samples for a given ApiDescription. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>api</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ApiDescription.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The samples keyed by media type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="79" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="79" bodyend="82"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
+        <definition>virtual IDictionary&lt; MediaTypeHeaderValue, object &gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</definition>
+        <argsstring>(ApiDescription api, SampleDirection sampleDirection)</argsstring>
+        <name>GetSample</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</qualifiedname>
+        <param>
+          <type>ApiDescription</type>
+          <declname>api</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <briefdescription>
+<para>Gets the request or response body samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>api</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ApiDescription.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value indicating whether the sample is for a request or for a response.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The samples keyed by media type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="90" column="36" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="90" bodyend="136"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" compoundref="_help_page_sample_generator_8cs" startline="149" endline="166">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" compoundref="_help_page_sample_generator_8cs" startline="178" endline="208">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" compoundref="_help_page_sample_generator_8cs" startline="234" endline="277">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a442ff2b649c4930ad4b41f7f6d1be3ef" compoundref="_help_page_sample_generator_8cs" startline="288" endline="355">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter</references>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a559df5d82a5d71b7e519d4f1c0f4b8a7" compoundref="_help_page_sample_generator_8cs" startline="69" endline="72">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ad209708a138fc201e28ce1b2b036a91d" compoundref="_help_page_sample_generator_8cs" startline="79" endline="82">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>object</type>
+        <definition>virtual object SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample</definition>
+        <argsstring>(string controllerName, string actionName, IEnumerable&lt; string &gt; parameterNames, Type type, MediaTypeFormatter formatter, MediaTypeHeaderValue mediaType, SampleDirection sampleDirection)</argsstring>
+        <name>GetActionSample</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>controllerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>actionName</declname>
+        </param>
+        <param>
+          <type>IEnumerable&lt; string &gt;</type>
+          <declname>parameterNames</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>MediaTypeFormatter</type>
+          <declname>formatter</declname>
+        </param>
+        <param>
+          <type>MediaTypeHeaderValue</type>
+          <declname>mediaType</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <briefdescription>
+<para>Search for samples that are provided directly through <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" kindref="member">ActionSamples</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>controllerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the controller.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the action.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameterNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter names.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CLR type.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>formatter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The formatter.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mediaType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media type.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value indicating whether the sample is for a request or for a response.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sample that matches the parameters.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="149" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="149" bodyend="166"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" compoundref="_help_page_sample_generator_8cs" startline="45" endline="45">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples</references>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>object</type>
+        <definition>virtual object SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>GetSampleObject</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</qualifiedname>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Gets the sample object that will be serialized by the formatters. First, it will look at the <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" kindref="member">SampleObjects</ref>. If no sample object is found, it will try to create one using DefaultSampleObjectFactory (which wraps an <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator" kindref="compound">ObjectGenerator</ref>) and other factories in <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" kindref="member">SampleObjectFactories</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sample object.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="178" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="178" bodyend="208"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" compoundref="_help_page_sample_generator_8cs" startline="62" endline="62">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories</references>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" compoundref="_help_page_sample_generator_8cs" startline="50" endline="50">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects</references>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a760f289f1451506c9c749b247cddda5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Type</type>
+        <definition>virtual Type SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType</definition>
+        <argsstring>(ApiDescription api)</argsstring>
+        <name>ResolveHttpRequestMessageType</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType</qualifiedname>
+        <param>
+          <type>ApiDescription</type>
+          <declname>api</declname>
+        </param>
+        <briefdescription>
+<para>Resolves the actual type of System.Net.Http.ObjectContent&lt;T&gt; passed to the System.Net.Http.HttpRequestMessage in an action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>api</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ApiDescription.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="215" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="215" bodyend="222"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" compoundref="_help_page_sample_generator_8cs" startline="234" endline="277">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Type</type>
+        <definition>virtual Type SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</definition>
+        <argsstring>(ApiDescription api, string controllerName, string actionName, IEnumerable&lt; string &gt; parameterNames, SampleDirection sampleDirection, out Collection&lt; MediaTypeFormatter &gt; formatters)</argsstring>
+        <name>ResolveType</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</qualifiedname>
+        <param>
+          <type>ApiDescription</type>
+          <declname>api</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>controllerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>actionName</declname>
+        </param>
+        <param>
+          <type>IEnumerable&lt; string &gt;</type>
+          <declname>parameterNames</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <param>
+          <type>out Collection&lt; MediaTypeFormatter &gt;</type>
+          <declname>formatters</declname>
+        </param>
+        <briefdescription>
+<para>Resolves the type of the action parameter or return value when HttpRequestMessage or HttpResponseMessage is used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>api</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ApiDescription.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controllerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the controller.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the action.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameterNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter names.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value indicating whether the sample is for a request or a response.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>formatters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The formatters.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="234" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="234" bodyend="277"/>
+        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" compoundref="_help_page_sample_generator_8cs" startline="40" endline="40">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes</references>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a760f289f1451506c9c749b247cddda5a" compoundref="_help_page_sample_generator_8cs" startline="215" endline="222">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a442ff2b649c4930ad4b41f7f6d1be3ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>object</type>
+        <definition>virtual object SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter</definition>
+        <argsstring>(MediaTypeFormatter formatter, object value, Type type, MediaTypeHeaderValue mediaType)</argsstring>
+        <name>WriteSampleObjectUsingFormatter</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter</qualifiedname>
+        <param>
+          <type>MediaTypeFormatter</type>
+          <declname>formatter</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>MediaTypeHeaderValue</type>
+          <declname>mediaType</declname>
+        </param>
+        <briefdescription>
+<para>Writes the sample object using formatter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>formatter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The formatter.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mediaType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the media.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="288" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="288" bodyend="355"/>
+        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af8839bfaa6efcbd42ea553adf01731f2" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Exception</type>
+        <definition>static Exception SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.UnwrapException</definition>
+        <argsstring>(Exception exception)</argsstring>
+        <name>UnwrapException</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.UnwrapException</qualifiedname>
+        <param>
+          <type>Exception</type>
+          <declname>exception</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="357" column="35" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="357" bodyend="365"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a28ff47ad3b073df0bf20b19fb9894de4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>static object SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory</definition>
+        <argsstring>(HelpPageSampleGenerator sampleGenerator, Type type)</argsstring>
+        <name>DefaultSampleObjectFactory</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory</qualifiedname>
+        <param>
+          <type><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" kindref="compound">HelpPageSampleGenerator</ref></type>
+          <declname>sampleGenerator</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="368" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="368" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a8110e1c7f00766aefed0da9fb5582c17" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.TryFormatJson</definition>
+        <argsstring>(string str)</argsstring>
+        <name>TryFormatJson</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.TryFormatJson</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="376" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="376" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aed94c0ac8c63972b4303ed9f21ec8acf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.TryFormatXml</definition>
+        <argsstring>(string str)</argsstring>
+        <name>TryFormatXml</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.TryFormatXml</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="391" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="391" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ae3befd2c91c1175422414d410d6b86eb" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.IsFormatSupported</definition>
+        <argsstring>(SampleDirection sampleDirection, MediaTypeFormatter formatter, Type type)</argsstring>
+        <name>IsFormatSupported</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.IsFormatSupported</qualifiedname>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <param>
+          <type>MediaTypeFormatter</type>
+          <declname>formatter</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="405" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="405" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a1e69078fc48c1606be1ea1066381190d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>static object SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.WrapSampleIfString</definition>
+        <argsstring>(object sample)</argsstring>
+        <name>WrapSampleIfString</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.WrapSampleIfString</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="433" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="433" bodyend="442"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a4dd26fbdabc6bf2f98fa7f717d7b3e92" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; KeyValuePair&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref>, object &gt; &gt;</type>
+        <definition>IEnumerable&lt; KeyValuePair&lt; HelpPageSampleKey, object &gt; &gt; SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetAllActionSamples</definition>
+        <argsstring>(string controllerName, string actionName, IEnumerable&lt; string &gt; parameterNames, SampleDirection sampleDirection)</argsstring>
+        <name>GetAllActionSamples</name>
+        <qualifiedname>SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetAllActionSamples</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>controllerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>actionName</declname>
+        </param>
+        <param>
+          <type>IEnumerable&lt; string &gt;</type>
+          <declname>parameterNames</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1a230b57efdf0882d808b71f875b6cccf8" kindref="member">SampleDirection</ref></type>
+          <declname>sampleDirection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="417" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="417" bodyend="431"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This class will generate the samples for the help page. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="21" column="11" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="22" bodyend="443"/>
+    <listofallmembers>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>ActionSamples</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>ActualHttpMessageTypes</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a28ff47ad3b073df0bf20b19fb9894de4" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>DefaultSampleObjectFactory</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" prot="public" virt="virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>GetActionSample</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a4dd26fbdabc6bf2f98fa7f717d7b3e92" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>GetAllActionSamples</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" prot="public" virt="virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>GetSample</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" prot="public" virt="virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>GetSampleObject</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a559df5d82a5d71b7e519d4f1c0f4b8a7" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>GetSampleRequests</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ad209708a138fc201e28ce1b2b036a91d" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>GetSampleResponses</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>HelpPageSampleGenerator</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ae3befd2c91c1175422414d410d6b86eb" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>IsFormatSupported</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a760f289f1451506c9c749b247cddda5a" prot="public" virt="virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>ResolveHttpRequestMessageType</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" prot="public" virt="virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>ResolveType</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>SampleObjectFactories</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" prot="public" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>SampleObjects</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a8110e1c7f00766aefed0da9fb5582c17" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>TryFormatJson</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aed94c0ac8c63972b4303ed9f21ec8acf" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>TryFormatXml</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af8839bfaa6efcbd42ea553adf01731f2" prot="package" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>UnwrapException</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a1e69078fc48c1606be1ea1066381190d" prot="private" virt="non-virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>WrapSampleIfString</name></member>
+      <member refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a442ff2b649c4930ad4b41f7f6d1be3ef" prot="public" virt="virtual"><scope>SiroccoDemo::APIs::Areas::HelpPage::HelpPageSampleGenerator</scope><name>WriteSampleObjectUsingFormatter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

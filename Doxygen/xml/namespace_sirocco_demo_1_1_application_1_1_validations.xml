@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_sirocco_demo_1_1_application_1_1_validations" kind="namespace" language="C#">
+    <compoundname>SiroccoDemo::Application::Validations</compoundname>
+    <innerclass refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_account_validator" prot="public">SiroccoDemo::Application::Validations::IAccountValidator</innerclass>
+    <innerclass refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator" prot="public">SiroccoDemo::Application::Validations::IContactValidator</innerclass>
+    <innerclass refid="interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_note_validator" prot="public">SiroccoDemo::Application::Validations::INoteValidator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Application/Validations/IAccountValidator.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

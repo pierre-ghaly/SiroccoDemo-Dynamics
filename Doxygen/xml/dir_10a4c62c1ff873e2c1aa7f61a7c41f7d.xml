@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_10a4c62c1ff873e2c1aa7f61a7c41f7d" kind="dir">
+    <compoundname>SiroccoDemo.Domain/DTOs</compoundname>
+    <innerfile refid="_create_account_with_contacts_and_notes_d_t_o_8cs">CreateAccountWithContactsAndNotesDTO.cs</innerfile>
+    <innerfile refid="_get_account_contact_note_summary_d_t_o_8cs">GetAccountContactNoteSummaryDTO.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.Domain/DTOs/"/>
+  </compounddef>
+</doxygen>

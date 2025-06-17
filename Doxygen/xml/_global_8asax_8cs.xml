@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_global_8asax_8cs" kind="file" language="C#">
+    <compoundname>Global.asax.cs</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application" prot="public">SiroccoDemo::APIs::WebApiApplication</innerclass>
+    <innernamespace refid="namespace_sirocco_demo">SiroccoDemo</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_a_p_is">SiroccoDemo::APIs</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Web.Http;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Web.Mvc;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Web.Optimization;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Web.Routing;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_a_p_is" kindref="compound">SiroccoDemo.APIs</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application" kindref="compound">WebApiApplication</ref><sp/>:<sp/>System.Web.HttpApplication</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application_1a996305632c746b7d0dc845873be2c508" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_web_api_application_1a996305632c746b7d0dc845873be2c508" kindref="member">Application_Start</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AreaRegistration.RegisterAllAreas();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GlobalConfiguration.Configure(WebApiConfig.Register);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config" kindref="compound">FilterConfig</ref>.<ref refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config_1a425a15e4169e815ebc2fc7956ba816f1" kindref="member">RegisterGlobalFilters</ref>(GlobalFilters.Filters);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config" kindref="compound">RouteConfig</ref>.<ref refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config_1acc560f5a628e44936a6bf1c125462201" kindref="member">RegisterRoutes</ref>(RouteTable.Routes);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config" kindref="compound">BundleConfig</ref>.<ref refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config_1a64c170fdeba641e21c7bf58b8ab06821" kindref="member">RegisterBundles</ref>(BundleTable.Bundles);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UnityConfig.RegisterComponents();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="SiroccoDemo.APIs/Global.asax.cs"/>
+  </compounddef>
+</doxygen>

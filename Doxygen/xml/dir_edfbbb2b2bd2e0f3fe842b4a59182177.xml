@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_edfbbb2b2bd2e0f3fe842b4a59182177" kind="dir">
+    <compoundname>SiroccoDemo.APIs/Areas/HelpPage/App_Start</compoundname>
+    <innerfile refid="_help_page_config_8cs">HelpPageConfig.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SiroccoDemo.APIs/Areas/HelpPage/App_Start/"/>
+  </compounddef>
+</doxygen>

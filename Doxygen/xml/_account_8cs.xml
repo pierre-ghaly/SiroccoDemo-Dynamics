@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_account_8cs" kind="file" language="C#">
+    <compoundname>Account.cs</compoundname>
+    <innerclass refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" prot="public">SiroccoDemo::Domain::Entities::Account</innerclass>
+    <innernamespace refid="namespace_sirocco_demo">SiroccoDemo</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_domain">SiroccoDemo::Domain</innernamespace>
+    <innernamespace refid="namespace_sirocco_demo_1_1_domain_1_1_entities">SiroccoDemo::Domain::Entities</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespace_sirocco_demo_1_1_domain_1_1_entities" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_sirocco_demo_1_1_domain_1_1_entities" kindref="compound">SiroccoDemo.Domain.Entities</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account" kindref="compound">Account</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a471d8ae02162ffe4675c6da9fbf365e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Guid<sp/><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a471d8ae02162ffe4675c6da9fbf365e7" kindref="member">Id</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="8" refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a3c8a9299999ab695ecb67ea42340884a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a3c8a9299999ab695ecb67ea42340884a" kindref="member">Name</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="9" refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a1c2548a37b793278f1e7b97733fca94b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Guid?<sp/><ref refid="class_sirocco_demo_1_1_domain_1_1_entities_1_1_account_1a1c2548a37b793278f1e7b97733fca94b" kindref="member">PrimaryContactId</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="SiroccoDemo.Domain/Entities/Account.cs"/>
+  </compounddef>
+</doxygen>
