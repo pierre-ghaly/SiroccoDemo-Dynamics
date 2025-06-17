@@ -32,7 +32,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="33" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="33" bodyend="33"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ab1f4dcbeb2953ef3c1c4a4a037a4622c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -123,7 +122,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="75" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="75" bodyend="75"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a2591b0021c317235dad8b8a309114a72" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
         <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
@@ -139,7 +137,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="80" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="80" bodyend="80"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a116a206c78b3bb76bbd6a62ec3cceedf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
         <type>Collection&lt; string &gt;</type>
@@ -155,7 +152,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="85" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="85" bodyend="85"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a01646e8aab5494616c76e0c82c1df1ca" compoundref="_help_page_api_model_8cs" startline="17" endline="23">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.HelpPageApiModel</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -173,10 +169,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" line="17" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Models/HelpPageApiModel.cs" bodystart="17" bodyend="23"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a116a206c78b3bb76bbd6a62ec3cceedf" compoundref="_help_page_api_model_8cs" startline="85" endline="85">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1ae4b6fc87aaa9ae169d12717ab91695e0" compoundref="_help_page_api_model_8cs" startline="75" endline="75">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a2591b0021c317235dad8b8a309114a72" compoundref="_help_page_api_model_8cs" startline="80" endline="80">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model_1a35017943fce60056fbcf05d935d5bfa0" compoundref="_help_page_api_model_8cs" startline="33" endline="33">SiroccoDemo.APIs.Areas.HelpPage.Models.HelpPageApiModel.UriParameters</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">

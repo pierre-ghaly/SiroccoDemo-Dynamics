@@ -41,9 +41,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" line="14" column="21" bodyfile="SiroccoDemo.Infrastructure/Validations/ContactValidator.cs" bodystart="14" bodyend="33"/>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1a598cb7b7e32dcdfa7da9636b815019e4" compoundref="_contact_input_8cs" startline="7" endline="7">SiroccoDemo.Application.Models.ContactInput.Email</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ae3e2a3fdc9b38ba54fd7b39a2be96be5" compoundref="_contact_input_8cs" startline="5" endline="5">SiroccoDemo.Application.Models.ContactInput.FirstName</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_1ac32772e519ed7848589caaaead414044" compoundref="_contact_input_8cs" startline="6" endline="6">SiroccoDemo.Application.Models.ContactInput.LastName</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

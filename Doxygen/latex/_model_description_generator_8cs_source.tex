@@ -1,454 +1,454 @@
 \doxysection{Model\+Description\+Generator.\+cs}
-\hypertarget{_model_description_generator_8cs_source}{}\label{_model_description_generator_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs@{SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs}}
-\mbox{\hyperlink{_model_description_generator_8cs}{Go to the documentation of this file.}}
+\label{_model_description_generator_8cs_source}\index{SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs@{SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Collections.Specialized;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.ComponentModel.DataAnnotations;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Globalization;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Reflection;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Runtime.Serialization;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Web.Http;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }System.Web.Http.Description;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }System.Xml.Serialization;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00014}00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions}{SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions}}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00015}00015\ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00019}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a5004499133a50424431adc57d98f7676}{ModelDescriptionGenerator}}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00020}00020\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modify\ this\ to\ support\ more\ data\ annotation\ attributes.}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IDictionary<Type,\ Func<object,\ string>>\ AnnotationTextGenerator\ =\ \textcolor{keyword}{new}\ Dictionary<Type,\ Func<object,\ string>>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(RequiredAttribute),\ a\ =>\ \textcolor{stringliteral}{"{}Required"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(RangeAttribute),\ a\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RangeAttribute\ range\ =\ (RangeAttribute)a;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Range:\ inclusive\ between\ \{0\}\ and\ \{1\}"{}},\ range.Minimum,\ range.Maximum);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(MaxLengthAttribute),\ a\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MaxLengthAttribute\ maxLength\ =\ (MaxLengthAttribute)a;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Max\ length:\ \{0\}"{}},\ maxLength.Length);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(MinLengthAttribute),\ a\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MinLengthAttribute\ minLength\ =\ (MinLengthAttribute)a;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Min\ length:\ \{0\}"{}},\ minLength.Length);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(StringLengthAttribute),\ a\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StringLengthAttribute\ strLength\ =\ (StringLengthAttribute)a;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}String\ length:\ inclusive\ between\ \{0\}\ and\ \{1\}"{}},\ strLength.MinimumLength,\ strLength.MaximumLength);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(DataTypeAttribute),\ a\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataTypeAttribute\ dataType\ =\ (DataTypeAttribute)a;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Data\ type:\ \{0\}"{}},\ dataType.CustomDataType\ ??\ dataType.DataType.ToString());}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(RegularExpressionAttribute),\ a\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RegularExpressionAttribute\ regularExpression\ =\ (RegularExpressionAttribute)a;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Matching\ regular\ expression\ pattern:\ \{0\}"{}},\ regularExpression.Pattern);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modify\ this\ to\ add\ more\ default\ documentations.}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IDictionary<Type,\ string>\ DefaultTypeDocumentation\ =\ \textcolor{keyword}{new}\ Dictionary<Type,\ string>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Int16),\ \textcolor{stringliteral}{"{}integer"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Int32),\ \textcolor{stringliteral}{"{}integer"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Int64),\ \textcolor{stringliteral}{"{}integer"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(UInt16),\ \textcolor{stringliteral}{"{}unsigned\ integer"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(UInt32),\ \textcolor{stringliteral}{"{}unsigned\ integer"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(UInt64),\ \textcolor{stringliteral}{"{}unsigned\ integer"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Byte),\ \textcolor{stringliteral}{"{}byte"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Char),\ \textcolor{stringliteral}{"{}character"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(SByte),\ \textcolor{stringliteral}{"{}signed\ byte"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Uri),\ \textcolor{stringliteral}{"{}URI"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Single),\ \textcolor{stringliteral}{"{}decimal\ number"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Double),\ \textcolor{stringliteral}{"{}decimal\ number"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Decimal),\ \textcolor{stringliteral}{"{}decimal\ number"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(String),\ \textcolor{stringliteral}{"{}string"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Guid),\ \textcolor{stringliteral}{"{}globally\ unique\ identifier"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(TimeSpan),\ \textcolor{stringliteral}{"{}time\ interval"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(DateTime),\ \textcolor{stringliteral}{"{}date"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(DateTimeOffset),\ \textcolor{stringliteral}{"{}date"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Boolean),\ \textcolor{stringliteral}{"{}boolean"{}}\ \},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00086}00086\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Lazy<IModelDocumentationProvider>\ \_documentationProvider;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00089}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a5004499133a50424431adc57d98f7676}{00089}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a5004499133a50424431adc57d98f7676}{ModelDescriptionGenerator}}(HttpConfiguration\ config)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (config\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(\textcolor{stringliteral}{"{}config"{}});}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00095}00095\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \_documentationProvider\ =\ \textcolor{keyword}{new}\ Lazy<IModelDocumentationProvider>(()\ =>\ config.Services.GetDocumentationProvider()\ as\ \mbox{\hyperlink{interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider}{IModelDocumentationProvider}});}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ ModelDescription>(StringComparer.OrdinalIgnoreCase);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00100}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{00100}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<string,\ ModelDescription>\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interface_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider}{IModelDocumentationProvider}}\ DocumentationProvider}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_documentationProvider.Value;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00109}00109\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00110}\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{00110}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description}{ModelDescription}}\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(Type\ modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(\textcolor{stringliteral}{"{}modelType"{}});}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00116}00116\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ Type\ underlyingType\ =\ Nullable.GetUnderlyingType(modelType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (underlyingType\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelType\ =\ underlyingType;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00122}00122\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description}{ModelDescription}}\ modelDescription;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ modelName\ =\ ModelNameHelper.GetModelName(modelType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}.TryGetValue(modelName,\ out\ modelDescription))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType\ !=\ modelDescription.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_a01a259c52027b00152cd6bfa06c9d4b9}{ModelType}})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String.Format(}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CultureInfo.CurrentCulture,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}A\ model\ description\ could\ not\ be\ created.\ Duplicate\ model\ name\ '\{0\}'\ was\ found\ for\ types\ '\{1\}'\ and\ '\{2\}'.\ "{}}\ +}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Use\ the\ [ModelName]\ attribute\ to\ change\ the\ model\ name\ for\ at\ least\ one\ of\ the\ types\ so\ that\ it\ has\ a\ unique\ name."{}},}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelName,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelDescription.\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_a01a259c52027b00152cd6bfa06c9d4b9}{ModelType}}.FullName,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelType.FullName));}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00138}00138\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ modelDescription;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00141}00141\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DefaultTypeDocumentation.ContainsKey(modelType))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateSimpleTypeModelDescription(modelType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00146}00146\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType.IsEnum)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateEnumTypeModelDescription(modelType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00151}00151\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType.IsGenericType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type[]\ genericArguments\ =\ modelType.GetGenericArguments();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00155}00155\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (genericArguments.Length\ ==\ 1)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ enumerableType\ =\ typeof(IEnumerable<>).MakeGenericType(genericArguments);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enumerableType.IsAssignableFrom(modelType))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateCollectionModelDescription(modelType,\ genericArguments[0]);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (genericArguments.Length\ ==\ 2)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ dictionaryType\ =\ typeof(IDictionary<,>).MakeGenericType(genericArguments);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionaryType.IsAssignableFrom(modelType))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateDictionaryModelDescription(modelType,\ genericArguments[0],\ genericArguments[1]);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00171}00171\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ keyValuePairType\ =\ typeof(KeyValuePair<,>).MakeGenericType(genericArguments);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (keyValuePairType.IsAssignableFrom(modelType))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateKeyValuePairModelDescription(modelType,\ genericArguments[0],\ genericArguments[1]);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00179}00179\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType.IsArray)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ elementType\ =\ modelType.GetElementType();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateCollectionModelDescription(modelType,\ elementType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00185}00185\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType\ ==\ typeof(NameValueCollection))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateDictionaryModelDescription(modelType,\ typeof(\textcolor{keywordtype}{string}),\ typeof(\textcolor{keywordtype}{string}));}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00190}00190\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (typeof(IDictionary).IsAssignableFrom(modelType))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateDictionaryModelDescription(modelType,\ typeof(\textcolor{keywordtype}{object}),\ typeof(\textcolor{keywordtype}{object}));}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00195}00195\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (typeof(IEnumerable).IsAssignableFrom(modelType))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateCollectionModelDescription(modelType,\ typeof(\textcolor{keywordtype}{object}));}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00200}00200\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateComplexTypeModelDescription(modelType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00203}00203\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Change\ this\ to\ provide\ different\ name\ for\ the\ member.}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetMemberName(MemberInfo\ member,\ \textcolor{keywordtype}{bool}\ hasDataContractAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ JsonPropertyAttribute\ jsonProperty\ =\ member.GetCustomAttribute<JsonPropertyAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jsonProperty\ !=\ \textcolor{keyword}{null}\ \&\&\ !String.IsNullOrEmpty(jsonProperty.PropertyName))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jsonProperty.PropertyName;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00212}00212\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hasDataContractAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataMemberAttribute\ dataMember\ =\ member.GetCustomAttribute<DataMemberAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dataMember\ !=\ \textcolor{keyword}{null}\ \&\&\ !String.IsNullOrEmpty(dataMember.Name))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dataMember.Name;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00221}00221\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ member.Name;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00224}00224\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ShouldDisplayMember(MemberInfo\ member,\ \textcolor{keywordtype}{bool}\ hasDataContractAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ JsonIgnoreAttribute\ jsonIgnore\ =\ member.GetCustomAttribute<JsonIgnoreAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ XmlIgnoreAttribute\ xmlIgnore\ =\ member.GetCustomAttribute<XmlIgnoreAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ IgnoreDataMemberAttribute\ ignoreDataMember\ =\ member.GetCustomAttribute<IgnoreDataMemberAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ NonSerializedAttribute\ nonSerialized\ =\ member.GetCustomAttribute<NonSerializedAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ ApiExplorerSettingsAttribute\ apiExplorerSetting\ =\ member.GetCustomAttribute<ApiExplorerSettingsAttribute>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00232}00232\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasMemberAttribute\ =\ member.DeclaringType.IsEnum\ ?}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ member.GetCustomAttribute<EnumMemberAttribute>()\ !=\ \textcolor{keyword}{null}\ :}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ member.GetCustomAttribute<DataMemberAttribute>()\ !=\ null;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00236}00236\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ member\ only\ if\ all\ the\ followings\ are\ true:}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ JsonIgnoreAttribute}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ XmlIgnoreAttribute}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ IgnoreDataMemberAttribute}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ NonSerializedAttribute}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ ApiExplorerSettingsAttribute\ with\ IgnoreApi\ set\ to\ true}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ DataContractAttribute\ without\ DataMemberAttribute\ or\ EnumMemberAttribute}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jsonIgnore\ ==\ \textcolor{keyword}{null}\ \&\&}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ xmlIgnore\ ==\ \textcolor{keyword}{null}\ \&\&}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ignoreDataMember\ ==\ \textcolor{keyword}{null}\ \&\&}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nonSerialized\ ==\ \textcolor{keyword}{null}\ \&\&}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (apiExplorerSetting\ ==\ \textcolor{keyword}{null}\ ||\ !apiExplorerSetting.IgnoreApi)\ \&\&}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (!hasDataContractAttribute\ ||\ hasMemberAttribute);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00251}00251\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ CreateDefaultDocumentation(Type\ type)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ documentation;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DefaultTypeDocumentation.TryGetValue(type,\ out\ documentation))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ documentation;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ documentation\ =\ DocumentationProvider.GetDocumentation(type);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00263}00263\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ documentation;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00266}00266\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GenerateAnnotations(MemberInfo\ property,\ ParameterDescription\ propertyModel)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ List<ParameterAnnotation>\ annotations\ =\ \textcolor{keyword}{new}\ List<ParameterAnnotation>();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00270}00270\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ IEnumerable<Attribute>\ attributes\ =\ \textcolor{keyword}{property}.GetCustomAttributes();}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (Attribute\ attribute\ \textcolor{keywordflow}{in}\ attributes)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Func<object,\ string>\ textGenerator;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AnnotationTextGenerator.TryGetValue(attribute.GetType(),\ out\ textGenerator))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ annotations.Add(}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ ParameterAnnotation}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AnnotationAttribute\ =\ attribute,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ textGenerator(attribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00285}00285\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rearrange\ the\ annotations}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ annotations.Sort((x,\ y)\ =>}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Special-\/case\ RequiredAttribute\ so\ that\ it\ shows\ up\ on\ top}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.AnnotationAttribute\ is\ RequiredAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (y.AnnotationAttribute\ is\ RequiredAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00298}00298\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sort\ the\ rest\ based\ on\ alphabetic\ order\ of\ the\ documentation}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Compare(x.Documentation,\ y.Documentation,\ StringComparison.OrdinalIgnoreCase);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00302}00302\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ParameterAnnotation\ annotation\ \textcolor{keywordflow}{in}\ annotations)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.Annotations.Add(annotation);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00308}00308\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CollectionModelDescription\ GenerateCollectionModelDescription(Type\ modelType,\ Type\ elementType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ collectionModelDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(elementType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collectionModelDescription\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ CollectionModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ElementDescription\ =\ collectionModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00321}00321\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00324}00324\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ModelDescription\ GenerateComplexTypeModelDescription(Type\ modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ ComplexTypeModelDescription\ complexModelDescription\ =\ \textcolor{keyword}{new}\ ComplexTypeModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ CreateDefaultDocumentation(modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00333}00333\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}.Add(complexModelDescription.Name,\ complexModelDescription);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasDataContractAttribute\ =\ modelType.GetCustomAttribute<DataContractAttribute>()\ !=\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ PropertyInfo[]\ properties\ =\ modelType.GetProperties(BindingFlags.Public\ |\ BindingFlags.Instance);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (PropertyInfo\ property\ \textcolor{keywordflow}{in}\ properties)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShouldDisplayMember(property,\ hasDataContractAttribute))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ParameterDescription\ propertyModel\ =\ \textcolor{keyword}{new}\ ParameterDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ GetMemberName(property,\ hasDataContractAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00345}00345\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.Documentation\ =\ DocumentationProvider.GetDocumentation(property);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00350}00350\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GenerateAnnotations(property,\ propertyModel);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexModelDescription.Properties.Add(propertyModel);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.TypeDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(property.PropertyType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00356}00356\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ FieldInfo[]\ fields\ =\ modelType.GetFields(BindingFlags.Public\ |\ BindingFlags.Instance);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (FieldInfo\ field\ \textcolor{keywordflow}{in}\ fields)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShouldDisplayMember(field,\ hasDataContractAttribute))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ParameterDescription\ propertyModel\ =\ \textcolor{keyword}{new}\ ParameterDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ GetMemberName(field,\ hasDataContractAttribute)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00366}00366\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.Documentation\ =\ DocumentationProvider.GetDocumentation(field);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00371}00371\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexModelDescription.Properties.Add(propertyModel);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.TypeDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(field.FieldType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00376}00376\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ complexModelDescription;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00379}00379\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00380}00380\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DictionaryModelDescription\ GenerateDictionaryModelDescription(Type\ modelType,\ Type\ keyType,\ Type\ valueType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ keyModelDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(keyType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ valueModelDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(valueType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00384}00384\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ DictionaryModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyModelDescription\ =\ keyModelDescription,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ValueModelDescription\ =\ valueModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00392}00392\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00393}00393\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ EnumTypeModelDescription\ GenerateEnumTypeModelDescription(Type\ modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00395}00395\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ EnumTypeModelDescription\ enumDescription\ =\ \textcolor{keyword}{new}\ EnumTypeModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ CreateDefaultDocumentation(modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasDataContractAttribute\ =\ modelType.GetCustomAttribute<DataContractAttribute>()\ !=\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (FieldInfo\ field\ \textcolor{keywordflow}{in}\ modelType.GetFields(BindingFlags.Public\ |\ BindingFlags.Static))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShouldDisplayMember(field,\ hasDataContractAttribute))}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EnumValueDescription\ enumValue\ =\ \textcolor{keyword}{new}\ EnumValueDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ field.Name,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Value\ =\ field.GetRawConstantValue().ToString()}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enumValue.Documentation\ =\ DocumentationProvider.GetDocumentation(field);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enumDescription.Values.Add(enumValue);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}.Add(enumDescription.Name,\ enumDescription);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00420}00420\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ enumDescription;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00422}00422\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00423}00423\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00424}00424\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ KeyValuePairModelDescription\ GenerateKeyValuePairModelDescription(Type\ modelType,\ Type\ keyType,\ Type\ valueType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00426}00426\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ keyModelDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(keyType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00427}00427\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ valueModelDescription\ =\ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a4d99d64ba60145cc93e2b8ca3462d37f}{GetOrCreateModelDescription}}(valueType);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00428}00428\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ KeyValuePairModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00431}00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00432}00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyModelDescription\ =\ keyModelDescription,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ValueModelDescription\ =\ valueModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00435}00435\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00436}00436\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00437}00437\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00438}00438\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ModelDescription\ GenerateSimpleTypeModelDescription(Type\ modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00439}00439\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00440}00440\ \ \ \ \ \ \ \ \ \ \ \ \ SimpleTypeModelDescription\ simpleModelDescription\ =\ \textcolor{keyword}{new}\ SimpleTypeModelDescription}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00441}00441\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ CreateDefaultDocumentation(modelType)}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_a18a84ab77016b731c4b89e11d40b22d9}{GeneratedModels}}.Add(simpleModelDescription.Name,\ simpleModelDescription);}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00447}00447\ }
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ simpleModelDescription;}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00449}00449\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00450}00450\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_model_description_generator_8cs_source_l00451}00451\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Collections.Specialized;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Globalization;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }System.Runtime.Serialization;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }System.Web.Http;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ }System.Web.Http.Description;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }System.Xml.Serialization;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ModelDescriptionGenerator}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modify\ this\ to\ support\ more\ data\ annotation\ attributes.}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IDictionary<Type,\ Func<object,\ string>>\ AnnotationTextGenerator\ =\ \textcolor{keyword}{new}\ Dictionary<Type,\ Func<object,\ string>>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(RequiredAttribute),\ a\ =>\ \textcolor{stringliteral}{"{}Required"{}}\ \},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(RangeAttribute),\ a\ =>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RangeAttribute\ range\ =\ (RangeAttribute)a;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Range:\ inclusive\ between\ \{0\}\ and\ \{1\}"{}},\ range.Minimum,\ range.Maximum);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(MaxLengthAttribute),\ a\ =>}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MaxLengthAttribute\ maxLength\ =\ (MaxLengthAttribute)a;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Max\ length:\ \{0\}"{}},\ maxLength.Length);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(MinLengthAttribute),\ a\ =>}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MinLengthAttribute\ minLength\ =\ (MinLengthAttribute)a;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Min\ length:\ \{0\}"{}},\ minLength.Length);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(StringLengthAttribute),\ a\ =>}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StringLengthAttribute\ strLength\ =\ (StringLengthAttribute)a;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}String\ length:\ inclusive\ between\ \{0\}\ and\ \{1\}"{}},\ strLength.MinimumLength,\ strLength.MaximumLength);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(DataTypeAttribute),\ a\ =>}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataTypeAttribute\ dataType\ =\ (DataTypeAttribute)a;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Data\ type:\ \{0\}"{}},\ dataType.CustomDataType\ ??\ dataType.DataType.ToString());}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(RegularExpressionAttribute),\ a\ =>}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RegularExpressionAttribute\ regularExpression\ =\ (RegularExpressionAttribute)a;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Format(CultureInfo.CurrentCulture,\ \textcolor{stringliteral}{"{}Matching\ regular\ expression\ pattern:\ \{0\}"{}},\ regularExpression.Pattern);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modify\ this\ to\ add\ more\ default\ documentations.}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IDictionary<Type,\ string>\ DefaultTypeDocumentation\ =\ \textcolor{keyword}{new}\ Dictionary<Type,\ string>}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Int16),\ \textcolor{stringliteral}{"{}integer"{}}\ \},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Int32),\ \textcolor{stringliteral}{"{}integer"{}}\ \},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Int64),\ \textcolor{stringliteral}{"{}integer"{}}\ \},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(UInt16),\ \textcolor{stringliteral}{"{}unsigned\ integer"{}}\ \},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(UInt32),\ \textcolor{stringliteral}{"{}unsigned\ integer"{}}\ \},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(UInt64),\ \textcolor{stringliteral}{"{}unsigned\ integer"{}}\ \},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Byte),\ \textcolor{stringliteral}{"{}byte"{}}\ \},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Char),\ \textcolor{stringliteral}{"{}character"{}}\ \},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(SByte),\ \textcolor{stringliteral}{"{}signed\ byte"{}}\ \},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Uri),\ \textcolor{stringliteral}{"{}URI"{}}\ \},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Single),\ \textcolor{stringliteral}{"{}decimal\ number"{}}\ \},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Double),\ \textcolor{stringliteral}{"{}decimal\ number"{}}\ \},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Decimal),\ \textcolor{stringliteral}{"{}decimal\ number"{}}\ \},}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(String),\ \textcolor{stringliteral}{"{}string"{}}\ \},}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Guid),\ \textcolor{stringliteral}{"{}globally\ unique\ identifier"{}}\ \},}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(TimeSpan),\ \textcolor{stringliteral}{"{}time\ interval"{}}\ \},}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(DateTime),\ \textcolor{stringliteral}{"{}date"{}}\ \},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(DateTimeOffset),\ \textcolor{stringliteral}{"{}date"{}}\ \},}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ typeof(Boolean),\ \textcolor{stringliteral}{"{}boolean"{}}\ \},}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Lazy<IModelDocumentationProvider>\ \_documentationProvider;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ModelDescriptionGenerator(HttpConfiguration\ config)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (config\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(\textcolor{stringliteral}{"{}config"{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \_documentationProvider\ =\ \textcolor{keyword}{new}\ Lazy<IModelDocumentationProvider>(()\ =>\ config.Services.GetDocumentationProvider()\ as\ IModelDocumentationProvider);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ GeneratedModels\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ ModelDescription>(StringComparer.OrdinalIgnoreCase);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<string,\ ModelDescription>\ GeneratedModels\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ IModelDocumentationProvider\ DocumentationProvider}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_documentationProvider.Value;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ModelDescription\ GetOrCreateModelDescription(Type\ modelType)}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(\textcolor{stringliteral}{"{}modelType"{}});}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ Type\ underlyingType\ =\ Nullable.GetUnderlyingType(modelType);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (underlyingType\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelType\ =\ underlyingType;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ modelDescription;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ modelName\ =\ ModelNameHelper.GetModelName(modelType);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GeneratedModels.TryGetValue(modelName,\ out\ modelDescription))}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType\ !=\ modelDescription.ModelType)}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String.Format(}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CultureInfo.CurrentCulture,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}A\ model\ description\ could\ not\ be\ created.\ Duplicate\ model\ name\ '\{0\}'\ was\ found\ for\ types\ '\{1\}'\ and\ '\{2\}'.\ "{}}\ +}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Use\ the\ [ModelName]\ attribute\ to\ change\ the\ model\ name\ for\ at\ least\ one\ of\ the\ types\ so\ that\ it\ has\ a\ unique\ name."{}},}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelName,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelDescription.ModelType.FullName,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modelType.FullName));}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ modelDescription;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DefaultTypeDocumentation.ContainsKey(modelType))}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateSimpleTypeModelDescription(modelType);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType.IsEnum)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateEnumTypeModelDescription(modelType);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType.IsGenericType)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type[]\ genericArguments\ =\ modelType.GetGenericArguments();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (genericArguments.Length\ ==\ 1)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ enumerableType\ =\ typeof(IEnumerable<>).MakeGenericType(genericArguments);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enumerableType.IsAssignableFrom(modelType))}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateCollectionModelDescription(modelType,\ genericArguments[0]);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (genericArguments.Length\ ==\ 2)}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ dictionaryType\ =\ typeof(IDictionary<,>).MakeGenericType(genericArguments);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionaryType.IsAssignableFrom(modelType))}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateDictionaryModelDescription(modelType,\ genericArguments[0],\ genericArguments[1]);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ keyValuePairType\ =\ typeof(KeyValuePair<,>).MakeGenericType(genericArguments);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (keyValuePairType.IsAssignableFrom(modelType))}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateKeyValuePairModelDescription(modelType,\ genericArguments[0],\ genericArguments[1]);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType.IsArray)}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ elementType\ =\ modelType.GetElementType();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateCollectionModelDescription(modelType,\ elementType);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modelType\ ==\ typeof(NameValueCollection))}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateDictionaryModelDescription(modelType,\ typeof(\textcolor{keywordtype}{string}),\ typeof(\textcolor{keywordtype}{string}));}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (typeof(IDictionary).IsAssignableFrom(modelType))}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateDictionaryModelDescription(modelType,\ typeof(\textcolor{keywordtype}{object}),\ typeof(\textcolor{keywordtype}{object}));}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (typeof(IEnumerable).IsAssignableFrom(modelType))}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateCollectionModelDescription(modelType,\ typeof(\textcolor{keywordtype}{object}));}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateComplexTypeModelDescription(modelType);}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Change\ this\ to\ provide\ different\ name\ for\ the\ member.}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetMemberName(MemberInfo\ member,\ \textcolor{keywordtype}{bool}\ hasDataContractAttribute)}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ JsonPropertyAttribute\ jsonProperty\ =\ member.GetCustomAttribute<JsonPropertyAttribute>();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jsonProperty\ !=\ \textcolor{keyword}{null}\ \&\&\ !String.IsNullOrEmpty(jsonProperty.PropertyName))}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jsonProperty.PropertyName;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hasDataContractAttribute)}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataMemberAttribute\ dataMember\ =\ member.GetCustomAttribute<DataMemberAttribute>();}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dataMember\ !=\ \textcolor{keyword}{null}\ \&\&\ !String.IsNullOrEmpty(dataMember.Name))}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dataMember.Name;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ member.Name;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ShouldDisplayMember(MemberInfo\ member,\ \textcolor{keywordtype}{bool}\ hasDataContractAttribute)}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ JsonIgnoreAttribute\ jsonIgnore\ =\ member.GetCustomAttribute<JsonIgnoreAttribute>();}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ XmlIgnoreAttribute\ xmlIgnore\ =\ member.GetCustomAttribute<XmlIgnoreAttribute>();}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ IgnoreDataMemberAttribute\ ignoreDataMember\ =\ member.GetCustomAttribute<IgnoreDataMemberAttribute>();}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ NonSerializedAttribute\ nonSerialized\ =\ member.GetCustomAttribute<NonSerializedAttribute>();}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ ApiExplorerSettingsAttribute\ apiExplorerSetting\ =\ member.GetCustomAttribute<ApiExplorerSettingsAttribute>();}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasMemberAttribute\ =\ member.DeclaringType.IsEnum\ ?}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ member.GetCustomAttribute<EnumMemberAttribute>()\ !=\ \textcolor{keyword}{null}\ :}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ member.GetCustomAttribute<DataMemberAttribute>()\ !=\ null;}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ member\ only\ if\ all\ the\ followings\ are\ true:}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ JsonIgnoreAttribute}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ XmlIgnoreAttribute}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ IgnoreDataMemberAttribute}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ NonSerializedAttribute}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ ApiExplorerSettingsAttribute\ with\ IgnoreApi\ set\ to\ true}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ DataContractAttribute\ without\ DataMemberAttribute\ or\ EnumMemberAttribute}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jsonIgnore\ ==\ \textcolor{keyword}{null}\ \&\&}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ xmlIgnore\ ==\ \textcolor{keyword}{null}\ \&\&}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ignoreDataMember\ ==\ \textcolor{keyword}{null}\ \&\&}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nonSerialized\ ==\ \textcolor{keyword}{null}\ \&\&}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (apiExplorerSetting\ ==\ \textcolor{keyword}{null}\ ||\ !apiExplorerSetting.IgnoreApi)\ \&\&}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (!hasDataContractAttribute\ ||\ hasMemberAttribute);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ CreateDefaultDocumentation(Type\ type)}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ documentation;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DefaultTypeDocumentation.TryGetValue(type,\ out\ documentation))}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ documentation;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ documentation\ =\ DocumentationProvider.GetDocumentation(type);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ documentation;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GenerateAnnotations(MemberInfo\ property,\ ParameterDescription\ propertyModel)}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ List<ParameterAnnotation>\ annotations\ =\ \textcolor{keyword}{new}\ List<ParameterAnnotation>();}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ IEnumerable<Attribute>\ attributes\ =\ \textcolor{keyword}{property}.GetCustomAttributes();}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (Attribute\ attribute\ \textcolor{keywordflow}{in}\ attributes)}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Func<object,\ string>\ textGenerator;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AnnotationTextGenerator.TryGetValue(attribute.GetType(),\ out\ textGenerator))}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ annotations.Add(}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ ParameterAnnotation}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AnnotationAttribute\ =\ attribute,}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ textGenerator(attribute)}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rearrange\ the\ annotations}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ annotations.Sort((x,\ y)\ =>}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Special-\/case\ RequiredAttribute\ so\ that\ it\ shows\ up\ on\ top}}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.AnnotationAttribute\ is\ RequiredAttribute)}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (y.AnnotationAttribute\ is\ RequiredAttribute)}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sort\ the\ rest\ based\ on\ alphabetic\ order\ of\ the\ documentation}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.Compare(x.Documentation,\ y.Documentation,\ StringComparison.OrdinalIgnoreCase);}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ParameterAnnotation\ annotation\ \textcolor{keywordflow}{in}\ annotations)}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.Annotations.Add(annotation);}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CollectionModelDescription\ GenerateCollectionModelDescription(Type\ modelType,\ Type\ elementType)}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ collectionModelDescription\ =\ GetOrCreateModelDescription(elementType);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collectionModelDescription\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ CollectionModelDescription}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ElementDescription\ =\ collectionModelDescription}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ModelDescription\ GenerateComplexTypeModelDescription(Type\ modelType)}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ ComplexTypeModelDescription\ complexModelDescription\ =\ \textcolor{keyword}{new}\ ComplexTypeModelDescription}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ CreateDefaultDocumentation(modelType)}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ GeneratedModels.Add(complexModelDescription.Name,\ complexModelDescription);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasDataContractAttribute\ =\ modelType.GetCustomAttribute<DataContractAttribute>()\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ PropertyInfo[]\ properties\ =\ modelType.GetProperties(BindingFlags.Public\ |\ BindingFlags.Instance);}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (PropertyInfo\ property\ \textcolor{keywordflow}{in}\ properties)}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShouldDisplayMember(property,\ hasDataContractAttribute))}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ParameterDescription\ propertyModel\ =\ \textcolor{keyword}{new}\ ParameterDescription}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ GetMemberName(property,\ hasDataContractAttribute)}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.Documentation\ =\ DocumentationProvider.GetDocumentation(property);}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GenerateAnnotations(property,\ propertyModel);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexModelDescription.Properties.Add(propertyModel);}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.TypeDescription\ =\ GetOrCreateModelDescription(property.PropertyType);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ FieldInfo[]\ fields\ =\ modelType.GetFields(BindingFlags.Public\ |\ BindingFlags.Instance);}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (FieldInfo\ field\ \textcolor{keywordflow}{in}\ fields)}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShouldDisplayMember(field,\ hasDataContractAttribute))}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ParameterDescription\ propertyModel\ =\ \textcolor{keyword}{new}\ ParameterDescription}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ GetMemberName(field,\ hasDataContractAttribute)}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.Documentation\ =\ DocumentationProvider.GetDocumentation(field);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ complexModelDescription.Properties.Add(propertyModel);}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ propertyModel.TypeDescription\ =\ GetOrCreateModelDescription(field.FieldType);}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ complexModelDescription;}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DictionaryModelDescription\ GenerateDictionaryModelDescription(Type\ modelType,\ Type\ keyType,\ Type\ valueType)}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ keyModelDescription\ =\ GetOrCreateModelDescription(keyType);}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ valueModelDescription\ =\ GetOrCreateModelDescription(valueType);}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ DictionaryModelDescription}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyModelDescription\ =\ keyModelDescription,}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ValueModelDescription\ =\ valueModelDescription}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ EnumTypeModelDescription\ GenerateEnumTypeModelDescription(Type\ modelType)}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ EnumTypeModelDescription\ enumDescription\ =\ \textcolor{keyword}{new}\ EnumTypeModelDescription}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ CreateDefaultDocumentation(modelType)}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasDataContractAttribute\ =\ modelType.GetCustomAttribute<DataContractAttribute>()\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (FieldInfo\ field\ \textcolor{keywordflow}{in}\ modelType.GetFields(BindingFlags.Public\ |\ BindingFlags.Static))}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShouldDisplayMember(field,\ hasDataContractAttribute))}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EnumValueDescription\ enumValue\ =\ \textcolor{keyword}{new}\ EnumValueDescription}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ field.Name,}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Value\ =\ field.GetRawConstantValue().ToString()}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DocumentationProvider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enumValue.Documentation\ =\ DocumentationProvider.GetDocumentation(field);}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enumDescription.Values.Add(enumValue);}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ GeneratedModels.Add(enumDescription.Name,\ enumDescription);}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ enumDescription;}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ KeyValuePairModelDescription\ GenerateKeyValuePairModelDescription(Type\ modelType,\ Type\ keyType,\ Type\ valueType)}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ keyModelDescription\ =\ GetOrCreateModelDescription(keyType);}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ ModelDescription\ valueModelDescription\ =\ GetOrCreateModelDescription(valueType);}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ KeyValuePairModelDescription}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyModelDescription\ =\ keyModelDescription,}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ValueModelDescription\ =\ valueModelDescription}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ModelDescription\ GenerateSimpleTypeModelDescription(Type\ modelType)}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ SimpleTypeModelDescription\ simpleModelDescription\ =\ \textcolor{keyword}{new}\ SimpleTypeModelDescription}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ ModelNameHelper.GetModelName(modelType),}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelType\ =\ modelType,}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Documentation\ =\ CreateDefaultDocumentation(modelType)}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ GeneratedModels.Add(simpleModelDescription.Name,\ simpleModelDescription);}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ simpleModelDescription;}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00450\ \ \ \ \ \}}
+\DoxyCodeLine{00451\ \}}
 
 \end{DoxyCode}

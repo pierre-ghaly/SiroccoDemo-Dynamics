@@ -17,8 +17,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="40" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="40" bodyend="40"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" compoundref="_help_page_sample_generator_8cs" startline="234" endline="277">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>IDictionary&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_key" kindref="compound">HelpPageSampleKey</ref>, object &gt;</type>
@@ -34,8 +32,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="45" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="45" bodyend="45"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" compoundref="_help_page_sample_generator_8cs" startline="149" endline="166">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>IDictionary&lt; Type, object &gt;</type>
@@ -51,8 +47,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="50" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="50" bodyend="50"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" compoundref="_help_page_sample_generator_8cs" startline="178" endline="208">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
         <type>IList&lt; Func&lt; <ref refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator" kindref="compound">HelpPageSampleGenerator</ref>, Type, object &gt; &gt;</type>
@@ -71,8 +65,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="62" column="22" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="62" bodyend="62"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" compoundref="_help_page_sample_generator_8cs" startline="178" endline="208">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ab1d234b781169989ac91306bd1aa5845" compoundref="_help_page_sample_generator_8cs" startline="26" endline="35">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.HelpPageSampleGenerator</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -90,10 +82,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="26" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="26" bodyend="35"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" compoundref="_help_page_sample_generator_8cs" startline="45" endline="45">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" compoundref="_help_page_sample_generator_8cs" startline="40" endline="40">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" compoundref="_help_page_sample_generator_8cs" startline="62" endline="62">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" compoundref="_help_page_sample_generator_8cs" startline="50" endline="50">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a559df5d82a5d71b7e519d4f1c0f4b8a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
@@ -125,7 +113,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="69" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="69" bodyend="72"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ad209708a138fc201e28ce1b2b036a91d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
@@ -157,7 +144,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="79" column="28" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="79" bodyend="82"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>IDictionary&lt; MediaTypeHeaderValue, object &gt;</type>
@@ -201,12 +187,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="90" column="36" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="90" bodyend="136"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" compoundref="_help_page_sample_generator_8cs" startline="149" endline="166">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" compoundref="_help_page_sample_generator_8cs" startline="178" endline="208">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" compoundref="_help_page_sample_generator_8cs" startline="234" endline="277">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a442ff2b649c4930ad4b41f7f6d1be3ef" compoundref="_help_page_sample_generator_8cs" startline="288" endline="355">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a559df5d82a5d71b7e519d4f1c0f4b8a7" compoundref="_help_page_sample_generator_8cs" startline="69" endline="72">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1ad209708a138fc201e28ce1b2b036a91d" compoundref="_help_page_sample_generator_8cs" startline="79" endline="82">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a929f09573364211a4c5ac83d37e18e23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>object</type>
@@ -310,8 +290,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="149" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="149" bodyend="166"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a15b9c5dfe37f62f25c4938d154b2371e" compoundref="_help_page_sample_generator_8cs" startline="45" endline="45">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1af41a4d4188c2f450b5f7375b60996d6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>object</type>
@@ -343,9 +321,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="178" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="178" bodyend="208"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a90417b66b0dc6a2c110cf4089b8eb012" compoundref="_help_page_sample_generator_8cs" startline="62" endline="62">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a55d7bc5ba420a28613d23882d135a897" compoundref="_help_page_sample_generator_8cs" startline="50" endline="50">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a760f289f1451506c9c749b247cddda5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>Type</type>
@@ -377,7 +352,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="215" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="215" bodyend="222"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" compoundref="_help_page_sample_generator_8cs" startline="234" endline="277">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveType</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aac36a2ef19e232f01c5054d4085c3503" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>Type</type>
@@ -467,9 +441,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="234" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="234" bodyend="277"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1aa6d4b4c4239ffd6a04b72d123d155b24" compoundref="_help_page_sample_generator_8cs" startline="40" endline="40">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a760f289f1451506c9c749b247cddda5a" compoundref="_help_page_sample_generator_8cs" startline="215" endline="222">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a442ff2b649c4930ad4b41f7f6d1be3ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>object</type>
@@ -537,7 +508,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" line="288" column="31" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs" bodystart="288" bodyend="355"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_help_page_sample_generator_1a35972db5cc04b3189057867d689a6e1a" compoundref="_help_page_sample_generator_8cs" startline="90" endline="136">SiroccoDemo.APIs.Areas.HelpPage.HelpPageSampleGenerator.GetSample</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="package-static-func">

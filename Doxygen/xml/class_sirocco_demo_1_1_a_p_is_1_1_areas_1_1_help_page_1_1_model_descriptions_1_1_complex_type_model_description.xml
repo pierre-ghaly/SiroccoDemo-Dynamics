@@ -17,7 +17,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs" line="12" column="27" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs" bodystart="12" bodyend="12"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_1affe265b2f61279497736a8e569ae6341" compoundref="_complex_type_model_description_8cs" startline="7" endline="10">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.ComplexTypeModelDescription</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -34,7 +33,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs" line="7" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs" bodystart="7" bodyend="10"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_complex_type_model_description_1a7946ce040937ddb216e811ae0e929d9d" compoundref="_complex_type_model_description_8cs" startline="12" endline="12">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.Properties</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

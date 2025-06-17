@@ -17,9 +17,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Global.asax.cs" line="10" column="24" bodyfile="SiroccoDemo.APIs/Global.asax.cs" bodystart="10" bodyend="19"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_bundle_config_1a64c170fdeba641e21c7bf58b8ab06821" compoundref="_bundle_config_8cs" startline="7" endline="21">SiroccoDemo.APIs.BundleConfig.RegisterBundles</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_filter_config_1a425a15e4169e815ebc2fc7956ba816f1" compoundref="_filter_config_8cs" startline="8" endline="11">SiroccoDemo.APIs.FilterConfig.RegisterGlobalFilters</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_route_config_1acc560f5a628e44936a6bf1c125462201" compoundref="_route_config_8cs" startline="12" endline="21">SiroccoDemo.APIs.RouteConfig.RegisterRoutes</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

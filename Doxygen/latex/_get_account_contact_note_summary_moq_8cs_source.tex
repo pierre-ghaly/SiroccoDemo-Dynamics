@@ -1,47 +1,47 @@
 \doxysection{Get\+Account\+Contact\+Note\+Summary\+Moq.\+cs}
-\hypertarget{_get_account_contact_note_summary_moq_8cs_source}{}\label{_get_account_contact_note_summary_moq_8cs_source}\index{SiroccoDemo.Moq/Activities/GetAccountContactNoteSummaryMoq.cs@{SiroccoDemo.Moq/Activities/GetAccountContactNoteSummaryMoq.cs}}
-\mbox{\hyperlink{_get_account_contact_note_summary_moq_8cs}{Go to the documentation of this file.}}
+\label{_get_account_contact_note_summary_moq_8cs_source}\index{SiroccoDemo.Moq/Activities/GetAccountContactNoteSummaryMoq.cs@{SiroccoDemo.Moq/Activities/GetAccountContactNoteSummaryMoq.cs}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.Xrm.Sdk;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.Xrm.Tooling.Connector;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Moq;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_plugins}{SiroccoDemo.Plugins}};}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_moq_1_1_activities}{SiroccoDemo.Moq.Activities}}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }GetAccountContactNoteSummaryMoq}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00010}00010\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ExecuteMoq(CrmServiceClient\ crmService)}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ var\ factoryMock\ =\ \textcolor{keyword}{new}\ Mock<IOrganizationServiceFactory>();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pluginContextMock\ =\ \textcolor{keyword}{new}\ Mock<IPluginExecutionContext>();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ serviceProviderMock\ =\ \textcolor{keyword}{new}\ Mock<IServiceProvider>();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ factoryMock.Setup(f\ =>\ f.CreateOrganizationService(It.IsAny<Guid>())).Returns(crmService);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ outputParameters\ =\ \textcolor{keyword}{new}\ ParameterCollection();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ pluginContextMock.Setup(c\ =>\ c.OutputParameters).Returns(outputParameters);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ serviceProviderMock.Setup(s\ =>\ s.GetService(typeof(IOrganizationServiceFactory))).Returns(factoryMock.Object);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ serviceProviderMock.Setup(s\ =>\ s.GetService(typeof(IPluginExecutionContext))).Returns(pluginContextMock.Object);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ plugin\ =\ \textcolor{keyword}{new}\ GetAccountContactNoteSummary();}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ plugin.Execute(serviceProviderMock.Object);}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}GetAccountContactNoteSummary\ Plugin\ Moq\ Executed\ Successfully."{}});}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (outputParameters.Contains(\textcolor{stringliteral}{"{}Result"{}}))}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ outputParameters[\textcolor{stringliteral}{"{}Result"{}}]\ as\ string;}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Result:\ \{result\}"{}});}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}No\ Result"{}});}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00040}00040\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_get_account_contact_note_summary_moq_8cs_source_l00041}00041\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }Microsoft.Xrm.Sdk;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }Microsoft.Xrm.Tooling.Connector;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }Moq;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }SiroccoDemo.Plugins;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }SiroccoDemo.Moq.Activities}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }GetAccountContactNoteSummaryMoq}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ExecuteMoq(CrmServiceClient\ crmService)}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ var\ factoryMock\ =\ \textcolor{keyword}{new}\ Mock<IOrganizationServiceFactory>();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pluginContextMock\ =\ \textcolor{keyword}{new}\ Mock<IPluginExecutionContext>();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ serviceProviderMock\ =\ \textcolor{keyword}{new}\ Mock<IServiceProvider>();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ factoryMock.Setup(f\ =>\ f.CreateOrganizationService(It.IsAny<Guid>())).Returns(crmService);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ outputParameters\ =\ \textcolor{keyword}{new}\ ParameterCollection();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ pluginContextMock.Setup(c\ =>\ c.OutputParameters).Returns(outputParameters);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ serviceProviderMock.Setup(s\ =>\ s.GetService(typeof(IOrganizationServiceFactory))).Returns(factoryMock.Object);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ serviceProviderMock.Setup(s\ =>\ s.GetService(typeof(IPluginExecutionContext))).Returns(pluginContextMock.Object);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ plugin\ =\ \textcolor{keyword}{new}\ GetAccountContactNoteSummary();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ plugin.Execute(serviceProviderMock.Object);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}GetAccountContactNoteSummary\ Plugin\ Moq\ Executed\ Successfully."{}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (outputParameters.Contains(\textcolor{stringliteral}{"{}Result"{}}))}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ outputParameters[\textcolor{stringliteral}{"{}Result"{}}]\ as\ string;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Result:\ \{result\}"{}});}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}No\ Result"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \}}
 
 \end{DoxyCode}

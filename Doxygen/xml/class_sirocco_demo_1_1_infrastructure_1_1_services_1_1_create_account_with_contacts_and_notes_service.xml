@@ -128,11 +128,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" line="38" column="53" bodyfile="SiroccoDemo.Infrastructure/Services/CreateAccountWithContactsAndNotesService.cs" bodystart="38" bodyend="92"/>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a57ede667ad687421d20bf2e39840b7a9" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="5" endline="5">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.Account</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a231c19ddff5d049d5feeb326c2b5b45e" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="9" endline="9">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.AccountNotes</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a119a9a6b3257c49a8b51af39bebe7ed3" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="6" endline="6">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.PrimaryContact</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a083e37a0782520b6ef2f364192de48a0" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="8" endline="8">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.PrimaryContactNotes</references>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model_1a0ce7822861e6b2d6592104d4a7798d35" compoundref="_create_account_with_contacts_and_notes_model_8cs" startline="7" endline="7">SiroccoDemo.Application.Models.CreateAccountWithContactsAndNotesModel.SecondaryContacts</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">

@@ -163,28 +163,6 @@
   \doxynewunicodechar{³}{${}^{3}$}% Superscript three
 \fi
   % Hyperlinks
-    % Hyperlinks (required, but should be loaded last)
-    \ifPDFTeX
-      \usepackage[pdftex,pagebackref=true]{hyperref}
-    \else
-      \ifXeTeX
-        \usepackage[xetex,pagebackref=true]{hyperref}
-      \else
-        \ifLuaTeX
-          \usepackage[luatex,pagebackref=true]{hyperref}
-        \else
-          \usepackage[ps2pdf,pagebackref=true]{hyperref}
-        \fi
-      \fi
-    \fi
-    \hypersetup{%
-      colorlinks=true,%
-      linkcolor=blue,%
-      citecolor=blue,%
-      unicode,%
-      pdftitle={Sirocco Demo},%
-      pdfsubject={}%
-    }
   % Custom commands used by the header
   % Custom commands
   \newcommand{\clearemptydoublepage}{%
@@ -209,12 +187,6 @@
 \begin{document}
   \raggedbottom
   % Titlepage & ToC
-    % To avoid duplicate page anchors due to reuse of same numbers for
-    % the index (be it as roman numbers)
-    \hypersetup{pageanchor=false,
-                bookmarksnumbered=true,
-                pdfencoding=unicode
-               }
   \pagenumbering{alph}
   \begin{titlepage}
   \vspace*{7cm}
@@ -229,8 +201,6 @@
   \tableofcontents
   \clearemptydoublepage
   \pagenumbering{arabic}
-  % re-enable anchors again
-  \hypersetup{pageanchor=true}
 %--- Begin generated contents ---
 \input{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g}
 \input{md_packages_2_microsoft_8_bcl_8_async_interfaces_88_80_80_2_p_a_c_k_a_g_e}

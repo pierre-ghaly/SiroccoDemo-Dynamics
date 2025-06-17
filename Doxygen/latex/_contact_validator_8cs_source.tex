@@ -1,41 +1,41 @@
 \doxysection{Contact\+Validator.\+cs}
-\hypertarget{_contact_validator_8cs_source}{}\label{_contact_validator_8cs_source}\index{SiroccoDemo.Infrastructure/Validations/ContactValidator.cs@{SiroccoDemo.Infrastructure/Validations/ContactValidator.cs}}
-\mbox{\hyperlink{_contact_validator_8cs}{Go to the documentation of this file.}}
+\label{_contact_validator_8cs_source}\index{SiroccoDemo.Infrastructure/Validations/ContactValidator.cs@{SiroccoDemo.Infrastructure/Validations/ContactValidator.cs}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_models}{SiroccoDemo.Application.Models}};}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_application_1_1_validations}{SiroccoDemo.Application.Validations}};}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_domain_1_1_exceptions}{SiroccoDemo.Domain.Exceptions}};}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text.RegularExpressions;}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_sirocco_demo_1_1_infrastructure_1_1_validations}{SiroccoDemo.Infrastructure.Validations}}}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00008}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator}{ContactValidator}}\ :\ \mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_validations_1_1_i_contact_validator}{IContactValidator}}}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00009}00009\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ Regex\ EmailRegex\ =\ \textcolor{keyword}{new}\ Regex(}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{@"{}\string^[a-\/zA-\/Z0-\/9.\_\%+-\/]+@[a-\/zA-\/Z0-\/9.-\/]+\(\backslash\).[a-\/zA-\/Z]\{2,\}\$"{}},}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ RegexOptions.Compiled\ |\ RegexOptions.IgnoreCase);}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00014}\mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_ac9323a8b60550a8384e2198e7a1f224b}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sirocco_demo_1_1_infrastructure_1_1_validations_1_1_contact_validator_ac9323a8b60550a8384e2198e7a1f224b}{Validate}}(\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input}{ContactInput}}\ contact)}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (contact\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Contact\ information\ is\ required."{}},\ nameof(contact),\ \textcolor{keyword}{null});}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ac32772e519ed7848589caaaead414044}{LastName}}))}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Contact\ last\ name\ is\ required."{}},\ nameof(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ac32772e519ed7848589caaaead414044}{LastName}}),\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ac32772e519ed7848589caaaead414044}{LastName}});}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_a598cb7b7e32dcdfa7da9636b815019e4}{Email}}))}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Contact\ email\ is\ required."{}},\ nameof(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_a598cb7b7e32dcdfa7da9636b815019e4}{Email}}),\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_a598cb7b7e32dcdfa7da9636b815019e4}{Email}});}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!EmailRegex.IsMatch(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_a598cb7b7e32dcdfa7da9636b815019e4}{Email}}))}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Contact\ email\ format\ is\ invalid."{}},\ nameof(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_a598cb7b7e32dcdfa7da9636b815019e4}{Email}}),\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_a598cb7b7e32dcdfa7da9636b815019e4}{Email}});}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ae3e2a3fdc9b38ba54fd7b39a2be96be5}{FirstName}})\ \&\&\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ae3e2a3fdc9b38ba54fd7b39a2be96be5}{FirstName}}.Length\ >\ 50)}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Contact\ first\ name\ cannot\ exceed\ 50\ characters."{}},\ nameof(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ae3e2a3fdc9b38ba54fd7b39a2be96be5}{FirstName}}),\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ae3e2a3fdc9b38ba54fd7b39a2be96be5}{FirstName}});}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ac32772e519ed7848589caaaead414044}{LastName}}.Length\ >\ 50)}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sirocco_demo_1_1_domain_1_1_exceptions_1_1_invalid_input_exception}{InvalidInputException}}(\textcolor{stringliteral}{"{}Contact\ last\ name\ cannot\ exceed\ 50\ characters."{}},\ nameof(contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ac32772e519ed7848589caaaead414044}{LastName}}),\ contact.\mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_contact_input_ac32772e519ed7848589caaaead414044}{LastName}});}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00034}00034\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_contact_validator_8cs_source_l00035}00035\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }SiroccoDemo.Application.Models;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }SiroccoDemo.Application.Validations;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }SiroccoDemo.Domain.Exceptions;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Text.RegularExpressions;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }SiroccoDemo.Infrastructure.Validations}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ContactValidator\ :\ IContactValidator}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ Regex\ EmailRegex\ =\ \textcolor{keyword}{new}\ Regex(}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{@"{}\string^[a-\/zA-\/Z0-\/9.\_\%+-\/]+@[a-\/zA-\/Z0-\/9.-\/]+\(\backslash\).[a-\/zA-\/Z]\{2,\}\$"{}},}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ RegexOptions.Compiled\ |\ RegexOptions.IgnoreCase);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Validate(ContactInput\ contact)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (contact\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Contact\ information\ is\ required."{}},\ nameof(contact),\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contact.LastName))}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Contact\ last\ name\ is\ required."{}},\ nameof(contact.LastName),\ contact.LastName);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contact.Email))}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Contact\ email\ is\ required."{}},\ nameof(contact.Email),\ contact.Email);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!EmailRegex.IsMatch(contact.Email))}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Contact\ email\ format\ is\ invalid."{}},\ nameof(contact.Email),\ contact.Email);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(contact.FirstName)\ \&\&\ contact.FirstName.Length\ >\ 50)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Contact\ first\ name\ cannot\ exceed\ 50\ characters."{}},\ nameof(contact.FirstName),\ contact.FirstName);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (contact.LastName.Length\ >\ 50)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidInputException(\textcolor{stringliteral}{"{}Contact\ last\ name\ cannot\ exceed\ 50\ characters."{}},\ nameof(contact.LastName),\ contact.LastName);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \}}
 
 \end{DoxyCode}

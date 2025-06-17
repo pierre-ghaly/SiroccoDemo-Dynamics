@@ -1,14 +1,13 @@
 \chapter{Castle Core Changelog }
-\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g}{}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g}\index{Castle Core Changelog@{Castle Core Changelog}}
+\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g}\index{Castle Core Changelog@{Castle Core Changelog}}
 \label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md0}%
-\Hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md0}%
-\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md1}{}\doxysection{\texorpdfstring{5.\+1.\+1 (2022-\/12-\/30)}{5.\+1.\+1 (2022-\/12-\/30)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md1}
+\doxysection{5.\+1.\+1 (2022-\/12-\/30)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md1}
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Proxies using records derived from a base generic record broken using .NET 6 compiler (@\+CesarD, \#632)
 \item Failure proxying type that has a non-\/inheritable custom attribute type applied where {\ttfamily null} argument is given for array parameter (@stakx, \#637)
 \item Nested custom attribute types do not get replicated (@stakx, \#638)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md2}{}\doxysection{\texorpdfstring{5.\+1.\+0 (2022-\/08-\/02)}{5.\+1.\+0 (2022-\/08-\/02)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md2}
+\end{DoxyItemize}\doxysection{5.\+1.\+0 (2022-\/08-\/02)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md2}
 Enhancements\+:
 \begin{DoxyItemize}
 \item Support for covariant method returns (@stakx, \#619)
@@ -20,7 +19,7 @@ Bugfixes\+:
 \item Dynamic\+Proxy emits invalid metadata for redeclared event (@stakx, \#590)
 \item Proxies using records with a base class broken using .NET 6 compiler (@ajcvickers, \#601)
 \item {\ttfamily Missing\+Method\+Exception} when proxying interfaces containing sealed methods (@stakx, \#621)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md3}{}\doxysection{\texorpdfstring{5.\+0.\+0 (2022-\/05-\/11)}{5.\+0.\+0 (2022-\/05-\/11)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md3}
+\end{DoxyItemize}\doxysection{5.\+0.\+0 (2022-\/05-\/11)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md3}
 Enhancements\+:
 \begin{DoxyItemize}
 \item .NET 6.\+0 support (@\+Jevonius, \#616)
@@ -32,7 +31,7 @@ Enhancements\+:
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Generic method with differently named generic arguments to parent throws {\ttfamily Key\+Not\+Found\+Exception} (@stakx, \#106)
-\item Proxying certain {\ttfamily \mbox{[}Serializable\mbox{]}} classes produces proxy types that fail PEVerify test (@stakx, \#367)
+\item Proxying certain {\ttfamily [Serializable]} classes produces proxy types that fail PEVerify test (@stakx, \#367)
 \item {\ttfamily private protected} methods are not intercepted (@\+Crispy\+Drone, \#535)
 \item {\ttfamily System.\+UInt\+Ptr} unsupported (@stakx, \#546)
 \item Dynamic\+Proxy generates two modules when proceeding from a class proxy\textquotesingle{}s protected method to the target, causing an {\ttfamily Invalid\+Operation\+Exception} when saving the generated assembly to disk (@stakx, \#569)
@@ -41,7 +40,7 @@ Bugfixes\+:
 
 Deprecations\+:
 \begin{DoxyItemize}
-\item Removed support for the .NET Framework \texorpdfstring{$<$}{<} 4.\+6.\+2 and .NET Standard 1.\+x. (@stakx, \#495, \#496; @\+Jevonius, \#614)
+\item Removed support for the .NET Framework $<$ 4.\+6.\+2 and .NET Standard 1.\+x. (@stakx, \#495, \#496; @\+Jevonius, \#614)
 \item Removed support for Code Access Security (CAS). (@stakx, \#502)
 \item Removed support for Remoting. This library no longer defines any types deriving from {\ttfamily Marshal\+By\+Ref\+Object}, and {\ttfamily Proxy\+Util.\+Is\+Proxy} (which used to recognize remoting/"{}transparent"{} proxies) now tests only for Dynamic\+Proxy proxies. (@stakx, \#507)
 \item The following public members have been removed\+:
@@ -49,25 +48,25 @@ Deprecations\+:
 \item {\ttfamily Castle.\+Core.\+Internal.\+Collection\+Extensions} (class)
 \item {\ttfamily Castle.\+Core.\+Internal.\+Lock} (class) along with all related types and methods
 \item {\ttfamily Castle.\+Core.\+Internal.\+Permission\+Util.\+Is\+Granted} (method)
-\item {\ttfamily Castle.\+Core.\+Pair\texorpdfstring{$<$}{<},\texorpdfstring{$>$}{>}} (type). Use {\ttfamily System.\+Value\+Tuple\texorpdfstring{$<$}{<},\texorpdfstring{$>$}{>}} or {\ttfamily System.\+Tuple\texorpdfstring{$<$}{<},\texorpdfstring{$>$}{>}} instead.
+\item {\ttfamily Castle.\+Core.\+Pair$<$,$>$} (type). Use {\ttfamily System.\+Value\+Tuple$<$,$>$} or {\ttfamily System.\+Tuple$<$,$>$} instead.
 \item all type members in {\ttfamily Castle.\+Dynamic\+Proxy.\+Module\+Scope} that gave direct access to Dynamic\+Proxy\textquotesingle{}s type cache and {\ttfamily Module\+Builder}s. Only {\ttfamily Save\+Assembly}, {\ttfamily Load\+Assembly\+Into\+Cache}, and members supporting these two facilities are left public.
-\item almost all types and type members in the {\ttfamily Castle.\+Dynamic\+Proxy.\texorpdfstring{$\ast$}{*}} sub-\/namespaces, as most of them are intended for internal use only.
+\item almost all types and type members in the {\ttfamily Castle.\+Dynamic\+Proxy.$\ast$} sub-\/namespaces, as most of them are intended for internal use only.
 \item Dynamic\+Proxy\textquotesingle{}s custom exception types have been replaced by standard BCL exceptions (where appropriate), and by a single {\ttfamily Dynamic\+Proxy\+Exception} type for internal Dynamic\+Proxy errors.
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md4}{}\doxysection{\texorpdfstring{4.\+4.\+1 (2020-\/05-\/06)}{4.\+4.\+1 (2020-\/05-\/06)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md4}
+\end{DoxyItemize}\doxysection{4.\+4.\+1 (2020-\/05-\/06)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md4}
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Prevent method name collisions when a proxy type implements more than two identically named interfaces having one or more identically named methods each. Name collisions are avoided by including the declaring types\textquotesingle{} namespaces in the proxy type\textquotesingle{}s method names. (@stakx, \#469)
 \item Reduce lock contention while generating new proxy types which previously blocked new proxy instances (@tangdf, \#484)
 \item Fix mixins where proxy constructor fields were ordered differently to interfaces because of different case comparisons (@zapov, \#475)
 \item Fix proxy generation for types having only a {\ttfamily private protected} constructor (@mriehm, \#491)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md5}{}\doxysection{\texorpdfstring{4.\+4.\+0 (2019-\/04-\/05)}{4.\+4.\+0 (2019-\/04-\/05)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md5}
+\end{DoxyItemize}\doxysection{4.\+4.\+0 (2019-\/04-\/05)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md5}
 Enhancements\+:
 \begin{DoxyItemize}
 \item Added trace logging level below Debug; maps to Trace in log4net/\+NLog, and Verbose in Serilog (@pi3k14, \#404)
 \item Recognize read-\/only parameters by the {\ttfamily In} modreq (@zvirja, \#406)
 \item Dictionary\+Adapter\+: Exposed Get\+Adapter overloads with Name\+Value\+Collection parameter in .NET Standard (@rzontar, \#423)
-\item Ability to add delegate mixins to proxies using {\ttfamily Proxy\+Generation\+Options.\+Add\+Delegate\mbox{[}Type\mbox{]}Mixin}. You can bind to the mixed-\/in {\ttfamily Invoke} methods on the proxy using {\ttfamily Proxy\+Util.\+Create\+Delegate\+To\+Mixin}. (@stakx, \#436)
+\item Ability to add delegate mixins to proxies using {\ttfamily Proxy\+Generation\+Options.\+Add\+Delegate[Type]Mixin}. You can bind to the mixed-\/in {\ttfamily Invoke} methods on the proxy using {\ttfamily Proxy\+Util.\+Create\+Delegate\+To\+Mixin}. (@stakx, \#436)
 \item New {\ttfamily IInvocation.\+Capture\+Proceed\+Info()} method to enable better implementations of asynchronous interceptors (@stakx, \#439)
 \end{DoxyItemize}
 
@@ -94,7 +93,7 @@ Deprecations\+:
 \item {\ttfamily Castle.\+Dynamic\+Proxy.\+Serialization.\+Cache\+Mappings\+Attribute.\+Apply\+To} (method)
 \item {\ttfamily Castle.\+Dynamic\+Proxy.\+Serialization.\+Cache\+Mappings\+Attribute.\+Get\+Deserialized\+Mappings} (method)
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md6}{}\doxysection{\texorpdfstring{4.\+3.\+1 (2018-\/06-\/21)}{4.\+3.\+1 (2018-\/06-\/21)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md6}
+\end{DoxyItemize}\doxysection{4.\+3.\+1 (2018-\/06-\/21)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md6}
 Enhancements\+:
 \begin{DoxyItemize}
 \item Use shared read locking to reduce lock contention in Invocation\+Helper and Proxy\+Util (@\+Tim\+Lovell\+Smith, \#377)
@@ -110,7 +109,7 @@ Bugfixes\+:
 Deprecations\+:
 \begin{DoxyItemize}
 \item {\ttfamily Castle.\+Dynamic\+Proxy.\+Generators.\+Emitters.\+Arguments\+Util.\+Is\+Any\+By\+Ref} (@stakx, \#370)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md7}{}\doxysection{\texorpdfstring{4.\+3.\+0 (2018-\/06-\/07)}{4.\+3.\+0 (2018-\/06-\/07)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md7}
+\end{DoxyItemize}\doxysection{4.\+3.\+0 (2018-\/06-\/07)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md7}
 Enhancements\+:
 \begin{DoxyItemize}
 \item Added .NET Standard/.NET Core support for NLog (@snakefoot, \#200)
@@ -130,12 +129,12 @@ Bugfixes\+:
 \item Ensure that Dynamic\+Proxy doesn\textquotesingle{}t create invalid dynamic assemblies when proxying types from non-\/strong-\/named assemblies (@stakx, \#327)
 \item Fix interceptor selectors being passed {\ttfamily System.\+Runtime\+Type} for class proxies instead of the target type (@stakx, \#359)
 \item Replace Null\+Reference\+Exception with descriptive one thrown when interceptors swallow exceptions and cause a null value type to be returned (@jonorossi, \#85)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md8}{}\doxysection{\texorpdfstring{4.\+2.\+1 (2017-\/10-\/11)}{4.\+2.\+1 (2017-\/10-\/11)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md8}
+\end{DoxyItemize}\doxysection{4.\+2.\+1 (2017-\/10-\/11)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md8}
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Add missing equality checks in {\ttfamily Method\+Signature\+Comparer.\+Equal\+Signature\+Types} to fix {\ttfamily Type\+Load\+Exception}s ("{}\+Method does not have an implementation"{}) (@stakx, \#310)
 \item Add missing XML documentation files to Nu\+Get packages (@fir3pho3nixx, \#312)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md9}{}\doxysection{\texorpdfstring{4.\+2.\+0 (2017-\/09-\/28)}{4.\+2.\+0 (2017-\/09-\/28)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md9}
+\end{DoxyItemize}\doxysection{4.\+2.\+0 (2017-\/09-\/28)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md9}
 Enhancements\+:
 \begin{DoxyItemize}
 \item Add IProxy\+Target\+Accessor.\+Dyn\+Proxy\+Set\+Target to set the target of a proxy (@yallie, \#293)
@@ -155,13 +154,13 @@ Bugfixes\+:
 Deprecations\+:
 \begin{DoxyItemize}
 \item IChange\+Proxy\+Target.\+Change\+Proxy\+Target is deprecated in favor of IProxy\+Target\+Accessor.\+Dyn\+Proxy\+Set\+Target (@yallie, \#293)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md10}{}\doxysection{\texorpdfstring{4.\+1.\+1 (2017-\/07-\/12)}{4.\+1.\+1 (2017-\/07-\/12)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md10}
+\end{DoxyItemize}\doxysection{4.\+1.\+1 (2017-\/07-\/12)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md10}
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Prevent member name collision when proxy implements same generic interface more than twice (@stakx, \#88)
 \item Fix incorrect replication (reversed order) of custom modifiers (modopts and modreqs) on the CLR, does not work yet on Mono (@stakx, \#277)
 \item Fix COM interface proxy error case throwing exceptions trying to release null pointer from Query\+Interface (@stakx, \#281)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md11}{}\doxysection{\texorpdfstring{4.\+1.\+0 (2017-\/06-\/11)}{4.\+1.\+0 (2017-\/06-\/11)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md11}
+\end{DoxyItemize}\doxysection{4.\+1.\+0 (2017-\/06-\/11)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md11}
 Breaking Changes\+:
 \begin{DoxyItemize}
 \item Remove Allow\+Partially\+Trusted\+Callers\+Attribute, which wasn\textquotesingle{}t defined by default (@fir3pho3nixx, \#241)
@@ -180,7 +179,7 @@ Bugfixes\+:
 \item Fix dependency on "{}\+System.\+Component\+Model.\+Type\+Converter"{} Nu\+Get package version that does not exist (\#239)
 \item Fix Param\+Array\+Attribute not being replicated in proxy (@stakx, \#121)
 \item Fix System.\+Net.\+Mail.\+Smtp\+Client is obsolete on Mono warning (\#254)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md12}{}\doxysection{\texorpdfstring{4.\+0.\+0 (2017-\/01-\/25)}{4.\+0.\+0 (2017-\/01-\/25)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md12}
+\end{DoxyItemize}\doxysection{4.\+0.\+0 (2017-\/01-\/25)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md12}
 Breaking Changes\+:
 \begin{DoxyItemize}
 \item Update to NLog 4.\+4.\+1 and remove beta .NET Core support for NLog (\#228)
@@ -190,12 +189,12 @@ Breaking Changes\+:
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Fix Custom\+Attribute\+Info.\+From\+Expression for VB.\+NET (@thomaslevesque, \#223)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md13}{}\doxysection{\texorpdfstring{4.\+0.\+0-\/beta002 (2016-\/10-\/28)}{4.\+0.\+0-\/beta002 (2016-\/10-\/28)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md13}
+\end{DoxyItemize}\doxysection{4.\+0.\+0-\/beta002 (2016-\/10-\/28)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md13}
 Breaking Changes\+:
 \begin{DoxyItemize}
 \item Rework Serilog integration to accept an ILogger rather than a Logger\+Configuration to work correctly with Serilog (\#142, \#211)
 \item Remove obsolete property {\ttfamily Attributes\+To\+Add\+To\+Generated\+Types} from {\ttfamily Proxy\+Generation\+Options} (\#219)
-\item Change type of {\ttfamily Proxy\+Generation\+Options.\+Additional\+Attributes} to {\ttfamily IList\texorpdfstring{$<$}{<}Custom\+Attribute\+Info\texorpdfstring{$>$}{>}} (\#219)
+\item Change type of {\ttfamily Proxy\+Generation\+Options.\+Additional\+Attributes} to {\ttfamily IList$<$Custom\+Attribute\+Info$>$} (\#219)
 \item Remove {\ttfamily IAttribute\+Disassembler} which is no longer necessary (\#219)
 \end{DoxyItemize}
 
@@ -209,7 +208,7 @@ Bugfixes\+:
 \begin{DoxyItemize}
 \item Fix building on Mono 4.\+6.\+1
 \item Different attributes in {\ttfamily Proxy\+Generation\+Options.\+Additional\+Attributes} now generates different proxy types (\#219)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md14}{}\doxysection{\texorpdfstring{4.\+0.\+0-\/beta001 (2016-\/07-\/17)}{4.\+0.\+0-\/beta001 (2016-\/07-\/17)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md14}
+\end{DoxyItemize}\doxysection{4.\+0.\+0-\/beta001 (2016-\/07-\/17)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md14}
 Breaking Changes\+:
 \begin{DoxyItemize}
 \item Update to log4net 1.\+2.\+15/2.0.\+5 (\#199)
@@ -226,7 +225,7 @@ Enhancements\+:
 Bugfixes\+:
 \begin{DoxyItemize}
 \item Fix target framework moniker in Nu\+Get package for .NET Core (\#174)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md15}{}\doxysection{\texorpdfstring{4.\+0.\+0-\/alpha001 (2016-\/04-\/07)}{4.\+0.\+0-\/alpha001 (2016-\/04-\/07)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md15}
+\end{DoxyItemize}\doxysection{4.\+0.\+0-\/alpha001 (2016-\/04-\/07)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md15}
 Breaking Changes\+:
 \begin{DoxyItemize}
 \item Remove all Silverlight support (\#100, \#150)
@@ -249,20 +248,20 @@ Bugfixes\+:
 \item Fix \textquotesingle{}System.\+Argument\+Exception\+: System.\+Decimal is not a supported constant type\textquotesingle{} with optional method parameters (@fknx, \#87, \#91)
 \item Fix Proxy\+Generator cache does not take into account Additional\+Attributes (@cmerat, \#77, \#78)
 \item Fix Castle.\+Services.\+Logging.\+Serilog\+Integration.\+dll missing some assembly info attributes (@imzshh, \#20, \#82)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md16}{}\doxysection{\texorpdfstring{3.\+3.\+3 (2014-\/11-\/06)}{3.\+3.\+3 (2014-\/11-\/06)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md16}
+\end{DoxyItemize}\doxysection{3.\+3.\+3 (2014-\/11-\/06)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md16}
 
 \begin{DoxyItemize}
 \item Fix Serilog integration modifies Logger\+Configuration.\+Minimum\+Level (\#70)
 \item Add Source\+Context to the Serilog logger (@\+KevivL, \#69)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md17}{}\doxysection{\texorpdfstring{3.\+3.\+2 (2014-\/11-\/03)}{3.\+3.\+2 (2014-\/11-\/03)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md17}
+\end{DoxyItemize}\doxysection{3.\+3.\+2 (2014-\/11-\/03)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md17}
 
 \begin{DoxyItemize}
 \item fixed \#66 -\/ Serilog\+Logger implementation bug where exceptions were passed through incorrectly
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md18}{}\doxysection{\texorpdfstring{3.\+3.\+1 (2014-\/09-\/10)}{3.\+3.\+1 (2014-\/09-\/10)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md18}
+\end{DoxyItemize}\doxysection{3.\+3.\+1 (2014-\/09-\/10)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md18}
 
 \begin{DoxyItemize}
 \item implemented \#61 -\/ Added support for Serilog -\/ contributed by Russell J Baker (@ruba1987)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md19}{}\doxysection{\texorpdfstring{3.\+3.\+0 (2014-\/04-\/27)}{3.\+3.\+0 (2014-\/04-\/27)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md19}
+\end{DoxyItemize}\doxysection{3.\+3.\+0 (2014-\/04-\/27)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md19}
 
 \begin{DoxyItemize}
 \item implemented \#51 -\/ removed abandoned projects\+: Binder, Pagination, Validator
@@ -271,31 +270,31 @@ Bugfixes\+:
 \item fixed \#47 -\/ Calling Dynamic\+Proxy proxy methods with multidimensional array parameters -\/ contributed by Ed Parcell (@edparcell)
 \item fixed \#44 -\/ Dictionary\+Adapter Fetch\+Attribute on type has no effect
 \item fixed \#34 and \#39 -\/ inaccessible type parameters should give better error messages -\/ contributed by Blair Conrad (@blairconrad)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md20}{}\doxysection{\texorpdfstring{3.\+2.\+2 (2013-\/11-\/30)}{3.\+2.\+2 (2013-\/11-\/30)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md20}
+\end{DoxyItemize}\doxysection{3.\+2.\+2 (2013-\/11-\/30)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md20}
 
 \begin{DoxyItemize}
 \item fixed \#35 -\/ Parameter\+Builder.\+Set\+Constant fails when using a default value of null -\/ contributed by (@jonasro)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md21}{}\doxysection{\texorpdfstring{3.\+2.\+1 (2013-\/10-\/05)}{3.\+2.\+1 (2013-\/10-\/05)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md21}
+\end{DoxyItemize}\doxysection{3.\+2.\+1 (2013-\/10-\/05)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md21}
 
 \begin{DoxyItemize}
 \item fixed \#32 -\/ Improve configuration of Smtp\+Client in sync sending -\/ contributed by Artur Dorochowicz (@\+Artur\+Dorochowicz)
-\item fixed \#31 -\/ \mbox{[}Dynamic\+Proxy\mbox{]} Preserve Default\+Values of proxied method\textquotesingle{}s parameters (in .NET 4.\+5)
+\item fixed \#31 -\/ [Dynamic\+Proxy] Preserve Default\+Values of proxied method\textquotesingle{}s parameters (in .NET 4.\+5)
 \item fixed \#30 -\/ tailoring Internals\+Visible\+To message based on assembly of inaccessible type -\/ contributed by Blair Conrad (@blairconrad)
 \item fixed \#27 -\/ Allow dynamic proxy of generic interfaces which have generic methods, under Mono 2.\+10.\+8 and Mono 3.\+0.\+6 -\/ contributed by Iain Ballard (@i-\/e-\/b)
 \item fixed \#26 -\/ Proxy of COM class issue, reference count incremented -\/ contributed by Jean-\/\+Claude Viau (@jcviau)
 \item fixed DYNPROXY-\/188 -\/ Create\+Interface\+Proxy\+Without\+Target fails with interface containing member with \textquotesingle{}ref UInt\+Ptr\textquotesingle{} -\/ contributed by Pier Janssen (@\+Pjanssen)
 \item fixed DYNPROXY-\/186 -\/ .Net remoting (transparent proxy) cannot be proxied -\/ contributed by Jean-\/\+Claude Viau (@jcviau)
 \item fixed DYNPROXY-\/185 -\/ Proxy\+Util.\+Get\+Unproxied\+Instance returns proxy object for Class\+Proxy\+With\+Target instead of its target -\/ contributed by Dmitry Xlestkov (@d-\/s-\/x)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md22}{}\doxysection{\texorpdfstring{3.\+2.\+0 (2013-\/02-\/16)}{3.\+2.\+0 (2013-\/02-\/16)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md22}
+\end{DoxyItemize}\doxysection{3.\+2.\+0 (2013-\/02-\/16)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md22}
 
 \begin{DoxyItemize}
 \item fixed DYNPROXY-\/179 -\/ Exception when creating a generic proxy (from cache)
 \item fixed DYNPROXY-\/175 -\/ invalid Composition\+Invocation type used when code uses interface proxies with and without Interceptor\+Selector
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md23}{}\doxysection{\texorpdfstring{3.\+1.\+0 (2012-\/08-\/05)}{3.\+1.\+0 (2012-\/08-\/05)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md23}
+\end{DoxyItemize}\doxysection{3.\+1.\+0 (2012-\/08-\/05)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md23}
 
 \begin{DoxyItemize}
-\item fixed DYNPROXY-\/174 -\/ Unable to cast object of type \textquotesingle{}System.\+Collections.\+Object\+Model.\+Read\+Only\+Collection\`{}1\mbox{[}System.\+Reflection.\+Custom\+Attribute\+Typed\+Argument\mbox{]}\textquotesingle{} to type \textquotesingle{}System.\+Array\textquotesingle{}
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md24}{}\doxysection{\texorpdfstring{3.\+1.\+0 RC (2012-\/07-\/08)}{3.\+1.\+0 RC (2012-\/07-\/08)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md24}
+\item fixed DYNPROXY-\/174 -\/ Unable to cast object of type \textquotesingle{}System.\+Collections.\+Object\+Model.\+Read\+Only\+Collection\`{}1[System.\+Reflection.\+Custom\+Attribute\+Typed\+Argument]\textquotesingle{} to type \textquotesingle{}System.\+Array\textquotesingle{}
+\end{DoxyItemize}\doxysection{3.\+1.\+0 RC (2012-\/07-\/08)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md24}
 
 \begin{DoxyItemize}
 \item support multiple inheritance of DA attributes on interfaces.
@@ -309,26 +308,26 @@ Bugfixes\+:
 \item fixed DYNPROXY-\/171 -\/ PEVerify error on generic method definition
 \item fixed DYNPROXY-\/170 -\/ Calls to properties inside non-\/intercepted methods are not forwarded to target object (regression from v2.\+5)
 \item fixed DYNPROXY-\/169 -\/ Support IChange\+Proxy\+Target on additional interfaces and mixins when using Create\+Interface\+Proxy\+With\+Target\+Interface
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md25}{}\doxysection{\texorpdfstring{3.\+0.\+0 (2011-\/12-\/13)}{3.\+0.\+0 (2011-\/12-\/13)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md25}
+\end{DoxyItemize}\doxysection{3.\+0.\+0 (2011-\/12-\/13)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md25}
 
 \begin{DoxyItemize}
 \item no major changes since RC
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md26}{}\doxysection{\texorpdfstring{3.\+0.\+0 RC 1 (2011-\/11-\/20)}{3.\+0.\+0 RC 1 (2011-\/11-\/20)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md26}
+\end{DoxyItemize}\doxysection{3.\+0.\+0 RC 1 (2011-\/11-\/20)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md26}
 
 \begin{DoxyItemize}
 \item Applied Jeff Sharps patch that refactored Xml Dictionary\+Adapter to improve maintainability and enable more complete functionality
 \item fixed DYNPROXY-\/165 -\/ Object.\+Get\+Type() and Object.\+Memberwise\+Clone() should be ignored and not reported as non-\/interceptable to IProxy\+Generation\+Hook
 \item fixed DYNPROXY-\/164 -\/ Invalid Proxy type generated when there are more than one base class generic constraints
 \item fixed DYNPROXY-\/162 -\/ ref or out parameters can not be passed back if proxied method throw an exception
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md27}{}\doxysection{\texorpdfstring{3.\+0.\+0 beta 1 (2011-\/08-\/14)}{3.\+0.\+0 beta 1 (2011-\/08-\/14)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md27}
+\end{DoxyItemize}\doxysection{3.\+0.\+0 beta 1 (2011-\/08-\/14)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md27}
 Breaking Changes\+:
 \begin{DoxyItemize}
 \item Removed overloads of logging methods that were taking format string from ILogger and ILogger and IExtended\+Logger and didn\textquotesingle{}t have word Format in their name.
 \begin{DoxyItemize}
 \item For example\+:
 \begin{DoxyItemize}
-\item void Error(string format, params object\mbox{[}$\,$\mbox{]} args); // was removed
-\item void Error\+Format(string format, params object\mbox{[}$\,$\mbox{]} args); //use this one instead
+\item void Error(string format, params object[$\,$] args); // was removed
+\item void Error\+Format(string format, params object[$\,$] args); //use this one instead
 \end{DoxyItemize}
 \item impact -\/ low
 \item fixability -\/ medium
@@ -376,7 +375,7 @@ Bugfixes\+:
 \item implemented CORE-\/33 -\/ Add lazy logging
 \item implemented DYNPROXY-\/156 -\/ Provide mechanism for interceptors to implement retry logic
 \item removed obsolete members from ILogger and its implementations
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md28}{}\doxysection{\texorpdfstring{2.\+5.\+2 (2010-\/11-\/15)}{2.\+5.\+2 (2010-\/11-\/15)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md28}
+\end{DoxyItemize}\doxysection{2.\+5.\+2 (2010-\/11-\/15)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md28}
 
 \begin{DoxyItemize}
 \item fixed DYNPROXY-\/150 -\/ Finalizer should not be proxied
@@ -392,7 +391,7 @@ Bugfixes\+:
 \item Upgraded NLog to 2.\+0 Beta 1
 \item Added Default\+Xml\+Serializer to bridge XPath\+Adapter with standard Xml Serialization.
 \item XPath\+Adapter for Dictionary\+Adapter added IXPath\+Serializer to provide hooks for custom serialization.
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md29}{}\doxysection{\texorpdfstring{2.\+5.\+1 (2010-\/09-\/21)}{2.\+5.\+1 (2010-\/09-\/21)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md29}
+\end{DoxyItemize}\doxysection{2.\+5.\+1 (2010-\/09-\/21)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md29}
 
 \begin{DoxyItemize}
 \item Interface proxy with target Interface now accepts null as a valid target value (which can be replaced at a later stage).
@@ -404,7 +403,7 @@ Bugfixes\+:
 \item fixed issue DYNPROXY-\/138 -\/ Error message missing space
 \item fixed false positive where Dynamic\+Proxy would not let you proxy interface with target interface when target object was a COM object.
 \item fixed Reflection\+Based\+Dictionary\+Adapter when using indexed properties
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md30}{}\doxysection{\texorpdfstring{2.\+5.\+0 (2010-\/08-\/21)}{2.\+5.\+0 (2010-\/08-\/21)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md30}
+\end{DoxyItemize}\doxysection{2.\+5.\+0 (2010-\/08-\/21)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md30}
 
 \begin{DoxyItemize}
 \item Dynamic\+Proxy will now not replicate non-\/public attribute types
@@ -421,11 +420,11 @@ Bugfixes\+:
 \item Split IoC specific classes into Castle.\+Windsor project
 \item Merged logging services solution
 \item Merged Dynamic\+Proxy project
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md31}{}\doxysection{\texorpdfstring{1.\+2.\+0 (2010-\/01-\/11)}{1.\+2.\+0 (2010-\/01-\/11)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md31}
+\end{DoxyItemize}\doxysection{1.\+2.\+0 (2010-\/01-\/11)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md31}
 
 \begin{DoxyItemize}
 \item Added IEmail\+Sender interface and its default implementation
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md32}{}\doxysection{\texorpdfstring{1.\+2.\+0 beta (2009-\/12-\/04)}{1.\+2.\+0 beta (2009-\/12-\/04)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md32}
+\end{DoxyItemize}\doxysection{1.\+2.\+0 beta (2009-\/12-\/04)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md32}
 
 \begin{DoxyItemize}
 \item BREAKING CHANGE -\/ added Change\+Proxy\+Target method to IChange\+Proxy\+Target interface
@@ -434,16 +433,16 @@ Bugfixes\+:
 \item Moved custom attribute replication from Custom\+Attribute\+Util to new interface -\/ IAttribute\+Disassembler
 \item Exposed IAttribute\+Disassembler via Proxy\+Generation\+Options, so that users can plug their implementation for some convoluted scenarios. (for Silverlight)
 \item Moved IInterceptor\+Selector from Dynamic Proxy to Core (IOC-\/\+ISSUE-\/156)
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md33}{}\doxysection{\texorpdfstring{1.\+1.\+0 (2009-\/05-\/04)}{1.\+1.\+0 (2009-\/05-\/04)}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md33}
+\end{DoxyItemize}\doxysection{1.\+1.\+0 (2009-\/05-\/04)}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md33}
 
 \begin{DoxyItemize}
 \item Applied Eric Hauser\textquotesingle{}s patch fixing CORE-\/\+ISSUE-\/22 "{}\+Support for environment variables in resource URI"{}
 \item Applied Gauthier Segay\textquotesingle{}s patch fixing CORE-\/\+ISSUE-\/20 "{}\+Castle.\+Core.\+Tests won\textquotesingle{}t build via nant because it use Trace\+Context without referencing System.\+Web.\+dll"{}
 \item Added simple interface to Component\+Model to make optional properties required.
-\item Applied Mark\textquotesingle{}s -- \href{mailto:mwatts42@gmail.com}{\texttt{mwatts42@gmail.\+com}} -- patch that changes the Core to support being compiled for Silverlight 2
+\item Applied Mark\textquotesingle{}s -- {\texttt{mwatts42@gmail.\+com}} -- patch that changes the Core to support being compiled for Silverlight 2
 \item Applied Louis De\+Jardin\textquotesingle{}s patch adding Trace\+Logger as a new logger implementation
 \item Applied Chris Bilson\textquotesingle{}s patch fixing CORE-\/15 "{}\+Web\+Logger Throws When Logging Outside of an Http\+Context"{}
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md34}{}\doxysection{\texorpdfstring{Release Candidate 3}{Release Candidate 3}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md34}
+\end{DoxyItemize}\doxysection{Release Candidate 3}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md34}
 
 \begin{DoxyItemize}
 \item Added IService\+Provider\+Ex which extends IService\+Provider
@@ -455,14 +454,14 @@ Bugfixes\+:
 \begin{DoxyItemize}
 \item Debug(string)
 \item Debug(string, Exception)
-\item Debug(string, params object\mbox{[}$\,$\mbox{]})
-\item Debug\+Format(string, params object\mbox{[}$\,$\mbox{]})
-\item Debug\+Format(\+Exception, string, params object\mbox{[}$\,$\mbox{]})
-\item Debug\+Format(\+IFormat\+Provider, string, params object\mbox{[}$\,$\mbox{]})
-\item Debug\+Format(\+IFormat\+Provider, Exception, string, params object\mbox{[}$\,$\mbox{]})
-\item The "{}\+Fatal\+Error"{} overloads where marked as \mbox{[}Obsolete\mbox{]}, replaced by "{}\+Fatal"{} and "{}\+Fatal\+Format"{}.
+\item Debug(string, params object[$\,$])
+\item Debug\+Format(string, params object[$\,$])
+\item Debug\+Format(\+Exception, string, params object[$\,$])
+\item Debug\+Format(\+IFormat\+Provider, string, params object[$\,$])
+\item Debug\+Format(\+IFormat\+Provider, Exception, string, params object[$\,$])
+\item The "{}\+Fatal\+Error"{} overloads where marked as [Obsolete], replaced by "{}\+Fatal"{} and "{}\+Fatal\+Format"{}.
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md35}{}\doxysection{\texorpdfstring{0.\+0.\+1.\+0}{0.\+0.\+1.\+0}}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md35}
+\end{DoxyItemize}\doxysection{0.\+0.\+1.\+0}\label{md_packages_2_castle_8_core_85_81_81_2_c_h_a_n_g_e_l_o_g_autotoc_md35}
 
 \begin{DoxyItemize}
 \item Included IProxy\+Target\+Accessor

@@ -1,63 +1,59 @@
 \doxysection{Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller Class Reference}
-\hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller}{}\label{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller}\index{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}}
+\label{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller}\index{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}}
 
 
 Account with contacts and notes creation.  
 
 
-
-
-Inheritance diagram for Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller\+:
-% FIG 0
-
-
-Collaboration diagram for Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller\+:
-% FIG 1
+Inheritance diagram for Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_a917d8345e28c341ef6c5128b174031e6}{Create\+Account\+With\+Contacts\+And\+Notes\+Controller}} (\mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service}{ICreate\+Account\+With\+Contacts\+And\+Notes\+Service}} service)
+\textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Controller} (\textbf{ ICreate\+Account\+With\+Contacts\+And\+Notes\+Service} service)
 \item 
-IHttp\+Action\+Result \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_a5950483798d2514ad211760e4dc33029}{Create\+Account\+With\+Contacts\+And\+Notes}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model}{Create\+Account\+With\+Contacts\+And\+Notes\+Model}} model)
+IHttp\+Action\+Result \textbf{ Create\+Account\+With\+Contacts\+And\+Notes} ([From\+Body] \textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Model} model)
 \begin{DoxyCompactList}\small\item\em Creates an account with optional primary contact, secondary contacts, account notes, and primary contact notes. Only the Account field is required. All other fields are optional. Note\+: Primary contact notes cannot be provided without a primary contact. All operations are executed in a single transaction -\/ if any step fails, everything is rolled back. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller}{Sirocco\+Demo.\+APIs.\+Controllers.\+Base\+Controller}}}
+\doxysubsection*{Protected Member Functions inherited from \textbf{ Sirocco\+Demo.\+APIs.\+Controllers.\+Base\+Controller}}
 \begin{DoxyCompactItemize}
 \item 
-IHttp\+Action\+Result \mbox{\hyperlink{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller_a94b341772ec15e640a5bf99b5bd70bab}{Execute\+With\+Exception\+Handling$<$ T $>$}} (Func$<$ T $>$ action)
+IHttp\+Action\+Result \textbf{ Execute\+With\+Exception\+Handling$<$ T $>$} (Func$<$ T $>$ action)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Account with contacts and notes creation. 
 
-Definition at line \mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs_source}{Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}}.
+Definition at line \textbf{ 13} of file \textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}.
 
 
 
 \label{doc-constructors}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_a917d8345e28c341ef6c5128b174031e6}\index{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}!CreateAccountWithContactsAndNotesController@{CreateAccountWithContactsAndNotesController}}
+\index{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}!CreateAccountWithContactsAndNotesController@{CreateAccountWithContactsAndNotesController}}
 \index{CreateAccountWithContactsAndNotesController@{CreateAccountWithContactsAndNotesController}!SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}}
-\doxysubsubsection{\texorpdfstring{CreateAccountWithContactsAndNotesController()}{CreateAccountWithContactsAndNotesController()}}
+\doxysubsubsection{CreateAccountWithContactsAndNotesController()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_a917d8345e28c341ef6c5128b174031e6} 
-Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_sirocco_demo_1_1_application_1_1_services_1_1_i_create_account_with_contacts_and_notes_service}{ICreate\+Account\+With\+Contacts\+And\+Notes\+Service}}}]{service}{}\end{DoxyParamCaption})}
+Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller (\begin{DoxyParamCaption}\item[{\textbf{ ICreate\+Account\+With\+Contacts\+And\+Notes\+Service}}]{service}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs_source}{Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}}.
+Definition at line \textbf{ 17} of file \textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}.
 
 
 
 \label{doc-func-members}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_a5950483798d2514ad211760e4dc33029}\index{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}!CreateAccountWithContactsAndNotes@{CreateAccountWithContactsAndNotes}}
+\index{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}!CreateAccountWithContactsAndNotes@{CreateAccountWithContactsAndNotes}}
 \index{CreateAccountWithContactsAndNotes@{CreateAccountWithContactsAndNotes}!SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController@{SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController}}
-\doxysubsubsection{\texorpdfstring{CreateAccountWithContactsAndNotes()}{CreateAccountWithContactsAndNotes()}}
+\doxysubsubsection{CreateAccountWithContactsAndNotes()}
 {\footnotesize\ttfamily \label{class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller_a5950483798d2514ad211760e4dc33029} 
-IHttp\+Action\+Result Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+Create\+Account\+With\+Contacts\+And\+Notes (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{class_sirocco_demo_1_1_application_1_1_models_1_1_create_account_with_contacts_and_notes_model}{Create\+Account\+With\+Contacts\+And\+Notes\+Model}}}]{model}{}\end{DoxyParamCaption})}
+IHttp\+Action\+Result Sirocco\+Demo.\+APIs.\+Controllers.\+Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+Create\+Account\+With\+Contacts\+And\+Notes (\begin{DoxyParamCaption}\item[{[\+From\+Body] \textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Model}}]{model}{}\end{DoxyParamCaption})}
 
 
 
@@ -73,10 +69,10 @@ Created account details with generated IDs
 \end{DoxyReturn}
 $<$response code="{}200"{}$>$Account created successfully$<$/response$>$ $<$response code="{}400"{}$>$Invalid input data or business rule violation. Returns structured error with Error\+Code, Message, and specific details.$<$/response$>$ $<$response code="{}500"{}$>$Internal server error$<$/response$>$ 
 
-Definition at line \mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs_source}{Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}}.
+Definition at line \textbf{ 39} of file \textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Sirocco\+Demo.\+APIs/\+Controllers/\mbox{\hyperlink{_create_account_with_contacts_and_notes_controller_8cs}{Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}}\end{DoxyCompactItemize}
+Sirocco\+Demo.\+APIs/\+Controllers/\textbf{ Create\+Account\+With\+Contacts\+And\+Notes\+Controller.\+cs}\end{DoxyCompactItemize}

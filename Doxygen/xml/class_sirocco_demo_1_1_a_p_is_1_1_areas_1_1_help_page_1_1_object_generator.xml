@@ -68,8 +68,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" line="33" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs" bodystart="33" bodyend="36"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a978e3e71dc3309cc222ce1bb0d375d20" compoundref="_object_generator_8cs" startline="33" endline="36">SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.GenerateObject</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_object_generator_1a978e3e71dc3309cc222ce1bb0d375d20" compoundref="_object_generator_8cs" startline="33" endline="36">SiroccoDemo.APIs.Areas.HelpPage.ObjectGenerator.GenerateObject</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">

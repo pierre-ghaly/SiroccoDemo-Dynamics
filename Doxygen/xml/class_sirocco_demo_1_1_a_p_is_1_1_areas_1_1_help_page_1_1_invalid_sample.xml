@@ -16,10 +16,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" line="19" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" bodystart="19" bodyend="19"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1acc22c300c92f178fafdd333f0988843c" compoundref="_invalid_sample_8cs" startline="21" endline="25">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.Equals</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a76798481119b436426c5a83c7d1d9039" compoundref="_invalid_sample_8cs" startline="27" endline="30">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.GetHashCode</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a6ffad5cb2e979eec1533e3b39f288441" compoundref="_invalid_sample_8cs" startline="10" endline="17">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.InvalidSample</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a9e47f9fdf24ccb68426d9889e89a593a" compoundref="_invalid_sample_8cs" startline="32" endline="35">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.ToString</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -40,8 +36,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" line="10" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" bodystart="10" bodyend="17"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a5a5c79e642fe4a147e2d56174e80a66f" compoundref="_invalid_sample_8cs" startline="19" endline="19">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.ErrorMessage</references>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1acc22c300c92f178fafdd333f0988843c" compoundref="_invalid_sample_8cs" startline="21" endline="25">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.Equals</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1acc22c300c92f178fafdd333f0988843c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override bool</type>
@@ -60,8 +54,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" line="21" column="30" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" bodystart="21" bodyend="25"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a5a5c79e642fe4a147e2d56174e80a66f" compoundref="_invalid_sample_8cs" startline="19" endline="19">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.ErrorMessage</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a6ffad5cb2e979eec1533e3b39f288441" compoundref="_invalid_sample_8cs" startline="10" endline="17">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.InvalidSample</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a76798481119b436426c5a83c7d1d9039" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override int</type>
@@ -76,7 +68,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" line="27" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" bodystart="27" bodyend="30"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a5a5c79e642fe4a147e2d56174e80a66f" compoundref="_invalid_sample_8cs" startline="19" endline="19">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.ErrorMessage</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a9e47f9fdf24ccb68426d9889e89a593a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -91,7 +82,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" line="32" column="32" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/SampleGeneration/InvalidSample.cs" bodystart="32" bodyend="35"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_invalid_sample_1a5a5c79e642fe4a147e2d56174e80a66f" compoundref="_invalid_sample_8cs" startline="19" endline="19">SiroccoDemo.APIs.Areas.HelpPage.InvalidSample.ErrorMessage</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

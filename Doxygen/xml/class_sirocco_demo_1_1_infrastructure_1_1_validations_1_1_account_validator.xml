@@ -22,7 +22,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.Infrastructure/Validations/AccountValidator.cs" line="9" column="21" bodyfile="SiroccoDemo.Infrastructure/Validations/AccountValidator.cs" bodystart="9" bodyend="19"/>
-        <references refid="class_sirocco_demo_1_1_application_1_1_models_1_1_account_input_1af5ae1263f6fe44963e3ab17d1788d079" compoundref="_account_input_8cs" startline="5" endline="5">SiroccoDemo.Application.Models.AccountInput.Name</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

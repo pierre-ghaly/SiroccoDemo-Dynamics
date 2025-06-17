@@ -17,7 +17,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs" line="16" column="23" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs" bodystart="16" bodyend="16"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_attribute_1a84f7a069f7b2828bd2aa2ea1a3a66016" compoundref="_model_name_attribute_8cs" startline="11" endline="14">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.ModelNameAttribute</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -38,7 +37,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs" line="11" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs" bodystart="11" bodyend="14"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_name_attribute_1a09946415fc919f95255cec28e303e299" compoundref="_model_name_attribute_8cs" startline="16" endline="16">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.Name</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

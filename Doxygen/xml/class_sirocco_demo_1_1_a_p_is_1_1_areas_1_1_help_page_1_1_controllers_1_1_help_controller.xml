@@ -34,11 +34,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" line="26" column="34" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" bodystart="26" bodyend="26"/>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a694e650b9477a74a189bc2e7b24b5cd6" compoundref="_help_controller_8cs" startline="34" endline="46">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Api</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a561a899565e2b0d689563df88bf7b087" compoundref="_help_controller_8cs" startline="16" endline="19">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.HelpController</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a889b4b7ed856daed68d2d0dada7e2343" compoundref="_help_controller_8cs" startline="21" endline="24">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.HelpController</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1abc8dc179f60d26eb61d6f89429a91902" compoundref="_help_controller_8cs" startline="28" endline="32">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Index</referencedby>
-        <referencedby refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1ad16fe1f50a3dbcf5585df34de1981a9e" compoundref="_help_controller_8cs" startline="48" endline="61">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.ResourceModel</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -55,7 +50,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" line="16" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" bodystart="16" bodyend="19"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a223e810cfe5c428ac0a92ec50a96f316" compoundref="_help_controller_8cs" startline="26" endline="26">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Configuration</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a889b4b7ed856daed68d2d0dada7e2343" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -74,7 +68,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" line="21" column="16" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" bodystart="21" bodyend="24"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a223e810cfe5c428ac0a92ec50a96f316" compoundref="_help_controller_8cs" startline="26" endline="26">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Configuration</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1abc8dc179f60d26eb61d6f89429a91902" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ActionResult</type>
@@ -89,7 +82,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" line="28" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" bodystart="28" bodyend="32"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a223e810cfe5c428ac0a92ec50a96f316" compoundref="_help_controller_8cs" startline="26" endline="26">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Configuration</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a694e650b9477a74a189bc2e7b24b5cd6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ActionResult</type>
@@ -108,7 +100,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" line="34" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" bodystart="34" bodyend="46"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a223e810cfe5c428ac0a92ec50a96f316" compoundref="_help_controller_8cs" startline="26" endline="26">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Configuration</references>
       </memberdef>
       <memberdef kind="function" id="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1ad16fe1f50a3dbcf5585df34de1981a9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ActionResult</type>
@@ -127,8 +118,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" line="48" column="29" bodyfile="SiroccoDemo.APIs/Areas/HelpPage/Controllers/HelpController.cs" bodystart="48" bodyend="61"/>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_controllers_1_1_help_controller_1a223e810cfe5c428ac0a92ec50a96f316" compoundref="_help_controller_8cs" startline="26" endline="26">SiroccoDemo.APIs.Areas.HelpPage.Controllers.HelpController.Configuration</references>
-        <references refid="class_sirocco_demo_1_1_a_p_is_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_model_description_generator_1a18a84ab77016b731c4b89e11d40b22d9" compoundref="_model_description_generator_8cs" startline="100" endline="100">SiroccoDemo.APIs.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
