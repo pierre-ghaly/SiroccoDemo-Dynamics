@@ -184,7 +184,7 @@ namespace SiroccoDemo.Infrastructure.Services
                 transactionRequest.Requests.Add(request);
             }
 
-            var transactionResponse = (ExecuteTransactionResponse)_organizationService.Execute(transactionRequest);
+            _ = (ExecuteTransactionResponse)_organizationService.Execute(transactionRequest);
 
             return new CreateAccountWithContactsAndNotesDTO
             {

@@ -362,3 +362,17 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Doxygen/Doxyfile
+
+# Security: Exclude config files with sensitive data
+**/appsettings.Production.json
+**/appsettings.Development.json
+**/connectionstrings.config
+**/secrets.config
+**/*secrets*.config
+**/*local*.config
+
+# Sensitive config files - use .template versions instead
+SiroccoDemo.APIs/Web.config
+SiroccoDemo.Moq/App.config
+SiroccoDemo.Infrastructure/app.config
+SiroccoDemo.Plugins/app.config

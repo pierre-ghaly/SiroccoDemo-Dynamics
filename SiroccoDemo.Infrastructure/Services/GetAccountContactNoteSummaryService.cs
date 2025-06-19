@@ -17,42 +17,54 @@ namespace SiroccoDemo.Infrastructure.Services
 
         public List<GetAccountContactNoteSummaryDTO> GetAccountContactNoteSummary()
         {
+            var summaryData = _crmRepository.GetAccountContactNoteSummaryData();
+
+            var accountGroups = summaryData.GroupBy(x => x.AccountId);
+
             var returnDTO = new List<GetAccountContactNoteSummaryDTO>();
 
-            var accountsAndPrimaryContact = _crmRepository.GetAllAccountsAndPrimaryContact();
-
-            foreach (var (account, primaryContactId) in accountsAndPrimaryContact)
+            foreach (var accountGroup in accountGroups)
             {
                 var itemDTO = new GetAccountContactNoteSummaryDTO
                 {
-                    AccountName = account.Name
+                    AccountName = accountGroup.First().AccountName
                 };
 
-                var contacts = _crmRepository.GetContactsByAccountId(account.Id);
+                var accountHasContacts = accountGroup.Any(x => x.HasContact);
 
-                foreach (var contact in contacts)
+                if (accountHasContacts)
                 {
-                    if (primaryContactId.HasValue && contact.Id == primaryContactId.Value)
+                    var contactGroups = accountGroup.Where(x => x.HasContact).GroupBy(x => x.ContactId);
+
+                    foreach (var contactGroup in contactGroups)
                     {
-                        var notes = _crmRepository.GetNotesByRegarding(contact.Id);
-                        itemDTO.PrimaryContact = new PrimaryContactWithNotes
+                        var contactData = contactGroup.First();
+
+                        if (contactData.IsPrimaryContact)
                         {
-                            FirstName = contact.FirstName,
-                            LastName = contact.LastName,
-                            Email = contact.Email,
-                            Notes = notes.Select(n => n.Description).ToList()
-                        };
-                    }
-                    else
-                    {
-                        itemDTO.SecondaryContacts.Add(new SecondaryContact
+                            itemDTO.PrimaryContact = new PrimaryContactWithNotes
+                            {
+                                FirstName = contactData.ContactFirstName,
+                                LastName = contactData.ContactLastName,
+                                Email = contactData.ContactEmail,
+                                Notes = contactGroup
+                                    .Where(x => !string.IsNullOrEmpty(x.NoteDescription))
+                                    .Select(x => x.NoteDescription)
+                                    .ToList()
+                            };
+                        }
+                        else
                         {
-                            FirstName = contact.FirstName,
-                            LastName = contact.LastName,
-                            Email = contact.Email
-                        });
+                            itemDTO.SecondaryContacts.Add(new SecondaryContact
+                            {
+                                FirstName = contactData.ContactFirstName,
+                                LastName = contactData.ContactLastName,
+                                Email = contactData.ContactEmail
+                            });
+                        }
                     }
                 }
+
                 returnDTO.Add(itemDTO);
             }
 
