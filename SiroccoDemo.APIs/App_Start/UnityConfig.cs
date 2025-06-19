@@ -19,17 +19,18 @@ namespace SiroccoDemo.APIs
             var container = new UnityContainer();
 
             // Register CRM Organization Service
-            container.RegisterFactory<IOrganizationService>(c => CrmServiceFactory.CreateOrganizationService());
+            container.RegisterFactory<IOrganizationService>(c => CrmServiceFactory.CreateOrganizationService(), 
+                                                            new Unity.Lifetime.ContainerControlledLifetimeManager());
 
-            // Register repositories
+            // Register Repositories
             container.RegisterType<ICrmRepository, CrmRepository>();
 
-            // Register validators
+            // Register Validators
             container.RegisterType<IAccountValidator, AccountValidator>();
             container.RegisterType<IContactValidator, ContactValidator>();
             container.RegisterType<INoteValidator, NoteValidator>();
 
-            // Register services
+            // Register Services
             container.RegisterType<ICreateAccountWithContactsAndNotesService, CreateAccountWithContactsAndNotesService>();
             container.RegisterType<IGetAccountContactNoteSummaryService, GetAccountContactNoteSummaryService>();
 

@@ -1,4 +1,5 @@
-﻿using SiroccoDemo.Domain.Entities;
+﻿using SiroccoDemo.Domain.DTOs;
+using SiroccoDemo.Domain.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -13,5 +14,6 @@ namespace SiroccoDemo.Application.Repositories
         List<(Account Account, Guid? PrimaryContactId)> GetAllAccountsAndPrimaryContact();
         List<Contact> GetContactsByAccountId(Guid accountId);
         List<Note> GetNotesByRegarding(Guid regardingId);
+        List<AccountContactSummaryDataDTO> GetAccountContactNoteSummaryData();
     }
 }
