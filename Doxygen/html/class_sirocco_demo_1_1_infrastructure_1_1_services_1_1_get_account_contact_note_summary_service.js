@@ -1,5 +1,0 @@
-var class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service =
-[
-    [ "GetAccountContactNoteSummaryService", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service.html#afa0e7de32711b46a9378c3e080dff05a", null ],
-    [ "GetAccountContactNoteSummary", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service.html#ace76721933f6c629abfd0454ecaef1fe", null ]
-];

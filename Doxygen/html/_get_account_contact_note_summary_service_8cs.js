@@ -1,4 +1,0 @@
-var _get_account_contact_note_summary_service_8cs =
-[
-    [ "SiroccoDemo.Infrastructure.Services.GetAccountContactNoteSummaryService", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service.html", "class_sirocco_demo_1_1_infrastructure_1_1_services_1_1_get_account_contact_note_summary_service" ]
-];

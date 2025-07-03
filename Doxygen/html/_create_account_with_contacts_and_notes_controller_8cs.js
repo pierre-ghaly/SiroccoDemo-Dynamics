@@ -1,4 +1,0 @@
-var _create_account_with_contacts_and_notes_controller_8cs =
-[
-    [ "SiroccoDemo.APIs.Controllers.CreateAccountWithContactsAndNotesController", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller.html", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller" ]
-];

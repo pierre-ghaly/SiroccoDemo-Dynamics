@@ -1,6 +1,0 @@
-var namespace_sirocco_demo_1_1_a_p_is_1_1_controllers =
-[
-    [ "BaseController", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller.html", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_base_controller" ],
-    [ "CreateAccountWithContactsAndNotesController", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller.html", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller" ],
-    [ "GetAccountContactNoteSummaryController", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_get_account_contact_note_summary_controller.html", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_get_account_contact_note_summary_controller" ]
-];

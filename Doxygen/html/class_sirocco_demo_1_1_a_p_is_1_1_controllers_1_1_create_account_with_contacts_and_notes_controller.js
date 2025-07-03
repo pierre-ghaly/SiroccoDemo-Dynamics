@@ -1,5 +1,0 @@
-var class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller =
-[
-    [ "CreateAccountWithContactsAndNotesController", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller.html#a917d8345e28c341ef6c5128b174031e6", null ],
-    [ "CreateAccountWithContactsAndNotes", "class_sirocco_demo_1_1_a_p_is_1_1_controllers_1_1_create_account_with_contacts_and_notes_controller.html#a5950483798d2514ad211760e4dc33029", null ]
-];
